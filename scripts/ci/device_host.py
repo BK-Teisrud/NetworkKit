@@ -14,6 +14,19 @@ def load_project(root):
         check=True, text=True, capture_output=True).stdout)
 
 
+def shared_source_paths(directory):
+    """Use paths relative to the source group, never flattened basenames."""
+    paths = sorted(p.relative_to(directory).as_posix() for p in directory.rglob("*.swift") if p.is_file())
+    if not paths:
+        raise RuntimeError("Missing shared Swift sources")
+    return paths
+
+
+def validate_membership(actual, expected):
+    if sorted(actual) != sorted(expected) or len(set(actual)) != len(actual):
+        raise RuntimeError("Host omits or duplicates shared test sources")
+
+
 def validate(root, project):
     def require(condition, message):
         if not condition:
@@ -30,8 +43,8 @@ def validate(root, project):
     references = [objects[objects[b]["fileRef"]] for b in test_phases[0]["files"]]
     require(all(r.get("sourceTree") == "<group>" for r in references), "Shared test reference changes directory")
     actual = [r["path"] for r in references]
-    expected = sorted(p.name for p in (root / "Tests/NetworkKitTests").rglob("*.swift"))
-    require(sorted(actual) == expected and len(set(actual)) == len(actual), "Host omits or duplicates shared test sources")
+    expected = shared_source_paths(root / "Tests/NetworkKitTests")
+    validate_membership(actual, expected)
     groups = [g for g in objects.values() if g["isa"] == "PBXGroup" and g.get("path") == "../../Tests/NetworkKitTests"]
     require(len(groups) == 1, "Missing shared test directory")
     require(set(groups[0]["children"]) == {objects[b]["fileRef"] for b in test_phases[0]["files"]}, "Test group/source membership differs")
@@ -71,7 +84,7 @@ def validate(root, project):
     public_paths = [objects[objects[item]["fileRef"]]["path"] for item in public_sources[0]["files"]]
     source_root = root / "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests"
     expected_public = sorted("../PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/" + str(p.relative_to(source_root))
-                             for p in source_root.rglob("*.swift"))
+                             for p in source_root.rglob("*.swift") if p.is_file())
     require(sorted(public_paths) == expected_public and len(set(public_paths)) == len(public_paths),
             "Opt-in probe omits or duplicates shared native sources")
     public_scheme = ET.parse(root / "Tools/DeviceTestHost/NetworkKitDeviceHost.xcodeproj/xcshareddata/xcschemes/PublicHTTPSChecks.xcscheme")

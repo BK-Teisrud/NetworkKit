@@ -4,9 +4,7 @@
 
 A native networking library for Apple platforms, distributed as a Swift package with no external package dependencies.
 
-**Status: F2 is closed after the accepted non-publishing HTTP-core rehearsal.** The selected core and recorded minimum/non-Watch evidence are documented in the [F2 closeout](docs/planning/F2_CLOSEOUT_2026-10-31.md). No stable version/tag or release exists. Physical Watch #132 and actual workload/security/publication #29 remain mandatory. Bounded retry implementation I24–I27 is authorized under ADR-0014/#137. The bounded F3 technical gate is accepted with recorded limitations; see the [F3 closeout](docs/planning/F3_CLOSEOUT_2026-11-01.md) and #110 for formal completion.
-
-The selected F4 download increment is now authorized under ADR-0015. I29 adds a [foreground GET-to-file API](Sources/NetworkKit/NetworkKit.docc/FileDownloads.md); [its implementation report](docs/planning/I29_FOREGROUND_DOWNLOAD.md) distinguishes critical-path local verification from the remaining I30–I32/native/publication gates. No stable release or production suitability is implied.
+**Status:** the HTTP core and bounded retry increment have recorded technical acceptance. Foreground file downloads remain under F4 verification; maintenance #158–#161 is one combined delivery before further I31/I32. See the [work queue](docs/planning/WORK_QUEUE.md) for current order and acceptance evidence. No stable version/tag, release or production suitability is approved; #29/#132 remain mandatory publication barriers.
 
 Open the repository-root Package.swift in Xcode. The package is named NetworkKit and exposes the NetworkKit library. Tests cover HTTP values, configuration, construction, response interpretation, session ownership, network policy and client integration, with platform-specific evidence described in the guides. See [implementation authorization](docs/decisions/ADR-0012-implementation-start.md).
 
@@ -84,3 +82,7 @@ See the [rights notice](LICENSE) and [ownership and rights decision](docs/decisi
 ## Language
 
 All repository documentation and GitHub project content use English. The owner and assistant continue to communicate in Norwegian. See [the language policy](docs/governance/LANGUAGE_POLICY.md).
+
+## Source organization
+
+The single NetworkKit module groups implementation files under Client, HTTP, Transport, Policies, Retry and Downloads. Tests mirror these responsibilities with Compatibility and Support folders. The privacy manifest and DocC catalog stay at the target root. These folders introduce no separate module/product or runtime behavior change. See [contributing](CONTRIBUTING.md) for privacy review and the device-host README for explicit source-membership refreshes.

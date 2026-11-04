@@ -238,7 +238,7 @@
       "number": 7,
       "name": "Work Queue",
       "layout": "TABLE_LAYOUT",
-      "filter": "is:open -label:\"type: epic\" -label:\"scope: extension\" -label:\"scope: research\""
+      "filter": "is:open -status:Done -status:\"Not Planned\" -label:\"type: epic\" -label:\"scope: research\""
     },
     {
       "id": "PVTV_lAHOAz1qP84Bny9dzgMI_-Y",
@@ -300,5 +300,5 @@
   "workflow_configuration": "See docs/planning/PROJECT_MANAGEMENT.md",
   "product_workflows_present": true,
   "shortDescription": "Approved HTTP-core implementation underway. Real Apple platform CI and required quality-gate enabled; executing HTTP client and release evidence remain outstanding.",
-  "readme": "Follow https://github.com/BK-Teisrud/NetworkKit/blob/main/docs/planning/WORK_QUEUE.md. I01–I06 provide the package, values/errors, configuration, safe URLs, buffered requests, and real four-platform/source/DocC CI. The required quality-gate protects main. See https://github.com/BK-Teisrud/NetworkKit/blob/main/docs/planning/CI_IMPLEMENTATION.md and issue #47 for actual PR/main/enforcement evidence. Executing client, live transport/security/lifecycle, and release/minimum-OS evidence remain later work. English GitHub content; Norwegian owner–assistant conversations."
+  "readme": "Current execution order: https://github.com/BK-Teisrud/NetworkKit/blob/main/docs/planning/WORK_QUEUE.md. GitHub Project Status owns live work state; ROADMAP owns selected scope; dated reports preserve history. English GitHub content and Norwegian owner–assistant conversations. Selected maintenance #158–#161 is one combined delivery before I31/I32. Stop at pending GitHub execution."
 }

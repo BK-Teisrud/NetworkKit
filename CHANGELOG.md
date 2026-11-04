@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+### Architecture maintenance — combined delivery
+
+- Group the existing single-module library/tests by responsibility; make feasibility discovery and device-host membership preserve relative source paths.
+- Split the native loopback suite and execute four bounded local download declarations/eight ownership cases in Mac CI, with exact discovery/result checks. Public services and resource probes remain opt-in.
+- Keep public API and production Swift behavior unchanged; consolidate current planning ownership, restore selected extension tasks in Work Queue and require privacy assessment in system-API changes.
+
+
 - Corrected the download feature's bundled required-reason declaration: FileTimestamp / C617.1 covers fstat used for app-temporary file metadata. Tracking remains disabled and collection/tracking-domain lists remain empty; actual consumer privacy/distribution review remains separate.
 
 ### Foreground file download — I29 implementation candidate

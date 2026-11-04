@@ -12,7 +12,7 @@ The retained log does not identify whether the storage server's readiness, stric
 
 The previous test fixture performed an unbounded stdout read for its port and an unbounded Process.waitUntilExit in teardown. Its stderr pipe was never drained. The raw Foundation cache control used default timeouts that could exceed the enclosing test. These are observed source-level gaps even though the original stalled phase is unknown.
 
-A macOS-only [test child-process helper](../../Tests/NetworkKitTests/BoundedFixtureProcess.swift) now bounds the readiness handshake to three seconds and 128 bytes, uses monotonic elapsed time with poll/read, and routes synthetic fixture stderr directly instead of retaining an undrained pipe. Teardown requests termination, waits at most one second, then force-stops only its owned running child and waits at most one additional second. A failed join is an assertion failure, not ignored acceptance. This is a test-helper boundary; Process launch/OS scheduling are not hard real-time guarantees.
+A macOS-only [test child-process helper](../../Tests/NetworkKitTests/Support/BoundedFixtureProcess.swift) now bounds the readiness handshake to three seconds and 128 bytes, uses monotonic elapsed time with poll/read, and routes synthetic fixture stderr directly instead of retaining an undrained pipe. Teardown requests termination, waits at most one second, then force-stops only its owned running child and waits at most one additional second. A failed join is an assertion failure, not ignored acceptance. This is a test-helper boundary; Process launch/OS scheduling are not hard real-time guarantees.
 
 The cache probe emits immediate, synthetic phase labels for owned/borrowed startup, each strict request, wire-record retrieval, client shutdown, positive cache control, teardown and completion. It logs no URLs, tokens, bodies or real account/device identifiers. The private raw positive-control session now has five-second request and ten-second resource limits. Library defaults, per-client 5/10 fixture limits and all original cache/owned/borrowed assertions remain unchanged. The suite's one-minute limit is unchanged.
 
@@ -20,7 +20,7 @@ No production transport/cache behavior is changed. If the test recurs, the phase
 
 ## Meaningful failure-path verification
 
-[FixtureProcessTests.swift](../../Tests/NetworkKitTests/FixtureProcessTests.swift) is explicitly macOS-only. One test starts a child that never reports readiness and requires a startup-timeout error plus successful idempotent cleanup. Another waits for a child to install SIGTERM-ignore, then requires successful forced stop and idempotent cleanup. Only child processes created by these tests are signalled. Neither test contacts a network service.
+[FixtureProcessTests.swift](../../Tests/NetworkKitTests/Support/FixtureProcessTests.swift) is explicitly macOS-only. One test starts a child that never reports readiness and requires a startup-timeout error plus successful idempotent cleanup. Another waits for a child to install SIGTERM-ignore, then requires successful forced stop and idempotent cleanup. Only child processes created by these tests are signalled. Neither test contacts a network service.
 
 These two declarations add native fixture-lifecycle coverage on macOS only. Other runtime destinations retain the 214 declarations from I18; do not create dummy passes elsewhere to make counts equal. The source inventory lists 216 declarations with these two marked macOS-only; actual counts must come from each runtime result.
 

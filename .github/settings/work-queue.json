@@ -700,9 +700,11 @@
       "milestone": "F4 – File transfers",
       "blocked_by": [],
       "parent": 16,
-      "implementation_authorized": false,
-      "authorization_scope": "Owner requested this maintenance sequence before further I31; current exception authorizes planning only, no implementation/merge/new CI.",
-      "readiness_note": "Requires PR #157 checkpoint and main acceptance plus normal CI-stop resumption."
+      "implementation_authorized": true,
+      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
+      "internal_order_after": [],
+      "delivery_group": "architecture-maintenance-2026-11-04"
     },
     {
       "order": 40.42,
@@ -711,13 +713,15 @@
       "title": "[QA-03] Split native loopback tests and execute a bounded functional CI selection",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/159",
       "milestone": "F4 – File transfers",
-      "blocked_by": [
+      "blocked_by": [],
+      "parent": 16,
+      "implementation_authorized": true,
+      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
+      "internal_order_after": [
         "QA-02"
       ],
-      "parent": 16,
-      "implementation_authorized": false,
-      "authorization_scope": "Owner requested this maintenance sequence before further I31; current exception authorizes planning only, no implementation/merge/new CI.",
-      "readiness_note": "Requires predecessor PR/main acceptance and normal CI-stop resumption."
+      "delivery_group": "architecture-maintenance-2026-11-04"
     },
     {
       "order": 40.43,
@@ -726,13 +730,15 @@
       "title": "[QA-04] Organize library and unit tests without changing API or lifecycle behavior",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/160",
       "milestone": "F4 – File transfers",
-      "blocked_by": [
+      "blocked_by": [],
+      "parent": 16,
+      "implementation_authorized": true,
+      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
+      "internal_order_after": [
         "QA-03"
       ],
-      "parent": 16,
-      "implementation_authorized": false,
-      "authorization_scope": "Owner requested this maintenance sequence before further I31; current exception authorizes planning only, no implementation/merge/new CI.",
-      "readiness_note": "Requires predecessor PR/main acceptance and normal CI-stop resumption."
+      "delivery_group": "architecture-maintenance-2026-11-04"
     },
     {
       "order": 40.44,
@@ -741,13 +747,15 @@
       "title": "[QA-05] Consolidate current planning and require privacy review with system API changes",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/161",
       "milestone": "F4 – File transfers",
-      "blocked_by": [
+      "blocked_by": [],
+      "parent": 16,
+      "implementation_authorized": true,
+      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
+      "internal_order_after": [
         "QA-04"
       ],
-      "parent": 16,
-      "implementation_authorized": false,
-      "authorization_scope": "Owner requested this maintenance sequence before further I31; current exception authorizes planning only, no implementation/merge/new CI.",
-      "readiness_note": "Requires predecessor PR/main acceptance and normal CI-stop resumption."
+      "delivery_group": "architecture-maintenance-2026-11-04"
     },
     {
       "order": 40.5,
@@ -758,6 +766,9 @@
       "milestone": "F4 – File transfers",
       "blocked_by": [
         "I30",
+        "QA-02",
+        "QA-03",
+        "QA-04",
         "QA-05"
       ],
       "parent": 16,
@@ -807,5 +818,21 @@
   "status_source": "GitHub Issues and ProjectV2; this file records planned structure, not completion status",
   "authorization_scope": "Core under ADR-0012; bounded read-retry I24–I27 explicitly authorized by owner on 2026-10-31 under ADR-0014 and START-F3 #137. No publication or other extension authorization. I28 non-shipping bounded feasibility only explicitly authorized on 2026-11-01 under ADR-0015 / START-F4 #145; I29–I32 remain unauthorized. I29–I32 explicitly authorized by owner on 2026-11-01 under ADR-0015/I28; permission recorded in #147–#150, no new signing/device-installation or publication.",
   "extension_start_gate": 137,
-  "download_start_decision": 147
+  "download_start_decision": 147,
+  "maintenance_delivery": {
+    "group": "architecture-maintenance-2026-11-04",
+    "issues": [
+      158,
+      159,
+      160,
+      161
+    ],
+    "one_pr": true,
+    "excluded_issues": [
+      149,
+      150
+    ],
+    "predecessor_main": "d1ac92d4da8950b59521bf75b9690058302a4251",
+    "predecessor_run": 41897385923
+  }
 }

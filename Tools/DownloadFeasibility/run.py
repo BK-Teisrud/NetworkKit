@@ -17,10 +17,20 @@ import time
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def library_sources(root):
+    """Match recursive library source discovery while excluding documentation assets."""
+    directory = root / 'Sources/NetworkKit'
+    sources = sorted(p for p in directory.rglob('*.swift')
+                     if p.is_file() and not any(part.endswith('.docc') for part in p.relative_to(directory).parts))
+    if not sources:
+        raise RuntimeError('Missing NetworkKit library sources')
+    return sources
+
+
 def run_handoff(output):
     """No network. Exercise candidate ownership around existing terminal arbitration."""
     probe = Path(__file__).with_name('HandoffProbe.swift')
-    sources = sorted((ROOT / 'Sources/NetworkKit').glob('*.swift'))
+    sources = library_sources(ROOT)
     with tempfile.TemporaryDirectory(prefix='snk-i28-handoff-') as tmp:
         work = Path(tmp)
         binary, result = work / 'probe', work / 'result.json'
@@ -115,7 +125,7 @@ def main():
             threading.Thread(target=server.serve_forever, daemon=True).start()
         try:
             binary = work / 'probe'
-            sources = sorted((ROOT / 'Sources/NetworkKit').glob('*.swift'))
+            sources = library_sources(ROOT)
             subprocess.run(['xcrun', 'swiftc', '-swift-version', '6', '-parse-as-library',
                             *map(str, sources), str(Path(__file__).with_name('Probe.swift')),
                             '-o', str(binary)], check=True, timeout=120)

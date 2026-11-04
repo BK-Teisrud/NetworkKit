@@ -1,23 +1,27 @@
 # Work queue
 
-## Maintenance prerequisite — 2026-11-04
+## Current delivery — 2026-11-04
 
-The owner requested completing the [architecture maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) before further I31 work. After PR #157 checkpoint/main acceptance, execute QA-02 / #158 → QA-03 / #159 → QA-04 / #160 → QA-05 / #161, then resume I31 #149 and I32 #150. I31 is now Blocked by this maintenance chain; existing native evidence gaps remain open. This update is planning only under a narrow CI-stop exception, with no code, merge or new CI run. F4 scope and #29/#132 publication barriers are unchanged.
+PR #157/main d1ac92d4da8950b59521bf75b9690058302a4251/run 41897385923 is accepted after all seven checks and full-log review (267 Mac tests, four 258-test simulator results, 23 helpers and DocC). This accepts the native/naming checkpoint, not complete I31 evidence.
 
+The owner authorized **one combined branch/PR for QA-02–QA-05**, excluding I31/I32. Execute locally in the following order, with intermediate checks and commits, then one integrated PR/main gate. The four issues remain independently traceable and open until the whole delivery's applicable criteria and required main checks pass. This supersedes the earlier per-issue PR/main prerequisite sequence.
 
-## Current delivery — 2026-11-01
+| Order | Task | Internal sequence |
+| --- | --- | --- |
+| 40.41 | [QA-02 / #158](https://github.com/BK-Teisrud/NetworkKit/issues/158): folder-aware source/host tools | First |
+| 40.42 | [QA-03 / #159](https://github.com/BK-Teisrud/NetworkKit/issues/159): split native tests and bounded functional CI | After QA-02 local checks |
+| 40.43 | [QA-04 / #160](https://github.com/BK-Teisrud/NetworkKit/issues/160): organize library/unit tests | After local tooling/native safeguards |
+| 40.44 | [QA-05 / #161](https://github.com/BK-Teisrud/NetworkKit/issues/161): current planning/privacy/view reconciliation | Integrate with final structure |
 
-F3 is formally closed: I27 #110 is Done after final PR #144/main b4511c5efe9a349a9f91eb0448974f1bf49b8d3f/run 41302196774; all seven checks passed. [F3 closeout](F3_CLOSEOUT_2026-11-01.md) preserves its bounded technical acceptance and source-specific evidence.
+I31 #149 is Blocked by all four maintenance issues. Its checkpoint passed real native Mac/four minimum simulator observations, but trusted HTTPS/auth/app-managed storage, remaining platform/physical/macOS14 and representative resource criteria remain. I32 #150 follows I31. Missing evidence is not silently moved to publication. [Maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) defines the scope; [combined review](ARCHITECTURE_MAINTENANCE_REVIEW_2026-11-04.md) records actual candidate checks and deliberate no-change decisions.
 
-F4 planning/I28, I29 and I30 #148 are Done after accepted PR #156/main run 41333096996. I31 #149 is paused/Blocked for the maintenance prerequisites; its checkpoint evidence is: [native Mac checkpoint](I31_NATIVE_DOWNLOAD_2026-11-04.md) executes real URLSession file transfers, counted redirects/lifecycle/known-path cleanup and finite file/RSS observations. [Minimum native execution](I31_MINIMUM_DOWNLOAD_2026-11-04.md) now passes 24 cases across four existing simulators. FileTimestamp/C617.1 metadata is corrected for fstat; validation/PR/main and remaining trusted HTTPS/auth/storage/other-current/physical/macOS14 evidence are outstanding. I32 #150 stays predecessor-blocked. No new signing/device installation, purchase or publication is authorized.
-
-#14 advanced resilience remains Backlog; #89/#90 remain independent planning. #29 actual app/workload/security/publication and physical Watch #132 remain mandatory separate barriers. No new milestone/date or publication authorization follows.
+Project Status is live work state; this file and work-queue.json define order/dependencies. ROADMAP defines selected scope; dated reports preserve evidence. Stop at pending GitHub execution until owner continuation. #29/#132 retain mandatory publication barriers; no signing/device installation, purchase, release or new feature scope is implied.
 
 ## Accepted F2 and next lanes
 
 The [F2 closeout](F2_CLOSEOUT_2026-10-31.md) records accepted core hardening/rehearsal, final main d0a522770269617f95660d67e9d0198838dc2bb5/run 41244932962 and the milestone-counter discrepancy. Original submission-time evidence/failure limits remain immutable. The F2-only resource disposition is not F3 or production acceptance.
 
-F4 selected I29–I32 code start is explicitly authorized after completed I28/#88. I29/I30 are accepted; complete the maintenance prerequisites before resuming I31 #149 native criteria and then I32 #150. #89/#90 remain independent research, and deferred domain catalogs stay open. Stop whenever GitHub execution is pending; resume only after the owner's next instruction, without queue polling or independent work across that stop.
+F4 selected I29–I32 code start is explicitly authorized after completed I28/#88. I29/I30 are accepted; complete the combined maintenance delivery before resuming I31 #149 and then I32 #150. #89/#90 remain independent research, and deferred domain catalogs stay open. Stop whenever GitHub execution is pending; resume only after the owner's next instruction, without queue polling or independent work across that stop.
 
 ## Accepted core implementation history
 
@@ -78,7 +82,7 @@ I21 may investigate access to older test environments as preparation without cod
 | 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Backlog; real-time use case/lifecycle pending |
 | 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
 
-These are governance/planning tasks, not authorized extension implementation. F2 is complete; the selected F3 gate is current delivery work. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.
+The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.
 
 ## Historical F2 closure preparation — 2026-10-27
 

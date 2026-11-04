@@ -100,7 +100,7 @@ def source_integrity():
         require(uses and all(re.fullmatch(r"actions/[\w-]+@[0-9a-f]{40}", use) for use in uses),
                 f"Actions must be GitHub-owned and SHA-pinned: {workflow_path.name}")
     validate_documented_examples(
-        (ROOT / "Tests/NetworkKitTests/DocumentationExamplesTests.swift").read_text(),
+        (ROOT / "Tests/NetworkKitTests/Compatibility/DocumentationExamplesTests.swift").read_text(),
         (ROOT / "Sources/NetworkKit/NetworkKit.docc/IntegrationGuide.md").read_text())
     run("git", "diff", "--check")
     run("python3", "-m", "unittest", "discover", "-s", "scripts/ci", "-p", "test_*.py", "-v")
@@ -256,9 +256,10 @@ def main():
     else:
         platform_check(kind)
         if kind == "macos-core":
-            # Compile opt-in public-service checks, never execute them in CI.
+            # Build the probe package; execute only the exact local loopback selection below.
             run("swift", "build", "--package-path", ROOT / "Tools/PublicHTTPSChecks",
                 "--build-tests", "-Xswiftc", "-warnings-as-errors")
+            run(sys.executable, ROOT / "scripts/ci/native_loopback.py")
             # Compile/exercise the opt-in release harness without volatile timing/RSS thresholds.
             run(sys.executable, ROOT / "scripts/benchmarks/run.py", "--output", OUTPUT / "resource-smoke.json",
                 "--repetitions", "1", "--smoke")

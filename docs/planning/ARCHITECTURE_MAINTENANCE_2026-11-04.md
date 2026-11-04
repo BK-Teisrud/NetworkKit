@@ -2,13 +2,13 @@
 
 ## Decision and evidence boundary
 
-On 2026-11-04 the owner requested scheduling the architecture audit findings before further download work, then explicitly permitted plan/issue/project updates while PR #157 CI is pending. This is a planning-only exception: no implementation, merge or new CI run is authorized during this update. The normal CI stop rule remains in force afterward.
+On 2026-11-04 the owner requested scheduling the architecture audit findings before further download work, then explicitly permitted plan/issue/project updates while PR #157 CI is pending. That initial update was a planning-only exception. After the run completed, the owner instructed implementation of the combined maintenance delivery. The normal CI stop rule still applies after each push/merge.
 
 The audit reviewed checkpoint 7a4d5eb0d55197664204dd09250e866b0fb33d05: 30 production Swift files / 2,383 lines, APIClient 290 lines and the shared native loopback test file 829 lines. One NetworkKit module using Foundation/URLSession remains appropriate. The concrete gaps are native functional CI execution, flat-path tooling, file organization and duplicated current planning/privacy-review process. Counts describe that checkpoint, not permanent thresholds.
 
 ## Required sequence
 
-First resolve and accept the existing PR #157 checkpoint and its required main checks without marking I31 complete. Then complete the following bounded maintenance tasks in order. They remain Blocked until their predecessor acceptance and the owner's CI-stop resumption. Each needs its own appropriate verification and required PR/main acceptance before Done.
+PR #157/main run 41897385923 is accepted. The owner subsequently selected one combined implementation branch/PR for the four maintenance tasks, excluding I31/I32. Preserve the local sequence and intermediate verification; there is one integrated required PR/main gate. No task is Done until that gate and its own criteria pass. Internal predecessors below guide implementation, rather than requiring separate PR/main cycles.
 
 | Order | Task | Predecessor |
 | --- | --- | --- |
@@ -17,7 +17,7 @@ First resolve and accept the existing PR #157 checkpoint and its required main c
 | 40.43 | [[QA-04] Organize library and unit tests without changing API or lifecycle behavior](https://github.com/BK-Teisrud/NetworkKit/issues/160) | #159 |
 | 40.44 | [[QA-05] Consolidate current planning and require privacy review with system API changes](https://github.com/BK-Teisrud/NetworkKit/issues/161) | #160 |
 
-Further I31 #149 execution is blocked by the final maintenance task. I32 #150 still requires I31. Existing I31 trusted HTTPS/auth/app-managed storage, current/physical/minimum/macOS 14 and representative resource evidence are not waived or transferred to publication. The maintenance tasks belong to existing F4; no new milestone, dates, product scope or release is introduced. Priority remains P2/EXTENSION, with Order and dependencies expressing precedence within F4 rather than relabeling extension work as core.
+Further I31 #149 execution is blocked by all four maintenance tasks until integrated acceptance. I32 #150 still requires I31. Existing I31 trusted HTTPS/auth/app-managed storage, current/physical/minimum/macOS 14 and representative resource evidence are not waived or transferred to publication. The maintenance tasks belong to existing F4; no new milestone, dates, product scope or release is introduced. Priority remains P2/EXTENSION, with Order and dependencies expressing precedence within F4 rather than relabeling extension work as core.
 
 ## Scope and safeguards
 

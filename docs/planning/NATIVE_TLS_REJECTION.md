@@ -4,7 +4,7 @@ Date: 2026-10-27. Task: [#104](https://github.com/BK-Teisrud/NetworkKit/issues/1
 
 ## Actual boundary exercised
 
-[NativeTLSTests](../../Tests/NetworkKitTests/NativeTLSTests.swift) creates the public APIClient with its normal owned session and HTTPS/system-trust defaults. Typed Endpoint and raw URLRequest calls both reach a real URLSession TLS handshake with a Python standard-library listener bound to 127.0.0.1 on a kernel-assigned port. No scripted transport, URLProtocol, test delegate, injected session or trust override handles those calls.
+[NativeTLSTests](../../Tests/NetworkKitTests/Transport/NativeTLSTests.swift) creates the public APIClient with its normal owned session and HTTPS/system-trust defaults. Typed Endpoint and raw URLRequest calls both reach a real URLSession TLS handshake with a Python standard-library listener bound to 127.0.0.1 on a kernel-assigned port. No scripted transport, URLProtocol, test delegate, injected session or trust override handles those calls.
 
 Each fixture generates a fresh, disposable RSA/SHA-256 self-signed server certificate using the existing /usr/bin/openssl. Its SAN includes localhost and 127.0.0.1, with server-auth usage and CA:FALSE. The test URL uses matching 127.0.0.1, so this is untrusted-chain evidence, not an independently controlled hostname-mismatch test. The certificate/key exist only in a private temporary directory; nothing is installed into a keychain or trust store. No operational credential, public service or external endpoint is created.
 

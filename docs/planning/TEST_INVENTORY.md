@@ -6,7 +6,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## AuthenticationTests.swift
 
-[Source](../../Tests/NetworkKitTests/AuthenticationTests.swift) — 15 declarations.
+[Source](../../Tests/NetworkKitTests/Client/AuthenticationTests.swift) — 15 declarations.
 
 - `bothInputsReceiveMinimalContextAndHeaders`
 - `credentialConflictsAreNeverSilentlyOverwritten`
@@ -26,7 +26,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## ClientLifecycleTests.swift
 
-[Source](../../Tests/NetworkKitTests/ClientLifecycleTests.swift) — 11 declarations.
+[Source](../../Tests/NetworkKitTests/Client/ClientLifecycleTests.swift) — 11 declarations.
 
 - `shutdownWithoutActiveWorkIsIdempotent`
 - `closingRejectsBothInputsBeforeReadingOptionsAndJoinsCleanup`
@@ -42,7 +42,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## ConfigurationTests.swift
 
-[Source](../../Tests/NetworkKitTests/ConfigurationTests.swift) — 8 declarations.
+[Source](../../Tests/NetworkKitTests/Client/ConfigurationTests.swift) — 8 declarations.
 
 - `defaultsAndIndependentOverrides`
 - `invalidLimits`
@@ -55,7 +55,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## DiagnosticsTests.swift
 
-[Source](../../Tests/NetworkKitTests/DiagnosticsTests.swift) — 13 declarations.
+[Source](../../Tests/NetworkKitTests/Client/DiagnosticsTests.swift) — 13 declarations.
 
 - `canariesInEveryBoundaryStayOutOfEventsAndErrorDescriptions`
 - `onlyExactAllowlistedMethodNamesAreRetained`
@@ -73,7 +73,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## DocumentationExamplesTests.swift
 
-[Source](../../Tests/NetworkKitTests/DocumentationExamplesTests.swift) — 4 declarations.
+[Source](../../Tests/NetworkKitTests/Compatibility/DocumentationExamplesTests.swift) — 4 declarations.
 
 - `typedGuideDecodesValueAndMetadata`
 - `formatGuideHandlesBytesTextEmptyAndExplicitStatus`
@@ -82,7 +82,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## EndpointURLTests.swift
 
-[Source](../../Tests/NetworkKitTests/EndpointURLTests.swift) — 15 declarations.
+[Source](../../Tests/NetworkKitTests/HTTP/EndpointURLTests.swift) — 15 declarations.
 
 - `typedEndpointAndBasePath`
 - `reservedAndUnicodeSegmentsAreData`
@@ -102,7 +102,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## F1AcceptanceTests.swift
 
-[Source](../../Tests/NetworkKitTests/F1AcceptanceTests.swift) — 6 declarations.
+[Source](../../Tests/NetworkKitTests/Compatibility/F1AcceptanceTests.swift) — 6 declarations.
 
 - `typedAndRawPOSTHaveRequestAndResponseParity`
 - `encodingFailureDoesNotSendOrPoisonClient`
@@ -113,14 +113,14 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## FixtureProcessTests.swift
 
-[Source](../../Tests/NetworkKitTests/FixtureProcessTests.swift) — 2 macOS-only declarations; no placeholder executions on other platforms.
+[Source](../../Tests/NetworkKitTests/Support/FixtureProcessTests.swift) — 2 macOS-only declarations; no placeholder executions on other platforms.
 
 - `missingReadinessFailsAndStopsTheChild`
 - `childIgnoringTerminationIsForceStoppedWithinTheBound`
 
 ## HTTPPipelineTests.swift
 
-[Source](../../Tests/NetworkKitTests/HTTPPipelineTests.swift) — 12 declarations.
+[Source](../../Tests/NetworkKitTests/HTTP/HTTPPipelineTests.swift) — 12 declarations.
 
 - `jsonThroughSession`
 - `dataTextAndEmptyThroughSession`
@@ -137,7 +137,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## NetworkKitTests.swift
 
-[Source](../../Tests/NetworkKitTests/NetworkKitTests.swift) — 21 declarations.
+[Source](../../Tests/NetworkKitTests/HTTP/NetworkKitTests.swift) — 21 declarations.
 
 - `standardMethodsAndCaseSensitivity`
 - `tokenAlphabetIsASCIIOnly`
@@ -163,7 +163,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## NetworkSecurityTests.swift
 
-[Source](../../Tests/NetworkKitTests/NetworkSecurityTests.swift) — 21 declarations.
+[Source](../../Tests/NetworkKitTests/Policies/NetworkSecurityTests.swift) — 21 declarations.
 
 - `originNormalizationAndSafeDescriptions`
 - `HTTPIsDeniedByDefault`
@@ -189,7 +189,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## OperationBudgetTests.swift
 
-[Source](../../Tests/NetworkKitTests/OperationBudgetTests.swift) — 16 declarations.
+[Source](../../Tests/NetworkKitTests/Client/OperationBudgetTests.swift) — 16 declarations.
 
 - `defaultBudgetExpiresAndJoinsBothChildren`
 - `callOverridesClientLimits`
@@ -210,7 +210,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## PublicResponseAPITests.swift
 
-[Source](../../Tests/NetworkKitTests/PublicResponseAPITests.swift) — 8 declarations.
+[Source](../../Tests/NetworkKitTests/HTTP/PublicResponseAPITests.swift) — 8 declarations.
 
 - `externalConsumerSelectsBorrowedStorageProfile`
 - `externalConsumerReceivesOnlySanitizedDiagnostics`
@@ -223,7 +223,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## RedirectIntegrationTests.swift
 
-[Source](../../Tests/NetworkKitTests/RedirectIntegrationTests.swift) — 3 declarations.
+[Source](../../Tests/NetworkKitTests/Policies/RedirectIntegrationTests.swift) — 3 declarations.
 
 - `deniedRedirectDestinationIsNotContacted`
 - `terminalRedirectFailureCancelsOnlyItsUnderlyingTask`
@@ -231,7 +231,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## RequestEncodingTests.swift
 
-[Source](../../Tests/NetworkKitTests/RequestEncodingTests.swift) — 20 declarations.
+[Source](../../Tests/NetworkKitTests/HTTP/RequestEncodingTests.swift) — 20 declarations.
 
 - `defaultEndpointHasNoBodyOrInventedContentType`
 - `dataAndEmptyDataAreExplicitBodies`
@@ -256,7 +256,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## ResponseDecodingTests.swift
 
-[Source](../../Tests/NetworkKitTests/ResponseDecodingTests.swift) — 19 declarations.
+[Source](../../Tests/NetworkKitTests/HTTP/ResponseDecodingTests.swift) — 19 declarations.
 
 - `jsonAndMetadata`
 - `acceptedJSONMediaTypes`
@@ -280,7 +280,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## SessionTransportTests.swift
 
-[Source](../../Tests/NetworkKitTests/SessionTransportTests.swift) — 14 declarations.
+[Source](../../Tests/NetworkKitTests/Transport/SessionTransportTests.swift) — 14 declarations.
 
 - `strictConfigurationDisablesAutomaticStorage`
 - `ownedSessionIsReusedAndSnapshotsItsConfiguration`
@@ -299,7 +299,7 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## StorageIntegrationTests.swift
 
-[Source](../../Tests/NetworkKitTests/StorageIntegrationTests.swift) — 8 declarations.
+[Source](../../Tests/NetworkKitTests/Policies/StorageIntegrationTests.swift) — 8 declarations.
 
 - `strictProfileDoesNotRetainOrSendCookies`
 - `strictProfileCannotServeAnAutomaticHTTPCacheEntry`
@@ -313,20 +313,20 @@ Snapshot: 2026-10-27, TLS-01 candidate based on `dcf0a1b57c43ea5d96e06ee1d328e2d
 
 ## PrivacyManifestTests.swift
 
-[Source](../../Tests/NetworkKitTests/PrivacyManifestTests.swift) — 1 declaration.
+[Source](../../Tests/NetworkKitTests/Compatibility/PrivacyManifestTests.swift) — 1 declaration.
 
 - `bundledManifestMatchesReviewedSDKPractices`
 
 ## NativeTLSTests.swift
 
-[Source](../../Tests/NetworkKitTests/NativeTLSTests.swift) — 1 macOS-only declaration.
+[Source](../../Tests/NetworkKitTests/Transport/NativeTLSTests.swift) — 1 macOS-only declaration.
 
 - `untrustedCertificateIsRejectedThroughBothPublicInputs`
 
 ## DownloadTests.swift — I29 addition
 
-[Source](../../Tests/NetworkKitTests/DownloadTests.swift) — 11 declarations covering successful/empty app ownership, invalid limits/requests before auth, rejected statuses without retry, actual file size, preserve/inspect/remove errors, original deadline discard, cancellation/cleanup precedence, exclusive target collisions, native-return adoption order and shutdown/join. See the I29 report for actual local results and unproved native boundaries.
+[Source](../../Tests/NetworkKitTests/Downloads/DownloadTests.swift) — 11 declarations covering successful/empty app ownership, invalid limits/requests before auth, rejected statuses without retry, actual file size, preserve/inspect/remove errors, original deadline discard, cancellation/cleanup precedence, exclusive target collisions, native-return adoption order and shutdown/join. See the I29 report for actual local results and unproved native boundaries.
 
 ## I30 verification addition
 
-[DownloadTests](../../Tests/NetworkKitTests/DownloadTests.swift) now has 21 declarations / 55 expanded cases. [DocumentationExamplesTests](../../Tests/NetworkKitTests/DocumentationExamplesTests.swift) adds a regular-import public compatibility declaration. I30 adds 11 declarations in total; actual source-hashed results, negative controls and unproved native boundaries are in [the I30 report](I30_DOWNLOAD_VERIFICATION.md).
+[DownloadTests](../../Tests/NetworkKitTests/Downloads/DownloadTests.swift) now has 21 declarations / 55 expanded cases. [DocumentationExamplesTests](../../Tests/NetworkKitTests/Compatibility/DocumentationExamplesTests.swift) adds a regular-import public compatibility declaration. I30 adds 11 declarations in total; actual source-hashed results, negative controls and unproved native boundaries are in [the I30 report](I30_DOWNLOAD_VERIFICATION.md).

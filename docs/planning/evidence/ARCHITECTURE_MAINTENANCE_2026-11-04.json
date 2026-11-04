@@ -1,0 +1,360 @@
+{
+  "baseline_commit": "d1ac92d4da8950b59521bf75b9690058302a4251",
+  "scope": "combined QA-02\u2013QA-05; no I31/I32 delivery or publication",
+  "moves": [
+    {
+      "from": "Sources/NetworkKit/APIClient.swift",
+      "to": "Sources/NetworkKit/Client/APIClient.swift",
+      "sha256": "08907cd2e4c7f240a88a4ac140d61a5b9a76da16159d1ee8edc6ce2a3c74a79a",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/ClientLifecycle.swift",
+      "to": "Sources/NetworkKit/Client/ClientLifecycle.swift",
+      "sha256": "ba7d243eb266b79c7157c66341d48896f8693354d9aa369aba8d93abbacc25ae",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/NetworkOperation.swift",
+      "to": "Sources/NetworkKit/Client/NetworkOperation.swift",
+      "sha256": "ad25dd095bdba5943c1b8f45ce8ed7e3ae16ba4b0d7b64ce4dc611f94af19455",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/ExecutionBoundaries.swift",
+      "to": "Sources/NetworkKit/Client/ExecutionBoundaries.swift",
+      "sha256": "e29ab5022b3eb67f8d554546ef7b1cff1123d02dc138edf84f6d2b548e788e9a",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/NetworkConfiguration.swift",
+      "to": "Sources/NetworkKit/Client/NetworkConfiguration.swift",
+      "sha256": "60faadba3b86ce8aa89501680958109807d5f051a6873f38306a8710cfc5596b",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/Diagnostics.swift",
+      "to": "Sources/NetworkKit/Client/Diagnostics.swift",
+      "sha256": "84b24c4b28ab4d7783ce461cb5fb4ad71009140f9fbe9e283d5d9ff1561f7f40",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/Endpoint.swift",
+      "to": "Sources/NetworkKit/HTTP/Endpoint.swift",
+      "sha256": "7b196e8ede8a9c031595e3ecdd72bfc3aaeecdc6610d055f383a787b976dec31",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/HTTPHeaders.swift",
+      "to": "Sources/NetworkKit/HTTP/HTTPHeaders.swift",
+      "sha256": "45bfe1c8779e3f39c048fc1a299bd6ee8a75fe28d71ea797ce704c7eccc4b4f4",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/HTTPMethod.swift",
+      "to": "Sources/NetworkKit/HTTP/HTTPMethod.swift",
+      "sha256": "98bde648d1db468b7b29a1856ace61a7301f6daf057eb99cd6e5114a31456bdb",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/HTTPStatus.swift",
+      "to": "Sources/NetworkKit/HTTP/HTTPStatus.swift",
+      "sha256": "84bde1bf4b8a3c92e66f9c8bacdf079b56de7fc92a851134723e54017257ca71",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/HTTPStatusPolicy.swift",
+      "to": "Sources/NetworkKit/HTTP/HTTPStatusPolicy.swift",
+      "sha256": "f28eb6564f87d7988aa281683bd6c398f340eaa32434ee3d5245021355954722",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/HTTPToken.swift",
+      "to": "Sources/NetworkKit/HTTP/HTTPToken.swift",
+      "sha256": "d9053f6ff580b333c643e0209d8e001e008506a95f41581f9b60bc46402bb13b",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/JSONDecodingOptions.swift",
+      "to": "Sources/NetworkKit/HTTP/JSONDecodingOptions.swift",
+      "sha256": "d11a252a75f1a4cfb814d2ed0fbb3e4dbcb85200d5e9b978a1e1f83f3ca50904",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/NetworkError.swift",
+      "to": "Sources/NetworkKit/HTTP/NetworkError.swift",
+      "sha256": "bd9133325b2af1255af713b7d9557c476dac5483448f8c565eb961f4016eede4",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/NetworkResponse.swift",
+      "to": "Sources/NetworkKit/HTTP/NetworkResponse.swift",
+      "sha256": "2267de5fe325f2c310dfb875a2e1b3b230713d2397a423e53ba303a72674067d",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/RequestBody.swift",
+      "to": "Sources/NetworkKit/HTTP/RequestBody.swift",
+      "sha256": "914d27be0edb4fa36fc91e57787bf6d9c0311acbeb0a2d8334e24f2bf2cbbcdb",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/RequestBuilder.swift",
+      "to": "Sources/NetworkKit/HTTP/RequestBuilder.swift",
+      "sha256": "20358d3345bb6b9ca66a4edd9adee8aae81c5b7c7c60a7162e47435499ee3921",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/RequestURLBuilder.swift",
+      "to": "Sources/NetworkKit/HTTP/RequestURLBuilder.swift",
+      "sha256": "404943fa36c0fe5e7df5c078412ad6da30e82882bc097c29c3c0c0af896fef1b",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/ResponseMetadata.swift",
+      "to": "Sources/NetworkKit/HTTP/ResponseMetadata.swift",
+      "sha256": "9bd34a8ecd6cfd7c5bfc1b9fdbc89909fa0564095232daf68d87f5d90dc9d07b",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/ResponseStrategy.swift",
+      "to": "Sources/NetworkKit/HTTP/ResponseStrategy.swift",
+      "sha256": "1cddc3a3ce3aa32a4ad304e250a0e3d01503853eedd4a7add3f011f26545bd86",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/Authentication.swift",
+      "to": "Sources/NetworkKit/Policies/Authentication.swift",
+      "sha256": "f0db6e385961df30c1a1a7680af6584db91b001c3a07416c9c489cfb478a5573",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/NetworkSecurityPolicy.swift",
+      "to": "Sources/NetworkKit/Policies/NetworkSecurityPolicy.swift",
+      "sha256": "cc85f6f2ab60f79731207d81e80f30bf5e032b0f2351ae42177e2ab62f29f3d9",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/SessionStorageProfile.swift",
+      "to": "Sources/NetworkKit/Policies/SessionStorageProfile.swift",
+      "sha256": "83ca939758de16bab5df13d94c280065ad46c89ba0c0335863870a8b81e59c66",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/URLSessionTransport.swift",
+      "to": "Sources/NetworkKit/Transport/URLSessionTransport.swift",
+      "sha256": "fe46ddb68913842dc7626f3e8f48ad991396a5f0fea303dc5b8d2d04ad95dd20",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/NetworkTaskDelegate.swift",
+      "to": "Sources/NetworkKit/Transport/NetworkTaskDelegate.swift",
+      "sha256": "d9a97411a31d322a971685604d39de115112e606d7bb8e6837ea0005305f0bd8",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/RetryPolicy.swift",
+      "to": "Sources/NetworkKit/Retry/RetryPolicy.swift",
+      "sha256": "6eb67b32d63d859262709ecc0037e57422191d1bcf445ba57256a5ce69efb637",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/RetryTiming.swift",
+      "to": "Sources/NetworkKit/Retry/RetryTiming.swift",
+      "sha256": "09ce036bc4f2e74b7dcbf3697c937d45e42ccecb23fec8bfdc330ee54eb9248a",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/Download.swift",
+      "to": "Sources/NetworkKit/Downloads/Download.swift",
+      "sha256": "7946c61557640cc27a5336086a065f96e49283670681853d0960838ae4dab91a",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Sources/NetworkKit/DownloadFileOwner.swift",
+      "to": "Sources/NetworkKit/Downloads/DownloadFileOwner.swift",
+      "sha256": "7a9c2a1f5e74d87b91352b5fd32961f2018e8857713a195d160d3d57679ed76d",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/AuthenticationTests.swift",
+      "to": "Tests/NetworkKitTests/Client/AuthenticationTests.swift",
+      "sha256": "13c0c103ac46ea3d8636cc248f607f6f5ddd1acaed1f01dae26528cb386c8ec0",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/ClientLifecycleTests.swift",
+      "to": "Tests/NetworkKitTests/Client/ClientLifecycleTests.swift",
+      "sha256": "c64f3264625800cb6c1c4778a32d57e7b05ff9e4a44c5bf6f092d638bb6006bc",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/ConfigurationTests.swift",
+      "to": "Tests/NetworkKitTests/Client/ConfigurationTests.swift",
+      "sha256": "77c7a94fd1350527b72f3740b0705580123ca5198f20511fb0ac775d0409825f",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/DiagnosticsTests.swift",
+      "to": "Tests/NetworkKitTests/Client/DiagnosticsTests.swift",
+      "sha256": "af8eb09c2324ba0176ccc3a4175290e8800823be713fa499d56e64f496292f5d",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/OperationBudgetTests.swift",
+      "to": "Tests/NetworkKitTests/Client/OperationBudgetTests.swift",
+      "sha256": "37aaf2437725ccae29828b885116739c4069426c00f90e6544648263078be3e9",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/EndpointURLTests.swift",
+      "to": "Tests/NetworkKitTests/HTTP/EndpointURLTests.swift",
+      "sha256": "83086000f8eef9a0c8086394b1f3fadd5e63df35069951470fb67e01d3e78d40",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/HTTPPipelineTests.swift",
+      "to": "Tests/NetworkKitTests/HTTP/HTTPPipelineTests.swift",
+      "sha256": "9aca0c9816cc1f66f293867bce1915d6ed537552bc3b4448a1161e6ef2b0ae58",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/NetworkKitTests.swift",
+      "to": "Tests/NetworkKitTests/HTTP/NetworkKitTests.swift",
+      "sha256": "d5b5ae44ebf7dce1a4bc00e3aae7a9ad7b953907c15ec2e40ca8f734d73fb5c2",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/PublicResponseAPITests.swift",
+      "to": "Tests/NetworkKitTests/HTTP/PublicResponseAPITests.swift",
+      "sha256": "c1af9a599670704f48410de052119f43e96025572be3070ad5e295dcb68493f2",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/RequestEncodingTests.swift",
+      "to": "Tests/NetworkKitTests/HTTP/RequestEncodingTests.swift",
+      "sha256": "2b716f321edd736b2d74d917287c8fbead84a339824d8c76af3d49638e79319d",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/ResponseDecodingTests.swift",
+      "to": "Tests/NetworkKitTests/HTTP/ResponseDecodingTests.swift",
+      "sha256": "6b61be9f1650ad95c5f73e3af7874aabd4600232845c7e394b99875c14bb320b",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/NetworkSecurityTests.swift",
+      "to": "Tests/NetworkKitTests/Policies/NetworkSecurityTests.swift",
+      "sha256": "47afae3b5a9535d5b4bda23bb62a4780e1ca39238c207f89b9e3ea2a83335d52",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/RedirectIntegrationTests.swift",
+      "to": "Tests/NetworkKitTests/Policies/RedirectIntegrationTests.swift",
+      "sha256": "ee5feafb964508230b38e71592e71050e4e8a8d3073f81c8be3eba3d908c856a",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/StorageIntegrationTests.swift",
+      "to": "Tests/NetworkKitTests/Policies/StorageIntegrationTests.swift",
+      "sha256": "192612de09b2271f8ee7eee5594accea30428d0e0ab88468004364fc28838de2",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/SessionTransportTests.swift",
+      "to": "Tests/NetworkKitTests/Transport/SessionTransportTests.swift",
+      "sha256": "89f91162d836068cae511c3d0c8d964538354a2162ddd60e2dde15b3faad0d67",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/NativeTLSTests.swift",
+      "to": "Tests/NetworkKitTests/Transport/NativeTLSTests.swift",
+      "sha256": "6be95c2d127199737864b9af8bd83cb117d65518d88b3ac6202cb6eb45923947",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/RetryDecisionTests.swift",
+      "to": "Tests/NetworkKitTests/Retry/RetryDecisionTests.swift",
+      "sha256": "b72a222b58a9b7116f278c1f93f106b90defda52aeaee4c0d301e7128e0da960",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/RetryIntegrationTests.swift",
+      "to": "Tests/NetworkKitTests/Retry/RetryIntegrationTests.swift",
+      "sha256": "96d0c4c48371c5b7fcf64503c9a08df07b900b3e340ac2233b7b115ed567cdce",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/NativeRetryTests.swift",
+      "to": "Tests/NetworkKitTests/Retry/NativeRetryTests.swift",
+      "sha256": "91309d675e505e293006d2393e4d52d923c9d5b87125b757cc48e0b3839f29e3",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/DownloadTests.swift",
+      "to": "Tests/NetworkKitTests/Downloads/DownloadTests.swift",
+      "sha256": "a05382ed076cf2f700369763ba0ec77f88eb8ce6216f7952c04c8753e5cbe61f",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/DocumentationExamplesTests.swift",
+      "to": "Tests/NetworkKitTests/Compatibility/DocumentationExamplesTests.swift",
+      "sha256": "429b03fc70c3bb87f898b6b113ea9c4e3be407c188687b8c0b0f69187922c390",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/F1AcceptanceTests.swift",
+      "to": "Tests/NetworkKitTests/Compatibility/F1AcceptanceTests.swift",
+      "sha256": "90a43f468a0be141e2d005a218301ecc6890bce2aaa25c5f40b82d5edbb79956",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/PrivacyManifestTests.swift",
+      "to": "Tests/NetworkKitTests/Compatibility/PrivacyManifestTests.swift",
+      "sha256": "e8e53cae1714643c183444f1137e5eb0fb74d7c42925728ac3af6796474bd1bc",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/BoundedFixtureProcess.swift",
+      "to": "Tests/NetworkKitTests/Support/BoundedFixtureProcess.swift",
+      "sha256": "6c97f5ed443c88c19f0d9d680439105803828cc84d28516b60eebba5d0bf36cd",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/BudgetTestSupport.swift",
+      "to": "Tests/NetworkKitTests/Support/BudgetTestSupport.swift",
+      "sha256": "2f39314b993824ae28ef6122d025618136136a654cad745c83903510b72bf484",
+      "bytes_unchanged": true
+    },
+    {
+      "from": "Tests/NetworkKitTests/FixtureProcessTests.swift",
+      "to": "Tests/NetworkKitTests/Support/FixtureProcessTests.swift",
+      "sha256": "02125dba6516dd2e4b52efa038ab423582f2727974e0b8c48565565f7cc5651f",
+      "bytes_unchanged": true
+    }
+  ],
+  "verification": {
+    "pending": [
+      "required integrated PR/main acceptance"
+    ],
+    "passed": {
+      "native_loopback_declarations": 13,
+      "native_ci_declarations": 4,
+      "native_ci_ownership_cases": 8,
+      "handoff_observations": 7,
+      "size_guard_mutation_rejected_and_restored": true,
+      "source_integrity": true,
+      "python_helper_tests": 28,
+      "mac_tests": 267,
+      "mac_suites": 32,
+      "public_api_symbols_and_relationships_unchanged": true,
+      "docc_warnings_as_errors": true,
+      "host_sync_idempotent": true,
+      "host_build_settings_unchanged": true,
+      "watch_tv_unsigned_projects_prepared": true,
+      "ios_shared_tests_unsigned_build": true,
+      "work_queue_ui_order_and_visibility_verified": true,
+      "ios_native_tests_unsigned_build": true
+    }
+  }
+}
