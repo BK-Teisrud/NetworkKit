@@ -19,6 +19,8 @@ def sync_sources(root, project):
         target = next(v for v in objects.values() if v.get('isa') == 'PBXNativeTarget' and v.get('name') == target_name)
         phase = next(objects[p] for p in target['buildPhases'] if objects[p]['isa'] == 'PBXSourcesBuildPhase')
         old = {objects[objects[b]['fileRef']]['path']: (b, objects[b]['fileRef']) for b in phase['files']}
+        if len(old) != len(phase['files']):
+            raise RuntimeError('Duplicate existing shared source membership')
         refs = {r for _, r in old.values()}
         groups = [g for g in objects.values() if g.get('isa') == 'PBXGroup' and refs.intersection(g.get('children', []))]
         if len(groups) != 1 or not refs.issubset(groups[0]['children']):

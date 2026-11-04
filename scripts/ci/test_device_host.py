@@ -35,6 +35,13 @@ class DeviceHostContracts(unittest.TestCase):
         self.assertEqual(openstep(dict(reversed(list(project.items())))), serialized)
         self.assertEqual({k: v['buildSettings'] for k, v in project['objects'].items()
                           if 'buildSettings' in v}, before)
+        target = next(v for v in project['objects'].values()
+                      if v.get('isa') == 'PBXNativeTarget' and v.get('name') == 'NetworkKitDeviceTests')
+        phase = next(project['objects'][p] for p in target['buildPhases']
+                     if project['objects'][p]['isa'] == 'PBXSourcesBuildPhase')
+        phase['files'].append(phase['files'][0])
+        with self.assertRaisesRegex(RuntimeError, 'Duplicate existing'):
+            sync_sources(self.root, project)
 
     def test_manual_group_cycle_is_rejected_before_xcode(self):
         from prepare_manual_host import validate_groups
