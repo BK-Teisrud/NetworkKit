@@ -1,6 +1,6 @@
 # F4 foreground download technical review
 
-Date: 2026-11-04. Tracking: I31 #149 / I32 #150. Status: Candidate review; owner residual-risk disposition and required PR/main acceptance remain pending.
+Date: 2026-11-04. Tracking: I31 #149 / I32 #150. Status: Owner approved bounded technical F4 disposition on 2026-11-04; required PR/main acceptance remains pending.
 
 ## Selected delivery and authority
 
@@ -52,7 +52,7 @@ A current unsigned iOS native test host also builds with the existing test IDs. 
 
 ## Remaining owner decision and release barriers
 
-Before technical F4 acceptance, the owner must explicitly dispose of the recorded residual limits and missing physical/app-workload coverage. One possible bounded disposition is technical F4 acceptance on Mac and the recorded simulator matrix, with an explicit publication-blocking follow-up for physical download checks, actual file sizes/types/concurrency/disk and device memory, and current integrated app/privacy artifacts. That is a proposal, not an already granted waiver. Do not silently move an unmet F4 criterion into #29/#132 or treat OS delegation as authority for other scope exceptions.
+On 2026-11-04 the owner explicitly approved only bounded technical F4 acceptance after successful PR/main checks, on the actual Mac and eight simulator environments. The approval includes the recorded unresolved initial iPad failure, output-only size limit and missing fresh aggregate privacy PDF. Missing physical download checks, actual app file sizes/types/concurrency/disk/device memory and current integrated app/privacy review become explicit publication-blocking requirements under #29. This is a recorded phase disposition, not production suitability or publication approval; #132 remains open for physical Watch. OS delegation alone did not authorize these exceptions.
 
 Keep #29 actual app/workload/security/publication and #132 physical Watch open. Any release including downloads needs an explicit file-verification disposition; a core-only release is not implicitly expanded to include F3/F4 by merging this branch. No version, tag, release, purchase, new signing/device installation or further-extension authorization follows.
 

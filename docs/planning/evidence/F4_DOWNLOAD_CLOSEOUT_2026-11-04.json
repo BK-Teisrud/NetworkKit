@@ -2,7 +2,7 @@
   "date": "2026-11-04",
   "base_commit": "2426c26565e970ddd1b2d34b2f3b0d81de9ad47d",
   "execution_identity": "Uncommitted candidate content, identified by SHA256; not a claim that a final commit was executed.",
-  "status": "Candidate evidence; owner disposition and PR/main acceptance pending",
+  "status": "Owner approved bounded technical F4 disposition on 2026-11-04; required PR/main acceptance pending",
   "deployment_floors": {
     "iOS": "18.0",
     "macOS": "15.0",
@@ -389,6 +389,6 @@
     "Earlier short-budget public-probe timeouts and build-flag failures remain failed attempts.",
     "One Simulator-only Watch pair was created. No physical pairing/signing/install/account change.",
     "Current aggregate privacy PDF export deferred by owner; actual new archive manifest verified directly.",
-    "Physical F4 file checks and app-specific file/workload coverage remain unfulfilled; no implicit waiver."
+    "Physical F4 file checks and app-specific file/workload coverage remain unfulfilled. Owner explicitly moved these to publication-blocking #29 requirements on 2026-11-04; no production or publication approval."
   ]
 }
