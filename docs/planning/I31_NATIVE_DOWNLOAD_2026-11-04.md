@@ -5,7 +5,7 @@ Status: Partial I31 evidence; #149 remains In Progress. Required checkpoint PR/m
 
 ## Predecessor and scope
 
-I30 #148 completed after PR #156/main `07fdce6caec8a0544caa12a7ee3c3f1c0136fd99` / [run 41333096996](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41333096996): seven jobs passed; full log confirms 267 Mac tests, four 258-test simulator runs, 22 helpers and documentation/platform/host checks. Existing explicit I29–I32 authorization covers this next task, excluding new signing/device-installation steps, purchases and publication.
+I30 #148 completed after PR #156/main `07fdce6caec8a0544caa12a7ee3c3f1c0136fd99` / [run 41333096996](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41333096996): seven jobs passed; full log confirms 267 Mac tests, four 258-test simulator runs, 22 helpers and documentation/platform/host checks. Existing explicit I29–I32 authorization covers this next task, excluding new signing/device-installation steps, purchases and publication.
 
 The existing non-shipping NativeLoopbackTests fixture/selection gains native cases. Production Swift is unchanged; the separate required-reason privacy resource and existing bundle test are corrected below. No public API, dependency, root-test membership, workflow, physical device or account changes. The original regression/core evidence is retained separately; a root CI pass does not execute these opt-in native tests.
 

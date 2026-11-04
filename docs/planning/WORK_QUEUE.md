@@ -1,10 +1,15 @@
 # Work queue
 
+## Maintenance prerequisite — 2026-11-04
+
+The owner requested completing the [architecture maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) before further I31 work. After PR #157 checkpoint/main acceptance, execute QA-02 / #158 → QA-03 / #159 → QA-04 / #160 → QA-05 / #161, then resume I31 #149 and I32 #150. I31 is now Blocked by this maintenance chain; existing native evidence gaps remain open. This update is planning only under a narrow CI-stop exception, with no code, merge or new CI run. F4 scope and #29/#132 publication barriers are unchanged.
+
+
 ## Current delivery — 2026-11-01
 
 F3 is formally closed: I27 #110 is Done after final PR #144/main b4511c5efe9a349a9f91eb0448974f1bf49b8d3f/run 41302196774; all seven checks passed. [F3 closeout](F3_CLOSEOUT_2026-11-01.md) preserves its bounded technical acceptance and source-specific evidence.
 
-F4 planning/I28, I29 and I30 #148 are Done after accepted PR #156/main run 41333096996. Authorized I31 #149 is In Progress: [native Mac checkpoint](I31_NATIVE_DOWNLOAD_2026-11-04.md) executes real URLSession file transfers, counted redirects/lifecycle/known-path cleanup and finite file/RSS observations. [Minimum native execution](I31_MINIMUM_DOWNLOAD_2026-11-04.md) now passes 24 cases across four existing simulators. FileTimestamp/C617.1 metadata is corrected for fstat; validation/PR/main and remaining trusted HTTPS/auth/storage/other-current/physical/macOS14 evidence are outstanding. I32 #150 stays predecessor-blocked. No new signing/device installation, purchase or publication is authorized.
+F4 planning/I28, I29 and I30 #148 are Done after accepted PR #156/main run 41333096996. I31 #149 is paused/Blocked for the maintenance prerequisites; its checkpoint evidence is: [native Mac checkpoint](I31_NATIVE_DOWNLOAD_2026-11-04.md) executes real URLSession file transfers, counted redirects/lifecycle/known-path cleanup and finite file/RSS observations. [Minimum native execution](I31_MINIMUM_DOWNLOAD_2026-11-04.md) now passes 24 cases across four existing simulators. FileTimestamp/C617.1 metadata is corrected for fstat; validation/PR/main and remaining trusted HTTPS/auth/storage/other-current/physical/macOS14 evidence are outstanding. I32 #150 stays predecessor-blocked. No new signing/device installation, purchase or publication is authorized.
 
 #14 advanced resilience remains Backlog; #89/#90 remain independent planning. #29 actual app/workload/security/publication and physical Watch #132 remain mandatory separate barriers. No new milestone/date or publication authorization follows.
 
@@ -12,47 +17,47 @@ F4 planning/I28, I29 and I30 #148 are Done after accepted PR #156/main run 41333
 
 The [F2 closeout](F2_CLOSEOUT_2026-10-31.md) records accepted core hardening/rehearsal, final main d0a522770269617f95660d67e9d0198838dc2bb5/run 41244932962 and the milestone-counter discrepancy. Original submission-time evidence/failure limits remain immutable. The F2-only resource disposition is not F3 or production acceptance.
 
-F4 selected I29–I32 code start is explicitly authorized after completed I28/#88. I29/I30 are accepted; continue the existing I31 #149 native criteria before I32 #150. #89/#90 remain independent research, and deferred domain catalogs stay open. Stop whenever GitHub execution is pending; resume only after the owner's next instruction, without queue polling or independent work across that stop.
+F4 selected I29–I32 code start is explicitly authorized after completed I28/#88. I29/I30 are accepted; complete the maintenance prerequisites before resuming I31 #149 native criteria and then I32 #150. #89/#90 remain independent research, and deferred domain catalogs stay open. Stop whenever GitHub execution is pending; resume only after the owner's next instruction, without queue polling or independent work across that stop.
 
 ## Accepted core implementation history
 
-**Historical core authorization on 2026-10-20; [START-00 / #41](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/41) is closed.** [ADR-0012](../decisions/ADR-0012-implementation-start.md) records the instruction. I01 established the package baseline. I02 implements foundational HTTP values/errors and their tests; I03 adds isolated configuration snapshots and internal transport/clock seams; I04 adds safe endpoint/URL construction and shared raw-URL validation; I05 adds buffered request encoding, call headers/options, and raw preparation; I06 adds real platform/source/DocC CI and required quality-gate enforcement; I07 adds buffered response strategies and per-call status validation; I08 adds the internal owned/borrowed URLSession adapter; I09 adds shared HTTPS/origin/loopback policy and per-operation redirect/trust delegates; I10 connects typed/raw calls to the public shared HTTP pipeline. I11 verifies the F1 contract/evidence boundary; see [F1 review](F1_REVIEW.md) and #52 for actual acceptance. I12 adds per-call cancellation/terminal arbitration and the monotonic total budget; see [timing evidence](CANCELLATION_AND_BUDGET.md). I13 adds explicit shutdown, operation registration and concurrent-call verification; see [lifecycle evidence](SHUTDOWN_AND_CONCURRENCY.md). I14 adds the [bounded authentication-header provider](AUTHENTICATION_PROVIDER.md), with app-owned login/token storage and no refresh/replay. I15 adds [optional sanitized diagnostics](SANITIZED_DIAGNOSTICS.md), disabled by default with a fixed metadata allowlist. I16 verifies [storage profiles against a controlled local server](STORAGE_VERIFICATION.md) and exposes the explicit app-managed borrowed-session selection. I17 accepted the [contract/regression ledger](TEST_EVIDENCE.md) and [test inventory](TEST_INVENTORY.md) through PR #93 / main run 40377796452. I18 reviews the [public API and compiled integration guide](API_REVIEW.md); its acceptance remains recorded in #59. The 2026-10-26 planning review adds PREP-01 / #85 (Order 16.5) as the early planning action (accepted through PR #92 and main run 40374198746; see [environment readiness](ENVIRONMENT_READINESS.md) and #85) and GATE-F2 / #86 (Order 22.5) before rehearsal; see [plan audit](PLAN_REVIEW_2026-10-26.md).
+**Historical core authorization on 2026-10-20; [START-00 / #41](https://github.com/BK-Teisrud/NetworkKit/issues/41) is closed.** [ADR-0012](../decisions/ADR-0012-implementation-start.md) records the instruction. I01 established the package baseline. I02 implements foundational HTTP values/errors and their tests; I03 adds isolated configuration snapshots and internal transport/clock seams; I04 adds safe endpoint/URL construction and shared raw-URL validation; I05 adds buffered request encoding, call headers/options, and raw preparation; I06 adds real platform/source/DocC CI and required quality-gate enforcement; I07 adds buffered response strategies and per-call status validation; I08 adds the internal owned/borrowed URLSession adapter; I09 adds shared HTTPS/origin/loopback policy and per-operation redirect/trust delegates; I10 connects typed/raw calls to the public shared HTTP pipeline. I11 verifies the F1 contract/evidence boundary; see [F1 review](F1_REVIEW.md) and #52 for actual acceptance. I12 adds per-call cancellation/terminal arbitration and the monotonic total budget; see [timing evidence](CANCELLATION_AND_BUDGET.md). I13 adds explicit shutdown, operation registration and concurrent-call verification; see [lifecycle evidence](SHUTDOWN_AND_CONCURRENCY.md). I14 adds the [bounded authentication-header provider](AUTHENTICATION_PROVIDER.md), with app-owned login/token storage and no refresh/replay. I15 adds [optional sanitized diagnostics](SANITIZED_DIAGNOSTICS.md), disabled by default with a fixed metadata allowlist. I16 verifies [storage profiles against a controlled local server](STORAGE_VERIFICATION.md) and exposes the explicit app-managed borrowed-session selection. I17 accepted the [contract/regression ledger](TEST_EVIDENCE.md) and [test inventory](TEST_INVENTORY.md) through PR #93 / main run 40377796452. I18 reviews the [public API and compiled integration guide](API_REVIEW.md); its acceptance remains recorded in #59. The 2026-10-26 planning review adds PREP-01 / #85 (Order 16.5) as the early planning action (accepted through PR #92 and main run 40374198746; see [environment readiness](ENVIRONMENT_READINESS.md) and #85) and GATE-F2 / #86 (Order 22.5) before rehearsal; see [plan audit](PLAN_REVIEW_2026-10-26.md).
 
 Choose the lowest Order with closed blockers and satisfied Ready criteria. This is a recommended serial sequence for one developer, not a schedule. Reordering requires dependency review rather than new scope. See the [Work Queue](https://github.com/users/BK-Teisrud/projects/6/views/7).
 
 | Order | Task | Parent epic | Dependencies in addition to #41 |
 | --- | --- | --- | --- |
-| 1 | [[I01] Create the Swift package and test target after authorization](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/42) | #27 | None |
-| 2 | [[I02] Define immutable HTTP values, responses, and error taxonomy](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/43) | #11 | #42 |
-| 3 | [[I03] Implement configuration snapshots and internal test boundaries](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/44) | #22 | #43 |
-| 4 | [[I04] Implement safe endpoint and URL construction](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/45) | #9 | #44 |
-| 5 | [[I05] Implement headers and request encoding](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/46) | #8 | #45 |
-| 6 | [[I06] Enable real PR CI for all four platform families](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/47) | #23 | #46 |
-| 7 | [[I07] Implement response strategies and HTTP status validation](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/48) | #10 | #47 |
-| 8 | [[I08] Implement URLSession ownership and the transport adapter](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/49) | #21 | #48 |
-| 9 | [[I09] Implement HTTPS, loopback, and redirect policies](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/50) | #25 | #49 |
-| 10 | [[I10] Connect typed and raw calls to one secure HTTP pipeline](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/51) | #8 | #50 |
-| 11 | [[I11] Verify the initial HTTP core and F1 gate](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/52) | #23 | #51 |
-| 12 | [[I12] Implement cancellation and the total time budget](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/53) | #21 | #52 |
-| 13 | [[I13] Implement shutdown and concurrency isolation](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/54) | #21 | #53 |
-| 14 | [[I14] Implement the bounded authentication-header provider](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/55) | #25 | #54 |
-| 15 | [[I15] Implement sanitized optional diagnostics](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/56) | #20 | #55 |
-| 16 | [[I16] Verify secure storage and injected-session profiles](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/57) | #25 | #56 |
-| 16.5 | [[PREP-01] Prepare minimum-OS and physical-device evidence access](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/85) | #23 | None; planning/inventory only |
-| 17 | [[I17] Complete the test matrix and regression suite](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/58) | #23 | #57 |
-| 18 | [[I18] Complete API review, DocC, and integration guides](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/59) | #27 | #58, #95 |
-| 18.5 | [[BUG-01] Bound native HTTP probe liveness and diagnose main timeouts](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/95) | #23 | None; repair I18 main evidence before acceptance |
-| 18.75 | [[QA-01] Review quality and remove stale validation duplication](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/97) | #27 | #59 |
-| 19 | [[I19] Conduct the v1 security and privacy review](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/60) | #25 | #59, #97 |
-| 20 | [[I20] Measure baseline resource use and package quality](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/61) | #27 | #60 |
-| 20.5 | [[RES-01] Diagnose repeated-call RSS growth against native URLSession control](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/100) | #27 | #61 |
-| 20.75 | [[TLS-01] Verify native macOS rejection of an untrusted HTTPS certificate](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/104) | #25 | #60 |
-| 21 | [[I21] Obtain and document minimum-OS runtime evidence](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/62) | #23 | #60, #85 |
-| 22 | [[I22] Run representative tests on physical Apple devices](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/63) | #23 | #60, #85 |
-| 22.5 | [[GATE-F2] Reconcile v1 requirements, domain epics, and release evidence](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/86) | #29 | #59, #60, #61, #62, #63, #100, #104 |
-| 23 | [[I23] Rehearse the v1 release without publishing](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/64) | #27 | #63, #86 |
-| 23.75 | [WATCH-01: physical Watch publication evidence](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/132) | #29; publication milestone | Supported Watch development route; ADR-0013 |
-| 24 | [REL-01: Actual v1 release gate](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/29) | Governance | #64 and selected core epics |
+| 1 | [[I01] Create the Swift package and test target after authorization](https://github.com/BK-Teisrud/NetworkKit/issues/42) | #27 | None |
+| 2 | [[I02] Define immutable HTTP values, responses, and error taxonomy](https://github.com/BK-Teisrud/NetworkKit/issues/43) | #11 | #42 |
+| 3 | [[I03] Implement configuration snapshots and internal test boundaries](https://github.com/BK-Teisrud/NetworkKit/issues/44) | #22 | #43 |
+| 4 | [[I04] Implement safe endpoint and URL construction](https://github.com/BK-Teisrud/NetworkKit/issues/45) | #9 | #44 |
+| 5 | [[I05] Implement headers and request encoding](https://github.com/BK-Teisrud/NetworkKit/issues/46) | #8 | #45 |
+| 6 | [[I06] Enable real PR CI for all four platform families](https://github.com/BK-Teisrud/NetworkKit/issues/47) | #23 | #46 |
+| 7 | [[I07] Implement response strategies and HTTP status validation](https://github.com/BK-Teisrud/NetworkKit/issues/48) | #10 | #47 |
+| 8 | [[I08] Implement URLSession ownership and the transport adapter](https://github.com/BK-Teisrud/NetworkKit/issues/49) | #21 | #48 |
+| 9 | [[I09] Implement HTTPS, loopback, and redirect policies](https://github.com/BK-Teisrud/NetworkKit/issues/50) | #25 | #49 |
+| 10 | [[I10] Connect typed and raw calls to one secure HTTP pipeline](https://github.com/BK-Teisrud/NetworkKit/issues/51) | #8 | #50 |
+| 11 | [[I11] Verify the initial HTTP core and F1 gate](https://github.com/BK-Teisrud/NetworkKit/issues/52) | #23 | #51 |
+| 12 | [[I12] Implement cancellation and the total time budget](https://github.com/BK-Teisrud/NetworkKit/issues/53) | #21 | #52 |
+| 13 | [[I13] Implement shutdown and concurrency isolation](https://github.com/BK-Teisrud/NetworkKit/issues/54) | #21 | #53 |
+| 14 | [[I14] Implement the bounded authentication-header provider](https://github.com/BK-Teisrud/NetworkKit/issues/55) | #25 | #54 |
+| 15 | [[I15] Implement sanitized optional diagnostics](https://github.com/BK-Teisrud/NetworkKit/issues/56) | #20 | #55 |
+| 16 | [[I16] Verify secure storage and injected-session profiles](https://github.com/BK-Teisrud/NetworkKit/issues/57) | #25 | #56 |
+| 16.5 | [[PREP-01] Prepare minimum-OS and physical-device evidence access](https://github.com/BK-Teisrud/NetworkKit/issues/85) | #23 | None; planning/inventory only |
+| 17 | [[I17] Complete the test matrix and regression suite](https://github.com/BK-Teisrud/NetworkKit/issues/58) | #23 | #57 |
+| 18 | [[I18] Complete API review, DocC, and integration guides](https://github.com/BK-Teisrud/NetworkKit/issues/59) | #27 | #58, #95 |
+| 18.5 | [[BUG-01] Bound native HTTP probe liveness and diagnose main timeouts](https://github.com/BK-Teisrud/NetworkKit/issues/95) | #23 | None; repair I18 main evidence before acceptance |
+| 18.75 | [[QA-01] Review quality and remove stale validation duplication](https://github.com/BK-Teisrud/NetworkKit/issues/97) | #27 | #59 |
+| 19 | [[I19] Conduct the v1 security and privacy review](https://github.com/BK-Teisrud/NetworkKit/issues/60) | #25 | #59, #97 |
+| 20 | [[I20] Measure baseline resource use and package quality](https://github.com/BK-Teisrud/NetworkKit/issues/61) | #27 | #60 |
+| 20.5 | [[RES-01] Diagnose repeated-call RSS growth against native URLSession control](https://github.com/BK-Teisrud/NetworkKit/issues/100) | #27 | #61 |
+| 20.75 | [[TLS-01] Verify native macOS rejection of an untrusted HTTPS certificate](https://github.com/BK-Teisrud/NetworkKit/issues/104) | #25 | #60 |
+| 21 | [[I21] Obtain and document minimum-OS runtime evidence](https://github.com/BK-Teisrud/NetworkKit/issues/62) | #23 | #60, #85 |
+| 22 | [[I22] Run representative tests on physical Apple devices](https://github.com/BK-Teisrud/NetworkKit/issues/63) | #23 | #60, #85 |
+| 22.5 | [[GATE-F2] Reconcile v1 requirements, domain epics, and release evidence](https://github.com/BK-Teisrud/NetworkKit/issues/86) | #29 | #59, #60, #61, #62, #63, #100, #104 |
+| 23 | [[I23] Rehearse the v1 release without publishing](https://github.com/BK-Teisrud/NetworkKit/issues/64) | #27 | #63, #86 |
+| 23.75 | [WATCH-01: physical Watch publication evidence](https://github.com/BK-Teisrud/NetworkKit/issues/132) | #29; publication milestone | Supported Watch development route; ADR-0013 |
+| 24 | [REL-01: Actual v1 release gate](https://github.com/BK-Teisrud/NetworkKit/issues/29) | Governance | #64 and selected core epics |
 
 Historical review, 2026-10-27: preparation PR #103 is accepted through main run 40550211780. [TLS-01 / #104](NATIVE_TLS_REJECTION.md), Order 20.75, adds independently executable native macOS untrusted-certificate rejection coverage. It blocks #86 while #62/#63 remain Blocked for actual minimum/physical execution. System-trusted positive HTTPS and independent hostname-mismatch evidence are still missing. No support/tool change or owner-risk acceptance is inferred.
 
@@ -68,10 +73,10 @@ I21 may investigate access to older test environments as preparation without cod
 
 | Order | Planning task | Domain coverage | Readiness |
 | --- | --- | --- | --- |
-| 30 | [PLAN-F3 / #87](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/87) | #14 first; assess #12/#15/#19/#24 separately | Done; ADR-0014 and selected I24–I27 decomposition accepted |
-| 40 | [PLAN-F4 / #88](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/88) | #16/#26 | Done after PR #154/main run 41323512108; I28 accepted |
-| 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/89) | #17 | Backlog; real-time use case/lifecycle pending |
-| 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
+| 30 | [PLAN-F3 / #87](https://github.com/BK-Teisrud/NetworkKit/issues/87) | #14 first; assess #12/#15/#19/#24 separately | Done; ADR-0014 and selected I24–I27 decomposition accepted |
+| 40 | [PLAN-F4 / #88](https://github.com/BK-Teisrud/NetworkKit/issues/88) | #16/#26 | Done after PR #154/main run 41323512108; I28 accepted |
+| 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Backlog; real-time use case/lifecycle pending |
+| 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
 
 These are governance/planning tasks, not authorized extension implementation. F2 is complete; the selected F3 gate is current delivery work. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.
 
@@ -79,13 +84,13 @@ These are governance/planning tasks, not authorized extension implementation. F2
 
 [Preliminary F2 review](F2_REVIEW.md) indexes the ten core epics and 79 original source bullets without changing approved scope. #104 is accepted through main run 40556606300; #62/#63 actual access/execution and complete HTTPS/resource evidence remain Blocked. Both precede #86; #64 and #27 rehearsal follow, and #29 retains separate release authorization. Preparation does not satisfy those gates. F3 candidate work in other branches remains outside this F2 baseline.
 
-Physical iPhone follow-up: [PREP-02 / #113](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/113) is Ready/P1/CORE/Order 20.9 under #23, blocked by accepted START/I18 and blocking I22. Unsigned/signed builds succeeded, but actual device execution failed before tests because package tool-hosted tests need an app host. See [sanitized evidence](evidence/F2_IPHONE_ATTEMPT_2026-10-27.json). This is the next bounded F2 preparation task; no physical test pass or new host installation is claimed.
+Physical iPhone follow-up: [PREP-02 / #113](https://github.com/BK-Teisrud/NetworkKit/issues/113) is Ready/P1/CORE/Order 20.9 under #23, blocked by accepted START/I18 and blocking I22. Unsigned/signed builds succeeded, but actual device execution failed before tests because package tool-hosted tests need an app host. See [sanitized evidence](evidence/F2_IPHONE_ATTEMPT_2026-10-27.json). This is the next bounded F2 preparation task; no physical test pass or new host installation is claimed.
 
 PREP-02 implementation: [app-hosted iOS route](IOS_DEVICE_TEST_HOST.md) reuses all shared test files with drift guards and an unsigned device build in ios-core. Its 215-test app-hosted simulator and physical iPhone 17 Pro/iOS 27.2 runs passed; the temporary host was removed. Required PR/main checks remain on #113. Keep #63/#86 open for their complete evidence.
 
-NET-01 / [#115](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/115), P1 CORE Order 20.95 under #23, follows accepted I19/PREP-02 and blocks I22. [Public HTTPS verification](PUBLIC_HTTPS_VERIFICATION.md) supplies bounded native observations without provisioning a paid server; normal CI compiles only. #62 minimum access remains independent and all unproved native/resource/release claims stay open.
+NET-01 / [#115](https://github.com/BK-Teisrud/NetworkKit/issues/115), P1 CORE Order 20.95 under #23, follows accepted I19/PREP-02 and blocks I22. [Public HTTPS verification](PUBLIC_HTTPS_VERIFICATION.md) supplies bounded native observations without provisioning a paid server; normal CI compiles only. #62 minimum access remains independent and all unproved native/resource/release claims stay open.
 
-NET-01 #115 accepted through PR #116/main 40644612904. NET-02 #117 accepted through PR #118/main 40745209513. NET-02 / [#117](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/117), P1 CORE Order 20.96 under #23, follows accepted NET-01/PREP-02 and blocks I22. [Native lifecycle/storage observations](NATIVE_LIFECYCLE_STORAGE.md) remain separate from full ENV/resource/transition acceptance. [Minimum-runtime leads and authorization](MINIMUM_RUNTIME_ACCESS_2026-10-28.md) belong to independent #62; all three imports and [four separate minimum simulator regression runs](MINIMUM_RUNTIME_EXECUTION_2026-10-28.md) are now verified locally (215/215 each). A fresh iPhone boot completed after earlier migration timeouts. macOS 14 and remaining native/resource requirements remain open; this evidence awaits its PR/main acceptance.
+NET-01 #115 accepted through PR #116/main 40644612904. NET-02 #117 accepted through PR #118/main 40745209513. NET-02 / [#117](https://github.com/BK-Teisrud/NetworkKit/issues/117), P1 CORE Order 20.96 under #23, follows accepted NET-01/PREP-02 and blocks I22. [Native lifecycle/storage observations](NATIVE_LIFECYCLE_STORAGE.md) remain separate from full ENV/resource/transition acceptance. [Minimum-runtime leads and authorization](MINIMUM_RUNTIME_ACCESS_2026-10-28.md) belong to independent #62; all three imports and [four separate minimum simulator regression runs](MINIMUM_RUNTIME_EXECUTION_2026-10-28.md) are now verified locally (215/215 each). A fresh iPhone boot completed after earlier migration timeouts. macOS 14 and remaining native/resource requirements remain open; this evidence awaits its PR/main acceptance.
 
 Minimum macOS follow-up, 2026-10-29: [temporary standard GitHub macOS 14 execution route](MACOS14_EXECUTION_ROUTE_2026-10-29.md) prepares an exact-source prebuilt public consumer with the approved builder. Actual macOS 14 results are pending; observe brownout/retirement and stop at CI-dependent points. PR #120 minimum simulator evidence is accepted through main run 40765690271. Remaining native/physical/resource/rehearsal requirements are unchanged.
 
@@ -93,14 +98,14 @@ Minimum macOS follow-up, 2026-10-29: [temporary standard GitHub macOS 14 executi
 
 #87 and F3-DEC #106 are planning work. [Proposed ADR-0014](../decisions/ADR-0014-opt-in-retry-proposal.md) and [contract/decomposition](RETRY_INCREMENT_PLAN.md) record owner selections; complete acceptance/code start remain pending. Existing candidates #107/#108/#109/#110 stay Backlog, no I identifiers. Planned order is decision → eligibility/delay contracts → one-operation integration → native/resource verification → increment gate. Preserve the accepted F2 rows and separate #132/#29 publication lane. A documentation PR or generic continue instruction does not authorize retry code.
 
-- Order 40.1: [START-F4 / #145](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/145) — Done; I28 feasibility only authorized. See download plan for dependencies.
+- Order 40.1: [START-F4 / #145](https://github.com/BK-Teisrud/NetworkKit/issues/145) — Done; I28 feasibility only authorized. See download plan for dependencies.
 
-- Order 40.2: [I28 / #146](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/146) — Done after PR #154/main run 41323512108; detailed design accepted. See download plan for dependencies.
+- Order 40.2: [I28 / #146](https://github.com/BK-Teisrud/NetworkKit/issues/146) — Done after PR #154/main run 41323512108; detailed design accepted. See download plan for dependencies.
 
-- Order 40.3: [I29 / #147](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/147) — Done after PR #155/main run 41329332271. See download plan for dependencies.
+- Order 40.3: [I29 / #147](https://github.com/BK-Teisrud/NetworkKit/issues/147) — Done after PR #155/main run 41329332271. See download plan for dependencies.
 
-- Order 40.4: [I30 / #148](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/148) — Done after PR #156/main run 41333096996. See download plan for dependencies.
+- Order 40.4: [I30 / #148](https://github.com/BK-Teisrud/NetworkKit/issues/148) — Done after PR #156/main run 41333096996. See download plan for dependencies.
 
-- Order 40.5: [I31 / #149](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/149) — In Progress; native Mac checkpoint and remaining platform/HTTPS/resource criteria. See download plan for dependencies.
+- Order 40.5: [I31 / #149](https://github.com/BK-Teisrud/NetworkKit/issues/149) — Blocked by the maintenance chain; native Mac checkpoint and remaining platform/HTTPS/resource criteria retained. See download plan for dependencies.
 
-- Order 40.6: [I32 / #150](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/150) — Authorized in sequence; predecessor acceptance required. See download plan for dependencies.
+- Order 40.6: [I32 / #150](https://github.com/BK-Teisrud/NetworkKit/issues/150) — Authorized in sequence; predecessor acceptance required. See download plan for dependencies.

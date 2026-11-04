@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "run_url": "https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41178401513",
+  "run_url": "https://github.com/BK-Teisrud/NetworkKit/actions/runs/41178401513",
   "source_commit": "db1e4100d3d8303cb90e9f39fdd46553f3a67b8b",
   "conclusion": "failure",
   "builder": {

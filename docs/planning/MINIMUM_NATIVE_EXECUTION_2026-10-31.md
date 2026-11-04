@@ -1,6 +1,6 @@
 # Minimum Watch/TV native verification — 2026-10-31
 
-I21 / [#62](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/62). Reviewed implementation/test source is accepted main 5d2ae116ec685c483b1dcc31db9e41a850c4e2ac, PR #125 and main run 41182672027. The root CI passed 218 macOS tests, four simulator results of 215, two unsigned host builds and 16 helpers after full-log review. Those newer CI destinations remain distinct from these minimum runs.
+I21 / [#62](https://github.com/BK-Teisrud/NetworkKit/issues/62). Reviewed implementation/test source is accepted main 5d2ae116ec685c483b1dcc31db9e41a850c4e2ac, PR #125 and main run 41182672027. The root CI passed 218 macOS tests, four simulator results of 215, two unsigned host builds and 16 helpers after full-log review. Those newer CI destinations remain distinct from these minimum runs.
 
 ## Existing route, not a new host
 
@@ -22,7 +22,7 @@ Apple Watch Series 9 (45mm) / watchOS 10.0 (21R355) executed all 19 declarations
 
 All four finite local resource observations completed. The task-started Watch and minimum iPhone companion were shut down successfully (both exit 0). Full logs showed no unexpected restart or test time-limit failure; individual system timeouts remain failures. No failed suite was rerun, assertion skipped, support minimum changed or bound increased.
 
-[NET-04 #126](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/126) is the next P1 CORE investigation: compare plain Foundation and SDK cookie/store/redirect behavior; compare automatic challenge handling with an explicit fixed-synthetic Foundation fixture control; preserve failures and fix only demonstrated assumptions/defects. It follows accepted NET-03 and blocks the affected #62/#63 claims. TV/public-fixture timeout investigation remains under #62; no duplicate generic environment issue is added.
+[NET-04 #126](https://github.com/BK-Teisrud/NetworkKit/issues/126) is the next P1 CORE investigation: compare plain Foundation and SDK cookie/store/redirect behavior; compare automatic challenge handling with an explicit fixed-synthetic Foundation fixture control; preserve failures and fix only demonstrated assumptions/defects. It follows accepted NET-03 and blocks the affected #62/#63 claims. TV/public-fixture timeout investigation remains under #62; no duplicate generic environment issue is added.
 
 Apple's [watchOS networking note TN3135](https://developer.apple.com/documentation/technotes/tn3135-low-level-networking-on-watchos) distinguishes generally available URLSession HTTP/HTTPS from restricted low-level networking. Because this test fixture uses Network framework, its simulator execution must not be taken as proof that a normal physical Watch host can run the same listener. No audio/VoIP capability is to be added merely to circumvent that constraint. Apple's [ephemeral credential-store documentation](https://developer.apple.com/documentation/foundation/urlsessionconfiguration/urlcredentialstorage) describes private in-memory stores, but is not evidence that this particular Watch challenge control succeeded. Actual physical host/scenario applicability remains under #63.
 

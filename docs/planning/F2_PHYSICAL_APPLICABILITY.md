@@ -4,7 +4,7 @@ Date: 2026-10-31. Task: #63; reconciliation: #86. Status: accepted through PR #1
 
 ## Approved scope boundary
 
-[ADR-0013](../decisions/ADR-0013-watch-publication-gate.md) records the owner's explicit decision to move only missing physical Watch verification to [WATCH-01 / #132](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/132), a native blocker/sub-issue of #29. watchOS 10 support is unchanged. Watch simulator evidence remains separate; no physical Watch case passed. Other F2 criteria are unchanged.
+[ADR-0013](../decisions/ADR-0013-watch-publication-gate.md) records the owner's explicit decision to move only missing physical Watch verification to [WATCH-01 / #132](https://github.com/BK-Teisrud/NetworkKit/issues/132), a native blocker/sub-issue of #29. watchOS 10 support is unchanged. Watch simulator evidence remains separate; no physical Watch case passed. Other F2 criteria are unchanged.
 
 The non-Watch evidence below was accepted through PR #125/main 41182672027 (NET-03), PR #127/main 41199040706 (NET-04), PR #128/main 41203171039 (iPad strict TLS diagnostic and TV native results), PR #129/main 41221803657 (minimum-family and iPhone/iPad transitions), PR #130/main 41231362170 (Mac transitions) and PR #131/main 41234106849 (TV transitions). Exact SDK commits, fixture/source hashes and earlier failed observations remain in the linked records; an accepted later documentation commit does not relabel the executed SDK source.
 

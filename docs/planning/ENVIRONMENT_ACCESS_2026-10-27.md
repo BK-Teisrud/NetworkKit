@@ -1,6 +1,6 @@
 # Environment access refresh — 2026-10-27
 
-Scope: read-only preparation under [I21 / #62](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/62) and [I22 / #63](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/63), after RES-01 acceptance. Product baseline: `0922f40dac22cbecd62196024e3abf8f10ad352d`, main run 40459485079 succeeded with five complete runtime test results, release smoke and control type-check, without timeout/restart. #100 is complete for local attribution; actual target resources and explicit risk disposition remain open.
+Scope: read-only preparation under [I21 / #62](https://github.com/BK-Teisrud/NetworkKit/issues/62) and [I22 / #63](https://github.com/BK-Teisrud/NetworkKit/issues/63), after RES-01 acceptance. Product baseline: `0922f40dac22cbecd62196024e3abf8f10ad352d`, main run 40459485079 succeeded with five complete runtime test results, release smoke and control type-check, without timeout/restart. #100 is complete for local attribution; actual target resources and explicit risk disposition remain open.
 
 This refresh corrects the earlier unknown device inventory using local CoreDevice records. It does not establish fresh device communication, successful deployment or passing physical/minimum-runtime scenarios. The owner chose “not now; continue preparations” when offered a cable connection to the iPhone. Device execution remains deferred.
 

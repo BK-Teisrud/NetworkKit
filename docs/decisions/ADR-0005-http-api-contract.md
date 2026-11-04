@@ -1,7 +1,7 @@
 # ADR-0005: HTTP, response, and error contract in v1
 
 Date: 2026-10-19. Status: Core choices accepted by the owner; documented defaults elaborate those choices.
-Issue: [DEC-04 / #4](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/4).
+Issue: [DEC-04 / #4](https://github.com/BK-Teisrud/NetworkKit/issues/4).
 
 ## Approval and context
 

@@ -30,7 +30,7 @@ No hardware, subscription, paid test environment, OS/toolchain update, pairing r
 
 ## Owner decision
 
-Translated owner reply: “Approve moving to a mandatory release blocker.” Option B is selected. [WATCH-01 / #132](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/132) is a native blocker and sub-issue of #29. #29 and WATCH-01 are tracked in the separate “v1.0 – Publication gate” milestone so F2 can remain non-publishing. No release, F2 closure, support reduction or F3 implementation is approved. See [ADR-0013](../decisions/ADR-0013-watch-publication-gate.md).
+Translated owner reply: “Approve moving to a mandatory release blocker.” Option B is selected. [WATCH-01 / #132](https://github.com/BK-Teisrud/NetworkKit/issues/132) is a native blocker and sub-issue of #29. #29 and WATCH-01 are tracked in the separate “v1.0 – Publication gate” milestone so F2 can remain non-publishing. No release, F2 closure, support reduction or F3 implementation is approved. See [ADR-0013](../decisions/ADR-0013-watch-publication-gate.md).
 
 ## Primary references
 

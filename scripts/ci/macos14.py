@@ -65,12 +65,12 @@ def build(folder, https=False):
             native = package / 'Sources/NativeHTTPSProbe'
             native.mkdir(parents=True)
             shutil.copy2(ROOT / 'scripts/verification/NativeHTTPSProbe.swift', native / 'Probe.swift')
-            extra_target = ', .executableTarget(name: "NativeHTTPSProbe", dependencies: [.product(name: "NetworkKit", package: "SwiftNetworkKit")])'
+            extra_target = ', .executableTarget(name: "NativeHTTPSProbe", dependencies: [.product(name: "NetworkKit", package: "NetworkKit")])'
         (package / 'Package.swift').write_text('''// swift-tools-version: 6.2
 import PackageDescription
 let package = Package(name: "ResourceProbe", platforms: [.macOS(.v14)],
- dependencies: [.package(path: %s)], targets: [.executableTarget(name: "ResourceProbe",
- dependencies: [.product(name: "NetworkKit", package: "SwiftNetworkKit")])%s], swiftLanguageModes: [.v6])
+ dependencies: [.package(name: "NetworkKit", path: %s)], targets: [.executableTarget(name: "ResourceProbe",
+ dependencies: [.product(name: "NetworkKit", package: "NetworkKit")])%s], swiftLanguageModes: [.v6])
 ''' % (json.dumps(str(ROOT)), extra_target))
         args = ['swift', 'build', '--package-path', package, '-c', 'release', '--triple', 'arm64-apple-macosx14.0']
         command(*args, '-Xswiftc', '-warnings-as-errors')

@@ -14,7 +14,7 @@ Owner instruction: “Yes, authorize code start for I24–I27.” START-F3 #137 
 
 Refreshed: 2026-10-31. PLAN-F3 / #87; parent NK-07 / #14. Status: complete contract approved by the owner under [ADR-0014](../decisions/ADR-0014-opt-in-retry-proposal.md)/#106. Planning only; no extension code, dependency, date/version or implementation authorization. ADR-0013 is the separate accepted Watch decision.
 
-Accepted base: main `d0a522770269617f95660d67e9d0198838dc2bb5`, verified [run 41244932962](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41244932962): 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks, no failure/restart markers. F2 is closed. Physical Watch #132 and separate publication/workload/security #29 remain mandatory; planning has no hard dependency on publication.
+Accepted base: main `d0a522770269617f95660d67e9d0198838dc2bb5`, verified [run 41244932962](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41244932962): 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks, no failure/restart markers. F2 is closed. Physical Watch #132 and separate publication/workload/security #29 remain mandatory; planning has no hard dependency on publication.
 
 Owner confirmed 2026-10-31: general safe read-only app-data use case; exact opt-in/eligibility below; 250–500 ms jitter/30-second maximum; request/auth preparation once; diagnostic attempt count only. The owner also explicitly approved the complete parsing/lifecycle/compatibility contract. Planning PR/main acceptance and a separate code-start instruction remain required.
 
@@ -66,7 +66,7 @@ RES-01 found expiry-dependent runtime sleep-helper retention. Retry adds waiting
 | --- | --- | --- |
 | 30 | PLAN-F3 #87 | Planning decomposition and phase assessment; review PR/main required |
 | 30.1 | F3-DEC #106 | Complete owner contract decision recorded; review PR/main required |
-| 30.15 | [START-F3 / #137](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/137) | New explicit implementation instruction required; blocked by #87/#106 |
+| 30.15 | [START-F3 / #137](https://github.com/BK-Teisrud/NetworkKit/issues/137) | New explicit implementation instruction required; blocked by #87/#106 |
 | 30.2 | I24 / #107 (formerly F3-C01) | Eligibility/delay/API contracts with deterministic/parser/negative tests; Blocked by start gate and decision/core prerequisites |
 | 30.3 | I25 / #108 (formerly F3-C02) | One admitted operation/deadline integration and lifecycle regressions; Blocked by I24/start gate |
 | 30.4 | I26 / #109 (formerly F3-V01) | Controlled native/resource verification and target applicability; Blocked by I25/start gate |

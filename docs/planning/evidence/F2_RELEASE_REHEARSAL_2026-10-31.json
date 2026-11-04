@@ -28,7 +28,7 @@
   },
   "revision_installation": {
     "commit": "966599844ba59a35347e0f215f122fdebf084df3",
-    "dependency_url": "https://github.com/BK-Teisrud/SwiftNetworkKit.git",
+    "dependency_url": "https://github.com/BK-Teisrud/NetworkKit.git",
     "pin_count": 1,
     "resolved_revision_verified": true,
     "dependency_checkout_clean": true,
@@ -39,9 +39,9 @@
       "originHash": "92283af8770ff24780c882091f2f2f23848732f9a22af7703ead11321fd4003d",
       "pins": [
         {
-          "identity": "swiftnetworkkit",
+          "identity": "NetworkKit",
           "kind": "remoteSourceControl",
-          "location": "https://github.com/BK-Teisrud/SwiftNetworkKit.git",
+          "location": "https://github.com/BK-Teisrud/NetworkKit.git",
           "state": {
             "revision": "966599844ba59a35347e0f215f122fdebf084df3"
           }
@@ -136,7 +136,7 @@
     "sdk_symbol_records_in_matching_dsym": 1818,
     "api_client_symbol_records_in_matching_dsym": 110,
     "sdk_manifest_count": 1,
-    "sdk_manifest_relative_path": "SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy",
+    "sdk_manifest_relative_path": "NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy",
     "sdk_manifest_sha256": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3",
     "sdk_manifest_content": {
       "NSPrivacyTracking": false,

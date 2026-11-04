@@ -5,7 +5,7 @@ Status: Verification candidate; required PR/main checks pending. I31/I32 remain 
 
 ## Prerequisite and scope
 
-I29 #147 is completed after PR #155/main `07874101487ffd88dd5788077f5903dceb150420` / [run 41329332271](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41329332271): all seven jobs passed, full log reviewed (256 Mac tests, four 247-test simulator runs, 22 helpers and documentation/platform checks). The explicit I29–I32 instruction already authorizes this next task. Signing/device installation, purchases and publication remain excluded.
+I29 #147 is completed after PR #155/main `07874101487ffd88dd5788077f5903dceb150420` / [run 41329332271](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41329332271): all seven jobs passed, full log reviewed (256 Mac tests, four 247-test simulator runs, 22 helpers and documentation/platform checks). The explicit I29–I32 instruction already authorizes this next task. Signing/device installation, purchases and publication remain excluded.
 
 Only two existing test files change; production Sources/NetworkKit is byte-identical to the I29 baseline after restored mutations. No protocol, source API, file adapter, dependency, workflow or host membership changes are needed. Existing I29 critical tests are retained rather than duplicated into another framework.
 

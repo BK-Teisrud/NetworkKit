@@ -3,7 +3,7 @@
 Current gate disposition, 2026-10-31: the owner explicitly approved **only the non-publishing F2 rehearsal** with the documented runtime-retention, call-rate/payload/budget and finite-RSS limitations; see [GATE-F2 resource disposition](F2_REVIEW.md#resource-disposition-for-this-gate). The provisional eight-active-call / expected 1 MiB guidance is not an enforced cap or validated app fit. #29 still requires actual workload/device-memory suitability, security and publication authorization; #132 retains physical Watch evidence. No production suitability or release is approved. Earlier dated statements below preserve their original evidence limits.
 
 
-Reviewed 2026-10-26 under [#100](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/100). Product baseline: accepted I20 merge `98f23d32834ec5991ba0446cfd36c9966625fa3f`, main run 40408266400. No production Swift source, public API, timeout default or clock/lifecycle semantics are changed by this investigation. Candidate PR/main checks are required before #100 completion.
+Reviewed 2026-10-26 under [#100](https://github.com/BK-Teisrud/NetworkKit/issues/100). Product baseline: accepted I20 merge `98f23d32834ec5991ba0446cfd36c9966625fa3f`, main run 40408266400. No production Swift source, public API, timeout default or clock/lifecycle semantics are changed by this investigation. Candidate PR/main checks are required before #100 completion.
 
 ## Finding and disposition
 

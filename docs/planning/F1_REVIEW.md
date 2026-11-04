@@ -1,6 +1,6 @@
 # F1 HTTP core verification
 
-I11 / [#52](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/52), reviewed 2026-10-21.
+I11 / [#52](https://github.com/BK-Teisrud/NetworkKit/issues/52), reviewed 2026-10-21.
 This report verifies the initial HTTP slice against the approved F1 boundary. The final
 I11 PR, commit hashes, actual hosted test counts and phase-transition outcome are recorded
 on #52 after its PR and main checks pass. F1 acceptance does not authorize a release or
@@ -13,22 +13,22 @@ were read back from GitHub as merged; I06 has separate bootstrap/enforcement PRs
 
 | Task | Delivered behavior | Merged PR | Merge revision |
 | --- | --- | --- | --- |
-| [I01 / #42](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/42) | Package/product/targets | [#67](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/67) | `c9bcac3d2e0c` |
-| [I02 / #43](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/43) | HTTP values and structured errors | [#68](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/68) | `194024399cc7` |
-| [I03 / #44](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/44) | Immutable configuration and internal seams | [#69](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/69) | `235da22aeb8b` |
-| [I04 / #45](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/45) | Endpoint and safe URL construction | [#70](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/70) | `fcc684d8ac6b` |
-| [I05 / #46](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/46) | Buffered bodies and header precedence | [#71](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/71) | `dc3688cc4e4c` |
-| [I06 / #47](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/47) | Real platform CI and enforced quality-gate | [#72](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/72) | `fe47c58da976` |
-| [I06 / #47](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/47) | Required-check negative control and enforcement | [#73](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/73) | `e2c85b583c0c` |
-| [I07 / #48](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/48) | Response strategies and status policy | [#74](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/74) | `43739acff880` |
-| [I08 / #49](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/49) | Owned/borrowed session transport | [#75](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/75) | `d29272d97349` |
-| [I09 / #50](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/50) | HTTPS/origin/loopback/redirect/trust policy | [#76](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/76) | `00f648d525a4` |
-| [I10 / #51](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/51) | Shared public typed/raw pipeline | [#77](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/77) | `a09605739b92` |
+| [I01 / #42](https://github.com/BK-Teisrud/NetworkKit/issues/42) | Package/product/targets | [#67](https://github.com/BK-Teisrud/NetworkKit/pull/67) | `c9bcac3d2e0c` |
+| [I02 / #43](https://github.com/BK-Teisrud/NetworkKit/issues/43) | HTTP values and structured errors | [#68](https://github.com/BK-Teisrud/NetworkKit/pull/68) | `194024399cc7` |
+| [I03 / #44](https://github.com/BK-Teisrud/NetworkKit/issues/44) | Immutable configuration and internal seams | [#69](https://github.com/BK-Teisrud/NetworkKit/pull/69) | `235da22aeb8b` |
+| [I04 / #45](https://github.com/BK-Teisrud/NetworkKit/issues/45) | Endpoint and safe URL construction | [#70](https://github.com/BK-Teisrud/NetworkKit/pull/70) | `fcc684d8ac6b` |
+| [I05 / #46](https://github.com/BK-Teisrud/NetworkKit/issues/46) | Buffered bodies and header precedence | [#71](https://github.com/BK-Teisrud/NetworkKit/pull/71) | `dc3688cc4e4c` |
+| [I06 / #47](https://github.com/BK-Teisrud/NetworkKit/issues/47) | Real platform CI and enforced quality-gate | [#72](https://github.com/BK-Teisrud/NetworkKit/pull/72) | `fe47c58da976` |
+| [I06 / #47](https://github.com/BK-Teisrud/NetworkKit/issues/47) | Required-check negative control and enforcement | [#73](https://github.com/BK-Teisrud/NetworkKit/pull/73) | `e2c85b583c0c` |
+| [I07 / #48](https://github.com/BK-Teisrud/NetworkKit/issues/48) | Response strategies and status policy | [#74](https://github.com/BK-Teisrud/NetworkKit/pull/74) | `43739acff880` |
+| [I08 / #49](https://github.com/BK-Teisrud/NetworkKit/issues/49) | Owned/borrowed session transport | [#75](https://github.com/BK-Teisrud/NetworkKit/pull/75) | `d29272d97349` |
+| [I09 / #50](https://github.com/BK-Teisrud/NetworkKit/issues/50) | HTTPS/origin/loopback/redirect/trust policy | [#76](https://github.com/BK-Teisrud/NetworkKit/pull/76) | `00f648d525a4` |
+| [I10 / #51](https://github.com/BK-Teisrud/NetworkKit/issues/51) | Shared public typed/raw pipeline | [#77](https://github.com/BK-Teisrud/NetworkKit/pull/77) | `a09605739b92` |
 
 I01–I05 predate hosted CI. Their original local checks are not retroactively described
 as four-platform PR checks. Their cumulative behavior is exercised by I06 onward and
-by the I10/F1 suites. [I10 PR run 39650778950](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39650778950)
-and [main run 39652280325](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39652280325)
+by the I10/F1 suites. [I10 PR run 39650778950](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39650778950)
+and [main run 39652280325](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39652280325)
 passed all seven jobs; each log records 135 test functions / 18 suites on five runtimes.
 The baseline reviewed here is `a09605739b92e53954b4ce4f3a6fb9b1825af8ce`.
 
@@ -39,7 +39,7 @@ Existing detailed task guides retain their dated evidence.
 
 | F1 contract and traceability | Executable evidence | Assessment |
 | --- | --- | --- |
-| Package SwiftNetworkKit, product/import NetworkKit, one module, no dependencies, Swift 6 / tools 6.2; #27 / I01 | source-integrity manifest checks; public consumer tests; generic platform builds | Delivered; later API/resource/release reviews remain open |
+| Package NetworkKit, product/import NetworkKit, one module, no dependencies, Swift 6 / tools 6.2; #27 / I01 | source-integrity manifest checks; public consumer tests; generic platform builds | Delivered; later API/resource/release reviews remain open |
 | Methods, buffered JSON/Data/text bodies, header precedence; #8 / ADR-0005 | RequestEncodingTests; F1AcceptanceTests.typedAndRawPOSTHaveRequestAndResponseParity | Delivered; no stream/multipart/transfer/interceptor API |
 | Safe base/path/query construction; #9 / ADR-0005 | EndpointURLTests; ordered repeated/nil/empty query in the F1 POST parity test | Delivered; no automatic API versioning |
 | JSON/Data/strict UTF-8/explicit empty responses and metadata; #10 / ADR-0005 | ResponseDecodingTests; HTTPPipelineTests; F1AcceptanceTests.invalidUTF8IsDecodingFailureForBothInputs | Delivered; no streaming or custom format framework |

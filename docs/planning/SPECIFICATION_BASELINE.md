@@ -6,8 +6,8 @@ Source: NetworkKit_Teknisk_Spesifikasjon.pdf, version 1.0, dated 2026-10-19, 15 
 
 ## Approved setup decisions
 
-- Repository SwiftNetworkKit, account owner BK-Teisrud, public visibility, explicitly selected by the owner.
-- V1: HTTP core first, extensions later. Package SwiftNetworkKit; product/module/import NetworkKit; one library module. See V1_SCOPE.md and ADR-0003.
+- Repository NetworkKit, account owner BK-Teisrud, public visibility, explicitly selected by the owner.
+- V1: HTTP core first, extensions later. Package NetworkKit; product/module/import NetworkKit; one library module. See V1_SCOPE.md and ADR-0003.
 - Rights holder Teisrud Development AS. Proprietary; third-party use requires separate permission, subject to law/GitHub terms. See ADR-0002 and LICENSE.
 - Repository/GitHub setup, documentation, and planning only. No Swift files, Package.swift, prototypes, tests, or executable workflows.
 - Native Apple APIs and the Swift standard library without external package dependencies, including separately distributed Apple packages such as SwiftNIO.

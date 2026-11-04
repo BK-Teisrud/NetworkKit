@@ -1,7 +1,7 @@
 # ADR-0006: Session ownership, concurrency, and time limits
 
 Date: 2026-10-19. Status: Core choices accepted by the owner; lifecycle and concurrency details elaborate those choices.
-Issue: [DEC-05 / #5](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/5).
+Issue: [DEC-05 / #5](https://github.com/BK-Teisrud/NetworkKit/issues/5).
 
 ## Owner's choices
 

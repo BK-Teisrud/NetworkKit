@@ -137,7 +137,7 @@ platform test is hidden behind a skip or reported as stronger evidence than it p
 SDK 26.2 declarations for data(for:delegate:) and OSAllocatedUnfairLock are within all
 selected minimums (macOS 12/iOS 15/watchOS 8/tvOS 15 and macOS 13/iOS 16/watchOS 9/tvOS 16,
 respectively). The new watchOS test target also compiles with warnings as errors. Actual
-hosted PR/main run links are recorded on [#50](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/50)
+hosted PR/main run links are recorded on [#50](https://github.com/BK-Teisrud/NetworkKit/issues/50)
 before completed closure. TLS rejection is implemented by system handling; no real
 certificate/handshake integration is claimed from these callback tests.
 

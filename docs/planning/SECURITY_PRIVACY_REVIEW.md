@@ -7,7 +7,7 @@ Current gate disposition, 2026-10-31: the owner explicitly approved **only the n
 
 Current public-fixture decision, 2026-10-27: the owner selected [HTTPBingo/BadSSL verification](PUBLIC_HTTPS_VERIFICATION.md), NET-01 #115, instead of provisioning a paid/private HTTPS server. Public native observations are allowed for claims they actually support. Earlier controlled-fixture requirements still apply to server-counter/zero-contact claims; minimum/physical/resource/archive/privacy and owner release gates remain. Earlier no-endpoint statements below preserve their historical context.
 
-Date: 2026-10-26. Baseline: main `d79cc031957a1f9690d7f5e5ec9efbdca6c6d9d1` (QA-01), main CI run 40396838559 succeeded. Candidate changes add a bundled privacy manifest, its resource test and this review; no transport behavior or public API is intentionally changed. Acceptance requires candidate PR and merged-main evidence recorded on [#60](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/60).
+Date: 2026-10-26. Baseline: main `d79cc031957a1f9690d7f5e5ec9efbdca6c6d9d1` (QA-01), main CI run 40396838559 succeeded. Candidate changes add a bundled privacy manifest, its resource test and this review; no transport behavior or public API is intentionally changed. Acceptance requires candidate PR and merged-main evidence recorded on [#60](https://github.com/BK-Teisrud/NetworkKit/issues/60).
 
 ## Review result and scope
 

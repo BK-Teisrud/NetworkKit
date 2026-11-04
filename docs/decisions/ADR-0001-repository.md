@@ -4,7 +4,7 @@ Date: 2026-10-19. Status: Accepted for repository setup.
 
 ## Context
 
-The owner requested a complete GitHub setup for the PDF specification, without code, and selected a public repository named SwiftNetworkKit under BK-Teisrud.
+The owner requested a complete GitHub setup for the PDF specification, without code, and selected a public repository under BK-Teisrud. Its current name is NetworkKit under the subsequent [unified naming decision](ADR-0016-unified-networkkit-name.md).
 
 ## Decision
 

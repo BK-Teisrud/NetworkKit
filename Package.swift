@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftNetworkKit",
+    name: "NetworkKit",
     platforms: [
         .iOS(.v17),
         .macOS(.v14),

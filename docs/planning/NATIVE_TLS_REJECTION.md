@@ -1,6 +1,6 @@
 # TLS-01 — native macOS untrusted-certificate rejection
 
-Date: 2026-10-27. Task: [#104](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/104), CORE/P1, Order 20.75, under #25 in F2. Baseline: `dcf0a1b57c43ea5d96e06ee1d328e2d3d86a1a76`, accepted preparation PR #103 / main run 40550211780. This is a new native negative regression, independently executable while the owner defers physical-device connection. No production source/API, session/security policy, support minimum or package dependency changes.
+Date: 2026-10-27. Task: [#104](https://github.com/BK-Teisrud/NetworkKit/issues/104), CORE/P1, Order 20.75, under #25 in F2. Baseline: `dcf0a1b57c43ea5d96e06ee1d328e2d3d86a1a76`, accepted preparation PR #103 / main run 40550211780. This is a new native negative regression, independently executable while the owner defers physical-device connection. No production source/API, session/security policy, support minimum or package dependency changes.
 
 ## Actual boundary exercised
 

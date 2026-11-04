@@ -6,7 +6,7 @@ Owner: #146 / #88; ADR-0015 revision 1 remains the approved planning baseline.
 
 ## Accepted evidence and decision boundary
 
-PR #153/main `e9563ae1f758d9cba34b88369b05002abca5ff22` passed all seven jobs in [run 41320609362](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41320609362), full log reviewed. [Native transport evidence](I28_DOWNLOAD_FEASIBILITY_2026-11-01.md) records 28 bounded observations and compile-only minimum targets; [handoff evidence](I28_FILE_HANDOFF_2026-11-01.md) records seven ownership observations. Ordinary CI passes do not mean these opt-in experiments ran in CI. Their source hashes and execution limits remain immutable.
+PR #153/main `e9563ae1f758d9cba34b88369b05002abca5ff22` passed all seven jobs in [run 41320609362](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41320609362), full log reviewed. [Native transport evidence](I28_DOWNLOAD_FEASIBILITY_2026-11-01.md) records 28 bounded observations and compile-only minimum targets; [handoff evidence](I28_FILE_HANDOFF_2026-11-01.md) records seven ownership observations. Ordinary CI passes do not mean these opt-in experiments ran in CI. Their source hashes and execution limits remain immutable.
 
 The recommendation is a conditional feasibility go for the selected first slice, not completed implementation or production support. The owner disposition below is accepted. Accept the final planning PR/main and then complete #146/#88 only against their actual criteria. I29–I32 still require a separate explicit implementation instruction. Do not keep repeating generic feasibility checkpoints after that boundary: integrated behavior belongs in the selected implementation/test/native tasks.
 
@@ -80,7 +80,7 @@ No new issue/milestone, generic refactor, date, purchase, platform-support downg
 
 ## Explicit owner approval and closure criteria
 
-The owner approved the complete [publicly reviewable design](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/88#issuecomment-6560073646) on 2026-11-01. Translated reply: “Approve the detailed design and limitation; no I29 code.” The original Norwegian reply remains in the conversation. This approves exact API/error/diagnostic planning and the unobservable Foundation-owned partial-file limitation, not shipping source or runtime support. Earlier native/handoff reports describe their submission-time open design questions; this later owner decision resolves those questions without rewriting their raw evidence.
+The owner approved the complete [publicly reviewable design](https://github.com/BK-Teisrud/NetworkKit/issues/88#issuecomment-6560073646) on 2026-11-01. Translated reply: “Approve the detailed design and limitation; no I29 code.” The original Norwegian reply remains in the conversation. This approves exact API/error/diagnostic planning and the unobservable Foundation-owned partial-file limitation, not shipping source or runtime support. Earlier native/handoff reports describe their submission-time open design questions; this later owner decision resolves those questions without rewriting their raw evidence.
 
 | I28 / #88 criterion | Completion basis and retained limit |
 | --- | --- |

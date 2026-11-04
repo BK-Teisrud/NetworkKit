@@ -1,6 +1,6 @@
 # Setup status and verification
 
-Verified 2026-10-19. [Public repository](https://github.com/BK-Teisrud/SwiftNetworkKit), [private project](https://github.com/users/BK-Teisrud/projects/6). These settings were read back from GitHub, not merely proposed in JSON. This section records the 2026-10-19 setup baseline. **For current implementation status, see the update below and ADR-0012.**
+Verified 2026-10-19. [Public repository](https://github.com/BK-Teisrud/NetworkKit), [private project](https://github.com/users/BK-Teisrud/projects/6). These settings were read back from GitHub, not merely proposed in JSON. This section records the 2026-10-19 setup baseline. **For current implementation status, see the update below and ADR-0012.**
 
 | Area | Result and rationale |
 | --- | --- |
@@ -26,7 +26,7 @@ Verified 2026-10-19. [Public repository](https://github.com/BK-Teisrud/SwiftNetw
 
 ## Project workflow functional test
 
-[Setup issue #40](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/40) was created without explicit project import. Native automation imported it as Backlog. Setting project status to Done left the issue open, verified by API. It was closed as completed, reopened, and automatically returned to Backlog. Closing it again automatically set Done. All four checks passed. No product/test code was created.
+[Setup issue #40](https://github.com/BK-Teisrud/NetworkKit/issues/40) was created without explicit project import. Native automation imported it as Backlog. Setting project status to Done left the issue open, verified by API. It was closed as completed, reopened, and automatically returned to Backlog. Closing it again automatically set Done. All four checks passed. No product/test code was created.
 
 Native subissue relations exist; all 45 expected I01–I23 blocked-by relations were read back, and workflow enabled states were confirmed. PR merged/auto-add subissues have not been separately tested end to end with a product PR. Item closed does not distinguish closure reason: manually set Not Planned for rejected work. Completed filters on reason:completed, preventing false delivery counts. Triage synchronizes Priority/Scope manually.
 
@@ -38,7 +38,7 @@ Configuration baselines live in .github/settings and .github/rulesets. They are 
 
 ## Completed and outstanding work
 
-F0 planning and repository preparation are complete. PR #65 closed OPS-01 / #30; F0 was then closed with zero open issues. This is not product delivery. [START-00 / #41](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/41) in F1 remains open until explicit owner authorization. I01 is the first code task after approval.
+F0 planning and repository preparation are complete. PR #65 closed OPS-01 / #30; F0 was then closed with zero open issues. This is not product delivery. [START-00 / #41](https://github.com/BK-Teisrud/NetworkKit/issues/41) in F1 remains open until explicit owner authorization. I01 is the first code task after approval.
 
 [PRE_CODE_READINESS.md](../planning/PRE_CODE_READINESS.md) records outstanding per-task symbol checks, real CI in I06, and minimum-OS/device evidence in I21/I22. Newer device access is owner-reported without exact versions. Missing minimum environments block release; no purchases/upgrades or support changes are approved.
 
@@ -52,7 +52,7 @@ Language migration readback verified all 55 existing issues and 10 previous PR t
 
 ## Implementation update — 2026-10-20
 
-The owner instructed implementation to begin and supplied a default Xcode package. ADR-0012 records the instruction; #41 is closed explicitly. I01 / #42 adapts the starter at the repository root, with package SwiftNetworkKit, product/module NetworkKit, tools 6.2, Swift 6 mode, and minimum OS versions 17/14/10/17. See [PACKAGE_BASELINE.md](../planning/PACKAGE_BASELINE.md) for actual smoke checks and limitations. No HTTP behavior, meaningful behavioral tests, CI workflows, or releases are claimed. Earlier preparation/language verification paragraphs above remain dated historical records.
+The owner instructed implementation to begin and supplied a default Xcode package. ADR-0012 records the instruction; #41 is closed explicitly. I01 / #42 adapts the starter at the repository root, with package NetworkKit, product/module NetworkKit, tools 6.2, Swift 6 mode, and minimum OS versions 17/14/10/17. See [PACKAGE_BASELINE.md](../planning/PACKAGE_BASELINE.md) for actual smoke checks and limitations. No HTTP behavior, meaningful behavioral tests, CI workflows, or releases are claimed. Earlier preparation/language verification paragraphs above remain dated historical records.
 
 ## I02 value-layer update — 2026-10-20
 

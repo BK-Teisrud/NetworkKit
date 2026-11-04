@@ -1,18 +1,18 @@
 # ADR-0003: HTTP core in v1 and package, product, and module names
 
 Date: 2026-10-19. Status: Accepted by the project owner in conversation.
-Issue: [DEC-02 / #2](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/2).
+Issue: [DEC-02 / #2](https://github.com/BK-Teisrud/NetworkKit/issues/2).
 
 ## Context and approval
 
-The owner selected, in translation, “HTTP core first; other modules later,” followed by “Repository SwiftNetworkKit, but product/import NetworkKit, one module.” This sets the delivery boundary and names. It does not authorize implementation.
+The original owner decision selected the HTTP core first and one library module. On 2026-11-04 the owner unified repository, package, product and import under NetworkKit; [ADR-0016](ADR-0016-unified-networkkit-name.md) supersedes the original repository/package naming distinction. This naming decision does not expand implementation scope.
 
 ## Decision
 
 | Role | Approved name / boundary |
 | --- | --- |
-| GitHub repository | SwiftNetworkKit |
-| Swift package | SwiftNetworkKit |
+| GitHub repository | NetworkKit |
+| Swift package | NetworkKit |
 | Library product | NetworkKit |
 | Library module / target / import | NetworkKit |
 | Library modules in v1 | One |
@@ -25,7 +25,7 @@ The first stable release provides a bounded HTTP core with typed calls, JSON, pr
 
 ## Alternatives and trade-offs
 
-- Using SwiftNetworkKit for both repository and import would provide one name everywhere. The owner prefers NetworkKit for the product/import.
+- Separate repository/package and product/import names were originally selected. The owner subsequently chose one name everywhere; the current table reflects that superseding decision.
 - Multiple library modules from the outset would provide separate products, but introduce dependency and API boundaries before a need is established. Not selected.
 - Delivering retry/cache or the full feature catalog before the first stable release would expand the initial delivery. The owner chose the HTTP core first.
 

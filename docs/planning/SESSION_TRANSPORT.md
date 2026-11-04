@@ -120,7 +120,7 @@ DataOperation injection prevent cross-test/public-network dependencies in the co
 The inspected SDK 26.2 Foundation interface declares data(for:delegate:) from macOS 12,
 iOS 15, watchOS 8 and tvOS 15, within every selected minimum. The test lock is available
 from macOS 13/iOS 16/watchOS 9/tvOS 16. Actual hosted PR/main evidence is recorded on
-[issue #49](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/49) before completion.
+[issue #49](https://github.com/BK-Teisrud/NetworkKit/issues/49) before completion.
 No minimum-OS, physical-device, TLS, redirect, secure-erasure or full shutdown claim follows.
 
 Primary references: [Apple URLSession](https://developer.apple.com/documentation/foundation/urlsession),
@@ -130,7 +130,7 @@ and [session invalidation](https://developer.apple.com/documentation/foundation/
 
 ## watchOS test isolation correction
 
-The initial hosted run [39625774288](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39625774288)
+The initial hosted run [39625774288](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39625774288)
 passed source integrity, macOS/iPhone/iPad/tvOS and DocC, but watchOS ignored custom
 URLProtocol handlers and attempted DNS resolution for the reserved example.invalid
 fixture host. Those tests failed; the required quality-gate correctly blocked merge.

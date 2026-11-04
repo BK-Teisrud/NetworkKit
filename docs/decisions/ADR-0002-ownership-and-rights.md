@@ -1,7 +1,7 @@
 # ADR-0002: Rights holder and proprietary rights policy
 
 Date: 2026-10-19. Status: Accepted by the project owner in conversation.
-Decision issue: [DEC-03 / #3](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/3).
+Decision issue: [DEC-03 / #3](https://github.com/BK-Teisrud/NetworkKit/issues/3).
 
 ## Context
 

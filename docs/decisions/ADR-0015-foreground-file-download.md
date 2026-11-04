@@ -21,7 +21,7 @@ A saved-file URL and per-task delegate are documented API routes; runtime behavi
 
 ## Approval and verification
 
-The owner approved the complete publicly reviewable [revision 1 proposal](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/88#issuecomment-6558541234) on 2026-11-01. Translated reply: “Approve the planning proposal; still no code.” No prototype, shipping source, test execution, publication or additional feature is authorized. Required planning PR/main acceptance is still outstanding. #88 remains open for original specification reconciliation, native feasibility and detailed issue/dependency acceptance. Separate code-start decisions follow; planning approval must never satisfy them automatically.
+The owner approved the complete publicly reviewable [revision 1 proposal](https://github.com/BK-Teisrud/NetworkKit/issues/88#issuecomment-6558541234) on 2026-11-01. Translated reply: “Approve the planning proposal; still no code.” No prototype, shipping source, test execution, publication or additional feature is authorized. Required planning PR/main acceptance is still outstanding. #88 remains open for original specification reconciliation, native feasibility and detailed issue/dependency acceptance. Separate code-start decisions follow; planning approval must never satisfy them automatically.
 
 ## Consequences and deferred scope
 

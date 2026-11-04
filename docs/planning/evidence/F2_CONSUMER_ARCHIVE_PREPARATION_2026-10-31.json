@@ -9,7 +9,7 @@
     "note": "The installed Release binary is stripped; provenance is from its matching archive dSYM."
   },
   "manifest": {
-    "relative_path": "SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy",
+    "relative_path": "NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy",
     "sha256": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3",
     "content": {
       "NSPrivacyTracking": false,
@@ -54,7 +54,7 @@
       "observed_purpose": "App Functionality",
       "tracking": "NO",
       "linked": "NO",
-      "origin": "NetworkKitReleaseConsumer.app/SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy"
+      "origin": "NetworkKitReleaseConsumer.app/NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy"
     }
   },
   "aggregation_limits": [

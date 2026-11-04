@@ -2,7 +2,7 @@
 
 Optional public checks: [NET-01](../PublicHTTPSChecks/README.md) adds the separate PublicHTTPSChecks target/scheme using this same host. The default scheme still executes only the shared regression suite. Public checks are manually selected; CI compiles the optional route without executing external-service tests.
 
-PREP-02 / [#113](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/113) supplies an app-hosted test route after the package's system-xctest host was rejected on a physical destination. This is local verification infrastructure, not a distributed app or another library product. The package, public APIs and support minima remain unchanged.
+PREP-02 / [#113](https://github.com/BK-Teisrud/NetworkKit/issues/113) supplies an app-hosted test route after the package's system-xctest host was rejected on a physical destination. This is local verification infrastructure, not a distributed app or another library product. The package, public APIs and support minima remain unchanged.
 
 ## Structure and permissions
 

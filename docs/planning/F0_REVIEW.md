@@ -3,14 +3,14 @@
 > Historical planning/setup record from 2026-10-19. Implementation was subsequently authorized on 2026-10-20 in [ADR-0012](../decisions/ADR-0012-implementation-start.md). The package baseline is documented in [PACKAGE_BASELINE.md](PACKAGE_BASELINE.md). Earlier no-code statements describe that earlier stage.
 
 Status: Accepted by the owner on 2026-10-19. **Implementation is not authorized; still no code.** See [ADR-0009](../decisions/ADR-0009-f0-approval-no-implementation.md).
-Date: 2026-10-19. Architecture gate: [GATE-00 / #28](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/28).
+Date: 2026-10-19. Architecture gate: [GATE-00 / #28](https://github.com/BK-Teisrud/NetworkKit/issues/28).
 
 ## Decisions accepted together
 
 | Issue | Decision | Authoritative documentation |
 | --- | --- | --- |
 | DEC-03 / #3 | Teisrud Development AS holds the rights. Proprietary; third-party use requires separate written permission, subject to law/GitHub terms. Public under BK-Teisrud | [ADR-0002](../decisions/ADR-0002-ownership-and-rights.md), LICENSE |
-| DEC-02 / #2 | HTTP core first; repository/package SwiftNetworkKit, product/module/import NetworkKit, one library module | [ADR-0003](../decisions/ADR-0003-v1-scope-and-naming.md), [v1 scope](V1_SCOPE.md) |
+| DEC-02 / #2 | HTTP core first; repository/package NetworkKit, product/module/import NetworkKit, one library module | [ADR-0003](../decisions/ADR-0003-v1-scope-and-naming.md), [v1 scope](V1_SCOPE.md) |
 | DEC-01 / #1 | iOS/iPadOS 17, macOS 14, watchOS 10, tvOS 17; Xcode 26.3+, Swift tools 6.2, Swift 6 mode; visionOS deferred | [ADR-0004](../decisions/ADR-0004-platforms-and-toolchain.md), [platform matrix](PLATFORM_MATRIX.md) |
 | DEC-04 / #4 | Typed + raw requests; response wrapper; JSON/Data/text/empty; structured errors with separate CancellationError; 2xx with explicit call exceptions | [ADR-0005](../decisions/ADR-0005-http-api-contract.md), [HTTP contract](HTTP_API_CONTRACT.md) |
 | DEC-05 / #5 | Reused owned session plus app-owned injection; configurable 30-second inactivity / 60-second total budget; isolated state, unambiguous cancellation/timeout, controlled shutdown | [ADR-0006](../decisions/ADR-0006-concurrency-and-lifecycle.md), [lifecycle](CONCURRENCY_AND_LIFECYCLE.md) |

@@ -43,7 +43,7 @@
     "sdk": "26.2",
     "files": {
       "ResourceProbe": "9a51af9aca66fb07ecd86e4f02c973fc8e5707a64805fd741501520a60260d79",
-      "SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
+      "NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
     }
   },
   "execution_os": "ProductName:\t\tmacOS\nProductVersion:\t\t14.8.9\nBuildVersion:\t\t23J631",
@@ -600,11 +600,11 @@
     "No universal memory cap or owner release-risk acceptance."
   ],
   "date": "2026-10-31",
-  "run_url": "https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41179430976",
+  "run_url": "https://github.com/BK-Teisrud/NetworkKit/actions/runs/41179430976",
   "conclusion": "success",
   "full_log_sha256": "9376e6f54595ee68896af6eca04c1874f0bb06d373296e1a098ae24012bdaa2a",
   "accepted_main_ci": {
-    "url": "https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41179384664",
+    "url": "https://github.com/BK-Teisrud/NetworkKit/actions/runs/41179384664",
     "source_commit": "0ab623fe67e1be161f2ef1f3ac2fc67107cebb70",
     "macos_tests": 218,
     "simulator_tests_each": 215,

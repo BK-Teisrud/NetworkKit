@@ -1,7 +1,7 @@
 # ADR-0008: CI, official tools, and cost limits
 
 Date: 2026-10-19. Status: Core choices accepted by the owner; the execution plan and security details elaborate those choices.
-Issue: [DEC-07 / #7](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/7).
+Issue: [DEC-07 / #7](https://github.com/BK-Teisrud/NetworkKit/issues/7).
 
 ## Approved choices
 

@@ -1,6 +1,6 @@
 # Optional sanitized diagnostics
 
-I15 / [#56](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/56), 2026-10-22.
+I15 / [#56](https://github.com/BK-Teisrud/NetworkKit/issues/56), 2026-10-22.
 APIClient now supports a local app-owned sink through the immutable
 `NetworkConfiguration.diagnostics: (any NetworkDiagnosticSink)?` setting.
 It defaults to nil (disabled). There is no automatic stdout/OS log, file write,

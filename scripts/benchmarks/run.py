@@ -116,9 +116,9 @@ def run(package, output, repetitions, smoke, post_budget, post_budget_cycles, ex
         (root / "Package.swift").write_text('''// swift-tools-version: 6.2
 import PackageDescription
 let package = Package(name: "ResourceProbe", platforms: [.macOS(.v14)],
-    dependencies: [.package(path: %s)], targets: [.executableTarget(name: "ResourceProbe",
-    dependencies: [.product(name: "NetworkKit", package: %s)])], swiftLanguageModes: [.v6])
-''' % (json.dumps(str(package)), json.dumps(package.name.lower())))
+    dependencies: [.package(name: "NetworkKit", path: %s)], targets: [.executableTarget(name: "ResourceProbe",
+    dependencies: [.product(name: "NetworkKit", package: "NetworkKit")])], swiftLanguageModes: [.v6])
+''' % json.dumps(str(package)))
         if executable is None:
             print("Building standalone public consumer in release mode…", flush=True)
             command("swift", "build", "--package-path", str(root), "-c", "release", "-Xswiftc", "-warnings-as-errors", timeout=300)

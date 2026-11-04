@@ -1,7 +1,7 @@
 # ADR-0012: Begin the approved HTTP-core implementation
 
 Date: 2026-10-20. Status: Accepted through the owner's instruction to continue.
-Gate: [START-00 / #41](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/41). First task: [I01 / #42](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/42).
+Gate: [START-00 / #41](https://github.com/BK-Teisrud/NetworkKit/issues/41). First task: [I01 / #42](https://github.com/BK-Teisrud/NetworkKit/issues/42).
 
 ## Owner instruction and context
 
@@ -13,7 +13,7 @@ This instruction is treated in context as authorization to begin the previously 
 
 ## Decision and scope
 
-Close #41 explicitly after recording the instruction. Continue one bounded task and PR at a time within existing contracts. The owner's starter package is adapted rather than discarded: repository-root manifest, package SwiftNetworkKit, product/target/import NetworkKit, one library module and one test target, Swift tools 6.2, Swift 6 mode, and OS minimums 17/14/10/17. A root manifest supports ordinary Swift Package Manager consumption of the repository.
+Close #41 explicitly after recording the instruction. Continue one bounded task and PR at a time within existing contracts. The owner's starter package is adapted rather than discarded: repository-root manifest, package NetworkKit, product/target/import NetworkKit, one library module and one test target, Swift tools 6.2, Swift 6 mode, and OS minimums 17/14/10/17. A root manifest supports ordinary Swift Package Manager consumption of the repository.
 
 Remove the empty Xcode example test. Building the test target and compiling a separate importing consumer are smoke checks, not passed behavioral tests. The library remains without HTTP behavior at I01; real contract tests accompany I02 and subsequent implementation. No workflows are introduced until I06.
 

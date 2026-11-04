@@ -64,7 +64,7 @@ def validate_documented_examples(source, guide):
 def source_integrity():
     run(sys.executable, ROOT / "scripts/ci/device_host.py")
     manifest = json.loads(run("swift", "package", "dump-package", capture=True))
-    require(manifest["name"] == "SwiftNetworkKit", "Incorrect package name")
+    require(manifest["name"] == "NetworkKit", "Incorrect package name")
     require(manifest["toolsVersion"]["_version"] == "6.2.0", "Incorrect Swift tools baseline")
     require(manifest["swiftLanguageVersions"] == ["6"], "Swift 6 language mode required")
     require(manifest["dependencies"] == [], "External package dependencies are not authorized")
@@ -113,7 +113,7 @@ def workspace():
         WORKSPACE.mkdir(parents=True, exist_ok=True)
         file.write_text('<?xml version="1.0" encoding="UTF-8"?><Workspace version="1.0"><FileRef location="self:"></FileRef></Workspace>')
     schemes = json.loads(run("xcodebuild", "-workspace", WORKSPACE, "-list", "-json", capture=True))
-    require("SwiftNetworkKit" in schemes["workspace"]["schemes"], "Actual package scheme missing")
+    require("NetworkKit" in schemes["workspace"]["schemes"], "Actual package scheme missing")
 
 
 def select_device(devices, runtime, prefix):
@@ -131,7 +131,7 @@ def validate_summary(summary):
 
 
 def xcode(*args):
-    run("xcodebuild", "-workspace", WORKSPACE, "-scheme", "SwiftNetworkKit",
+    run("xcodebuild", "-workspace", WORKSPACE, "-scheme", "NetworkKit",
         "-derivedDataPath", OUTPUT / "DerivedData", "-parallel-testing-enabled", "NO",
         "CODE_SIGNING_ALLOWED=NO", "SWIFT_TREAT_WARNINGS_AS_ERRORS=YES", *args)
 
@@ -213,6 +213,20 @@ def platform_check(kind):
         test_destination("platform=" + platform_name + " Simulator,id=" + device["udid"], family + str(index))
 
 
+def copy_library_symbol_graphs(source, destination):
+    """Keep generated test-runner modules out of the distributed library docs."""
+    selected = [p for p in source.glob("NetworkKit*.symbols.json")
+                if json.loads(p.read_text())["module"]["name"] == "NetworkKit"]
+    require(any(p.name == "NetworkKit.symbols.json" for p in selected),
+            "Missing public NetworkKit module graph")
+    destination.mkdir(exist_ok=True)
+    # This directory is owned by this CI driver; discard stale generated graphs.
+    for stale in destination.glob("*.symbols.json"):
+        stale.unlink()
+    for graph in selected:
+        shutil.copyfile(graph, destination / graph.name)
+
+
 def documentation():
     # SwiftPM also visits its generated test runner module during graph extraction.
     # Build it explicitly so a clean runner has the same modules as a warm checkout.
@@ -222,9 +236,7 @@ def documentation():
     require(len(graphs) == 1, "Missing or ambiguous public NetworkKit symbol graph")
     require(json.loads(graphs[0].read_text())["symbols"], "Empty public API symbol graph")
     public_graphs = OUTPUT / "symbols"
-    public_graphs.mkdir(exist_ok=True)
-    for graph in graphs[0].parent.glob("NetworkKit*.symbols.json"):
-        shutil.copyfile(graph, public_graphs / graph.name)
+    copy_library_symbol_graphs(graphs[0].parent, public_graphs)
     run("xcrun", "docc", "convert", ROOT / "Sources/NetworkKit/NetworkKit.docc",
         "--additional-symbol-graph-dir", public_graphs, "--output-dir", OUTPUT / "NetworkKit.doccarchive",
         "--warnings-as-errors")

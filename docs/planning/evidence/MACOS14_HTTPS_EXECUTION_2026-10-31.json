@@ -1,7 +1,7 @@
 {
   "date": "2026-10-31",
   "run_id": 41204068268,
-  "run_url": "https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41204068268",
+  "run_url": "https://github.com/BK-Teisrud/NetworkKit/actions/runs/41204068268",
   "source_commit": "b8f2758530cca68ec819068ff3ac7748868e26dd",
   "custody": {
     "all_source_hashes_verified_against_immutable_git_blobs": true,
@@ -58,7 +58,7 @@
       "files": {
         "NativeHTTPSProbe": "fc32d13bb0b92e9fa873617b5088acf0aad67c445507d2b0edbd346dcc5d7689",
         "ResourceProbe": "094e17a31eb77007e3021b1d90dba07d0e80d10356d4b2ae1ea4072294f4df15",
-        "SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
+        "NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
       }
     },
     "execution_os": "ProductName:\t\tmacOS\nProductVersion:\t\t14.8.9\nBuildVersion:\t\t23J631",

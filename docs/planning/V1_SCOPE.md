@@ -5,7 +5,7 @@ Phase timing update, 2026-10-31: [ADR-0013](../decisions/ADR-0013-watch-publicat
 
 Status: Core scope and module choices accepted 2026-10-19; see [ADR-0003](../decisions/ADR-0003-v1-scope-and-naming.md). The initial public HTTP pipeline is implemented through I10. [F1 review](F1_REVIEW.md) records I11 verification and the remaining F2/release requirements; this is not complete v1 readiness.
 
-Repository/package SwiftNetworkKit distributes one library product and module named NetworkKit. Consumers import NetworkKit. Later test targets are not additional library modules.
+Repository/package NetworkKit distributes one library product and module named NetworkKit. Consumers import NetworkKit. Later test targets are not additional library modules.
 
 ## V1 user flow
 

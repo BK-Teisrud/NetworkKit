@@ -4,7 +4,7 @@ Configure a reusable client, execute buffered HTTP calls and control its lifetim
 
 ## Installation and current status
 
-The repository and Swift package are named SwiftNetworkKit; the library product and import are NetworkKit. Open the repository-root Package.swift in Xcode, or add the repository URL as a package dependency and select the NetworkKit product. There is no published v1 tag yet: evaluate an explicitly reviewed commit/revision, subject to Teisrud Development AS's proprietary rights and written permission requirements. Public visibility is not permission to ship the library in another application.
+The repository and Swift package are named NetworkKit; the library product and import are NetworkKit. Open the repository-root Package.swift in Xcode, or add the repository URL as a package dependency and select the NetworkKit product. There is no published v1 tag yet: evaluate an explicitly reviewed commit/revision, subject to Teisrud Development AS's proprietary rights and written permission requirements. Public visibility is not permission to ship the library in another application.
 
 Use Xcode 26.3 with the verified Swift 6.2.4 compiler for the current CI baseline; tools version is 6.2 and language mode is Swift 6. Product deployment minima are iOS/iPadOS 17, macOS 14, watchOS 10 and tvOS 17. Newer-SDK builds do not prove minimum-runtime support. The accepted platform matrix records actual minimum-family and non-Watch physical results with exact patch/architecture/suite limits. Physical Watch verification remains a separate pre-publication requirement; no stable release or production workload suitability is approved. No visionOS, Catalyst, Linux or external package dependency is selected.
 
