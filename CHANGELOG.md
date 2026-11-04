@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+### F4 verification and platform decision
+
+- Raise declared minima under owner-delegated authority to iOS/iPadOS 18, macOS 15, watchOS 11 and tvOS 18. Older-family support is removed from this unreleased candidate; toolchain and SDK runtime behavior remain unchanged.
+- Add bounded, explicitly selected native HTTPS file/auth/store/trust verification and ordinary-import compiled ownership/error examples. Public services remain excluded from automatic CI.
+- Review a fresh unsigned consumer with the current FileTimestamp/C617.1 manifest. Verification/owner technical acceptance and required PR/main gates remain separate from publication.
+
+
 ### Architecture maintenance — combined delivery
 
 - Group the existing single-module library/tests by responsibility; make feasibility discovery and device-host membership preserve relative source paths.

@@ -300,5 +300,5 @@
   "workflow_configuration": "See docs/planning/PROJECT_MANAGEMENT.md",
   "product_workflows_present": true,
   "shortDescription": "Approved HTTP-core implementation underway. Real Apple platform CI and required quality-gate enabled; executing HTTP client and release evidence remain outstanding.",
-  "readme": "Current execution order: https://github.com/BK-Teisrud/NetworkKit/blob/main/docs/planning/WORK_QUEUE.md. GitHub Project Status owns live work state; ROADMAP owns selected scope; dated reports preserve history. English GitHub content and Norwegian owner–assistant conversations. Selected maintenance #158–#161 is one combined delivery before I31/I32. Stop at pending GitHub execution."
+  "readme": "Current execution order: https://github.com/BK-Teisrud/NetworkKit/blob/main/docs/planning/WORK_QUEUE.md. Project Status owns live work state; ROADMAP owns selected scope; dated reports preserve history. English GitHub content and Norwegian owner–assistant conversations. Continue useful independent/next-branch work while CI runs without polling; require predecessor main and candidate checks before dependent merge. Maximum five work processes."
 }

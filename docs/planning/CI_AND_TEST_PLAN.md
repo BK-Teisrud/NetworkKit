@@ -12,19 +12,21 @@ Real CI now runs every mandatory job on pull requests and pushes to main. The ow
 | --- | --- | --- |
 | source-integrity | Standard GitHub runner; official/bundled tools | Manifest/dependency/platform/language-mode requirements, file formats, and documentation links; no external Swift packages or library SwiftUI imports |
 | macos-core | macos-15, arm64, explicitly selected Xcode 26.3 | Product build with macOS 14 minimum and unit/direct integration tests on the actual host OS |
-| ios-core | macos-15, arm64, explicitly selected Xcode 26.3 | iOS/iPadOS build with minimum 17 and tests on selected iPhone and iPad simulators; baseline runtime 26.2 |
-| watchos-core | macos-15, arm64, explicitly selected Xcode 26.3 | watchOS build with minimum 10 and tests on a selected watchOS 26.2 simulator, with compatible iPhone pairing/harness where needed |
-| tvos-core | macos-15, arm64, explicitly selected Xcode 26.3 | tvOS build with minimum 17 and tests on a selected Apple TV simulator; baseline runtime 26.2 |
+| ios-core | macos-15, arm64, explicitly selected Xcode 26.3 | iOS/iPadOS build with minimum 18 and tests on selected iPhone and iPad simulators; baseline runtime 26.2 |
+| watchos-core | macos-15, arm64, explicitly selected Xcode 26.3 | watchOS build with minimum 11 and tests on a selected watchOS 26.2 simulator, with compatible iPhone pairing/harness where needed |
+| tvos-core | macos-15, arm64, explicitly selected Xcode 26.3 | tvOS build with minimum 18 and tests on a selected Apple TV simulator; baseline runtime 26.2 |
 | documentation | Standard macOS runner, Xcode 26.3 / DocC | Build docs for the actual public API; check warnings/links and guide accuracy |
 | quality-gate | Small standard-runner aggregation job | Every mandatory job succeeds; failures, missing jobs, and unexpected skips cannot yield success |
 
 Source integrity and documentation checks are supporting jobs, not product dependencies. Bind and document actual schemes, test plans, and simulator IDs in the first real CI PR once the package exists. An app/test host is test infrastructure, not another distributed library module. Resolve unsupported test harnesses or raise explicit blockers; a build alone cannot be renamed “tests passed.”
 
+The current declared floors are iOS/iPadOS18, macOS15, watchOS11 and tvOS18 under owner-delegated ADR-0017; actual minimum-family runs record their exact patches. The owner now permits independent/next-branch work while CI runs without polling; predecessor main and candidate checks still gate dependent merge.
+
 ## Runner and toolchain verification
 
-The primary runner is standard macos-15 (arm64). Set DEVELOPER_DIR to the installed Xcode 26.3 and verify its version. Do not rely on image defaults or macos-latest. Official inventory reviewed 2026-10-19 lists Xcode 26.3 build 17C529 and SDK/simulator runtimes 26.2, but an older default Xcode. The inventory's macOS host is 15.7.9, not the library minimum 14.
+The primary runner is standard macos-15 (arm64). Set DEVELOPER_DIR to the installed Xcode 26.3 and verify its version. Do not rely on image defaults or macos-latest. Official inventory reviewed 2026-10-19 lists Xcode 26.3 build 17C529 and SDK/simulator runtimes 26.2, but an older default Xcode. That historical host inventory is not current runtime proof. The current library floor is macOS15.0 under ADR-0017; the Xcode host must separately meet its system requirements.
 
-Record image version, host OS/architecture, Xcode build, Swift patch, SDK, runtime, and destinations per run. Verify Swift tools 6.2 compatibility and Swift 6 language mode. Declare platform minimums explicitly in the future manifest. Missing toolchain/runtime fails preflight; do not silently fall back or automatically raise minimums.
+Record image version, host OS/architecture, Xcode build, Swift patch, SDK, runtime, and destinations per run. Verify Swift tools 6.2 compatibility and Swift 6 language mode. Keep current platform minimums explicit in the manifest under ADR-0017. Missing toolchain/runtime fails preflight; do not silently fall back or automatically raise minimums.
 
 Inventory establishes potential availability, not successful CI or a frozen image. The first CI PR must demonstrate selected destinations, including Watch pairing. Runner/Xcode/runtime updates go through PRs and retain approved product minimums. Beta/RC tooling cannot be the sole required gate.
 

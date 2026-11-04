@@ -2,26 +2,24 @@
 
 ## Current delivery — 2026-11-04
 
-PR #157/main d1ac92d4da8950b59521bf75b9690058302a4251/run 41897385923 is accepted after all seven checks and full-log review (267 Mac tests, four 258-test simulator results, 23 helpers and DocC). This accepts the native/naming checkpoint, not complete I31 evidence.
+Maintenance #158–#161 is completed after PR #162/main 2426c26565e970ddd1b2d34b2f3b0d81de9ad47d/run 41908869761, with all seven checks/full-log review (267 Mac tests, four 258-test simulator results, 28 helpers, native four-declaration/eight-case CI and DocC). The [maintenance review](ARCHITECTURE_MAINTENANCE_REVIEW_2026-11-04.md) preserves its candidate-time evidence; no extra closeout-only PR is required to rewrite pending history.
 
-The owner authorized **one combined branch/PR for QA-02–QA-05**, excluding I31/I32. Execute locally in the following order, with intermediate checks and commits, then one integrated PR/main gate. The four issues remain independently traceable and open until the whole delivery's applicable criteria and required main checks pass. This supersedes the earlier per-issue PR/main prerequisite sequence.
+The owner selected **one combined branch/PR for remaining I31/#149 and I32/#150**, with native evidence before the final API/privacy/technical review. [ADR-0017](../decisions/ADR-0017-current-platform-baseline.md) records delegated current minima: iOS/iPadOS18, macOS15, watchOS11 and tvOS18. No new feature/module/dependency, paid runner, device signing/installation or publication is implied. Native, physical, minimum-family and build-only proof remain distinct.
 
-| Order | Task | Internal sequence |
+| Order | Task | Gate |
 | --- | --- | --- |
-| 40.41 | [QA-02 / #158](https://github.com/BK-Teisrud/NetworkKit/issues/158): folder-aware source/host tools | First |
-| 40.42 | [QA-03 / #159](https://github.com/BK-Teisrud/NetworkKit/issues/159): split native tests and bounded functional CI | After QA-02 local checks |
-| 40.43 | [QA-04 / #160](https://github.com/BK-Teisrud/NetworkKit/issues/160): organize library/unit tests | After local tooling/native safeguards |
-| 40.44 | [QA-05 / #161](https://github.com/BK-Teisrud/NetworkKit/issues/161): current planning/privacy/view reconciliation | Integrate with final structure |
+| 40.5 | [I31 / #149](https://github.com/BK-Teisrud/NetworkKit/issues/149): native download/HTTPS/auth/storage/runtime/resource evidence | In Progress; predecessor maintenance accepted |
+| 40.6 | [I32 / #150](https://github.com/BK-Teisrud/NetworkKit/issues/150): compiled API examples, consumer/privacy and technical review | Same combined delivery; final review follows I31 evidence and requires explicit residual-risk disposition |
 
-I31 #149 is Blocked by all four maintenance issues. Its checkpoint passed real native Mac/four minimum simulator observations, but trusted HTTPS/auth/app-managed storage, remaining platform/physical/macOS14 and representative resource criteria remain. I32 #150 follows I31. Missing evidence is not silently moved to publication. [Maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) defines the scope; [combined review](ARCHITECTURE_MAINTENANCE_REVIEW_2026-11-04.md) records actual candidate checks and deliberate no-change decisions.
+The [F4 candidate technical review](F4_TECHNICAL_REVIEW_2026-11-04.md) and [content-hashed evidence](evidence/F4_DOWNLOAD_CLOSEOUT_2026-11-04.json) record Mac and eight simulator environments, failed attempts, consumer verification and remaining owner decisions.
 
-Project Status is live work state; this file and work-queue.json define order/dependencies. ROADMAP defines selected scope; dated reports preserve evidence. Stop at pending GitHub execution until owner continuation. #29/#132 retain mandatory publication barriers; no signing/device installation, purchase, release or new feature scope is implied.
+Project Status owns live work state; this file and work-queue.json define order/dependencies. ROADMAP owns scope; dated reports preserve evidence. Continue useful independent/next-branch work while CI runs, without polling or wait loops; check at natural checkpoints and before merge. Dependent merges require accepted predecessor main and candidate checks. Maximum five concurrent work processes remains. #29/#132 retain mandatory publication barriers.
 
 ## Accepted F2 and next lanes
 
 The [F2 closeout](F2_CLOSEOUT_2026-10-31.md) records accepted core hardening/rehearsal, final main d0a522770269617f95660d67e9d0198838dc2bb5/run 41244932962 and the milestone-counter discrepancy. Original submission-time evidence/failure limits remain immutable. The F2-only resource disposition is not F3 or production acceptance.
 
-F4 selected I29–I32 code start is explicitly authorized after completed I28/#88. I29/I30 are accepted; complete the combined maintenance delivery before resuming I31 #149 and then I32 #150. #89/#90 remain independent research, and deferred domain catalogs stay open. Stop whenever GitHub execution is pending; resume only after the owner's next instruction, without queue polling or independent work across that stop.
+F4 selected I29–I32 code start is explicitly authorized after completed I28/#88. I29/I30 are accepted; the combined maintenance is accepted; prepare I31 #149 then I32 #150 in one delivery. #89/#90 remain independent research, and deferred domain catalogs stay open. The owner now permits useful work while CI runs, without polling; retain predecessor/main and candidate gates before dependent merges.
 
 ## Accepted core implementation history
 

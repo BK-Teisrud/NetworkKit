@@ -10,8 +10,8 @@ from device_host import load_project, validate
 
 ROOT = Path(__file__).resolve().parents[2]
 VARIANTS = {
-    'tvOS': ('appletvos', 'appletvsimulator', 'TVOS_DEPLOYMENT_TARGET', '17.0', '3'),
-    'watchOS': ('watchos', 'watchsimulator', 'WATCHOS_DEPLOYMENT_TARGET', '10.0', '4'),
+    'tvOS': ('appletvos', 'appletvsimulator', 'TVOS_DEPLOYMENT_TARGET', '18.0', '3'),
+    'watchOS': ('watchos', 'watchsimulator', 'WATCHOS_DEPLOYMENT_TARGET', '11.0', '4'),
 }
 
 

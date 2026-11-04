@@ -5,8 +5,14 @@ import NetworkKit
 @main final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     private var client: APIClient?
+    // Retain the public file-operation reference; never invoke it on launch.
+    private var downloadOperation: ((URLRequest, Int64, DownloadOptions) async throws -> NetworkResponse<DownloadedFile>)?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        do { client = try APIClient(configuration: .init(baseURL: URL(string: "https://example.invalid")!)) }
+        do {
+            let instance = try APIClient(configuration: .init(baseURL: URL(string: "https://example.invalid")!))
+            client = instance
+            downloadOperation = instance.download
+        }
         catch { return false }
         let window = UIWindow(frame: UIScreen.main.bounds)
         let controller = UIViewController()

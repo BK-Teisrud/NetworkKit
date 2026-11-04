@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-04",
+  "base_commit": "2426c26565e970ddd1b2d34b2f3b0d81de9ad47d",
+  "execution_identity": "Uncommitted candidate content, identified by SHA256; not a claim that a final commit was executed.",
+  "status": "Candidate evidence; owner disposition and PR/main acceptance pending",
+  "deployment_floors": {
+    "iOS": "18.0",
+    "macOS": "15.0",
+    "watchOS": "11.0",
+    "tvOS": "18.0"
+  },
+  "simulator_selection": {
+    "declarations_per_environment": 8,
+    "parameter_and_resource_cases_per_environment": 14,
+    "successful_environments": [
+      {
+        "label": "iOS-min",
+        "selected_runtime": "iOS-18-2",
+        "model": "iPhone 16 Pro",
+        "new_simulator_pair": false,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "iPhone 16 Pro",
+          "modelName": "iPhone 16 Pro",
+          "osVersion": "18.2",
+          "osBuildNumber": "22C150",
+          "platform": "iOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=87986176 rssWarm=88051712 rssSampledMax=88461312 rssCompleted=88322048 rssAfterBudget=87437312 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=87445504 rssWarm=87453696 rssSampledMax=87629824 rssCompleted=87506944 rssAfterBudget=76652544 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=76836864 rssWarm=77099008 rssSampledMax=80470016 rssCompleted=77500416 rssAfterBudget=68231168 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=68206592 rssWarm=55541760 rssSampledMax=68206592 rssCompleted=56201216 rssAfterBudget=55754752 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "f29f08b51a3e7b1c7ce2c7db4b9b987e4213beec880d75fc5b58102c4c3568e2",
+        "passed": true
+      },
+      {
+        "label": "iPadOS-min",
+        "selected_runtime": "iOS-18-2",
+        "model": "iPad Pro 11-inch (M4)",
+        "new_simulator_pair": false,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "iPad Pro 11-inch (M4)",
+          "modelName": "iPad Pro 11-inch (M4)",
+          "osVersion": "18.2",
+          "osBuildNumber": "22C150",
+          "platform": "iOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=95154176 rssWarm=95215616 rssSampledMax=95657984 rssCompleted=95592448 rssAfterBudget=95100928 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=95109120 rssWarm=95260672 rssSampledMax=95522816 rssCompleted=95424512 rssAfterBudget=95277056 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=95178752 rssWarm=95219712 rssSampledMax=99082240 rssCompleted=95330304 rssAfterBudget=95170560 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=95170560 rssWarm=95199232 rssSampledMax=96972800 rssCompleted=95342592 rssAfterBudget=94162944 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "bb7bee934ff5d3724af7f26fb58e62e880ae72eb324af8beab057e447790db99",
+        "passed": true
+      },
+      {
+        "label": "tvOS-min",
+        "selected_runtime": "tvOS-18-2",
+        "model": "Apple TV 4K (3rd generation)",
+        "new_simulator_pair": false,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "Apple TV 4K (3rd generation)",
+          "modelName": "Apple TV 4K (3rd generation)",
+          "osVersion": "18.2",
+          "osBuildNumber": "22K154",
+          "platform": "tvOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=87683072 rssWarm=87740416 rssSampledMax=88121344 rssCompleted=88051712 rssAfterBudget=84123648 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=84615168 rssWarm=84865024 rssSampledMax=85151744 rssCompleted=85037056 rssAfterBudget=83193856 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=83218432 rssWarm=83279872 rssSampledMax=86388736 rssCompleted=83374080 rssAfterBudget=82939904 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=82874368 rssWarm=82903040 rssSampledMax=86142976 rssCompleted=83034112 rssAfterBudget=68956160 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "078820517f54232dab396468ae8cc2223d58d85d4290ff52b432bb1864ea7497",
+        "passed": true
+      },
+      {
+        "label": "watchOS-min",
+        "selected_runtime": "watchOS-11-2",
+        "model": "Apple Watch Series 10 (46mm)",
+        "new_simulator_pair": false,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "Apple Watch Series 10 (46mm)",
+          "modelName": "Apple Watch Series 10 (46mm)",
+          "osVersion": "11.2",
+          "osBuildNumber": "22S99",
+          "platform": "watchOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=80138240 rssWarm=80191488 rssSampledMax=80457728 rssCompleted=80457728 rssAfterBudget=80363520 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=80379904 rssWarm=80388096 rssSampledMax=80519168 rssCompleted=80519168 rssAfterBudget=75649024 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=75501568 rssWarm=75517952 rssSampledMax=78360576 rssCompleted=75730944 rssAfterBudget=75493376 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=75386880 rssWarm=75399168 rssSampledMax=77692928 rssCompleted=75698176 rssAfterBudget=74162176 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "91e1181dd28925179e9c1a76fd1ee1bc672ef48aaad821fcac17d9a5ebab8ff9",
+        "passed": true
+      },
+      {
+        "label": "iOS-current",
+        "selected_runtime": "iOS-26-2",
+        "model": "iPhone 17 Pro",
+        "new_simulator_pair": false,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "iPhone 17 Pro",
+          "modelName": "iPhone 17 Pro",
+          "osVersion": "26.2",
+          "osBuildNumber": "23C54",
+          "platform": "iOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=71467008 rssWarm=71540736 rssSampledMax=71536640 rssCompleted=68718592 rssAfterBudget=51736576 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=52531200 rssWarm=56074240 rssSampledMax=56401920 rssCompleted=56082432 rssAfterBudget=51175424 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=51187712 rssWarm=51408896 rssSampledMax=54616064 rssCompleted=51769344 rssAfterBudget=51372032 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=51339264 rssWarm=51630080 rssSampledMax=54243328 rssCompleted=51576832 rssAfterBudget=48209920 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "61c15c62e63a379ce7d464b4fd2144eff12ba4eb3bb7277b05163b3e90a9596b",
+        "passed": true
+      },
+      {
+        "label": "iPadOS-current",
+        "selected_runtime": "iOS-26-2",
+        "model": "iPad Pro 11-inch (M5)",
+        "new_simulator_pair": false,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "iPad Pro 11-inch (M5)",
+          "modelName": "iPad Pro 11-inch (M5)",
+          "osVersion": "26.2",
+          "osBuildNumber": "23C54",
+          "platform": "iOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=104329216 rssWarm=104374272 rssSampledMax=105086976 rssCompleted=104775680 rssAfterBudget=103845888 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=103849984 rssWarm=103849984 rssSampledMax=104128512 rssCompleted=104058880 rssAfterBudget=102387712 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=102309888 rssWarm=102309888 rssSampledMax=106057728 rssCompleted=102387712 rssAfterBudget=92626944 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=92631040 rssWarm=92721152 rssSampledMax=95358976 rssCompleted=92962816 rssAfterBudget=91680768 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "e1ace62d7315428e0d23b50c412acfd0ebd969c7a8212e60260418ea26b87262",
+        "passed": true
+      },
+      {
+        "label": "tvOS-current",
+        "selected_runtime": "tvOS-26-2",
+        "model": "Apple TV 4K (3rd generation)",
+        "new_simulator_pair": false,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "Apple TV 4K (3rd generation)",
+          "modelName": "Apple TV 4K (3rd generation)",
+          "osVersion": "26.2",
+          "osBuildNumber": "23K51",
+          "platform": "tvOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=92864512 rssWarm=92901376 rssSampledMax=93347840 rssCompleted=93282304 rssAfterBudget=93016064 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=93024256 rssWarm=93028352 rssSampledMax=93229056 rssCompleted=93147136 rssAfterBudget=92852224 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=92856320 rssWarm=92864512 rssSampledMax=94408704 rssCompleted=92962816 rssAfterBudget=91140096 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=91455488 rssWarm=91533312 rssSampledMax=92684288 rssCompleted=91496448 rssAfterBudget=85303296 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "c358c2f553129c12ff69cf895916f5ea8dc55c5f5832b2750cd94946dd3e0bbb",
+        "passed": true
+      },
+      {
+        "label": "watchOS-current",
+        "selected_runtime": "watchOS-26-2",
+        "model": "Apple Watch Series 11 (42mm)",
+        "new_simulator_pair": true,
+        "cleanup": [],
+        "summary": {
+          "result": "Passed",
+          "totalTestCount": 8,
+          "passedTests": 8,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "expectedFailures": 0
+        },
+        "environment": {
+          "architecture": "x86_64",
+          "deviceName": "Apple Watch Series 11 (42mm)",
+          "modelName": "Apple Watch Series 11 (42mm)",
+          "osVersion": "26.2",
+          "osBuildNumber": "23S303",
+          "platform": "watchOS Simulator"
+        },
+        "observations": [
+          "NativeLoopback download resource mode=networkkit bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=53567488 rssWarm=53608448 rssSampledMax=53858304 rssCompleted=53858304 rssAfterBudget=41291776 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=65536 concurrency=4 calls=17 returnedFileBytes=1114112 rssInitial=42147840 rssWarm=43307008 rssSampledMax=43573248 rssCompleted=43573248 rssAfterBudget=42889216 settleSeconds=5",
+          "NativeLoopback download resource mode=foundation bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=42676224 rssWarm=46211072 rssSampledMax=48709632 rssCompleted=48709632 rssAfterBudget=45846528 settleSeconds=5",
+          "NativeLoopback download resource mode=networkkit bytes=1048576 concurrency=4 calls=17 returnedFileBytes=17825792 rssInitial=38588416 rssWarm=42409984 rssSampledMax=46161920 rssCompleted=45142016 rssAfterBudget=43188224 settleSeconds=5"
+        ],
+        "store_observations": [
+          "NativeHTTPS download appManaged: reference/SDK cookie echo=true/true retained=true/true cache publication=false/false; owner deletion/reuse passed"
+        ],
+        "log_sha256": "e3902b04c53270553e890943fbad90386412d37017610f8da6782b0a9ba4b85c",
+        "passed": true
+      }
+    ],
+    "public_service_probes_in_automatic_ci": false,
+    "physical_device_evidence": false,
+    "exact_point_zero_runtime_evidence": false
+  },
+  "mac": {
+    "os": "15.8.1",
+    "architecture": "x86_64",
+    "native_declarations": 9,
+    "native_cases": 16,
+    "regression_tests": 269,
+    "regression_suites": 33,
+    "helper_tests": 28,
+    "documentation_warnings_as_errors": true,
+    "public_api_declarations_unchanged_except_deployment_metadata": true,
+    "logs": {
+      "mac-final-native": {
+        "sha256": "918bf8986d81154bb4fc9fb8a5aff13b59d613e67642887e56dc8bec136d5135"
+      },
+      "source": {
+        "sha256": "d9fefe751f03f14d1946330f89c1d88ddca0ed577ab0709fbbf539fc307b728c"
+      },
+      "regression": {
+        "sha256": "9426b8f8d28801756916d94368294c93b71c7c76f76ac81b6baec2720ad567b6"
+      },
+      "docs": {
+        "sha256": "373a5b98ffa72eb3979f3ce2761ae97213d52287a6f943157b3ff08a87ec7ffc"
+      },
+      "helpers-final": {
+        "sha256": "ebdbc80a938ad171e031b6c5dc73e4b0e5ed72f9cfc3ed0ef00a37024ee9629d"
+      },
+      "final-source-integrity": {
+        "sha256": "f6de1d83ffffa090e9536b0cd5cd7f2f4be21b54a3a8aee83f88acb2171eeb75"
+      }
+    }
+  },
+  "source_hashes": {
+    "Sources/NetworkKit/NetworkKit.swift": "7af95bcc95f8e800d953b02b1751b05bce237bc7d5107e58eaf042c22a1285d9",
+    "Sources/NetworkKit/Transport/NetworkTaskDelegate.swift": "d9a97411a31d322a971685604d39de115112e606d7bb8e6837ea0005305f0bd8",
+    "Sources/NetworkKit/Transport/URLSessionTransport.swift": "fe46ddb68913842dc7626f3e8f48ad991396a5f0fea303dc5b8d2d04ad95dd20",
+    "Sources/NetworkKit/Retry/RetryTiming.swift": "09ce036bc4f2e74b7dcbf3697c937d45e42ccecb23fec8bfdc330ee54eb9248a",
+    "Sources/NetworkKit/Retry/RetryPolicy.swift": "6eb67b32d63d859262709ecc0037e57422191d1bcf445ba57256a5ce69efb637",
+    "Sources/NetworkKit/Policies/SessionStorageProfile.swift": "83ca939758de16bab5df13d94c280065ad46c89ba0c0335863870a8b81e59c66",
+    "Sources/NetworkKit/Policies/Authentication.swift": "f0db6e385961df30c1a1a7680af6584db91b001c3a07416c9c489cfb478a5573",
+    "Sources/NetworkKit/Policies/NetworkSecurityPolicy.swift": "cc85f6f2ab60f79731207d81e80f30bf5e032b0f2351ae42177e2ab62f29f3d9",
+    "Sources/NetworkKit/HTTP/RequestURLBuilder.swift": "404943fa36c0fe5e7df5c078412ad6da30e82882bc097c29c3c0c0af896fef1b",
+    "Sources/NetworkKit/HTTP/ResponseMetadata.swift": "9bd34a8ecd6cfd7c5bfc1b9fdbc89909fa0564095232daf68d87f5d90dc9d07b",
+    "Sources/NetworkKit/HTTP/JSONDecodingOptions.swift": "d11a252a75f1a4cfb814d2ed0fbb3e4dbcb85200d5e9b978a1e1f83f3ca50904",
+    "Sources/NetworkKit/HTTP/NetworkResponse.swift": "2267de5fe325f2c310dfb875a2e1b3b230713d2397a423e53ba303a72674067d",
+    "Sources/NetworkKit/HTTP/RequestBody.swift": "914d27be0edb4fa36fc91e57787bf6d9c0311acbeb0a2d8334e24f2bf2cbbcdb",
+    "Sources/NetworkKit/HTTP/RequestBuilder.swift": "20358d3345bb6b9ca66a4edd9adee8aae81c5b7c7c60a7162e47435499ee3921",
+    "Sources/NetworkKit/HTTP/HTTPToken.swift": "d9053f6ff580b333c643e0209d8e001e008506a95f41581f9b60bc46402bb13b",
+    "Sources/NetworkKit/HTTP/HTTPMethod.swift": "98bde648d1db468b7b29a1856ace61a7301f6daf057eb99cd6e5114a31456bdb",
+    "Sources/NetworkKit/HTTP/ResponseStrategy.swift": "1cddc3a3ce3aa32a4ad304e250a0e3d01503853eedd4a7add3f011f26545bd86",
+    "Sources/NetworkKit/HTTP/HTTPHeaders.swift": "45bfe1c8779e3f39c048fc1a299bd6ee8a75fe28d71ea797ce704c7eccc4b4f4",
+    "Sources/NetworkKit/HTTP/HTTPStatus.swift": "84bde1bf4b8a3c92e66f9c8bacdf079b56de7fc92a851134723e54017257ca71",
+    "Sources/NetworkKit/HTTP/NetworkError.swift": "bd9133325b2af1255af713b7d9557c476dac5483448f8c565eb961f4016eede4",
+    "Sources/NetworkKit/HTTP/HTTPStatusPolicy.swift": "f28eb6564f87d7988aa281683bd6c398f340eaa32434ee3d5245021355954722",
+    "Sources/NetworkKit/HTTP/Endpoint.swift": "7b196e8ede8a9c031595e3ecdd72bfc3aaeecdc6610d055f383a787b976dec31",
+    "Sources/NetworkKit/Downloads/DownloadFileOwner.swift": "7a9c2a1f5e74d87b91352b5fd32961f2018e8857713a195d160d3d57679ed76d",
+    "Sources/NetworkKit/Downloads/Download.swift": "7946c61557640cc27a5336086a065f96e49283670681853d0960838ae4dab91a",
+    "Sources/NetworkKit/Client/NetworkOperation.swift": "ad25dd095bdba5943c1b8f45ce8ed7e3ae16ba4b0d7b64ce4dc611f94af19455",
+    "Sources/NetworkKit/Client/ClientLifecycle.swift": "ba7d243eb266b79c7157c66341d48896f8693354d9aa369aba8d93abbacc25ae",
+    "Sources/NetworkKit/Client/APIClient.swift": "08907cd2e4c7f240a88a4ac140d61a5b9a76da16159d1ee8edc6ce2a3c74a79a",
+    "Sources/NetworkKit/Client/ExecutionBoundaries.swift": "e29ab5022b3eb67f8d554546ef7b1cff1123d02dc138edf84f6d2b548e788e9a",
+    "Sources/NetworkKit/Client/Diagnostics.swift": "84b24c4b28ab4d7783ce461cb5fb4ad71009140f9fbe9e283d5d9ff1561f7f40",
+    "Sources/NetworkKit/Client/NetworkConfiguration.swift": "60faadba3b86ce8aa89501680958109807d5f051a6873f38306a8710cfc5596b",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/PublicHTTPSTests.swift": "f85531f2a56bc779a4330975e2e01b806b202eea1b4b420ede58c4c9f0c09a55",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/PublicRetryTests.swift": "79eb6b3e334879331478fa07f187da9292d36c488db7a48c6f2a883df8c2f2b0",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/HTTPS/NativeDownloadHTTPSTests.swift": "a9304f794f30840d5572a15cd0bf6a52e62de308d322d4e6e6e268f9d1179408",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/HTTPS/TrustObservation.swift": "421a62f7c8430e0adaff10d5b83710bb6720444fb52904aef5679b04aadd341d",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/Support/NativeLoopbackFixture.swift": "b4e3128ed401f85374e45abd9fd8d2e8a3c88903b5d3f9efdf6cbfaf1945cd95",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/Loopback/NativeStorageTests.swift": "03a0bd2f792ba8410cd13d572d8319765d5688fe109a03d7f101aefa608f9e47",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/Loopback/NativeCoreTests.swift": "46e4a0ba65ea4047139ae9be2aca1b2e426d9cdf3c8695638965c4f82c582ac3",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/Loopback/NativeResourceTests.swift": "3a8a318a21b41d8f3edcb8f321f1dc70b64b3e8eda2ef1d89f569e4d2e5eee58",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/Loopback/NativeDownloadTests.swift": "a89818e7097b8f983d5ca3bc83d23ed05c41b8e5b2c20fd2df861e9322748928",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/Loopback/NativeRetryTests.swift": "b943e5665b69575586f3004254c5d5277a3f395cf5acff154996bdf3cf633673"
+  },
+  "additional_artifact_hashes": {
+    "Package.swift": "32d366ea9b79b3f2e8f01d2586c30c42ac13c80054aeed540414a739a8353a4f",
+    "Tools/PublicHTTPSChecks/Package.swift": "eb183777fc28974f11d867eb4e5728dd9d6b069e71d2967d3f5bf6c8bb1471b6",
+    "Sources/NetworkKit/PrivacyInfo.xcprivacy": "8c81590ba75b3c3df7ffab1f2df592a6b5bebc4cf905c4193876a45f4046e562"
+  },
+  "production_swift_files_byte_identical_to_base": 30,
+  "consumer": {
+    "unsigned_archive_built": true,
+    "app_minimum_os": "18.0",
+    "sdk_manifest_relative_path": "NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy",
+    "sdk_manifest_sha256": "8c81590ba75b3c3df7ffab1f2df592a6b5bebc4cf905c4193876a45f4046e562",
+    "manifest_matches_source": true,
+    "required_reason": "FileTimestamp/C617.1",
+    "tracking": false,
+    "collected_data_types": [],
+    "binary_dsym_uuid_match": true,
+    "download_symbol_retained": true,
+    "launch_network_requests": false,
+    "signing_installation_distribution": false
+  },
+  "limitations": [
+    "RSS is sampled process RSS, not true peak or SDK-attributed allocations. Four finite 17-call workloads do not establish an app/device resource guarantee.",
+    "The initial current-iPad run failed; an explicit unchanged-source followup passed. Precise cause unresolved; no automatic rerun or SDK fix claimed.",
+    "Earlier short-budget public-probe timeouts and build-flag failures remain failed attempts.",
+    "One Simulator-only Watch pair was created. No physical pairing/signing/install/account change.",
+    "Current aggregate privacy PDF export deferred by owner; actual new archive manifest verified directly.",
+    "Physical F4 file checks and app-specific file/workload coverage remain unfulfilled; no implicit waiver."
+  ]
+}
