@@ -1,5 +1,7 @@
 # I19 — security and privacy review
 
+Current source-specific update, 2026-11-04: I29 introduced fstat for temporary download-file kind/size inspection. [I31](I31_NATIVE_DOWNLOAD_2026-11-04.md) corrects the bundled FileTimestamp/C617.1 declaration and existing resource test. The dated core analysis below describes its earlier source; original F2 archive/manifest evidence is not rewritten. Final integrated app privacy/security/publication review remains #29/I32 work.
+
 Current gate disposition, 2026-10-31: the owner explicitly approved **only the non-publishing F2 rehearsal** with the documented runtime-retention, call-rate/payload/budget and finite-RSS limitations; see [GATE-F2 resource disposition](F2_REVIEW.md#resource-disposition-for-this-gate). The provisional eight-active-call / expected 1 MiB guidance is not an enforced cap or validated app fit. #29 still requires actual workload/device-memory suitability, security and publication authorization; #132 retains physical Watch evidence. No production suitability or release is approved. Earlier dated statements below preserve their original evidence limits.
 
 

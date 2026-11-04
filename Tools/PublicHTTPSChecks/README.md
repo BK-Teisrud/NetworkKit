@@ -2,6 +2,16 @@
 
 NET-01 / #115. The owner selected HTTPBingo and BadSSL on 2026-10-27 instead of provisioning a paid/private HTTPS environment. This separate verification package is not a shipped library product or an SDK dependency. Its only package dependency is the local repository. Normal root tests never run these checks.
 
+## Current I31 download selection
+
+[I31 Mac evidence](../../docs/planning/I31_NATIVE_DOWNLOAD_2026-11-04.md) adds five explicitly selected native-download declarations / nine cases on Mac; three public scenarios / six ownership cases compile on other hosts, with no execution inference. Mac-only known-path capture uses @testable for private observation without a shipping hook; public-constructor cases use the live URLSession adapter. Historical NET-03 counts below retain their earlier scope.
+
+```sh
+swift test --package-path Tools/PublicHTTPSChecks -Xswiftc -warnings-as-errors --filter nativeLoopbackDownload
+```
+
+This selection contacts only in-process loopback fixtures, including bounded four-concurrent-call file/RSS observations against a Foundation control. It neither starts public HTTPS cases nor changes signing/trust. Partial files with no exposed URL remain unobserved. Trusted HTTPS/auth/storage, other current/physical environments and actual candidate macOS 14 evidence remain open. The named minimum simulator execution is recorded separately.
+
 ## Explicit execution only
 
 On the observed Mac, from the repository root:

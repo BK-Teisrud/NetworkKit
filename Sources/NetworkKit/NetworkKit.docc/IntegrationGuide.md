@@ -41,7 +41,7 @@ Use `guideMakeOwnedClient` below at the owning service boundary, then call `guid
 
 ## Raw calls, other formats and request bodies
 
-Raw URLRequest follows the same APIClient security/status/time-budget checks. JSON is selected explicitly for a model; Data preserves buffered bytes, text requires supported UTF-8 semantics, and EmptyResponse skips payload decoding. Use explicit empty semantics for HEAD/204 rather than expecting an empty body to manufacture a JSON model. All responses are buffered; this is not a streaming or large-file API.
+Raw URLRequest follows the same APIClient security/status/time-budget checks. JSON is selected explicitly for a model; Data preserves buffered bytes, text requires supported UTF-8 semantics, and EmptyResponse skips payload decoding. Use explicit empty semantics for HEAD/204 rather than expecting an empty body to manufacture a JSON model. The send APIs buffer their responses. Use the separate <doc:FileDownloads> operation for foreground GET-to-file transfers with explicit size and ownership rules.
 
 <!-- DOC-EXAMPLE: formats -->
 ```swift

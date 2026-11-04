@@ -4,7 +4,7 @@
 
 F3 is formally closed: I27 #110 is Done after final PR #144/main b4511c5efe9a349a9f91eb0448974f1bf49b8d3f/run 41302196774; all seven checks passed. [F3 closeout](F3_CLOSEOUT_2026-11-01.md) preserves its bounded technical acceptance and source-specific evidence.
 
-F4 planning/I28 #88/#146 and I29 #147 are Done after accepted PR #155/main run 41329332271. The owner-authorized I30 [verification matrix](I30_DOWNLOAD_VERIFICATION.md) passes 267 local Mac declarations, with no production-source changes; PR/main acceptance is pending. I30 #148 is In Review; I31/#149 native/resource and I32/#150 final API/docs/gate remain predecessor-blocked. No new signing/device installation, purchase or publication is authorized.
+F4 planning/I28, I29 and I30 #148 are Done after accepted PR #156/main run 41333096996. Authorized I31 #149 is In Progress: [native Mac checkpoint](I31_NATIVE_DOWNLOAD_2026-11-04.md) executes real URLSession file transfers, counted redirects/lifecycle/known-path cleanup and finite file/RSS observations. [Minimum native execution](I31_MINIMUM_DOWNLOAD_2026-11-04.md) now passes 24 cases across four existing simulators. FileTimestamp/C617.1 metadata is corrected for fstat; validation/PR/main and remaining trusted HTTPS/auth/storage/other-current/physical/macOS14 evidence are outstanding. I32 #150 stays predecessor-blocked. No new signing/device installation, purchase or publication is authorized.
 
 #14 advanced resilience remains Backlog; #89/#90 remain independent planning. #29 actual app/workload/security/publication and physical Watch #132 remain mandatory separate barriers. No new milestone/date or publication authorization follows.
 

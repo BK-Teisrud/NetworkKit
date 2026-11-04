@@ -25,3 +25,7 @@ The library attempts removal of files it has actually acquired. Foundation can o
 The existing optional terminal diagnostic keeps its six-field allowlist. Download file errors map to outcome `other`; no filenames, paths, byte counts, progress or cleanup event stream are added. Library attempt count is zero before invocation or one afterward. There is no automatic download retry.
 
 The I29 implementation has critical-path deterministic/file-backed tests; broader integration, current/minimum/native resource evidence and compiled examples remain the separate I30–I32 work. No production support, tag, release or publication follows from API availability. Consult the repository I29 report for exact candidate results and retained publication barriers.
+
+## Bundled privacy declaration
+
+The SDK uses fstat only to inspect the preserved temporary download file's type and size, without consuming timestamps or sending metadata to a telemetry service. Apple's required-reason category still covers that API. The bundled manifest declares FileTimestamp / C617.1 for app-container file metadata. This declaration does not authorize arbitrary filesystem inspection or establish the host app's complete privacy/distribution compliance; the app's integrated artifact and practices retain their separate review.

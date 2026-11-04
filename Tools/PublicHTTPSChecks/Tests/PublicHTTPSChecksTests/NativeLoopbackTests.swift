@@ -1,7 +1,11 @@
 import Foundation
 import Network
 import Testing
+#if os(macOS)
+@testable import NetworkKit
+#else
 import NetworkKit
+#endif
 import os
 import Darwin
 
@@ -24,6 +28,7 @@ private final class NativeLoopbackFixture: Sendable {
         var cookies = 0
         var credentials = 0
         var redirect: String?
+        var downloadWrites = 0
     }
     private let state = OSAllocatedUnfairLock(initialState: State())
     private let listener: NWListener
@@ -91,6 +96,14 @@ private final class NativeLoopbackFixture: Sendable {
         }
         return false
     }
+    var downloadWrites: Int { state.withLock { $0.downloadWrites } }
+    func wroteDownload(after count: Int) async throws -> Bool {
+        for _ in 0..<200 {
+            if downloadWrites > count { return true }
+            try await Task.sleep(for: .milliseconds(10))
+        }
+        return false
+    }
     func stop() async -> Bool {
         listener.cancel()
         for connection in state.withLock({ Array($0.connections.values) }) { connection.cancel() }
@@ -131,6 +144,15 @@ private final class NativeLoopbackFixture: Sendable {
             connection.receive(minimumIncompleteLength: 1, maximumLength: 1) { _, _, _, _ in connection.cancel() }
             return
         }
+        if path == "/download-hold" {
+            var bytes = Data("HTTP/1.1 200 Fixture\r\nContent-Length: 1048576\r\nCache-Control: no-store\r\nConnection: close\r\n\r\n".utf8)
+            bytes.append(Data(repeating: 120, count: 1024))
+            connection.send(content: bytes, completion: .contentProcessed { [weak self] error in
+                if error == nil { self?.state.withLock { $0.downloadWrites += 1 } }
+                connection.receive(minimumIncompleteLength: 1, maximumLength: 1) { _, _, _, _ in connection.cancel() }
+            })
+            return
+        }
         var status = 200
         var extra = "Cache-Control: no-store\r\n"
         var body = Data(#"{"value":"synthetic"}"#.utf8)
@@ -148,6 +170,10 @@ private final class NativeLoopbackFixture: Sendable {
             }
         case "/retry-terminal", "/retry-disabled", "/retry-accepted": status = 503; extra += "Retry-After: 0\r\n"
         case "/retry-redirect": status = 302; extra += "Location: /retry-target\r\n"; body = Data()
+        case "/download-empty": body = Data()
+        case "/download-unknown": body = Data(repeating: 120, count: 65536)
+        case "/download-partial": status = 206; extra += "Content-Range: bytes 0-7/16\r\n"; body = Data(repeating: 120, count: 8)
+        case "/download-redirect": status = 302; extra += "Location: /payload\r\n"; body = Data()
         case "/empty": status = 204; body = Data()
         case "/status": status = 503; body = Data("invalid-json".utf8)
         case "/bad-json": body = Data("invalid-json".utf8)
@@ -168,7 +194,8 @@ private final class NativeLoopbackFixture: Sendable {
         let date = DateFormatter()
         date.locale = Locale(identifier: "en_US_POSIX"); date.timeZone = TimeZone(secondsFromGMT: 0)
         date.dateFormat = "EEE, dd MMM yyyy HH:mm:ss 'GMT'"
-        var bytes = Data("HTTP/1.1 \(status) Fixture\r\nDate: \(date.string(from: Date()))\r\nContent-Type: application/json\r\n\(extra)Content-Length: \(body.count)\r\nConnection: close\r\n\r\n".utf8)
+        let length = path == "/download-unknown" ? "" : "Content-Length: \(body.count)\r\n"
+        var bytes = Data("HTTP/1.1 \(status) Fixture\r\nDate: \(date.string(from: Date()))\r\nContent-Type: application/json\r\n\(extra)\(length)Connection: close\r\n\r\n".utf8)
         bytes.append(body)
         connection.send(content: bytes, completion: .contentProcessed { _ in connection.cancel() })
     }
@@ -547,3 +574,256 @@ extension PublicHTTPSTests {
         }
     }
 }
+
+
+private func downloadSession(_ ownership: Ownership) -> URLSession? {
+    guard ownership == .borrowed else { return nil }
+    let settings = URLSessionConfiguration.ephemeral
+    settings.httpCookieStorage = nil; settings.httpShouldSetCookies = false
+    settings.httpCookieAcceptPolicy = .never; settings.urlCredentialStorage = nil; settings.urlCache = nil
+    settings.requestCachePolicy = .reloadIgnoringLocalCacheData
+    return URLSession(configuration: settings)
+}
+
+extension PublicHTTPSTests {
+    @Test(arguments: Ownership.allCases)
+    func nativeLoopbackDownloadFiles(ownership: Ownership) async throws {
+        try await nativeFixture { fixture, base in
+            let session = downloadSession(ownership)
+            defer { session?.invalidateAndCancel() }
+            let sink = NativeRetryEvents()
+            let client = try nativeClient(base, session: session, diagnostics: sink)
+            var appOwned: [URL] = []
+            do {
+                for (path, count) in [("payload", 65536), ("download-empty", 0), ("download-unknown", 65536)] {
+                    let result = try await client.download(URLRequest(url: base.appendingPathComponent(path)), maximumBytes: 65536)
+                    appOwned.append(result.value.url)
+                    #expect(result.status.code == 200 && result.value.byteCount == Int64(count))
+                    let size = try FileManager.default.attributesOfItem(atPath: result.value.url.path)[.size] as? NSNumber
+                    #expect(size?.intValue == count)
+                    #expect(try Data(contentsOf: result.value.url) == Data(repeating: 120, count: count))
+                    #expect(fixture.count("/" + path) == 1)
+                }
+                do {
+                    let result = try await client.download(URLRequest(url: base.appendingPathComponent("large")), maximumBytes: 65536)
+                    appOwned.append(result.value.url); Issue.record("Oversized native download succeeded")
+                } catch DownloadError.sizeLimitExceeded {}
+                for (path, code) in [("download-partial", 206), ("status", 503)] {
+                    do {
+                        let result = try await client.download(URLRequest(url: base.appendingPathComponent(path)), maximumBytes: 65536)
+                        appOwned.append(result.value.url); Issue.record("Rejected native status succeeded")
+                    } catch NetworkError.httpStatus(let status, _) { #expect(status.code == code) }
+                    #expect(fixture.count("/" + path) == 1)
+                }
+                #expect(fixture.count("/large") == 1)
+                await client.shutdown()
+                for url in appOwned { #expect(FileManager.default.fileExists(atPath: url.path)) }
+                if let session {
+                    let (url, response) = try await session.download(from: base.appendingPathComponent("download-empty"))
+                    defer { try? FileManager.default.removeItem(at: url) }
+                    #expect((response as? HTTPURLResponse)?.statusCode == 200)
+                    #expect(fixture.count("/download-empty") == 2)
+                }
+                #expect(sink.events.count == 6 && sink.events.allSatisfy { $0.attemptCount == 1 })
+                print("NativeLoopback download files \(ownership.rawValue): 6 library calls; stored sizes/content/counters and handoff persistence passed")
+            } catch {
+                await client.shutdown()
+                for url in appOwned { try? FileManager.default.removeItem(at: url) }
+                throw error
+            }
+            for url in appOwned { try FileManager.default.removeItem(at: url) }
+        }
+    }
+
+    @Test(arguments: Ownership.allCases)
+    func nativeLoopbackDownloadRedirects(ownership: Ownership) async throws {
+        try await nativeFixture { fixture, base in
+            let other = try await NativeLoopbackFixture.start()
+            do {
+                fixture.redirect(to: try other.base.appendingPathComponent("payload"))
+                let session = downloadSession(ownership)
+                defer { session?.invalidateAndCancel() }
+                let client = try nativeClient(base, session: session)
+                do {
+                    let result = try await client.download(URLRequest(url: base.appendingPathComponent("download-redirect")), maximumBytes: 65536)
+                    defer { try? FileManager.default.removeItem(at: result.value.url) }
+                    #expect(result.value.byteCount == 65536)
+                    #expect(fixture.count("/download-redirect") == 1 && fixture.count("/payload") == 1)
+                    do {
+                        let unexpected = try await client.download(URLRequest(url: base.appendingPathComponent("cross")), maximumBytes: 65536)
+                        try? FileManager.default.removeItem(at: unexpected.value.url)
+                        Issue.record("Cross-origin native file redirect succeeded")
+                    } catch NetworkError.httpStatus(let status, _) { #expect(status.code == 302) }
+                    #expect(other.count("/payload") == 0 && fixture.count("/cross") == 1)
+                } catch { await client.shutdown(); throw error }
+                await client.shutdown()
+                #expect(await other.stop())
+                print("NativeLoopback download redirects \(ownership.rawValue): same-origin contacts and denied target zero passed")
+            } catch { #expect(await other.stop()); throw error }
+        }
+    }
+
+    @Test(arguments: Ownership.allCases)
+    func nativeLoopbackDownloadCancellation(ownership: Ownership) async throws {
+        try await nativeFixture { fixture, base in
+            for shutdown in [false, true] {
+                let session = downloadSession(ownership)
+                defer { session?.invalidateAndCancel() }
+                let sink = NativeRetryEvents()
+                let client = try nativeClient(base, session: session, diagnostics: sink)
+                let before = fixture.downloadWrites
+                let task = Task { try await client.download(URLRequest(url: base.appendingPathComponent("download-hold")), maximumBytes: 1048576) }
+                do {
+                    let written = try await fixture.wroteDownload(after: before)
+                    try #require(written, "Fixture must send headers and a partial body before cancellation")
+                    if shutdown { await client.shutdown() } else { task.cancel() }
+                    do {
+                        let unexpected = try await task.value
+                        try? FileManager.default.removeItem(at: unexpected.value.url)
+                        Issue.record("Expected cancellation of partial native download")
+                    } catch is CancellationError {}
+                    #expect(sink.events.count == 1 && sink.events.first?.attemptCount == 1)
+                    if !shutdown {
+                        let next = try await client.download(URLRequest(url: base.appendingPathComponent("download-empty")), maximumBytes: 1)
+                        try FileManager.default.removeItem(at: next.value.url)
+                    } else {
+                        do {
+                            let unexpected = try await client.download(URLRequest(url: base.appendingPathComponent("download-empty")), maximumBytes: 1)
+                            try? FileManager.default.removeItem(at: unexpected.value.url)
+                            Issue.record("Closed client admitted a download")
+                        } catch NetworkError.invalidRequest(.clientClosed) {}
+                    }
+                    await client.shutdown()
+                } catch {
+                    task.cancel(); _ = await task.result; await client.shutdown(); throw error
+                }
+            }
+            #expect(fixture.downloadWrites == 2 && fixture.count("/download-hold") == 2)
+            #expect(fixture.count("/download-empty") == 1)
+            print("NativeLoopback download lifecycle \(ownership.rawValue): partial writes, cancellation/shutdown join and admission passed; internal partial-file removal unobserved")
+        }
+    }
+}
+
+#if os(macOS)
+extension PublicHTTPSTests {
+    /// Private destination/capture seams expose only this test's acquired paths for independent cleanup checks.
+    @Test(arguments: Ownership.allCases)
+    func nativeLoopbackDownloadKnownFileCleanup(ownership: Ownership) async throws {
+        try await nativeFixture { fixture, base in
+            let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+            try FileManager.default.createDirectory(at: root, withIntermediateDirectories: false, attributes: [.posixPermissions: 0o700])
+            defer { try? FileManager.default.removeItem(at: root) }
+            for mode in ["status", "size", "preserve", "inspect", "remove"] {
+                let captured = OSAllocatedUnfairLock<URL?>(initialState: nil)
+                let destination = root.appendingPathComponent(UUID().uuidString)
+                var operations = DownloadFileOperations()
+                operations.destination = { destination }
+                if mode == "preserve" { operations.preserve = { _, _ in throw DownloadError.fileSystem(.preserve) } }
+                if mode == "inspect" { operations.inspect = { _ in throw DownloadError.fileSystem(.inspect) } }
+                if mode == "remove" { operations.remove = { _ in throw DownloadError.fileSystem(.remove) } }
+                let session = downloadSession(ownership)
+                defer { session?.invalidateAndCancel() }
+                let work: URLSessionTransport.DownloadOperation = { session, request, delegate in
+                    let result = try await session.download(for: request, delegate: delegate)
+                    captured.withLock { $0 = result.0 }
+                    return result
+                }
+                let security = NetworkSecurityPolicy(allowInsecureLoopback: true)
+                let transport = try session.map { try URLSessionTransport(session: $0, downloadOperation: work, securityPolicy: security, baseURL: base) }
+                    ?? URLSessionTransport(downloadOperation: work, securityPolicy: security, baseURL: base)
+                let client = try APIClient(configuration: .init(baseURL: base, security: security), transport: transport, downloadFiles: operations)
+                let path = mode == "status" || mode == "remove" ? "status" : "payload"
+                do {
+                    do {
+                        let unexpected = try await client.download(URLRequest(url: base.appendingPathComponent(path)), maximumBytes: mode == "size" ? 1 : 65536)
+                        try? FileManager.default.removeItem(at: unexpected.value.url)
+                        Issue.record("Expected controlled native file failure")
+                    } catch NetworkError.httpStatus(let status, _) { #expect(mode == "status" && status.code == 503) }
+                    catch let error as DownloadError {
+                        let expected: DownloadError = mode == "size" ? .sizeLimitExceeded : mode == "preserve" ? .fileSystem(.preserve)
+                            : mode == "inspect" ? .fileSystem(.inspect) : .cleanupFailed(primary: .httpStatus)
+                        #expect(error == expected)
+                    }
+                    let source = try #require(captured.withLock { $0 })
+                    if mode == "remove" {
+                        #expect(FileManager.default.fileExists(atPath: source.path))
+                        try FileManager.default.removeItem(at: source)
+                    } else { #expect(!FileManager.default.fileExists(atPath: source.path)) }
+                    #expect(!FileManager.default.fileExists(atPath: destination.path))
+                } catch {
+                    if let source = captured.withLock({ $0 }) { try? FileManager.default.removeItem(at: source) }
+                    await client.shutdown(); throw error
+                }
+                await client.shutdown()
+            }
+            #expect(try FileManager.default.contentsOfDirectory(atPath: root.path).isEmpty)
+            #expect(fixture.count("/status") == 2 && fixture.count("/payload") == 3)
+            print("NativeLoopback download known-file cleanup \(ownership.rawValue): native source/destination absence and injected refusal verified")
+        }
+    }
+}
+#endif
+
+#if os(macOS)
+extension PublicHTTPSTests {
+    @Test func nativeLoopbackDownloadResourceObservations() async throws {
+        try await nativeFixture { fixture, base in
+            for (path, bytes) in [("payload", 65536), ("large", 1048576)] {
+                for direct in (bytes == 65536 ? [false, true] : [true, false]) {
+                    let client = try nativeClient(base)
+                    let settings = URLSessionConfiguration.ephemeral
+                    settings.httpCookieStorage = nil; settings.httpShouldSetCookies = false
+                    settings.httpCookieAcceptPolicy = .never; settings.urlCredentialStorage = nil; settings.urlCache = nil
+                    settings.requestCachePolicy = .reloadIgnoringLocalCacheData; settings.timeoutIntervalForRequest = 2
+                    let session = URLSession(configuration: settings)
+                    let before = fixture.count("/" + path)
+                    let initial = try nativeResidentBytes()
+                    let maximum = OSAllocatedUnfairLock(initialState: initial)
+                    let observedBytes = OSAllocatedUnfairLock<Int64>(initialState: 0)
+                    do {
+                        func perform() async throws {
+                            let url: URL
+                            if direct {
+                                let request = URLRequest(url: base.appendingPathComponent(path), timeoutInterval: 2)
+                                let received = try await session.download(for: request)
+                                url = received.0
+                                guard (received.1 as? HTTPURLResponse)?.statusCode == 200 else {
+                                    try? FileManager.default.removeItem(at: url); throw NativeFixtureFailure.measurement
+                                }
+                            } else {
+                                let received = try await client.download(URLRequest(url: base.appendingPathComponent(path)), maximumBytes: Int64(bytes))
+                                url = received.value.url
+                                #expect(received.value.byteCount == Int64(bytes))
+                            }
+                            do {
+                                let size = try FileManager.default.attributesOfItem(atPath: url.path)[.size] as? NSNumber
+                                try #require(size?.intValue == bytes)
+                                observedBytes.withLock { $0 += Int64(bytes) }
+                                try FileManager.default.removeItem(at: url)
+                            } catch { try? FileManager.default.removeItem(at: url); throw error }
+                            let sample = try nativeResidentBytes()
+                            maximum.withLock { $0 = max($0, sample) }
+                        }
+                        try await perform()
+                        let warm = try nativeResidentBytes()
+                        for _ in 0..<4 {
+                            try await withThrowingTaskGroup(of: Void.self) { group in
+                                for _ in 0..<4 { group.addTask { try await perform() } }
+                                try await group.waitForAll()
+                            }
+                        }
+                        let completed = try nativeResidentBytes()
+                        await client.shutdown(); session.invalidateAndCancel()
+                        try await Task.sleep(for: .seconds(5))
+                        let settled = try nativeResidentBytes()
+                        #expect(fixture.count("/" + path) - before == 17)
+                        #expect(observedBytes.withLock { $0 } == Int64(bytes * 17))
+                        print("NativeLoopback download resource mode=\(direct ? "foundation" : "networkkit") bytes=\(bytes) concurrency=4 calls=17 returnedFileBytes=\(observedBytes.withLock { $0 }) rssInitial=\(initial) rssWarm=\(warm) rssSampledMax=\(maximum.withLock { $0 }) rssCompleted=\(completed) rssAfterBudget=\(settled) settleSeconds=5")
+                    } catch { await client.shutdown(); session.invalidateAndCancel(); throw error }
+                }
+            }
+        }
+    }
+}
+#endif

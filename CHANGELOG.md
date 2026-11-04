@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Corrected the download feature's bundled required-reason declaration: FileTimestamp / C617.1 covers fstat used for app-temporary file metadata. Tracking remains disabled and collection/tracking-domain lists remain empty; actual consumer privacy/distribution review remains separate.
+
 ### Foreground file download — I29 implementation candidate
 
 - Added one explicit GET-to-file operation with a required output-size limit, HTTP 200-only completion and app ownership on successful return.
