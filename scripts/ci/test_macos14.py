@@ -14,7 +14,7 @@ class PrebuiltConsumerContracts(unittest.TestCase):
             root = Path(temporary)
             names = ['Package.swift', 'scripts/benchmarks/Probe.swift', 'scripts/benchmarks/run.py',
                      'scripts/ci/macos14.py', 'scripts/verification/NativeHTTPSProbe.swift',
-                     'Sources/NetworkKit/Client.swift']
+                     'Sources/NetworkKit/Client/APIClient.swift']
             for name in names:
                 path = root / name
                 path.parent.mkdir(parents=True, exist_ok=True)
