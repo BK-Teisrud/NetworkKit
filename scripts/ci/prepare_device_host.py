@@ -17,7 +17,7 @@ VARIANTS = {
 
 def openstep(value):
     if isinstance(value, dict):
-        return '{\n' + ''.join(json.dumps(str(k)) + ' = ' + openstep(v) + ';\n' for k, v in value.items()) + '}'
+        return '{\n' + ''.join(json.dumps(str(k)) + ' = ' + openstep(v) + ';\n' for k, v in sorted(value.items())) + '}'
     if isinstance(value, list):
         return '(' + ','.join(openstep(v) for v in value) + ')'
     return json.dumps(str(value))
