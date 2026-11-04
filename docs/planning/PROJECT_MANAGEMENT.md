@@ -12,7 +12,7 @@ The owner permits up to five concurrent work processes, including independent is
 
 Conservatively permit at most two heavy CI workflows at once (two matrix jobs each) plus one local heavy verification process, keeping the planned heavy-work budget within five. Do not fan out five workflows that each start two matrix jobs. Respect GitHub's actual runner limits and preserve standard runners. A PR is created before preparing the next independent PR; do not launch simultaneous publication operations. Stop adding work when capacity is reached.
 
-The owner explicitly reconfirmed on 2026-10-31: stop whenever a GitHub run is pending and await the owner's instruction to continue. Do not poll or continue independent work across that stop. Independent Ready work may be prepared only while this stop condition does not apply, after dependency/overlap/capacity review. No unattended monitor or automatic resumption is implied. P0 means incident/gate; P1 necessary core work; P2 later extensions; P3 research. Priority does not authorize code.
+The owner superseded the former stop-at-pending-CI rule on 2026-11-04: continue useful independent or next-branch work while CI runs, without polling or wait loops. Check at natural task transitions and before merging. A dependent branch may be prepared from the merged predecessor, but cannot merge until predecessor main and the candidate's own required checks pass. Prioritize predecessor failures and review their downstream impact. No unattended monitor is implied. The five-process capacity and dependency/file-overlap safeguards remain. P0 means incident/gate; P1 necessary core work; P2 later extensions; P3 research. Priority does not authorize code.
 
 ## Fields and views
 
@@ -59,7 +59,7 @@ PR #135 exposed this issue: its narrative instruction created a closing referenc
 
 ## Combined maintenance delivery — 2026-11-04
 
-The owner selected one branch/PR for #158–#161, excluding I31/I32. Internal order and intermediate checks remain, but do not model them as external blockers requiring separate PRs. All four require integrated PR/main acceptance before manual closure. I31 stays externally blocked by all four; no issue is marked complete from a partial implementation. Work Queue includes selected extension tasks while excluding domain epics and research. Preserve ascending Order. This grouping changes delivery overhead, not scope, security rules or the CI stop rule.
+The owner selected one branch/PR for #158–#161, excluding I31/I32. Internal order and intermediate checks remain, but do not model them as external blockers requiring separate PRs. All four require integrated PR/main acceptance before manual closure. I31 stays externally blocked by all four; no issue is marked complete from a partial implementation. Work Queue includes selected extension tasks while excluding domain epics and research. Preserve ascending Order. This grouping changes delivery overhead, not scope or security rules. The later owner CI-continuation policy above supersedes the historical stop rule.
 
 ## Maintenance
 

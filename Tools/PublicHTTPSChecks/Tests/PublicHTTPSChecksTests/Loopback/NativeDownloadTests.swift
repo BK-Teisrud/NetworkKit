@@ -9,15 +9,6 @@ import NetworkKit
 import os
 import Darwin
 
-private func downloadSession(_ ownership: Ownership) -> URLSession? {
-    guard ownership == .borrowed else { return nil }
-    let settings = URLSessionConfiguration.ephemeral
-    settings.httpCookieStorage = nil; settings.httpShouldSetCookies = false
-    settings.httpCookieAcceptPolicy = .never; settings.urlCredentialStorage = nil; settings.urlCache = nil
-    settings.requestCachePolicy = .reloadIgnoringLocalCacheData
-    return URLSession(configuration: settings)
-}
-
 extension PublicHTTPSTests {
     @Test(arguments: Ownership.allCases)
     func nativeLoopbackDownloadFiles(ownership: Ownership) async throws {

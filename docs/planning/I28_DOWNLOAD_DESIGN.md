@@ -1,5 +1,8 @@
 # I28 foreground download detailed design
 
+Current execution update, 2026-11-04: I28/I29/I30 and maintenance #158–#161 are completed. The owner authorized one combined I31/I32 delivery. [ADR-0017](../decisions/ADR-0017-current-platform-baseline.md) supersedes only the earlier minimum OS values with iOS/iPadOS18, macOS15, watchOS11 and tvOS18. The exact download API/ownership/cleanup/size boundaries remain. Original submission-time planning/acceptance states below are historical, not current status.
+
+
 Date: 2026-11-01
 Status: Owner-approved design/disposition; PR #154/main accepted and I28/#88 completed. Subsequent I29–I32 implementation instruction is recorded in ADR-0015; earlier no-code decisions below retain their original scope.
 Owner: #146 / #88; ADR-0015 revision 1 remains the approved planning baseline.

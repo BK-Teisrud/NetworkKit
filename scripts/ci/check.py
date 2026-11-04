@@ -69,7 +69,7 @@ def source_integrity():
     require(manifest["swiftLanguageVersions"] == ["6"], "Swift 6 language mode required")
     require(manifest["dependencies"] == [], "External package dependencies are not authorized")
     require({p["platformName"]: p["version"] for p in manifest["platforms"]}
-            == {"ios": "17.0", "macos": "14.0", "watchos": "10.0", "tvos": "17.0"}, "Platform minimums changed")
+            == {"ios": "18.0", "macos": "15.0", "watchos": "11.0", "tvos": "18.0"}, "Platform minimums changed")
     require([(t["name"], t["type"]) for t in manifest["targets"]]
             == [("NetworkKit", "regular"), ("NetworkKitTests", "test")], "Unexpected targets/plugins")
     require(manifest["targets"][0].get("resources") == [{"path": "PrivacyInfo.xcprivacy", "rule": {"copy": {}}}],
@@ -102,6 +102,9 @@ def source_integrity():
     validate_documented_examples(
         (ROOT / "Tests/NetworkKitTests/Compatibility/DocumentationExamplesTests.swift").read_text(),
         (ROOT / "Sources/NetworkKit/NetworkKit.docc/IntegrationGuide.md").read_text())
+    validate_documented_examples(
+        (ROOT / "Tests/NetworkKitTests/Compatibility/FileDownloadExamplesTests.swift").read_text(),
+        (ROOT / "Sources/NetworkKit/NetworkKit.docc/FileDownloads.md").read_text())
     run("git", "diff", "--check")
     run("python3", "-m", "unittest", "discover", "-s", "scripts/ci", "-p", "test_*.py", "-v")
     print("Manifest, dependencies, source policies, JSON, local file links, workflow matrix/pins, and CI helper tests passed.")

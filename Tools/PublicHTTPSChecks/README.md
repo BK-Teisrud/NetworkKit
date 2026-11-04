@@ -2,7 +2,11 @@
 
 NET-01 / #115. The owner selected HTTPBingo and BadSSL on 2026-10-27 instead of provisioning a paid/private HTTPS environment. This separate verification package is not a shipped library product or an SDK dependency. Its only package dependency is the local repository. Normal root tests never run these checks.
 
-## Current I31 download selection
+## Current F4 candidate
+
+ADR-0017 raises the selected floors to iOS/iPadOS18, macOS15, watchOS11 and tvOS18. Explicit `nativeHTTPSDownload` tests cover fixed small HTTPBingo payload/auth/store cases and BadSSL trust controls, with production 30/60 budgets. These four declarations/seven cases are never selected by automatic CI. The file resource test now compiles on all selected families; actual executed runtime/resource scope is recorded separately, never inferred from a build. No public stress benchmark or real credential is introduced.
+
+## Historical I31 download selection
 
 [I31 Mac evidence](../../docs/planning/I31_NATIVE_DOWNLOAD_2026-11-04.md) adds five explicitly selected native-download declarations / nine cases on Mac; three public scenarios / six ownership cases compile on other hosts, with no execution inference. Mac-only known-path capture uses @testable for private observation without a shipping hook; public-constructor cases use the live URLSession adapter. Historical NET-03 counts below retain their earlier scope.
 

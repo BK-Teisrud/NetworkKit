@@ -79,7 +79,6 @@ extension PublicHTTPSTests {
     }
 }
 
-#if os(macOS)
 extension PublicHTTPSTests {
     @Test func nativeLoopbackDownloadResourceObservations() async throws {
         try await nativeFixture { fixture, base in
@@ -140,4 +139,3 @@ extension PublicHTTPSTests {
         }
     }
 }
-#endif

@@ -1,6 +1,10 @@
 # Platform and toolchain matrix
 
-## Accepted F2 closeout — 2026-10-31
+## Current declared support — 2026-11-04
+
+[ADR-0017](../decisions/ADR-0017-current-platform-baseline.md) selects iOS/iPadOS 18.0, macOS 15.0, watchOS 11.0 and tvOS 18.0 under explicit owner-delegated authority. Xcode 26.3/Swift tools 6.2/Swift 6 remain. This removes the older families from the current candidate; historical F2/F3/F4 observations below are not relabeled. New candidate native/family evidence must record exact patch, architecture, simulator/physical/build-only scope. A family run does not prove every patch or exact .0 runtime.
+
+## Historical accepted F2 closeout — 2026-10-31
 
 F2 is CLOSED after PR #135/main `cc654ab5faadc0fc7fe00d7ad238b2e3ed5a997c`, [run 41242130528](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41242130528), with full-log verification of 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks without failure/restart markers. #64/#27 are Done; direct item lists and GraphQL verify no open F2 issues/PRs. [Closeout evidence](F2_CLOSEOUT_2026-10-31.md) records the milestone summary-counter disagreement and actual verified states.
 
@@ -8,7 +12,7 @@ Original candidate evidence files retain their submission-time pending flags and
 
 PLAN-F3 #87 is Ready for planning only: review draft PR #111 and obtain a separate approved feature scope/start decision before code. Closed F2 is not publication or extension authorization.
 
-## Current verified evidence — 2026-10-31
+## Historical verified F2 evidence — 2026-10-31
 
 Latest accepted standard CI: PR #128 / main b8f2758530cca68ec819068ff3ac7748868e26dd, run 41203171039. All seven checks passed, with 218 Mac tests, four simulator runs of 215 each, six unsigned test-host builds and 17 helper controls. These PR runtimes remain distinct from minimum-family and physical execution.
 

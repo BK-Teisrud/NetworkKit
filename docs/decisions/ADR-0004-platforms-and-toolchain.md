@@ -3,7 +3,11 @@
 Date: 2026-10-19. Status: Accepted by the project owner in conversation.
 Issue: [DEC-01 / #1](https://github.com/BK-Teisrud/NetworkKit/issues/1).
 
-## Approved choices
+## Superseding current minimums
+
+On 2026-11-04 the owner delegated a newer baseline selection. [ADR-0017](ADR-0017-current-platform-baseline.md) selects iOS/iPadOS 18, macOS 15, watchOS 11 and tvOS 18. The original choices and evidence below remain historical; toolchain and product families remain unchanged.
+
+## Approved original choices
 
 The owner explicitly selected:
 

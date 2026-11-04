@@ -2,7 +2,7 @@
 
 ## Current scope — 2026-11-04
 
-F0/F1/F2/F3 are complete within their recorded acceptance limits. The selected F4 foreground GET-to-file increment remains under ADR-0015; upload, progress, resume, background and download retry remain deferred. Owner-authorized maintenance #158–#161 is one combined delivery before further I31/#149 and I32/#150. No new milestone, dates, module or product feature is selected.
+F0/F1/F2/F3 are complete within their recorded acceptance limits. The selected F4 foreground GET-to-file increment remains under ADR-0015; upload, progress, resume, background and download retry remain deferred. Maintenance #158–#161 is completed through PR #162 and accepted main run 41908869761. The owner selected one combined I31/#149–I32/#150 candidate and delegated the newer OS baseline to ADR-0017. Preparation may continue while CI runs; no dependent merge bypasses required predecessor/candidate checks. No new milestone, dates, module or product feature is selected.
 
 See [WORK_QUEUE](WORK_QUEUE.md) for current execution order and accepted predecessor evidence, GitHub Project Status for live work state, and the [maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) for safeguards. Dated reports and the original allocation below preserve history; their earlier status is not live state. #29 actual app/workload/security/publication and #132 physical Watch retain mandatory separate barriers.
 

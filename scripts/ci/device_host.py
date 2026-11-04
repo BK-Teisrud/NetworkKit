@@ -62,7 +62,7 @@ def validate(root, project):
     project_settings = objects[project["rootObject"]]
     for c in objects[project_settings["buildConfigurationList"]]["buildConfigurations"]:
         b = objects[c]["buildSettings"]
-        require(b.get("IPHONEOS_DEPLOYMENT_TARGET") == "17.0" and b.get("SWIFT_VERSION") == "6.0",
+        require(b.get("IPHONEOS_DEPLOYMENT_TARGET") == "18.0" and b.get("SWIFT_VERSION") == "6.0",
                 "Host deployment/language differs from approved baseline")
     forbidden = {"DEVELOPMENT_TEAM", "CODE_SIGN_IDENTITY", "PROVISIONING_PROFILE", "PROVISIONING_PROFILE_SPECIFIER", "CODE_SIGN_ENTITLEMENTS"}
     for o in objects.values():
