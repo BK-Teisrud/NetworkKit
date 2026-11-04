@@ -1,8 +1,8 @@
-SwiftNetworkKit — Proprietary Rights Notice
+NetworkKit — Proprietary Rights Notice
 
 Copyright (c) 2026 Teisrud Development AS. All rights reserved.
 
-SwiftNetworkKit is proprietary. No open-source license is granted.
+NetworkKit is proprietary. No open-source license is granted.
 
 Except for rights granted under applicable law, applicable GitHub terms for
 hosting and interacting with this public repository, or a separate written
@@ -18,7 +18,7 @@ Do not post confidential information in public issues.
 This notice does not restrict rights granted by GitHub's applicable terms
 for viewing and forking a public repository through the service. Such
 repository visibility does not grant an additional license to incorporate
-SwiftNetworkKit into an application or otherwise exploit the material.
+NetworkKit into an application or otherwise exploit the material.
 
 Any authorized third-party use must follow the separate written permission
 or license agreement issued by Teisrud Development AS.

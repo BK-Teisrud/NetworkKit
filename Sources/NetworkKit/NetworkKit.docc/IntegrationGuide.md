@@ -4,7 +4,7 @@ Configure a reusable client, execute buffered HTTP calls and control its lifetim
 
 ## Installation and current status
 
-The repository and Swift package are named SwiftNetworkKit; the library product and import are NetworkKit. Open the repository-root Package.swift in Xcode, or add the repository URL as a package dependency and select the NetworkKit product. There is no published v1 tag yet: evaluate an explicitly reviewed commit/revision, subject to Teisrud Development AS's proprietary rights and written permission requirements. Public visibility is not permission to ship the library in another application.
+The repository and Swift package are named NetworkKit; the library product and import are NetworkKit. Open the repository-root Package.swift in Xcode, or add the repository URL as a package dependency and select the NetworkKit product. There is no published v1 tag yet: evaluate an explicitly reviewed commit/revision, subject to Teisrud Development AS's proprietary rights and written permission requirements. Public visibility is not permission to ship the library in another application.
 
 Use Xcode 26.3 with the verified Swift 6.2.4 compiler for the current CI baseline; tools version is 6.2 and language mode is Swift 6. Product deployment minima are iOS/iPadOS 17, macOS 14, watchOS 10 and tvOS 17. Newer-SDK builds do not prove minimum-runtime support. The accepted platform matrix records actual minimum-family and non-Watch physical results with exact patch/architecture/suite limits. Physical Watch verification remains a separate pre-publication requirement; no stable release or production workload suitability is approved. No visionOS, Catalyst, Linux or external package dependency is selected.
 
@@ -41,7 +41,7 @@ Use `guideMakeOwnedClient` below at the owning service boundary, then call `guid
 
 ## Raw calls, other formats and request bodies
 
-Raw URLRequest follows the same APIClient security/status/time-budget checks. JSON is selected explicitly for a model; Data preserves buffered bytes, text requires supported UTF-8 semantics, and EmptyResponse skips payload decoding. Use explicit empty semantics for HEAD/204 rather than expecting an empty body to manufacture a JSON model. All responses are buffered; this is not a streaming or large-file API.
+Raw URLRequest follows the same APIClient security/status/time-budget checks. JSON is selected explicitly for a model; Data preserves buffered bytes, text requires supported UTF-8 semantics, and EmptyResponse skips payload decoding. Use explicit empty semantics for HEAD/204 rather than expecting an empty body to manufacture a JSON model. The send APIs buffer their responses. Use the separate <doc:FileDownloads> operation for foreground GET-to-file transfers with explicit size and ownership rules.
 
 <!-- DOC-EXAMPLE: formats -->
 ```swift

@@ -2,7 +2,7 @@
 
 ## Accepted F2 closeout — 2026-10-31
 
-F2 is CLOSED after PR #135/main `cc654ab5faadc0fc7fe00d7ad238b2e3ed5a997c`, [run 41242130528](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41242130528), with full-log verification of 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks without failure/restart markers. #64/#27 are Done; direct item lists and GraphQL verify no open F2 issues/PRs. [Closeout evidence](F2_CLOSEOUT_2026-10-31.md) records the milestone summary-counter disagreement and actual verified states.
+F2 is CLOSED after PR #135/main `cc654ab5faadc0fc7fe00d7ad238b2e3ed5a997c`, [run 41242130528](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41242130528), with full-log verification of 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks without failure/restart markers. #64/#27 are Done; direct item lists and GraphQL verify no open F2 issues/PRs. [Closeout evidence](F2_CLOSEOUT_2026-10-31.md) records the milestone summary-counter disagreement and actual verified states.
 
 Original candidate evidence files retain their submission-time pending flags and exact executed SDK/platform/failure limits. The owner resource approval is F2-only. #132 physical Watch and #29 actual workload/device-memory/security/publication decisions remain mandatory in their separate milestone, with support unchanged. No release/tag, production suitability or F3 implementation is authorized.
 
@@ -10,7 +10,7 @@ PLAN-F3 #87 is Ready for planning only: review draft PR #111 and obtain a separa
 
 ## Earlier disposition — 2026-10-31 (superseded by current acceptance above)
 
-Accepted implementation/verification baseline: main 5d2ae116ec685c483b1dcc31db9e41a850c4e2ac, PR #125, [main run 41182672027](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41182672027). Full logs confirmed 218 macOS root tests, four simulator results of 215 each, two unsigned host builds, 16 helpers and the required native TLS/smoke/control checks without unexpected restart or test time-limit failure. Root-CI targets are newer configured runtimes; they are not the minimum results below.
+Accepted implementation/verification baseline: main 5d2ae116ec685c483b1dcc31db9e41a850c4e2ac, PR #125, [main run 41182672027](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41182672027). Full logs confirmed 218 macOS root tests, four simulator results of 215 each, two unsigned host builds, 16 helpers and the required native TLS/smoke/control checks without unexpected restart or test time-limit failure. Root-CI targets are newer configured runtimes; they are not the minimum results below.
 
 | Environment / scenario | Accepted evidence | Remaining requirement / next action |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ Evidence: [minimum root regressions](MINIMUM_RUNTIME_EXECUTION_2026-10-28.md), [
 
 The following dated inventory/access tables describe the initial preparation, not today's missing-access claims. Later evidence above supersedes only its actual assertions; earlier timeouts, failures and uncertainty remain recorded.
 
-Inventory date: 2026-10-26. Owner: @BK-Teisrud. Preparation task: [#85](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/85). This is an access/scenario assessment, not product execution or compatibility certification. Actual release evidence remains in [I21 / #62](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/62) and [I22 / #63](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/63); security/trust review belongs to [I19 / #60](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/60).
+Inventory date: 2026-10-26. Owner: @BK-Teisrud. Preparation task: [#85](https://github.com/BK-Teisrud/NetworkKit/issues/85). This is an access/scenario assessment, not product execution or compatibility certification. Actual release evidence remains in [I21 / #62](https://github.com/BK-Teisrud/NetworkKit/issues/62) and [I22 / #63](https://github.com/BK-Teisrud/NetworkKit/issues/63); security/trust review belongs to [I19 / #60](https://github.com/BK-Teisrud/NetworkKit/issues/60).
 
 ## Observed local inventory
 

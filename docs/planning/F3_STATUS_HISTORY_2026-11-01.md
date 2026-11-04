@@ -28,7 +28,7 @@ Planning #87/#106 is accepted through PR #111/main `25e0d52b8316251bb6592d075cae
 
 ## Complete retry contract approval — 2026-10-31
 
-The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
+The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/NetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
 
 
 
@@ -37,7 +37,7 @@ The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in
 
 ## Accepted F2 closeout — 2026-10-31
 
-F2 is CLOSED after PR #135/main `cc654ab5faadc0fc7fe00d7ad238b2e3ed5a997c`, [run 41242130528](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41242130528), with full-log verification of 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks without failure/restart markers. #64/#27 are Done; direct item lists and GraphQL verify no open F2 issues/PRs. [Closeout evidence](F2_CLOSEOUT_2026-10-31.md) records the milestone summary-counter disagreement and actual verified states.
+F2 is CLOSED after PR #135/main `cc654ab5faadc0fc7fe00d7ad238b2e3ed5a997c`, [run 41242130528](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41242130528), with full-log verification of 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks without failure/restart markers. #64/#27 are Done; direct item lists and GraphQL verify no open F2 issues/PRs. [Closeout evidence](F2_CLOSEOUT_2026-10-31.md) records the milestone summary-counter disagreement and actual verified states.
 
 Original candidate evidence files retain their submission-time pending flags and exact executed SDK/platform/failure limits. The owner resource approval is F2-only. #132 physical Watch and #29 actual workload/device-memory/security/publication decisions remain mandatory in their separate milestone, with support unchanged. No release/tag, production suitability or F3 implementation is authorized.
 
@@ -78,7 +78,7 @@ Planning #87/#106 is accepted through PR #111/main `25e0d52b8316251bb6592d075cae
 
 ## Complete retry contract approval — 2026-10-31
 
-The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
+The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/NetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
 
 
 
@@ -108,7 +108,7 @@ Planning #87/#106 is accepted through PR #111/main `25e0d52b8316251bb6592d075cae
 
 ## Complete retry contract approval — 2026-10-31
 
-The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
+The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/NetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
 
 
 Current phase status, 2026-10-31: F2 is CLOSED through PR #135/main 41242130528; #64/#27 are Done and open item connections are empty. [Final closeout](F2_CLOSEOUT_2026-10-31.md) records accepted evidence and counter discrepancy. #87 is Ready for retry planning only; physical Watch #132 and publication/workload/security #29 remain separate blockers. No F3 code or release authorization. Dated progress below preserves history.
@@ -123,7 +123,7 @@ Current reconciliation, 2026-10-31: #62 and revised #63 are Done. [GATE-F2 revie
 Current owner decision, 2026-10-31: [ADR-0013](../decisions/ADR-0013-watch-publication-gate.md) moves only missing physical Watch verification to #132/#29 in the separate “v1.0 – Publication gate” milestone. watchOS 10 support is unchanged. F2 remains open for revised #63, #86 and formal #64/#27; publication and F3 implementation remain unauthorized. [Applicability matrix](F2_PHYSICAL_APPLICABILITY.md) and [work queue](WORK_QUEUE.md) supersede dated access notes below.
 
 
-No deadlines are set. Phases are gates, not calendar promises. The owner selected HTTP core first: F0 → F1 → F2 completes non-publishing core hardening/rehearsal; a separate publication gate precedes the first stable release. F3–F6 are optional later deliveries, outside v1.0. Repository/package: SwiftNetworkKit; product/module: NetworkKit, with one library module. See [v1 scope](V1_SCOPE.md) and [ADR-0003](../decisions/ADR-0003-v1-scope-and-naming.md).
+No deadlines are set. Phases are gates, not calendar promises. The owner selected HTTP core first: F0 → F1 → F2 completes non-publishing core hardening/rehearsal; a separate publication gate precedes the first stable release. F3–F6 are optional later deliveries, outside v1.0. Repository/package: NetworkKit; product/module: NetworkKit, with one library module. See [v1 scope](V1_SCOPE.md) and [ADR-0003](../decisions/ADR-0003-v1-scope-and-naming.md).
 
 Current review: [TLS-01 native macOS rejection](NATIVE_TLS_REJECTION.md), a bounded P1 regression at Order 20.75 under #25. Preparation PR #103 is accepted through main run 40550211780; #62/#63 execution remains blocked by readiness/access. TLS-01 supplies local native negative evidence without selecting a new TLS product feature. F2 remains open for complete native/platform/resource and explicit owner-risk gates; no new milestone or support/tool change is selected.
 

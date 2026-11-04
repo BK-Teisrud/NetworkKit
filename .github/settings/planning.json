@@ -57,7 +57,7 @@
         "scope: governance",
         "priority: P1"
       ],
-      "body": "## Purpose\n\nIdentify included/deferred requirements across core domains; resolve SwiftNetworkKit versus NetworkKit product/import names and target boundaries.\n\n## Acceptance criteria\n\n- [ ] Alternatives and consequences documented in an ADR.\n- [ ] Owner approval recorded for the decision.\n- [ ] Affected roadmap, requirements, and risks updated.\n- [ ] No implementation code added.\n\n## Dependencies\n\nF0 cannot close before this decision. Coordinate with the other DEC issues.\n"
+      "body": "## Purpose\n\nIdentify included/deferred requirements across core domains; resolve package, product and import naming and target boundaries.\n\n## Acceptance criteria\n\n- [ ] Alternatives and consequences documented in an ADR.\n- [ ] Owner approval recorded for the decision.\n- [ ] Affected roadmap, requirements, and risks updated.\n- [ ] No implementation code added.\n\n## Dependencies\n\nF0 cannot close before this decision. Coordinate with the other DEC issues.\n"
     },
     {
       "id": "DEC-03",

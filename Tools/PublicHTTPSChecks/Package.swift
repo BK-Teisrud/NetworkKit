@@ -5,9 +5,9 @@ import PackageDescription
 let package = Package(
     name: "NetworkKitPublicHTTPSChecks",
     platforms: [.macOS(.v14), .iOS(.v17), .watchOS(.v10), .tvOS(.v17)],
-    dependencies: [.package(path: "../..")],
+    dependencies: [.package(name: "NetworkKit", path: "../..")],
     targets: [.testTarget(name: "PublicHTTPSChecksTests", dependencies: [
-        .product(name: "NetworkKit", package: "SwiftNetworkKit"),
+        .product(name: "NetworkKit", package: "NetworkKit"),
     ])],
     swiftLanguageModes: [.v6]
 )

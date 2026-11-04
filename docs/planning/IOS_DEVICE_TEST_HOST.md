@@ -1,6 +1,6 @@
 # PREP-02 — app-hosted iOS test route
 
-Date: 2026-10-27. Task [#113](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/113), parent #23, F2 CORE/P1. Source baseline: accepted main `4ed54dc5bff1f4beeac51d5d2f88da7b29b1eb9b`, main run 40565802082 passed with full logs verified. This task changes verification infrastructure; production Sources, Package.swift, dependencies, product/import and platform minima are unchanged.
+Date: 2026-10-27. Task [#113](https://github.com/BK-Teisrud/NetworkKit/issues/113), parent #23, F2 CORE/P1. Source baseline: accepted main `4ed54dc5bff1f4beeac51d5d2f88da7b29b1eb9b`, main run 40565802082 passed with full logs verified. This task changes verification infrastructure; production Sources, Package.swift, dependencies, product/import and platform minima are unchanged.
 
 ## Problem and bounded solution
 

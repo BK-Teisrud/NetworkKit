@@ -2,7 +2,7 @@
 
 ## Complete retry contract approval — 2026-10-31
 
-The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
+The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/NetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.
 
 
 GATE-F2 disposition, 2026-10-31: the owner expressly accepts proceeding **only with the non-publishing F2 rehearsal** under the recorded runtime retention, call-rate/budget/payload and finite-memory-observation limitations. #86 reconciles accepted non-Watch/minimum evidence and the ADR-0013 Watch deferral. This is no production-fit or publication acceptance: #29 retains workload/security approval, #132 physical Watch, and #64 actual clean-consumer/archive rehearsal. No further product defect, generic refactor or extra issue is established by this review.

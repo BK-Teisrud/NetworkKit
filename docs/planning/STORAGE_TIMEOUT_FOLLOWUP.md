@@ -1,10 +1,10 @@
 # Native HTTP-probe liveness follow-up — BUG-01
 
-Date: 2026-10-26. Task: [#95](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/95). This acceptance blocker precedes I19; I18 / #59 remains unaccepted until its failed main evidence is reconciled.
+Date: 2026-10-26. Task: [#95](https://github.com/BK-Teisrud/NetworkKit/issues/95). This acceptance blocker precedes I19; I18 / #59 remains unaccepted until its failed main evidence is reconciled.
 
 ## Observed failure and uncertainty
 
-PR #94 passed all seven checks, but [main run 40382689252](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/40382689252) on `5ea73b3f8f4045bea23dd32bd0b8b3273c2a9358` failed. StorageIntegrationTests.strictProfileCannotServeAnAutomaticHTTPCacheEntry(borrowed: true) exceeded its original 60-second limit. Xcode restarted the test process. macos-core and quality-gate failed; the other platform/source/DocC checks succeeded. No accepted I18 main result exists from that run.
+PR #94 passed all seven checks, but [main run 40382689252](https://github.com/BK-Teisrud/NetworkKit/actions/runs/40382689252) on `5ea73b3f8f4045bea23dd32bd0b8b3273c2a9358` failed. StorageIntegrationTests.strictProfileCannotServeAnAutomaticHTTPCacheEntry(borrowed: true) exceeded its original 60-second limit. Xcode restarted the test process. macos-core and quality-gate failed; the other platform/source/DocC checks succeeded. No accepted I18 main result exists from that run.
 
 The retained log does not identify whether the storage server's readiness, strict I/O, raw cache positive control, client shutdown or child teardown stalled. Nearby socket warnings are not proof of a cause. This is distinct from previous jobs that never acquired a hosted runner. Do not erase the failure with a blind rerun or claim an OS/cache/product root cause without evidence.
 

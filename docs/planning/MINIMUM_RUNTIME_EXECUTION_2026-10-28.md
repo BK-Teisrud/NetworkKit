@@ -1,6 +1,6 @@
 # Minimum-runtime regression execution — 2026-10-28
 
-I21 / [#62](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/62). Reviewed product/test source: main 5a5cfb2eed49065f0721e34c253292eacab0dd9c, after [PR #119](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/119) and successful main run 40757232306. This follow-up changes evidence and planning only.
+I21 / [#62](https://github.com/BK-Teisrud/NetworkKit/issues/62). Reviewed product/test source: main 5a5cfb2eed49065f0721e34c253292eacab0dd9c, after [PR #119](https://github.com/BK-Teisrud/NetworkKit/pull/119) and successful main run 40757232306. This follow-up changes evidence and planning only.
 
 ## Acquisition and boot history
 
@@ -10,7 +10,7 @@ After completed imports and a clean shutdown, one fresh iPhone 14 Pro / iOS 17.0
 
 ## Actual regression results
 
-The existing root-package SwiftNetworkKit scheme runs with the exact discovered simulator destination, unsigned builds, warnings as errors, parallel testing disabled, separate temporary derived data and a fresh xcresult. Each result must be Passed with 215/215 tests and zero failed, skipped or expected failures. Full logs must also show completed execution without unexpected restart or time-limit markers. The three macOS-only declarations retain their existing compile-time exclusions; they are not reported as skipped or executed on these targets.
+The existing root-package NetworkKit scheme runs with the exact discovered simulator destination, unsigned builds, warnings as errors, parallel testing disabled, separate temporary derived data and a fresh xcresult. Each result must be Passed with 215/215 tests and zero failed, skipped or expected failures. Full logs must also show completed execution without unexpected restart or time-limit markers. The three macOS-only declarations retain their existing compile-time exclusions; they are not reported as skipped or executed on these targets.
 
 | Destination | OS/build | Boot readiness | Root regression suite |
 | --- | --- | --- | --- |

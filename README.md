@@ -1,6 +1,6 @@
-# SwiftNetworkKit
+# NetworkKit
 
-[![CI](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/workflows/ci.yml)
+[![CI](https://github.com/BK-Teisrud/NetworkKit/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/BK-Teisrud/NetworkKit/actions/workflows/ci.yml)
 
 A native networking library for Apple platforms, distributed as a Swift package with no external package dependencies.
 
@@ -8,13 +8,13 @@ A native networking library for Apple platforms, distributed as a Swift package 
 
 The selected F4 download increment is now authorized under ADR-0015. I29 adds a [foreground GET-to-file API](Sources/NetworkKit/NetworkKit.docc/FileDownloads.md); [its implementation report](docs/planning/I29_FOREGROUND_DOWNLOAD.md) distinguishes critical-path local verification from the remaining I30–I32/native/publication gates. No stable release or production suitability is implied.
 
-Open the repository-root Package.swift in Xcode. The package is named SwiftNetworkKit and exposes the NetworkKit library. Tests cover HTTP values, configuration, construction, response interpretation, session ownership, network policy and client integration, with platform-specific evidence described in the guides. See [implementation authorization](docs/decisions/ADR-0012-implementation-start.md).
+Open the repository-root Package.swift in Xcode. The package is named NetworkKit and exposes the NetworkKit library. Tests cover HTTP values, configuration, construction, response interpretation, session ownership, network policy and client integration, with platform-specific evidence described in the guides. See [implementation authorization](docs/decisions/ADR-0012-implementation-start.md).
 
 ## Project foundations
 
 Foundation/URLSession is the primary HTTP transport. Swift Concurrency, injectable services, system trust, and privacy-preserving defaults guide the design. Network.framework may be considered for specific low-level requirements. The project will not implement its own HTTP, TLS, or cryptographic stack, or provide a backend product.
 
-The repository and package are named **SwiftNetworkKit**. The library product, module, and import name are **NetworkKit**, with one library module in v1. The first stable release is limited to the HTTP core; other modules are deferred. The package and selected HTTP core are implemented; rehearsal and separate publication gates remain distinct. See [v1 scope](docs/planning/V1_SCOPE.md) and [ADR-0003](docs/decisions/ADR-0003-v1-scope-and-naming.md).
+The repository and package are named **NetworkKit**. The library product, module, and import name are **NetworkKit**, with one library module in v1. The first stable release is limited to the HTTP core; other modules are deferred. The package and selected HTTP core are implemented; rehearsal and separate publication gates remain distinct. See [v1 scope](docs/planning/V1_SCOPE.md), [ADR-0003](docs/decisions/ADR-0003-v1-scope-and-naming.md) and the [unified naming decision](docs/decisions/ADR-0016-unified-networkkit-name.md).
 
 ## Documentation
 
@@ -77,7 +77,7 @@ The repository and package are named **SwiftNetworkKit**. The library product, m
 
 Approved v1 targets: **iOS/iPadOS 17+, macOS 14+, watchOS 10+, and tvOS 17+**. visionOS is deferred. Development baseline: **Xcode 26.3+, Swift tools 6.2, and Swift 6 language mode with strict concurrency checking**. See the [platform matrix](docs/planning/PLATFORM_MATRIX.md) and [ADR-0004](docs/decisions/ADR-0004-platforms-and-toolchain.md). PR CI now builds all four platform families and runs the product contract tests on macOS plus iPhone, iPad, Apple Watch, and Apple TV simulators. The required quality-gate also covers source integrity and DocC. Minimum-family and non-Watch physical evidence are accepted within the exact patch/architecture/suite limits in the platform matrix. Physical Watch #132 and the separate publication/workload decision #29 remain open.
 
-**Rights holder: Teisrud Development AS. SwiftNetworkKit is proprietary.** Third-party use requires separate written permission from the company, subject to statutory rights and GitHub's applicable terms. Public visibility permits viewing and forking through GitHub; the project grants no additional open-source license or general permission to use the material in applications.
+**Rights holder: Teisrud Development AS. NetworkKit is proprietary.** Third-party use requires separate written permission from the company, subject to statutory rights and GitHub's applicable terms. Public visibility permits viewing and forking through GitHub; the project grants no additional open-source license or general permission to use the material in applications.
 
 See the [rights notice](LICENSE) and [ownership and rights decision](docs/decisions/ADR-0002-ownership-and-rights.md). Ask maintainer @BK-Teisrud for a confirmed permission-request contact channel; do not share confidential information publicly.
 

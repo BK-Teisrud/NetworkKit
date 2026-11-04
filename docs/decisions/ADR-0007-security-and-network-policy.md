@@ -1,7 +1,7 @@
 # ADR-0007: Security, authentication, storage, and network policy in v1
 
 Date: 2026-10-19. Status: Core choices accepted by the owner; related defaults elaborate those choices.
-Issue: [DEC-06 / #6](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/6).
+Issue: [DEC-06 / #6](https://github.com/BK-Teisrud/NetworkKit/issues/6).
 
 ## Approved choices
 

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Corrected the download feature's bundled required-reason declaration: FileTimestamp / C617.1 covers fstat used for app-temporary file metadata. Tracking remains disabled and collection/tracking-domain lists remain empty; actual consumer privacy/distribution review remains separate.
+
 ### Foreground file download — I29 implementation candidate
 
 - Added one explicit GET-to-file operation with a required output-size limit, HTTP 200-only completion and app ownership on successful return.
@@ -83,7 +85,7 @@ The following entries record earlier task-local counts and the work remaining at
 
 ### Package baseline
 
-- Implementation started under ADR-0012 on 2026-10-20. Adapted the owner's Xcode starter into a repository-root Swift package: SwiftNetworkKit / NetworkKit, tools 6.2, Swift 6, OS minimums 17/14/10/17.
+- Implementation started under ADR-0012 on 2026-10-20. Adapted the owner's Xcode starter into a repository-root Swift package: NetworkKit / NetworkKit, tools 6.2, Swift 6, OS minimums 17/14/10/17.
 - Removed the empty example test; recorded actual macOS build and consumer-import smoke checks without claiming behavioral tests. No HTTP functionality or workflows yet.
 
 ### Project setup (historical)
@@ -98,5 +100,5 @@ The following entries record earlier task-local counts and the work remaining at
 - DEC-05 accepted: a reused owned session plus injection, 30-second inactivity timeout / 60-second total budget, isolated state, cancellation, and controlled shutdown.
 - DEC-04 accepted: typed endpoints and raw URLRequest, response wrapper, JSON/Data/text/empty responses, structured errors with a separate CancellationError, and explicit HTTP-status exceptions.
 - DEC-01 accepted: iOS/iPadOS 17, macOS 14, watchOS 10, and tvOS 17; Xcode 26.3+, Swift tools 6.2, and Swift 6 language mode. The platform matrix distinguishes planned support from outstanding evidence.
-- DEC-02 accepted: HTTP core first. Repository/package SwiftNetworkKit; product/module/import NetworkKit, with one library module in v1.
+- DEC-02 accepted: HTTP core first. Repository/package NetworkKit; product/module/import NetworkKit, with one library module in v1.
 - DEC-03 accepted: Teisrud Development AS is the rights holder; proprietary rights policy with separate written permission required for third-party use.

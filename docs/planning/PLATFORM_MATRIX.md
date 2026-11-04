@@ -2,7 +2,7 @@
 
 ## Accepted F2 closeout — 2026-10-31
 
-F2 is CLOSED after PR #135/main `cc654ab5faadc0fc7fe00d7ad238b2e3ed5a997c`, [run 41242130528](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41242130528), with full-log verification of 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks without failure/restart markers. #64/#27 are Done; direct item lists and GraphQL verify no open F2 issues/PRs. [Closeout evidence](F2_CLOSEOUT_2026-10-31.md) records the milestone summary-counter disagreement and actual verified states.
+F2 is CLOSED after PR #135/main `cc654ab5faadc0fc7fe00d7ad238b2e3ed5a997c`, [run 41242130528](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41242130528), with full-log verification of 218 Mac tests, four 215 simulator suites, 19 helpers and four manual-host provenance checks without failure/restart markers. #64/#27 are Done; direct item lists and GraphQL verify no open F2 issues/PRs. [Closeout evidence](F2_CLOSEOUT_2026-10-31.md) records the milestone summary-counter disagreement and actual verified states.
 
 Original candidate evidence files retain their submission-time pending flags and exact executed SDK/platform/failure limits. The owner resource approval is F2-only. #132 physical Watch and #29 actual workload/device-memory/security/publication decisions remain mandatory in their separate milestone, with support unchanged. No release/tag, production suitability or F3 implementation is authorized.
 
@@ -16,7 +16,7 @@ Latest accepted standard CI: PR #128 / main b8f2758530cca68ec819068ff3ac7748868e
 | --- | --- | --- | --- |
 | iOS 17.0 | iOS 17.0 simulator; 215 regression tests | Accepted native loopback/public suite at its recorded 19-declaration / 40-case source; [minimum records](MINIMUM_RUNTIME_EXECUTION_2026-10-28.md), [NET-03](NET03_NATIVE_LOOPBACK.md) | iPhone 17 Pro / iOS 27.2 regression/native accepted; actual background/outage/recovery accepted through PR #129/main 41221803657 |
 | iPadOS 17.0 | iPadOS 17.0 simulator; 215 regression tests | Same separately recorded minimum iPad run and native scope | iPad Pro 11-inch 3rd generation / 27.2: 215 regression, native 20/21 plus supplemental strict TLS; actual transition report accepted through PR #129/main 41221803657; earlier failure retained |
-| macOS 14.0 | ARM64 macOS 14.8.9 / 23J631 | Native consumer/reuse/cancellation/finite resource controls plus ten HTTPS cases in [run 41204068268](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41204068268); [custody](evidence/MACOS14_HTTPS_EXECUTION_2026-10-31.json) | Local Intel macOS 15.8.1 native evidence is separate. No exact 14.0, Intel macOS 14 or full macOS 14 suite claim |
+| macOS 14.0 | ARM64 macOS 14.8.9 / 23J631 | Native consumer/reuse/cancellation/finite resource controls plus ten HTTPS cases in [run 41204068268](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41204068268); [custody](evidence/MACOS14_HTTPS_EXECUTION_2026-10-31.json) | Local Intel macOS 15.8.1 native evidence is separate. No exact 14.0, Intel macOS 14 or full macOS 14 suite claim |
 | watchOS 10.0 | watchOS 10.0 simulator; 215 regression tests | Accepted revised 21-declaration / 44-case native suite; [NET-04](NET04_NATIVE_CONTROLS.md) | Watch Ultra 2 / 27.2: signed generic artefacts ready, physical development-tunnel/readiness unresolved; no runtime pass |
 | tvOS 17.0 | tvOS 17.0 simulator; 215 regression tests | Accepted revised 21-declaration / 44-case native suite | Apple TV 4K 3rd generation / 27.2: accepted 215 regression + 21 native declarations / 44 cases and finite resources; actual Ethernet-loss/recovery/post-budget accepted through PR #131/main 41234106849 |
 
@@ -113,7 +113,7 @@ The full suite passed 64 tests in 11 suites on macOS 15.8.1 x86_64 / Xcode 26.3 
 
 ## I06 hosted CI evidence — 2026-10-20
 
-All four generic platform builds and all 64 product test functions passed on each of five destinations in [bootstrap PR run 39487893701](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39487893701): hosted macOS 15.7.9 arm64; iPhone 17 and iPad (A16), OS 26.2 build 23C54; Series 11 watch, OS 26.2 build 23S303; Apple TV 4K, OS 26.2 build 23K51. Xcode 26.3 build 17C529 / Swift 6.2.4 / SDKs 26.2, image 20260907.0337.1. Source integrity and DocC also passed. See [CI implementation](CI_IMPLEMENTATION.md) and #47 for main/enforcement evidence. This validates current value/configuration/request behavior, not unimplemented HTTP transport or minimum runtimes.
+All four generic platform builds and all 64 product test functions passed on each of five destinations in [bootstrap PR run 39487893701](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39487893701): hosted macOS 15.7.9 arm64; iPhone 17 and iPad (A16), OS 26.2 build 23C54; Series 11 watch, OS 26.2 build 23S303; Apple TV 4K, OS 26.2 build 23K51. Xcode 26.3 build 17C529 / Swift 6.2.4 / SDKs 26.2, image 20260907.0337.1. Source integrity and DocC also passed. See [CI implementation](CI_IMPLEMENTATION.md) and #47 for main/enforcement evidence. This validates current value/configuration/request behavior, not unimplemented HTTP transport or minimum runtimes.
 
 ## I09 security-policy evidence — 2026-10-21
 
@@ -126,7 +126,7 @@ and issue #50 for hosted PR/main results. Minimum-OS and physical-device gates r
 
 ## I10 cumulative baseline and I11 gate — 2026-10-21
 
-[Main run 39652280325](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39652280325)
+[Main run 39652280325](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39652280325)
 on `a09605739b92e53954b4ce4f3a6fb9b1825af8ce` passed all seven checks and 135 test
 functions / 18 suites on each table destination. Xcode 26.3 / 17C529, Swift 6.2.4,
 SDKs/simulator runtimes 26.2, macOS 15.7.9 arm64, image 20260907.0337.1. Exact UUIDs

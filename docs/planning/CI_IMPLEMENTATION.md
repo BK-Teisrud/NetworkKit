@@ -1,10 +1,10 @@
 # Real CI implementation and activation
 
-I06 / #47. Bootstrap PR: [#72](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/72).
+I06 / #47. Bootstrap PR: [#72](https://github.com/BK-Teisrud/NetworkKit/pull/72).
 Status: real CI is active. Main requires quality-gate from the verified GitHub Actions
 integration (15368), with a current-base requirement and no bypass. Activation followed
 successful bootstrap PR and main runs. The separate enforcement PR and completion
-record on [#47](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/47) hold the final
+record on [#47](https://github.com/BK-Teisrud/NetworkKit/issues/47) hold the final
 negative-control and acceptance evidence; the task stays open until that verification completes.
 
 ## Checks and exact environment
@@ -28,7 +28,7 @@ runtime download, or product minimum change is allowed.
 | documentation | Build generated test modules, extract real public NetworkKit symbol graphs, and build the module's DocC catalog with warnings as errors, without a package plugin |
 | quality-gate | On standard ubuntu-24.04, require the aggregate mandatory matrix result to be success; fail on failure, cancellation, missing result, or skip |
 
-The Swift package's actual Xcode scheme is **SwiftNetworkKit**, distinct from the
+The Swift package's actual Xcode scheme is **NetworkKit**, distinct from the
 **NetworkKit** product/module. A generated ignored `.swiftpm/xcode/package.xcworkspace`
 uses Xcode's self-reference to open the package; no second distributed product or
 hand-maintained application project is introduced. Test results must contain passed
@@ -93,7 +93,7 @@ the failed host assertion was not replaced with a build-only check. Companion lo
 now reports the actual existing compatible pairing rather than an unused candidate.
 
 The next hosted run executed and passed all 64 product test functions on each of macOS,
-iPhone, iPad, watchOS, and tvOS: [run 39486374412](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39486374412).
+iPhone, iPad, watchOS, and tvOS: [run 39486374412](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39486374412).
 Its quality-gate correctly failed because documentation failed on a clean runner:
 SwiftPM's symbol-graph command also visits its generated test runner module. The DocC
 job now builds test modules before extraction and still curates only NetworkKit graphs.
@@ -103,11 +103,11 @@ of the corrected workflow remains required before activation.
 
 ## Verified bootstrap and current main policy
 
-- [Bootstrap PR #72](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/72), final source
+- [Bootstrap PR #72](https://github.com/BK-Teisrud/NetworkKit/pull/72), final source
   44ce36edd82c2a532f2ceb89007cda86d3fddf2b:
-  [all seven checks passed](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39487893701).
+  [all seven checks passed](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39487893701).
 - Merged baseline fe47c58da9763247971c18df835cbf00176742fa:
-  [main run 39489206787](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39489206787)
+  [main run 39489206787](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39489206787)
   passed all seven checks before the required rule was activated. This precondition
   was checked against the API, including all actual jobs and the gate app identity.
 - Ruleset 25428389 adds only required_status_checks: quality-gate, integration_id 15368,
@@ -127,16 +127,16 @@ The rule and effective main-branch read-back succeeded on 2026-10-20 after the m
 
 ## Enforcement negative control and final acceptance
 
-[Verification PR #73](https://github.com/BK-Teisrud/SwiftNetworkKit/pull/73), revision
+[Verification PR #73](https://github.com/BK-Teisrud/NetworkKit/pull/73), revision
 13e4eb0b458e356c8a02c337bf1701d1a372fab9, deliberately introduced one missing local
-Markdown link. In [run 39491129998](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/39491129998),
+Markdown link. In [run 39491129998](https://github.com/BK-Teisrud/NetworkKit/actions/runs/39491129998),
 source-integrity failed for that exact fixture and quality-gate failed. All platform
 jobs and documentation passed. GitHub reported mergeable=MERGEABLE (no conflict) but
 mergeStateStatus=BLOCKED while the failed required gate came from GitHub Actions 15368.
 No bypass, merge attempt, or product-code failure was used to manufacture the result.
 
 The temporary control is removed. The final PR revision must pass every mandatory check
-before normal merge; [issue #47](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/47)
+before normal merge; [issue #47](https://github.com/BK-Teisrud/NetworkKit/issues/47)
 records that positive run and the final main result before closure. The README CI badge
 links to current main status; dated snapshots are not a substitute for live results.
 

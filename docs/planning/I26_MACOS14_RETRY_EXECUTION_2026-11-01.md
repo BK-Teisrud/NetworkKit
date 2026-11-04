@@ -1,6 +1,6 @@
 # I26 — actual macOS 14 retry execution
 
-[Manual run 41294523457](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41294523457) succeeds for accepted main `660f8c099faccdd4215ad5e4bf1d082faaa3e403` after PR #141/main run 41293485494 acceptance. The approved Xcode 26.3/Swift 6.2.4 builder and actual native ARM64 execution jobs both pass. The execution host reports **macOS 14.8.9 / 23J631**, not macOS 14.0 or this local Intel/macOS 15 host.
+[Manual run 41294523457](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41294523457) succeeds for accepted main `660f8c099faccdd4215ad5e4bf1d082faaa3e403` after PR #141/main run 41293485494 acceptance. The approved Xcode 26.3/Swift 6.2.4 builder and actual native ARM64 execution jobs both pass. The execution host reports **macOS 14.8.9 / 23J631**, not macOS 14.0 or this local Intel/macOS 15 host.
 
 [Sanitized immutable evidence](evidence/I26_MACOS14_RETRY_EXECUTION_2026-11-01.json) preserves the exact manifest, source hashes, transfer checksums, real runtime, cases and resource results. A separate local download/extraction verified the payload against accepted HEAD and current source hashes, compared the manifest to execution evidence, and confirmed ARM64 slices and macOS 14.0 load metadata without executing those binaries on Intel. Full workflow logs were reviewed; no failed probe or hidden rerun is accepted.
 

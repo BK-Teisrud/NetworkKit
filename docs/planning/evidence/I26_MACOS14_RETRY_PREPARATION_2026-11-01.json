@@ -93,7 +93,7 @@
     "files": {
       "NativeHTTPSProbe": "81297779c856fce010766b3e326f68f1bb0eec084dfffeca7fc1410c28950274",
       "ResourceProbe": "a2eb6d79b4106b448d75bc61c801ddec90d35557b5523e11c77539f8633a57bb",
-      "SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
+      "NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
     }
   },
   "limits": [

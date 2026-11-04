@@ -1,11 +1,13 @@
 # I19 — security and privacy review
 
+Current source-specific update, 2026-11-04: I29 introduced fstat for temporary download-file kind/size inspection. [I31](I31_NATIVE_DOWNLOAD_2026-11-04.md) corrects the bundled FileTimestamp/C617.1 declaration and existing resource test. The dated core analysis below describes its earlier source; original F2 archive/manifest evidence is not rewritten. Final integrated app privacy/security/publication review remains #29/I32 work.
+
 Current gate disposition, 2026-10-31: the owner explicitly approved **only the non-publishing F2 rehearsal** with the documented runtime-retention, call-rate/payload/budget and finite-RSS limitations; see [GATE-F2 resource disposition](F2_REVIEW.md#resource-disposition-for-this-gate). The provisional eight-active-call / expected 1 MiB guidance is not an enforced cap or validated app fit. #29 still requires actual workload/device-memory suitability, security and publication authorization; #132 retains physical Watch evidence. No production suitability or release is approved. Earlier dated statements below preserve their original evidence limits.
 
 
 Current public-fixture decision, 2026-10-27: the owner selected [HTTPBingo/BadSSL verification](PUBLIC_HTTPS_VERIFICATION.md), NET-01 #115, instead of provisioning a paid/private HTTPS server. Public native observations are allowed for claims they actually support. Earlier controlled-fixture requirements still apply to server-counter/zero-contact claims; minimum/physical/resource/archive/privacy and owner release gates remain. Earlier no-endpoint statements below preserve their historical context.
 
-Date: 2026-10-26. Baseline: main `d79cc031957a1f9690d7f5e5ec9efbdca6c6d9d1` (QA-01), main CI run 40396838559 succeeded. Candidate changes add a bundled privacy manifest, its resource test and this review; no transport behavior or public API is intentionally changed. Acceptance requires candidate PR and merged-main evidence recorded on [#60](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/60).
+Date: 2026-10-26. Baseline: main `d79cc031957a1f9690d7f5e5ec9efbdca6c6d9d1` (QA-01), main CI run 40396838559 succeeded. Candidate changes add a bundled privacy manifest, its resource test and this review; no transport behavior or public API is intentionally changed. Acceptance requires candidate PR and merged-main evidence recorded on [#60](https://github.com/BK-Teisrud/NetworkKit/issues/60).
 
 ## Review result and scope
 

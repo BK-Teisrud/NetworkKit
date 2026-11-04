@@ -1,6 +1,6 @@
 # GitHub configuration
 
-Repository: BK-Teisrud/SwiftNetworkKit. This document defines the intended configuration; [setup status](SETUP_STATUS.md) records what is active and verified. JSON files under .github/settings and .github/rulesets are versioned configuration baselines, not automatic GitHub synchronization.
+Repository: BK-Teisrud/NetworkKit. This document defines the intended configuration; [setup status](SETUP_STATUS.md) records what is active and verified. JSON files under .github/settings and .github/rulesets are versioned configuration baselines, not automatic GitHub synchronization.
 
 ## General settings
 

@@ -1,6 +1,6 @@
 # Quality and maintainability review — 2026-10-26
 
-Task: [QA-01 / #97](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/97). Owner requested a comprehensive current-state review and ongoing quality/refactoring assessment. Baseline: `21a204191eaa82a60ec88bf9f60ef57f5f054920`, accepted BUG-01/I18 follow-up main run 40390885712. This review is bounded engineering analysis and concrete corrections, not a guarantee of zero defects/debt or the final I19 security/privacy acceptance.
+Task: [QA-01 / #97](https://github.com/BK-Teisrud/NetworkKit/issues/97). Owner requested a comprehensive current-state review and ongoing quality/refactoring assessment. Baseline: `21a204191eaa82a60ec88bf9f60ef57f5f054920`, accepted BUG-01/I18 follow-up main run 40390885712. This review is bounded engineering analysis and concrete corrections, not a guarantee of zero defects/debt or the final I19 security/privacy acceptance.
 
 ## Scope and method
 

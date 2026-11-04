@@ -1,6 +1,6 @@
 # Storage profiles and controlled-server verification
 
-I16 / [#57](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/57), 2026-10-22.
+I16 / [#57](https://github.com/BK-Teisrud/NetworkKit/issues/57), 2026-10-22.
 The owned default remains strict. Tests now exercise actual URLSession behavior against
 an isolated loopback HTTP server, rather than treating URLProtocol as storage evidence.
 A public, explicit app-managed choice is now available for compatible borrowed sessions.

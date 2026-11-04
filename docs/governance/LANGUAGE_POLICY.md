@@ -4,7 +4,7 @@ English is the working language of all repository documentation and GitHub proje
 
 ## Apply consistently
 
-Write documentation, templates, configuration descriptions, issues, pull requests, GitHub comments, milestone names/descriptions, project fields/options/views, and future commit messages in clear English. Preserve established technical names and identifiers such as SwiftNetworkKit, NetworkKit, DEC-01, F0, and Order. Use one English term consistently across GitHub and versioned snapshots.
+Write documentation, templates, configuration descriptions, issues, pull requests, GitHub comments, milestone names/descriptions, project fields/options/views, and future commit messages in clear English. Preserve established technical names and identifiers such as NetworkKit, NetworkKit, DEC-01, F0, and Order. Use one English term consistently across GitHub and versioned snapshots.
 
 Existing editable issues and PRs are translated without changing their numbers, state, dependencies, acceptance outcomes, authorship, or original chronology. Translated approval statements are identified as translations, not new approvals. Where a historical status is outdated, retain its timing or add a clearly identified subsequent outcome.
 

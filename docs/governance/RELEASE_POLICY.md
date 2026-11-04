@@ -6,7 +6,7 @@ After implementation authorization, use SemVer: 0.x for explicitly unstable prer
 
 ## Separate F2 and publication gates
 
-[ADR-0013](../decisions/ADR-0013-watch-publication-gate.md) permits only the missing physical Watch evidence to remain open across non-publishing F2 reconciliation/rehearsal. watchOS support remains unchanged; no unexecuted physical case passes. [WATCH-01 / #132](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/132) is a mandatory native blocker/sub-issue of #29 in “v1.0 – Publication gate”.
+[ADR-0013](../decisions/ADR-0013-watch-publication-gate.md) permits only the missing physical Watch evidence to remain open across non-publishing F2 reconciliation/rehearsal. watchOS support remains unchanged; no unexecuted physical case passes. [WATCH-01 / #132](https://github.com/BK-Teisrud/NetworkKit/issues/132) is a mandatory native blocker/sub-issue of #29 in “v1.0 – Publication gate”.
 
 Before publication, obtain accepted physical Watch evidence or a separate explicit owner-approved product-support/risk decision changing the exact unmet requirement. F2 closure, simulator results and signed host builds do not satisfy it. Keep the checklist and native issue relationship in sync; issue dependencies do not by themselves technically prevent a tag/release. All other security, minimum-runtime, owner workload-risk and release authorization requirements remain effective. No release/tag is authorized by this phase change.
 

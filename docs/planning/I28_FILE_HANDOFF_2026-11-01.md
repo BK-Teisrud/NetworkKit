@@ -5,7 +5,7 @@ Status: Partial I28 feasibility evidence; no I29–I32/public API authorization.
 
 ## Accepted predecessor
 
-PR #152/main `c043db2af535ded1d80d0f88ea4137bbc18e4dec` passed all seven jobs in [run 41317907594](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41317907594). The full log was reviewed; ordinary core tests and CI helpers passed. The opt-in I28 experiments are not automatically executed by that CI. Earlier [native checkpoint](I28_DOWNLOAD_FEASIBILITY_2026-11-01.md) results remain source-specific and immutable.
+PR #152/main `c043db2af535ded1d80d0f88ea4137bbc18e4dec` passed all seven jobs in [run 41317907594](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41317907594). The full log was reviewed; ordinary core tests and CI helpers passed. The opt-in I28 experiments are not automatically executed by that CI. Earlier [native checkpoint](I28_DOWNLOAD_FEASIBILITY_2026-11-01.md) results remain source-specific and immutable.
 
 ## Question and method
 

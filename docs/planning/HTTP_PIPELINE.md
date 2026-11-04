@@ -118,7 +118,7 @@ raw origin. Other platforms exercise the real delegate callback with scripted tr
 Existing bounded-redirect/trust/storage suites remain in place.
 
 Actual local and hosted run evidence is recorded on
-[issue #51](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/51). CI must pass source
+[issue #51](https://github.com/BK-Teisrud/NetworkKit/issues/51). CI must pass source
 integrity, all four platform build/test jobs, DocC and the required quality-gate before
 merge. Minimum-OS runtimes, representative physical devices, complete TLS coverage and
 v1 timing/lifecycle/auth/privacy/release gates remain outstanding.

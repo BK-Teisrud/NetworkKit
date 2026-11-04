@@ -1,7 +1,7 @@
 # ADR-0004: Minimum platforms and toolchain for v1
 
 Date: 2026-10-19. Status: Accepted by the project owner in conversation.
-Issue: [DEC-01 / #1](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/1).
+Issue: [DEC-01 / #1](https://github.com/BK-Teisrud/NetworkKit/issues/1).
 
 ## Approved choices
 
@@ -11,7 +11,7 @@ The owner explicitly selected:
 - Minimum iOS/iPadOS 17.0, macOS 14.0, watchOS 10.0, and tvOS 17.0.
 - Minimum Xcode 26.3, Swift tools 6.2, and Swift 6 language mode with strict concurrency checking.
 
-Repository/package SwiftNetworkKit and product/module NetworkKit follow ADR-0003. This decision sets planned support and development requirements; it does not establish working code or successful tests.
+Repository/package NetworkKit and product/module NetworkKit follow ADR-0003. This decision sets planned support and development requirements; it does not establish working code or successful tests.
 
 ## Decision and matrix
 

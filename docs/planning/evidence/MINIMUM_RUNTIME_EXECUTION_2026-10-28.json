@@ -73,7 +73,7 @@
     {
       "target": "iphone17",
       "runtime_build": "21A328",
-      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme SwiftNetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
+      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme NetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
       "command_exit": 0,
       "summary": {
         "result": "Passed",
@@ -100,7 +100,7 @@
     {
       "target": "ipad17",
       "runtime_build": "21A328",
-      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme SwiftNetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
+      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme NetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
       "command_exit": 0,
       "summary": {
         "result": "Passed",
@@ -127,7 +127,7 @@
     {
       "target": "watch10",
       "runtime_build": "21R355",
-      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme SwiftNetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
+      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme NetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
       "command_exit": 0,
       "summary": {
         "result": "Passed",
@@ -154,7 +154,7 @@
     {
       "target": "tv17",
       "runtime_build": "21J353",
-      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme SwiftNetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
+      "command": "xcodebuild -workspace .swiftpm/xcode/package.xcworkspace -scheme NetworkKit -destination <exact discovered minimum simulator> -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO SWIFT_TREAT_WARNINGS_AS_ERRORS=YES test",
       "command_exit": 0,
       "summary": {
         "result": "Passed",

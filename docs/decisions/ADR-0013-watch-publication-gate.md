@@ -1,7 +1,7 @@
 # ADR-0013: Move missing physical Watch verification to the publication gate
 
 Date: 2026-10-31. Status: Accepted by explicit owner decision; repository review/main acceptance pending.
-Owner: @BK-Teisrud. Follow-up: [WATCH-01 / #132](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/132); publication: #29.
+Owner: @BK-Teisrud. Follow-up: [WATCH-01 / #132](https://github.com/BK-Teisrud/NetworkKit/issues/132); publication: #29.
 
 ## Decision and authorization
 

@@ -2,7 +2,7 @@
 
 Current retry extension review: [I27](I27_RETRY_REVIEW_2026-11-01.md) compares the exact pre-retry 319-symbol surface to the 326-symbol accepted I27 surface, preserving all original identifiers and initializer function values. The dated I18 review below remains its original core evidence.
 
-Review date: 2026-10-26. Task: [I18 / #59](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/59). Baseline: I17 main commit `8ed9ad573b12f4a5b710583cec4411be52fb8871`, accepted in PR #93 and main run 40377796452. This review changes guides, documentation controls and consumer examples; it does not change executable library behavior or approve a release.
+Review date: 2026-10-26. Task: [I18 / #59](https://github.com/BK-Teisrud/NetworkKit/issues/59). Baseline: I17 main commit `8ed9ad573b12f4a5b710583cec4411be52fb8871`, accepted in PR #93 and main run 40377796452. This review changes guides, documentation controls and consumer examples; it does not change executable library behavior or approve a release.
 
 ## Public surface and rationale
 

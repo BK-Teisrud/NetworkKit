@@ -1,0 +1,159 @@
+{
+  "date": "2026-11-04",
+  "task": "I31 / #149",
+  "scope": "Actual unsigned minimum simulator download execution, not physical or whole-feature acceptance",
+  "base_commit": "07fdce6caec8a0544caa12a7ee3c3f1c0136fd99",
+  "source_sha256": {
+    "Sources/NetworkKit/APIClient.swift": "08907cd2e4c7f240a88a4ac140d61a5b9a76da16159d1ee8edc6ce2a3c74a79a",
+    "Sources/NetworkKit/Authentication.swift": "f0db6e385961df30c1a1a7680af6584db91b001c3a07416c9c489cfb478a5573",
+    "Sources/NetworkKit/ClientLifecycle.swift": "ba7d243eb266b79c7157c66341d48896f8693354d9aa369aba8d93abbacc25ae",
+    "Sources/NetworkKit/Diagnostics.swift": "84b24c4b28ab4d7783ce461cb5fb4ad71009140f9fbe9e283d5d9ff1561f7f40",
+    "Sources/NetworkKit/Download.swift": "7946c61557640cc27a5336086a065f96e49283670681853d0960838ae4dab91a",
+    "Sources/NetworkKit/DownloadFileOwner.swift": "7a9c2a1f5e74d87b91352b5fd32961f2018e8857713a195d160d3d57679ed76d",
+    "Sources/NetworkKit/Endpoint.swift": "7b196e8ede8a9c031595e3ecdd72bfc3aaeecdc6610d055f383a787b976dec31",
+    "Sources/NetworkKit/ExecutionBoundaries.swift": "e29ab5022b3eb67f8d554546ef7b1cff1123d02dc138edf84f6d2b548e788e9a",
+    "Sources/NetworkKit/HTTPHeaders.swift": "45bfe1c8779e3f39c048fc1a299bd6ee8a75fe28d71ea797ce704c7eccc4b4f4",
+    "Sources/NetworkKit/HTTPMethod.swift": "98bde648d1db468b7b29a1856ace61a7301f6daf057eb99cd6e5114a31456bdb",
+    "Sources/NetworkKit/HTTPStatus.swift": "84bde1bf4b8a3c92e66f9c8bacdf079b56de7fc92a851134723e54017257ca71",
+    "Sources/NetworkKit/HTTPStatusPolicy.swift": "f28eb6564f87d7988aa281683bd6c398f340eaa32434ee3d5245021355954722",
+    "Sources/NetworkKit/HTTPToken.swift": "d9053f6ff580b333c643e0209d8e001e008506a95f41581f9b60bc46402bb13b",
+    "Sources/NetworkKit/JSONDecodingOptions.swift": "d11a252a75f1a4cfb814d2ed0fbb3e4dbcb85200d5e9b978a1e1f83f3ca50904",
+    "Sources/NetworkKit/NetworkConfiguration.swift": "60faadba3b86ce8aa89501680958109807d5f051a6873f38306a8710cfc5596b",
+    "Sources/NetworkKit/NetworkError.swift": "bd9133325b2af1255af713b7d9557c476dac5483448f8c565eb961f4016eede4",
+    "Sources/NetworkKit/NetworkKit.swift": "7af95bcc95f8e800d953b02b1751b05bce237bc7d5107e58eaf042c22a1285d9",
+    "Sources/NetworkKit/NetworkOperation.swift": "ad25dd095bdba5943c1b8f45ce8ed7e3ae16ba4b0d7b64ce4dc611f94af19455",
+    "Sources/NetworkKit/NetworkResponse.swift": "2267de5fe325f2c310dfb875a2e1b3b230713d2397a423e53ba303a72674067d",
+    "Sources/NetworkKit/NetworkSecurityPolicy.swift": "cc85f6f2ab60f79731207d81e80f30bf5e032b0f2351ae42177e2ab62f29f3d9",
+    "Sources/NetworkKit/NetworkTaskDelegate.swift": "d9a97411a31d322a971685604d39de115112e606d7bb8e6837ea0005305f0bd8",
+    "Sources/NetworkKit/RequestBody.swift": "914d27be0edb4fa36fc91e57787bf6d9c0311acbeb0a2d8334e24f2bf2cbbcdb",
+    "Sources/NetworkKit/RequestBuilder.swift": "20358d3345bb6b9ca66a4edd9adee8aae81c5b7c7c60a7162e47435499ee3921",
+    "Sources/NetworkKit/RequestURLBuilder.swift": "404943fa36c0fe5e7df5c078412ad6da30e82882bc097c29c3c0c0af896fef1b",
+    "Sources/NetworkKit/ResponseMetadata.swift": "9bd34a8ecd6cfd7c5bfc1b9fdbc89909fa0564095232daf68d87f5d90dc9d07b",
+    "Sources/NetworkKit/ResponseStrategy.swift": "1cddc3a3ce3aa32a4ad304e250a0e3d01503853eedd4a7add3f011f26545bd86",
+    "Sources/NetworkKit/RetryPolicy.swift": "6eb67b32d63d859262709ecc0037e57422191d1bcf445ba57256a5ce69efb637",
+    "Sources/NetworkKit/RetryTiming.swift": "09ce036bc4f2e74b7dcbf3697c937d45e42ccecb23fec8bfdc330ee54eb9248a",
+    "Sources/NetworkKit/SessionStorageProfile.swift": "83ca939758de16bab5df13d94c280065ad46c89ba0c0335863870a8b81e59c66",
+    "Sources/NetworkKit/URLSessionTransport.swift": "fe46ddb68913842dc7626f3e8f48ad991396a5f0fea303dc5b8d2d04ad95dd20",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/NativeLoopbackTests.swift": "b48d6978ee72da14c5bee7e0a130ded5b9981fa2c26c74e5d7a56352e5997a59",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/PublicHTTPSTests.swift": "9cf689601a53b7cd10851227a976948d1b411f01e4ed1ba8f4a15a3371929a20",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/PublicRetryTests.swift": "79eb6b3e334879331478fa07f187da9292d36c488db7a48c6f2a883df8c2f2b0",
+    "Package.swift": "f345ef3bc7f89ca9a934ce09f4d68da5829363f82d3ce72d04f368ba626745ad",
+    "Tools/PublicHTTPSChecks/Package.swift": "57ea65e6920f13f89773a0edf4e25c4f28606bfed9b46c08b4c53a91f5c98f69"
+  },
+  "execution_privacy_manifest_sha256_before_metadata_correction": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3",
+  "results": [
+    {
+      "family": "iOS",
+      "runtime": "17.0",
+      "runtime_build": "21A328",
+      "exit_code": 0,
+      "summary": {
+        "result": "Passed",
+        "totalTestCount": 3,
+        "passedTests": 3,
+        "failedTests": 0,
+        "skippedTests": 0,
+        "expectedFailures": 0
+      },
+      "six_parameter_cases_passed": true,
+      "log_sha256": "d89f5212fdaebd6932ba3c20ed4afa212241297075836db118170bb0ce854694",
+      "environment": {
+        "architecture": "x86_64",
+        "modelName": "iPhone 14 Pro",
+        "osBuildNumber": "21A328",
+        "osVersion": "17.0",
+        "platform": "iOS Simulator"
+      },
+      "cleanup_exit_codes": [
+        0
+      ]
+    },
+    {
+      "family": "iPadOS",
+      "runtime": "17.0",
+      "runtime_build": "21A328",
+      "exit_code": 0,
+      "summary": {
+        "result": "Passed",
+        "totalTestCount": 3,
+        "passedTests": 3,
+        "failedTests": 0,
+        "skippedTests": 0,
+        "expectedFailures": 0
+      },
+      "six_parameter_cases_passed": true,
+      "log_sha256": "4a15a31a16acf8b80b82f058ec2e7897fce960c3eb1d0c45c16f80f85357cd33",
+      "environment": {
+        "architecture": "x86_64",
+        "modelName": "iPad (10th generation)",
+        "osBuildNumber": "21A328",
+        "osVersion": "17.0",
+        "platform": "iOS Simulator"
+      },
+      "cleanup_exit_codes": [
+        0
+      ]
+    },
+    {
+      "family": "tvOS",
+      "runtime": "17.0",
+      "runtime_build": "21J353",
+      "exit_code": 0,
+      "summary": {
+        "result": "Passed",
+        "totalTestCount": 3,
+        "passedTests": 3,
+        "failedTests": 0,
+        "skippedTests": 0,
+        "expectedFailures": 0
+      },
+      "six_parameter_cases_passed": true,
+      "log_sha256": "79bb0495d2cb1f448d5cc4205dbe81e203ca4d5ef670ef93798f1164b0a814fc",
+      "environment": {
+        "architecture": "x86_64",
+        "modelName": "Apple TV 4K (3rd generation)",
+        "osBuildNumber": "21J353",
+        "osVersion": "17.0",
+        "platform": "tvOS Simulator"
+      },
+      "cleanup_exit_codes": [
+        0
+      ]
+    },
+    {
+      "family": "watchOS",
+      "runtime": "10.0",
+      "runtime_build": "21R355",
+      "exit_code": 0,
+      "summary": {
+        "result": "Passed",
+        "totalTestCount": 3,
+        "passedTests": 3,
+        "failedTests": 0,
+        "skippedTests": 0,
+        "expectedFailures": 0
+      },
+      "six_parameter_cases_passed": true,
+      "log_sha256": "3940651d46b1b97aa06f97f5182a7c87a65b956409139f1fc17e1346fcd93fa5",
+      "environment": {
+        "architecture": "x86_64",
+        "modelName": "Apple Watch Series 9 (45mm)",
+        "osBuildNumber": "21R355",
+        "osVersion": "10.0",
+        "platform": "watchOS Simulator"
+      },
+      "cleanup_exit_codes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "total_native_parameter_cases": 24,
+  "limits": [
+    "x86_64 simulator execution, not ARM64/physical evidence",
+    "Only three public loopback declarations, no trusted HTTPS/auth/app-managed stores or resource sampling on these destinations",
+    "Runs preceded declaration-only privacy resource correction; functional Swift source identical",
+    "Actual candidate macOS 14/current-other-runtime/physical observations remain open",
+    "Unexposed Foundation partial files not attested deleted"
+  ]
+}

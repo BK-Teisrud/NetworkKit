@@ -49,7 +49,7 @@
     "files": {
       "NativeHTTPSProbe": "0af647ccfb5c09aa2d9064e3daff412358d3488ca79cbf4121e9fbd9d59e7d24",
       "ResourceProbe": "a8df8438b3908b075cdac3c4ade7067f87595d49248be390d823f560a0298a34",
-      "SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
+      "NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy": "528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3"
     }
   },
   "execution_os": "ProductName:\t\tmacOS\nProductVersion:\t\t14.8.9\nBuildVersion:\t\t23J631",
@@ -295,7 +295,7 @@
   "verification_record": {
     "date": "2026-11-01",
     "workflow_run": 41294523457,
-    "workflow_url": "https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41294523457",
+    "workflow_url": "https://github.com/BK-Teisrud/NetworkKit/actions/runs/41294523457",
     "accepted_main_run": 41293485494,
     "head_sha": "660f8c099faccdd4215ad5e4bf1d082faaa3e403",
     "independent_downloaded_payload_and_source_hash_checks": true,

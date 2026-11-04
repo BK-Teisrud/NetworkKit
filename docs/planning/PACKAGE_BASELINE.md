@@ -1,12 +1,12 @@
 # I01 package baseline
 
-Date: 2026-10-20. Task: [I01 / #42](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/42). Authorization: [ADR-0012](../decisions/ADR-0012-implementation-start.md).
+Date: 2026-10-20. Task: [I01 / #42](https://github.com/BK-Teisrud/NetworkKit/issues/42). Authorization: [ADR-0012](../decisions/ADR-0012-implementation-start.md).
 
 ## Delivered structure
 
 The owner supplied a default Xcode package in NetworkKit/. Its manifest, source, test target, and ignored Xcode workspace metadata were moved to the repository root. A local copy of the original starter was retained before adaptation. Existing ignore rules were consolidated, including .netrc; no credentials or workspace metadata are committed.
 
-Package.swift declares Swift tools 6.2 and explicitly selects Swift 6 language mode, which enables complete concurrency checking. Package name: SwiftNetworkKit. One automatic library product and library target: NetworkKit. One test target: NetworkKitTests. Platform minimums: iOS/iPadOS 17, macOS 14, watchOS 10, tvOS 17. No external package dependencies, plugins, or workflows.
+Package.swift declares Swift tools 6.2 and explicitly selects Swift 6 language mode, which enables complete concurrency checking. Package name: NetworkKit. One automatic library product and library target: NetworkKit. One test target: NetworkKitTests. Platform minimums: iOS/iPadOS 17, macOS 14, watchOS 10, tvOS 17. No external package dependencies, plugins, or workflows.
 
 The library source intentionally declares no HTTP API yet. The test target imports Swift Testing and NetworkKit but declares no placeholder test. Real contract tests arrive with I02; an empty example test is not evidence.
 

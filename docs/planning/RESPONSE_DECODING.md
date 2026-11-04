@@ -92,7 +92,7 @@ bodies, Data/empty results, status precedence/exceptions, metadata, sanitized fa
 pre/post-decoding cancellation, 40 concurrent independent decoders, typed/raw policy
 snapshots, and a public API consumer importing NetworkKit without @testable.
 
-Actual PR and main CI results are recorded on [issue #48](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/48)
+Actual PR and main CI results are recorded on [issue #48](https://github.com/BK-Teisrud/NetworkKit/issues/48)
 before completion. Local success is not minimum-OS or physical-device evidence.
 
 Primary references reviewed: [Apple JSONDecoder](https://developer.apple.com/documentation/foundation/jsondecoder),

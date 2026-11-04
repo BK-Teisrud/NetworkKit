@@ -1,6 +1,6 @@
 # Client shutdown and concurrent operations
 
-I13 / [#54](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/54), 2026-10-21.
+I13 / [#54](https://github.com/BK-Teisrud/NetworkKit/issues/54), 2026-10-21.
 The client now admits/tracks its own calls and supports explicit idempotent shutdown.
 The earlier [timing/cancellation behavior](CANCELLATION_AND_BUDGET.md) remains in force.
 Provider/diagnostics/storage/final API and release reviews remain later tasks.
@@ -105,7 +105,7 @@ that branch does not prove native watch networking or TLS. Existing I12 budget/r
 and native stopLoading tests remain in the full suite. Public API tests import NetworkKit
 without @testable and exercise shutdown through `any NetworkClient`.
 
-[Issue #54](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/54) records exact PR/main
+[Issue #54](https://github.com/BK-Teisrud/NetworkKit/issues/54) records exact PR/main
 hashes, five-runtime counts, source/DocC results and any isolated negative control before
 acceptance. Minimum-OS, physical-device, complete TLS/privacy/resource and release gates
 remain later work. No dependency, workflow, rule, paid service, tag or release is added.

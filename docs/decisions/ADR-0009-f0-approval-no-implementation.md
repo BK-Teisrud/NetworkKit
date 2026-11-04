@@ -1,7 +1,7 @@
 # ADR-0009: F0 planning accepted; implementation not authorized
 
 Date: 2026-10-19. Status: Accepted by the project owner in conversation.
-Issue: [GATE-00 / #28](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/28).
+Issue: [GATE-00 / #28](https://github.com/BK-Teisrud/NetworkKit/issues/28).
 
 ## Approval
 

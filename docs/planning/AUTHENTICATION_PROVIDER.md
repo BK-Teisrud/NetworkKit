@@ -1,6 +1,6 @@
 # Bounded authentication-header provider
 
-I14 / [#55](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/55), 2026-10-22.
+I14 / [#55](https://github.com/BK-Teisrud/NetworkKit/issues/55), 2026-10-22.
 Both APIClient send paths now support the approved asynchronous header boundary.
 This is not an OAuth, Keychain, token-refresh, login or retry implementation.
 

@@ -2,7 +2,7 @@
 
 I14 update: the [authentication provider](AUTHENTICATION_PROVIDER.md) now executes inside this operation boundary. The original I12 hook test remains historical evidence; dedicated provider cancellation/timeout/shutdown tests now supplement it.
 
-I12 / [#53](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/53), 2026-10-21.
+I12 / [#53](https://github.com/BK-Teisrud/NetworkKit/issues/53), 2026-10-21.
 The existing typed/raw public client now enforces the approved monotonic total budget
 and isolates cancellation to each call. I13 / #54 adds [explicit shutdown and operation registration](SHUTDOWN_AND_CONCURRENCY.md); no provider, diagnostics or deferred module is introduced here.
 
@@ -101,7 +101,7 @@ the cancellation handler. Both deterministic selected-completion cases failed: l
 cancellation incorrectly replaced success and a decoding failure with CancellationError.
 The repository source was unchanged by this negative control.
 
-[Issue #53](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/53) records exact PR/main
+[Issue #53](https://github.com/BK-Teisrud/NetworkKit/issues/53) records exact PR/main
 hashes, actual five-runtime results, source/DocC checks and any negative-control evidence
 before acceptance. Minimum-OS/physical/TLS evidence and full v1/release readiness remain
 later gates. Existing F1 review counts are dated evidence, not the new I12 suite count.

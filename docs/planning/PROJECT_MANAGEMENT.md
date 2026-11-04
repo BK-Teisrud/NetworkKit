@@ -1,6 +1,6 @@
 # Project management
 
-GitHub Issues define tasks and acceptance criteria. Milestones are delivery gates. Projects tracks work status; the roadmap and ADRs explain decisions. Maintainer @BK-Teisrud prioritizes work. [SwiftNetworkKit Roadmap](https://github.com/users/BK-Teisrud/projects/6) is private; repository issues are public.
+GitHub Issues define tasks and acceptance criteria. Milestones are delivery gates. Projects tracks work status; the roadmap and ADRs explain decisions. Maintainer @BK-Teisrud prioritizes work. [NetworkKit Roadmap](https://github.com/users/BK-Teisrud/projects/6) is private; repository issues are public.
 
 ## One work status
 
@@ -37,7 +37,7 @@ These are Projects features, not GitHub Actions workflows.
 
 | Workflow | State / rationale |
 | --- | --- |
-| Auto-add to project | On; SwiftNetworkKit only, filter is:issue; imports new/updated root issues |
+| Auto-add to project | On; NetworkKit only, filter is:issue; imports new/updated root issues |
 | Auto-add sub-issues | On; keeps subtasks in the project |
 | Item added | On → Backlog; triage Priority/Scope/Order |
 | Item closed | On → Done; correct Not Planned manually as described above |

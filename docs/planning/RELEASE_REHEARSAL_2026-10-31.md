@@ -7,7 +7,7 @@ Date: 2026-10-31. Status: executed; this evidence PR/main acceptance is pending.
 
 ## Accepted baseline and prerequisites
 
-Source: `966599844ba59a35347e0f215f122fdebf084df3`, PR #134, [main run 41238957032](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41238957032). Full logs confirm all seven checks: 218 Mac tests, four simulator runs of 215, 19 helpers and four manual-host provenance checks, without failure/restart markers. #86 and nine eligible selected-core epics are closed/Done; #27 remains dependent on this rehearsal. [F2 reconciliation](F2_REVIEW.md) preserves all 79 selected/deferred source bullets and exact platform limits.
+Source: `966599844ba59a35347e0f215f122fdebf084df3`, PR #134, [main run 41238957032](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41238957032). Full logs confirm all seven checks: 218 Mac tests, four simulator runs of 215, 19 helpers and four manual-host provenance checks, without failure/restart markers. #86 and nine eligible selected-core epics are closed/Done; #27 remains dependent on this rehearsal. [F2 reconciliation](F2_REVIEW.md) preserves all 79 selected/deferred source bullets and exact platform limits.
 
 The owner approved only the non-publishing F2 rehearsal with the recorded resource limitations. [ADR-0013](../decisions/ADR-0013-watch-publication-gate.md) keeps missing physical Watch evidence mandatory under #132/#29 with support unchanged. Neither decision authorizes publication or F3 implementation.
 
@@ -21,7 +21,7 @@ A separate SwiftPM executable declares only the public GitHub URL with that exac
 
 From the clean checkout, the existing iOS consumer archived in Release for generic iOS with signing disabled. The result is arm64 with iOS 17 minimum. The archived binary and dSYM UUIDs match; that dSYM contains 1,818 NetworkKit and 110 APIClient symbol records, proving SDK linkage under this build. Counts are inventories, not an API/stability or exhaustive binary analysis claim.
 
-Exactly one SDK PrivacyInfo.xcprivacy is present at SwiftNetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy and matches the reviewed source hash `528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3`: tracking false, empty domains, collected-data and required-reason arrays. No provisioning profile, signing, account registration or device installation was used.
+Exactly one SDK PrivacyInfo.xcprivacy is present at NetworkKit_NetworkKit.bundle/PrivacyInfo.xcprivacy and matches the reviewed source hash `528ab3fca910d2ac2f3ef256d5ea4c2327303a7a4a5efb9236987f3018e311f3`: tracking false, empty domains, collected-data and required-reason arrays. No provisioning profile, signing, account registration or device installation was used.
 
 ## Aggregate report custody and review
 

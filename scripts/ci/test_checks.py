@@ -1,9 +1,27 @@
 """Regression tests for fail-closed CI infrastructure, not product behavior."""
 import unittest
-from check import select_device, validate_summary, validate_documented_examples
+import json
+import tempfile
+from pathlib import Path
+from check import select_device, validate_summary, validate_documented_examples, copy_library_symbol_graphs
 
 
 class CheckContracts(unittest.TestCase):
+    def test_library_docs_exclude_renamed_test_runner_and_stale_graphs(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source, output = Path(folder) / "source", Path(folder) / "output"
+            source.mkdir()
+            output.mkdir()
+            for name in ["NetworkKit", "NetworkKitPackageTests"]:
+                (source / (name + ".symbols.json")).write_text(
+                    json.dumps({"module": {"name": name}}))
+            (output / "NetworkKitPackageTests.symbols.json").write_text("stale")
+            copy_library_symbol_graphs(source, output)
+            self.assertEqual([p.name for p in output.iterdir()], ["NetworkKit.symbols.json"])
+            (source / "NetworkKit.symbols.json").unlink()
+            with self.assertRaises(RuntimeError):
+                copy_library_symbol_graphs(source, output)
+
     def test_documentation_drift_and_missing_or_duplicate_blocks_fail(self):
         source = "// DOC-EXAMPLE: demo BEGIN\nlet value = 1\n// DOC-EXAMPLE: demo END\n"
         guide = "<!-- DOC-EXAMPLE: demo -->\n```swift\nlet value = 1\n```\n"

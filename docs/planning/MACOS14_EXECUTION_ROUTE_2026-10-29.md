@@ -1,6 +1,6 @@
 # Temporary macOS 14 execution route — 2026-10-29
 
-I21 / [#62](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/62). The owner has no second Mac and authorized completing F2 without a paid environment. PR #120 is accepted through main run 40765690271 on 8e490340dd806fde1d93cac28cf22e33e6e6c69e; its four minimum simulator regression results retain their recorded boundaries.
+I21 / [#62](https://github.com/BK-Teisrud/NetworkKit/issues/62). The owner has no second Mac and authorized completing F2 without a paid environment. PR #120 is accepted through main run 40765690271 on 8e490340dd806fde1d93cac28cf22e33e6e6c69e; its four minimum simulator regression results retain their recorded boundaries.
 
 ## Access decision and time limit
 
@@ -28,7 +28,7 @@ Use actual results to update #62 and the [F2 reconciliation](F2_REVIEW.md). Mini
 
 ## Architecture correction — 2026-10-31
 
-[Run 41178401513](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41178401513), source db1e4100d3d8303cb90e9f39fdd46553f3a67b8b, built the Intel consumer successfully but rejected the execution host before any probe ran. Actual runner images were macos-15-arm64 (builder, macOS 15.8.2) and macos-14-arm64 (execution, macOS 14.8.9). The earlier assumption that the standard macos-14 label selected Intel was incorrect. No macOS 14 behavior result was obtained.
+[Run 41178401513](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41178401513), source db1e4100d3d8303cb90e9f39fdd46553f3a67b8b, built the Intel consumer successfully but rejected the execution host before any probe ran. Actual runner images were macos-15-arm64 (builder, macOS 15.8.2) and macos-14-arm64 (execution, macOS 14.8.9). The earlier assumption that the standard macos-14 label selected Intel was incorrect. No macOS 14 behavior result was obtained.
 
 The corrected route targets arm64-apple-macosx14.0 and requires actual native ARM64 execution on macOS 14. Source/commit/checksum, deployment minimum, toolchain and OS gates remain enforced; an Intel execution host now fails before probe admission. This supersedes the Intel architecture choice above, not the dated local Intel observations or evidence limits. GitHub's [runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners) documents the ARM64 standard label. No Rosetta, larger runner, paid service, support-minimum change or test-framework transfer is introduced. A native ARM64 result will not establish Intel or exact macOS 14.0 behavior. The November 2 retirement deadline still applies.
 
@@ -36,7 +36,7 @@ The corrected ARM64 consumer cross-built successfully on the local Intel Mac wit
 
 ## Completed native result — 2026-10-31
 
-[Run 41179430976](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41179430976) passed on source 0ab623fe67e1be161f2ef1f3ac2fc67107cebb70. Actual execution was macOS 14.8.9 / 23J631, ARM64. [Main CI 41179384664](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41179384664) also passed; full logs confirmed 218 macOS tests, four simulator results of 215 each, two unsigned host builds and 15 helper tests without unexpected restart or test time-limit failure. These main-CI regressions ran on their configured newer environments, not on macOS 14.
+[Run 41179430976](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41179430976) passed on source 0ab623fe67e1be161f2ef1f3ac2fc67107cebb70. Actual execution was macOS 14.8.9 / 23J631, ARM64. [Main CI 41179384664](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41179384664) also passed; full logs confirmed 218 macOS tests, four simulator results of 215 each, two unsigned host builds and 15 helper tests without unexpected restart or test time-limit failure. These main-CI regressions ran on their configured newer environments, not on macOS 14.
 
 The native macOS 14 smoke received five payloads over one connection. Eight cancelled calls joined in 0.0013025 seconds; the fixture observed six slow requests before cancellation, so this does not claim all eight reached the server. The 100-cycle controls each received 6,401 payloads (64 KiB, concurrency 32), followed by a 12-second post-shutdown observation. NetworkKit warm/settled RSS was 12,500,992 / 26,755,072 bytes; direct Foundation was 12,386,304 / 21,037,056 bytes. NetworkKit RSS grew across this finite run and remained above its warm value. These observations retain the resource-suitability/attribution risk; they do not prove a leak, bounded long-term memory or acceptance for an owner's workload. No speculative production refactor is justified by RSS alone.
 
@@ -62,7 +62,7 @@ Ten consumer cases do not establish the full 218-test suite, exact 14.0 behavior
 
 ## Completed native HTTPS result — 2026-10-31
 
-[Manual run 41204068268](https://github.com/BK-Teisrud/SwiftNetworkKit/actions/runs/41204068268) passed on accepted source b8f2758530cca68ec819068ff3ac7748868e26dd. Actual execution was ARM64 macOS 14.8.9 / 23J631. All ten named typed/raw JSON, empty, trusted-certificate, self-signed and hostname-mismatch cases passed. SDK rejection codes were NSURLErrorDomain/-1202; independent Foundation controls confirmed exact OSStatus -67843 and -67602 for the respective invalid fixtures. No generic connection failure was accepted.
+[Manual run 41204068268](https://github.com/BK-Teisrud/NetworkKit/actions/runs/41204068268) passed on accepted source b8f2758530cca68ec819068ff3ac7748868e26dd. Actual execution was ARM64 macOS 14.8.9 / 23J631. All ten named typed/raw JSON, empty, trusted-certificate, self-signed and hostname-mismatch cases passed. SDK rejection codes were NSURLErrorDomain/-1202; independent Foundation controls confirmed exact OSStatus -67843 and -67602 for the respective invalid fixtures. No generic connection failure was accepted.
 
 All recorded source hashes were independently verified against immutable blobs in that exact accepted Git commit; the standalone result matches the aggregate record. The full workflow log contains no failure marker. [Permanent sanitized evidence](evidence/MACOS14_HTTPS_EXECUTION_2026-10-31.json) retains the complete manifest, compiler/SDK, environment, case results and custody hashes before the one-day artifact expires. A local Finder `.DS_Store` was observed during verification; it is metadata, not an SDK source change. The snapshot helper now excludes only that filename, with a control proving real source edits still change custody hashes.
 

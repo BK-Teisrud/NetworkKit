@@ -1,6 +1,6 @@
 # NET-03 native loopback verification
 
-Tracking: [#122](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/122). This is opt-in test infrastructure, not a production SDK change. The default test scheme is unchanged.
+Tracking: [#122](https://github.com/BK-Teisrud/NetworkKit/issues/122). This is opt-in test infrastructure, not a production SDK change. The default test scheme is unchanged.
 
 ## Preserved local result — 2026-10-31
 

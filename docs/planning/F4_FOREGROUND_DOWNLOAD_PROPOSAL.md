@@ -6,7 +6,7 @@ Owner: PLAN-F4 #88; domains #16 / specification §4.9 and #26 / §4.19.
 
 ## Need and approval
 
-The owner selected foreground GET download to a temporary file and explicitly approved the complete [revision 1 proposal](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/88#issuecomment-6558541234): “Approve the planning proposal; still no code.” File types, sizes and the concrete app/server workload remain unknown. The original Norwegian reply is retained in the conversation. No production workload or release commitment is inferred.
+The owner selected foreground GET download to a temporary file and explicitly approved the complete [revision 1 proposal](https://github.com/BK-Teisrud/NetworkKit/issues/88#issuecomment-6558541234): “Approve the planning proposal; still no code.” File types, sizes and the concrete app/server workload remain unknown. The original Norwegian reply is retained in the conversation. No production workload or release commitment is inferred.
 
 ## Owner-approved consolidated contract — revision 1
 
@@ -37,12 +37,12 @@ Apple's [pause/resume documentation](https://developer.apple.com/documentation/f
 
 | Order | Task | Required predecessors |
 | --- | --- | --- |
-| 40.1 | [START-F4 / #145](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/145) | Accepted planning PR/main and explicit feasibility-only owner permission |
-| 40.2 | [I28 / #146](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/146) | START-F4 / #145 |
-| 40.3 | [I29 / #147](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/147) | I28 / #146, completed #88 and separate implementation permission |
-| 40.4 | [I30 / #148](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/148) | I29 / #147 |
-| 40.5 | [I31 / #149](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/149) | I30 / #148 |
-| 40.6 | [I32 / #150](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/150) | I31 / #149 |
+| 40.1 | [START-F4 / #145](https://github.com/BK-Teisrud/NetworkKit/issues/145) | Accepted planning PR/main and explicit feasibility-only owner permission |
+| 40.2 | [I28 / #146](https://github.com/BK-Teisrud/NetworkKit/issues/146) | START-F4 / #145 |
+| 40.3 | [I29 / #147](https://github.com/BK-Teisrud/NetworkKit/issues/147) | I28 / #146, completed #88 and separate implementation permission |
+| 40.4 | [I30 / #148](https://github.com/BK-Teisrud/NetworkKit/issues/148) | I29 / #147 |
+| 40.5 | [I31 / #149](https://github.com/BK-Teisrud/NetworkKit/issues/149) | I30 / #148 |
+| 40.6 | [I32 / #150](https://github.com/BK-Teisrud/NetworkKit/issues/150) | I31 / #149 |
 
 START-F4 #145 and I28/#88 are Done after their accepted evidence and PR/main checks. I29 is In Review; I30–I32 remain predecessor-blocked/P2 under the separate explicit owner implementation instruction. START-F4 itself grants no shipping permission. START-F4 does not require #88 closure: it requires acceptance of this planning PR/main and the explicit bounded owner instruction. This avoids a dependency cycle. I29 requires both I28 and #88 plus a later explicit owner implementation decision; later tasks inherit this dependency but receive no code authorization from planning.
 

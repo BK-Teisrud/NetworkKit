@@ -1,6 +1,6 @@
 # I02 HTTP values and error API review
 
-Date: 2026-10-20. Issue: [I02 / #43](https://github.com/BK-Teisrud/SwiftNetworkKit/issues/43). This implements the foundational value layer of ADR-0005, not the HTTP client or response pipeline.
+Date: 2026-10-20. Issue: [I02 / #43](https://github.com/BK-Teisrud/NetworkKit/issues/43). This implements the foundational value layer of ADR-0005, not the HTTP client or response pipeline.
 
 ## Public API and rationale
 
