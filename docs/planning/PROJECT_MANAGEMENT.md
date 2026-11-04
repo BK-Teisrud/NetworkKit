@@ -26,7 +26,7 @@ Work views show Status, Priority (P0–P3), Scope (CORE/EXTENSION/RESEARCH/GOVER
 | Phase 0 | Open F0 setup tasks |
 | Decisions | Decision issues |
 | Extensions and Research | Deferred scope |
-| Work Queue | Open concrete tasks without epics/extensions/research; flat table sorted by ascending Order |
+| Work Queue | Open concrete tasks without epics/extensions/research; concrete tasks including selected extensions, sorted by ascending Order |
 | Completed | Closed issues with reason:completed |
 
 [WORK_QUEUE.md](WORK_QUEUE.md) defines the numbered order. Order 0 is the start gate; I01–I23 retain 1–23; PREP-01 is 16.5, GATE-F2 is 22.5, and the release gate is 24. Post-v1 planning tasks use 30/40/50/60; they do not authorize extension code. No product work is Ready before implementation authorization. Epics provide traceability, not oversized individual tasks.
@@ -56,6 +56,10 @@ For issues that require both PR and main verification, use neutral references su
 Check a prepared body for unintended closing syntax, and inspect `gh pr view NUMBER --json closingIssuesReferences` when finishing the PR metadata. For verification-gated work the list must be empty. Record main acceptance before manually marking the relevant issue completed/Done. A merge-triggered automatic closure is not evidence that main passed; preserve its event and record actual later acceptance separately.
 
 PR #135 exposed this issue: its narrative instruction created a closing reference to #64. The main run later passed and the formal acceptance was recorded then; #27 and F2 remained open until their final verification. This process correction does not change product scope, branch protection or required checks.
+
+## Combined maintenance delivery — 2026-11-04
+
+The owner selected one branch/PR for #158–#161, excluding I31/I32. Internal order and intermediate checks remain, but do not model them as external blockers requiring separate PRs. All four require integrated PR/main acceptance before manual closure. I31 stays externally blocked by all four; no issue is marked complete from a partial implementation. Work Queue includes selected extension tasks while excluding domain epics and research. Preserve ascending Order. This grouping changes delivery overhead, not scope, security rules or the CI stop rule.
 
 ## Maintenance
 

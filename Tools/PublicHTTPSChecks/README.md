@@ -12,6 +12,12 @@ swift test --package-path Tools/PublicHTTPSChecks -Xswiftc -warnings-as-errors -
 
 This selection contacts only in-process loopback fixtures, including bounded four-concurrent-call file/RSS observations against a Foundation control. It neither starts public HTTPS cases nor changes signing/trust. Partial files with no exposed URL remain unobserved. Trusted HTTPS/auth/storage, other current/physical environments and actual candidate macOS 14 evidence remain open. The named minimum simulator execution is recorded separately.
 
+## Structure and bounded CI selection
+
+Support/NativeLoopbackFixture.swift contains the bounded fixture and shared test-only helpers. Loopback/ separates core, storage, retry, download and resource responsibilities while preserving the original serialized PublicHTTPSTests suite and its time limit. No new shipped module/product is added. Refresh the checked-in host after source moves with `python3 scripts/ci/sync_device_sources.py`; CI validates membership rather than repairing it.
+
+After `swift build --package-path Tools/PublicHTTPSChecks --build-tests -Xswiftc -warnings-as-errors`, run `python3 scripts/ci/native_loopback.py` to exercise the same bounded CI selection. Full native resource runs remain explicit and make no universal resource guarantee.
+
 ## Explicit execution only
 
 On the observed Mac, from the repository root:
@@ -23,7 +29,7 @@ python3 Tools/PublicHTTPSChecks/certificate_witness.py --output /private/tmp/net
 
 For iOS use the existing device-host project with the separate PublicHTTPSChecks scheme. Its test target directly references every Swift source in this package's test directory, including the NET-03 loopback checks. The default NetworkKitDeviceHost scheme still runs only the original regression suite. See [host signing/install/cleanup procedure](../DeviceTestHost/README.md). Existing host/profile authorization remains scoped; create no profile, certificate, registration or trust exception as a side effect. Recheck actual device readiness and compatible existing profile before deployment.
 
-CI uses only swift build --build-tests for this package and unsigned build-for-testing for its separate iOS scheme. It never runs public-service scenarios. Compilation/discovery is not execution evidence. Source controls retain default-suite membership and require the public target's explicit separate scheme.
+CI builds this package and runs only the four allowlisted local native download declarations (eight owned/borrowed cases) through scripts/ci/native_loopback.py on Mac. Discovery and xUnit results must contain the exact selection, with all eight completion markers; zero/missing/skipped/unexpected evidence fails. Public-service probes and resource measurements remain opt-in. The separate iOS scheme is built unsigned; compilation/discovery is not execution evidence. Source controls retain default-suite membership and require the public target's explicit separate scheme.
 
 ## Traffic and privacy
 

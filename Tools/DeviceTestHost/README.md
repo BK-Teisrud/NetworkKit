@@ -62,3 +62,7 @@ On 2026-10-31 the owner authorized registering exactly the three existing test b
 ## Explicit manual transition app
 
 [Manual transition procedure](../../docs/planning/MANUAL_TRANSITION_CHECKS.md) provides a separate unsigned generated app for iOS/iPadOS, macOS, Watch and TV. It uses the existing host ID/profile boundary and starts no request until an owner selects a check. The app records scene/path observations, four finite public calls, shutdown and a sample after original budgets. It never changes connectivity settings or declares acceptance. Required CI compiles all four variants; actual signed deployment, owner-driven transitions and report review remain explicit #63 work. No XCTest suite is replaced or filtered by this preparation.
+
+## Shared source organization
+
+Shared unit tests use source-group-relative paths under Tests/NetworkKitTests; native sources retain their relative subdirectories under the separate probe target. After a move/add/remove, run `python3 scripts/ci/sync_device_sources.py` and review the generated membership diff. Stable identifiers preserve unchanged references; ambiguous source groups/collisions fail. CI runs the read-only validator, rejecting omissions, flattening and duplicate references. This command changes source membership only, never signing/account settings.

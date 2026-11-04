@@ -1,17 +1,10 @@
 # Requirements traceability and backlog
 
-## Maintenance prerequisite — 2026-11-04
+## Current scope — 2026-11-04
 
-The owner requested completing the [architecture maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) before further I31 work. After PR #157 checkpoint/main acceptance, execute QA-02 / #158 → QA-03 / #159 → QA-04 / #160 → QA-05 / #161, then resume I31 #149 and I32 #150. I31 is now Blocked by this maintenance chain; existing native evidence gaps remain open. This update is planning only under a narrow CI-stop exception, with no code, merge or new CI run. F4 scope and #29/#132 publication barriers are unchanged.
+F0/F1/F2/F3 are complete within their recorded acceptance limits. The selected F4 foreground GET-to-file increment remains under ADR-0015; upload, progress, resume, background and download retry remain deferred. Owner-authorized maintenance #158–#161 is one combined delivery before further I31/#149 and I32/#150. No new milestone, dates, module or product feature is selected.
 
-
-## Current delivery — 2026-11-01
-
-F3 is formally closed: I27 #110 is Done after final PR #144/main b4511c5efe9a349a9f91eb0448974f1bf49b8d3f/run 41302196774; all seven checks passed. [F3 closeout](F3_CLOSEOUT_2026-11-01.md) preserves its bounded technical acceptance and source-specific evidence.
-
-F4 planning/I28, I29 and I30 #148 are Done after accepted PR #156/main run 41333096996. I31 #149 is paused/Blocked for the maintenance prerequisites; its checkpoint evidence is: [native Mac checkpoint](I31_NATIVE_DOWNLOAD_2026-11-04.md) executes real URLSession file transfers, counted redirects/lifecycle/known-path cleanup and finite file/RSS observations. [Minimum native execution](I31_MINIMUM_DOWNLOAD_2026-11-04.md) now passes 24 cases across four existing simulators. FileTimestamp/C617.1 metadata is corrected for fstat; validation/PR/main and remaining trusted HTTPS/auth/storage/other-current/physical/macOS14 evidence are outstanding. I32 #150 stays predecessor-blocked. No new signing/device installation, purchase or publication is authorized.
-
-#14 advanced resilience remains Backlog; #89/#90 remain independent planning. #29 actual app/workload/security/publication and physical Watch #132 remain mandatory separate barriers. No new milestone/date or publication authorization follows.
+See [WORK_QUEUE](WORK_QUEUE.md) for current execution order and accepted predecessor evidence, GitHub Project Status for live work state, and the [maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) for safeguards. Dated reports and the original allocation below preserve history; their earlier status is not live state. #29 actual app/workload/security/publication and #132 physical Watch retain mandatory separate barriers.
 
 ## Original requirements allocation
 
@@ -60,7 +53,7 @@ Decompose feature families into testable issues with contracts, test plans, and 
 
 ## Concrete implementation queue
 
-I01–I27 are selected native subissues with criteria and dependencies; see [WORK_QUEUE.md](WORK_QUEUE.md). START-00 / #41 was closed after the owner instruction on 2026-10-20 (ADR-0012). Core I01–I23 and retry I24–I26 are accepted; I27 remains the current review gate. Future tasks require selected scope, authorization, resolved dependencies and Ready checks. Decomposition itself did not authorize code. planning.json is the original seed rather than live status; work-queue.json describes the concrete queue.
+Selected implementation and maintenance issues have explicit criteria and dependencies; see [WORK_QUEUE.md](WORK_QUEUE.md). START-00 / #41 was closed after the owner instruction on 2026-10-20 (ADR-0012). Core I01–I23 and retry I24–I27 are accepted; the work queue defines the current selected F4 sequence. Future tasks require selected scope, authorization, resolved dependencies and Ready checks. Decomposition itself did not authorize code. planning.json is the original seed rather than live status; work-queue.json describes the concrete queue.
 
 ## Rolling planning review
 
