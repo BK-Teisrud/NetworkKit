@@ -1,6 +1,6 @@
 # F5 handshake and WSS feasibility proposal
 
-Date: 2026-11-07. Tracking: #89. Status: planning-only proposal beyond completed #165; no further experiment code or external probes authorized.
+Date: 2026-11-07. Tracking: #89. Status: owner-approved verification plan on 2026-11-07, beyond completed #165. Explicitly no further experiment code or external probes authorized; separate code-start approval after required plan PR/main remains.
 
 ## Purpose and predecessor
 

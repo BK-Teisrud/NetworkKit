@@ -1,6 +1,6 @@
 # F5 foreground connection contract proposal
 
-Date: 2026-11-07. Tracking: #89 / #17. Status: proposal; only the explicitly listed owner selections are accepted. No public API, production transport or further code is authorized. Experiment #165 is completed after accepted PR #166/main210a8bbae8d017ca7cb94983e390df8676ea0355/run42412525675.
+Date: 2026-11-07. Tracking: #89 / #17. Status: owner approved the combined planning direction on 2026-11-07. Exact API, production transport, detailed feasibility and further code remain unapproved. Experiment #165 is completed after accepted PR #166/main210a8bbae8d017ca7cb94983e390df8676ea0355/run42412525675.
 
 ## Accepted planning inputs
 
@@ -12,7 +12,7 @@ Date: 2026-11-07. Tracking: #89 / #17. Status: proposal; only the explicitly lis
 - Optional handshake headers once per new connection; anonymous connections permitted. No token persistence, automatic renewal or hidden reconnect.
 - Cancellation of an active send or receive terminates the whole connection; no automatic new connection or message replay. Explicit owner selection on 2026-11-07.
 
-These inputs were explicitly selected by the owner. Remaining details below are recommendations for review, not inferred owner approval.
+These inputs were explicitly selected by the owner. On 2026-11-07 the owner also approved the combined direction below as planning input: message/operation bounds, proposed10/10/2-second settings, WSS/system trust, redirect/credential restrictions and deferred stream/heartbeat/reconnect. This does not adopt an exact public API, production transport or unproven detailed behavior. Material feasibility findings must return for review; no further code is authorized.
 
 ## Proposed operations and ownership
 
