@@ -1,10 +1,10 @@
 # Roadmap
 
-## Current scope — 2026-11-07
+## Current scope — 2026-11-08
 
 F0–F4 are completed within recorded technical limits. F4 I31/I32 completed through PR #163/main f86ddcb5ba7a26d05b370007f70b439d0eff5999/run 42406475143 after all seven checks/full-log review and the explicit bounded owner disposition. #29/#132 retain publication barriers. Upload, progress, resume, background and download retry remain deferred.
 
-PLAN-F5/#89 is discovery only for future foreground server status/data updates with app-owned reconnection and no concrete server. The owner approved evaluating iOS/iPadOS/macOS/tvOS and deferring direct generic Watch WebSocket after TN3135 assessment. HTTP Watch support is unchanged. The [feasibility plan](F5_FEASIBILITY_PLAN.md) leaves transport/API/server contract and code authorization open. No extra milestone, feature delivery or speculative refactor is selected.
+PLAN-F5/#89 remains contract/architecture planning. PR #167/main e1845ccb3b31d260d8e1a0915be41a7361c9bb50/run42417330816 accepts the owner-approved planning direction, not a final transport/API. #165 is completed; #168's bounded local/public experiment is in PR #169 with [explicit negative/incomplete findings](F5_HANDSHAKE_SECURITY_REPORT.md). No further runtime budget or production implementation is authorized. Future foreground server updates, app-owned reconnection, pull receipt and optional per-connection handshake auth are selected; direct generic Watch WebSocket deferred, HTTP Watch unchanged. No extra milestone, module/refactor or SDK WebSocket delivery is inferred.
 
 See [WORK_QUEUE](WORK_QUEUE.md) for current execution order and accepted predecessor evidence, GitHub Project Status for live work state, and the [maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) for safeguards. Dated reports and the original allocation below preserve history; their earlier status is not live state. #29 actual app/workload/security/publication and #132 physical Watch retain mandatory separate barriers.
 
