@@ -24,7 +24,7 @@ The detailed proposal defines reviewable surface/ownership, explicit subprotocol
 
 ## Security, privacy, platforms, and compatibility
 
-WSS/system trust, denied redirects, reserved headers, no automatic stores/refresh/replay and explicit local anonymous loopback exception. Proposed reuse of existing auth types maps WSS to the HTTPS handshake origin; this material mapping requires acceptance and tests. A noncooperative app provider can outlive logical cancellation: the proposed cooperative requirement/retention boundary needs explicit owner disposition, not a hidden hard-timeout promise.
+WSS/system trust, denied redirects, reserved headers, no automatic stores/refresh/replay and explicit local anonymous loopback exception. Proposed reuse of existing auth types maps WSS to the HTTPS handshake origin; the owner selected this mapping for planning on 2026-11-08; exact API and tests remain. A noncooperative app provider can outlive logical cancellation: the owner selected the cooperative requirement/retention boundary for planning, not production suitability or a hidden hard-timeout promise.
 
 iOS/iPadOS18, macOS15, tvOS18; Watch HTTP support and #132 unchanged. No broader OS requirement change. No raw payload/URL/header/close-reason diagnostics. Public binary-WSS and async/provider/platform evidence remain incomplete; no acceptance inferred from #168 completion.
 
