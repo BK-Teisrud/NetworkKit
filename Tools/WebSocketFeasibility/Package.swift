@@ -5,6 +5,9 @@ import PackageDescription
 let package = Package(
     name: "WebSocketFeasibility",
     platforms: [.macOS(.v15)],
-    targets: [.executableTarget(name: "WebSocketFeasibility")],
+    targets: [
+        .executableTarget(name: "WebSocketFeasibility"),
+        .executableTarget(name: "HandshakeSecurity"),
+    ],
     swiftLanguageModes: [.v6]
 )

@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-04",
+  "as_of": "2026-11-08",
   "implementation_authorized": true,
   "start_gate": 41,
   "tasks": [
@@ -809,6 +809,28 @@
       "parent": 17
     },
     {
+      "order": 50.1,
+      "key": "FEAS-F5",
+      "number": 165,
+      "title": "[FEAS-F5] Compare native WebSocket mechanics in an isolated local spike",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/165",
+      "milestone": "F5 \u2013 Real-time communication",
+      "blocked_by": [],
+      "parent": 89,
+      "authorization_scope": "Only the separately owner-authorized non-delivering experiment, not production SDK implementation."
+    },
+    {
+      "order": 50.2,
+      "key": "FEAS-F5-SEC",
+      "number": 168,
+      "title": "[FEAS-F5-SEC] Verify native handshake policy and bounded WSS observations",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/168",
+      "milestone": "F5 \u2013 Real-time communication",
+      "blocked_by": [],
+      "parent": 89,
+      "authorization_scope": "Only the separately owner-authorized non-delivering experiment, not production SDK implementation."
+    },
+    {
       "order": 60,
       "key": "PLAN-F6",
       "number": 90,
@@ -874,6 +896,22 @@
     ],
     "watch_websocket": "Owner-approved deferral on 2026-11-07 under TN3135; HTTP support and #132 unchanged.",
     "reconnect": "App-owned; automatic reconnect/resubscription deferred.",
-    "authorization": "Discovery/planning only; no transport/API/prototype or code-start approval."
+    "authorization": "Owner approved only isolated #165/#168 experiments under their separate scope/budgets. No production WebSocket API/transport/implementation or further native calls authorized.",
+    "contract_direction": "Owner approved planning direction in PR #167, not exact API or production transport.",
+    "accepted_plan_main": "e1845ccb3b31d260d8e1a0915be41a7361c9bb50",
+    "accepted_plan_run": 42417330816,
+    "experiments": {
+      "165": {
+        "accepted_main": "210a8bbae8d017ca7cb94983e390df8676ea0355",
+        "accepted_run": 42412525675,
+        "report": "docs/planning/F5_NATIVE_FEASIBILITY_REPORT.md"
+      },
+      "168": {
+        "candidate_pr": 169,
+        "report": "docs/planning/F5_HANDSHAKE_SECURITY_REPORT.md",
+        "runtime_budget_consumed": true,
+        "conclusion": "Negative/incomplete; production transport/API not adopted."
+      }
+    }
   }
 }
