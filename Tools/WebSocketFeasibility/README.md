@@ -22,3 +22,7 @@ The final report is [F5_NATIVE_FEASIBILITY_REPORT](../../docs/planning/F5_NATIVE
 `time -l` maximum RSS includes the whole native process/framework/fixture, not SDK allocations or a process limit. Eight distinct scenarios are not statistical repetitions or a long-session test. Terminal callback observation does not prove every native allocation has been released.
 
 No WSS/trust/redirect verification, production auth provider, hostile frame injection, controlled fragmentation, abrupt peer-loss test, real server semantics, repeated state-race proof, async consumer adapter or mobile/physical execution is delivered. The fixture's optional peer-cancel branch is not an executed scenario or a TCP reset guarantee. Watch WebSocket is deferred; HTTP support/#132 unchanged. #29 remains a publication barrier. Any further runtime expansion requires review of the approved finite scope.
+
+## Separate #168 experiment
+
+This page describes only the original #165 executable. The separately authorized handshake/public-WSS probe has its own [security instructions and budget boundaries](SECURITY_README.md); it does not rerun or expand #165's recorded cases.
