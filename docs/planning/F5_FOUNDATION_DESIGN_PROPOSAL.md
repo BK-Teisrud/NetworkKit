@@ -1,10 +1,10 @@
 # F5 Foundation connection design proposal
 
-Date: 2026-11-08. Tracking: #89 / #17. Status: draft for owner review. No production transport/API, implementation or additional network budget is approved. PR #169/main acceptance is a separate predecessor gate; #168 findings remain negative/incomplete.
+Date: 2026-11-08. Tracking: #89 / #17. Status: owner-approved architecture/design direction on 2026-11-08. Exact Swift signatures, implementation, production suitability and additional network budget remain unapproved. PR #169/main acceptance is a separate predecessor gate; #168 findings remain negative/incomplete.
 
 ## Proposed transport and scope
 
-Propose one Foundation URLSessionWebSocketTask transport for the selected foreground raw-message increment, subject to explicit acceptance in proposed ADR-0018. It has stronger retained request-target/Host, denied-redirect and default-trust evidence in [#168 findings](F5_HANDSHAKE_SECURITY_REPORT.md), while the original specification suggests Foundation. Apple TN3151 generally favors Network for new WebSocket code; our project-specific delegate/security evidence is the reason to consider the alternative. The incomplete Network instrumentation does not prove Network unsuitable.
+The owner selected one Foundation URLSessionWebSocketTask transport as the architecture direction for the selected foreground raw-message increment in ADR-0018. It has stronger retained request-target/Host, denied-redirect and default-trust evidence in [#168 findings](F5_HANDSHAKE_SECURITY_REPORT.md), while the original specification suggests Foundation. Apple TN3151 generally favors Network for new WebSocket code; our project-specific delegate/security evidence is the reason to consider the alternative. The incomplete Network instrumentation does not prove Network unsuitable.
 
 Keep one NetworkKit library product, current HTTP declarations/behavior and HTTP NetworkClient unchanged. No shared generic transport framework or alternate production adapter. No automatic reconnect, heartbeat scheduler, event stream, subscriptions/JSON, background continuity, production Watch WebSocket, shared HTTP session or new dependency. iOS/iPadOS18, macOS15 and tvOS18 are selected; unavailable connection APIs on Watch must preserve the existing four-family HTTP build/test matrix.
 
@@ -48,7 +48,7 @@ The owner selected this boundary for planning; it is not production suitability 
 
 ## Proposed send/receive/terminal clarification
 
-Validate local send size (UTF-8 byte count or Data length), settings and close parameters before admission. Recommended clarification: invalid local pre-admission input rejects that call without sending or closing an otherwise healthy connection; invalid/oversized incoming data is terminal. This distinction was not explicit in the high-level direction and needs approval. Duplicate concurrent calls reject without cancelling the already admitted call. One send and one receive may overlap; no internal work queue.
+Validate local send size (UTF-8 byte count or Data length), settings and close parameters before admission. Recommended clarification: invalid local pre-admission input rejects that call without sending or closing an otherwise healthy connection; invalid/oversized incoming data is terminal. The owner explicitly accepted this clarification as design direction on 2026-11-08. Duplicate concurrent calls reject without cancelling the already admitted call. One send and one receive may overlap; no internal work queue.
 
 Cancellation of an admitted send/receive ends the whole connection as owner-selected. Send/open timeout is terminal; no replay of ambiguous data. One serialized first-committed terminal cause controls pending operations; no later failure/timeout replaces it. Test data/close/cancellation/deadline interleavings and exactly-once completion, not just happy-path actor access.
 
@@ -75,8 +75,8 @@ The public binary-echo failure, probe Host/TLS attribution limits and absence of
 
 Four slices are a proposal, not four new Ready issues or a schedule. They may be grouped only after dependency/overlap review; maxfive work processes and no polling/wait loops remain. No reconnect/stream milestone is selected.
 
-## Decisions needed before final decomposition
+## Remaining exact-contract and evidence decisions before final decomposition
 
-Approve or change the Foundation-only recommendation, proposed public surface, HTTP-auth mapping, logical deadline/noncooperative-provider boundary, pre-admission validation distinction and close subset. Then reconcile the exact requirement trace in #89/ADR-0018, fixture/binary-WSS strategy and stop/go conditions before creating implementation issues. #89 stays In Progress; #17 undelivered. #29/#132 remain open; direct generic Watch WebSocket deferred. No production code, new network budget, provisioning/device action or publication is authorized by this draft.
+Foundation-only architecture, the stated surface direction/auth mapping/provider boundary, pre-admission distinction and close subset were accepted for planning; exact types/signatures/error values and detailed validation/arbitration still need review. Reconcile the exact requirement trace in #89/ADR-0018, fixture/binary-WSS strategy and stop/go conditions before creating implementation issues. #89 stays In Progress; #17 undelivered. #29/#132 remain open; direct generic Watch WebSocket deferred. No production code, new network budget, provisioning/device action or publication is authorized by this draft.
 
 Primary reference for native framing/close validation: [RFC6455, sections5.5 and7.4](https://www.rfc-editor.org/rfc/rfc6455.html). No custom wire implementation is proposed.

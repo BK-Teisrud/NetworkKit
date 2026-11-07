@@ -1,7 +1,7 @@
 # ADR-0018: Proposed Foundation foreground WebSocket connection
 
 Date: 2026-11-08
-Status: Proposed; not accepted and no production implementation authorized.
+Status: Owner-approved architecture/design direction on 2026-11-08 only. Exact Swift signatures, production suitability, further implementation/runtime and publication remain unapproved.
 Owner: Teisrud Development AS / BK-Teisrud
 Issue / requirement: #89 / #17, proposed NK-10-01/05/06/07 increment
 
@@ -16,9 +16,9 @@ The owner selected future foreground raw status/data messages, pull receipt, app
 - Defer until a concrete server exists; valid if required protocol/workload evidence cannot be obtained within approved scope.
 - Two production adapters/generic transport framework: no selected need; avoid doubling state/security/verification paths.
 
-## Proposed decision and rationale
+## Accepted architecture direction and rationale
 
-Propose one URLSessionWebSocketTask adapter behind a dedicated per-connection actor and owned store-free session. Keep one NetworkKit product and HTTP NetworkClient/APIClient contracts unchanged. No injected session, public event stream, heartbeat/reconnect scheduler, background continuity or direct generic Watch WebSocket.
+The owner selected one URLSessionWebSocketTask adapter as the architecture direction behind a dedicated per-connection actor and owned store-free session. Keep one NetworkKit product and HTTP NetworkClient/APIClient contracts unchanged. No injected session, public event stream, heartbeat/reconnect scheduler, background continuity or direct generic Watch WebSocket.
 
 The detailed proposal defines reviewable surface/ownership, explicit subprotocol guard, origin-bound optional auth, logical budgets, cancellation/terminal rules and verification slices. It does not claim exact types/signatures compiled or production feasible. Foundation is proposed for project-specific evidence, not a universal performance/security conclusion or authority to reuse HTTP delegates blindly.
 
@@ -30,12 +30,12 @@ iOS/iPadOS18, macOS15, tvOS18; Watch HTTP support and #132 unchanged. No broader
 
 ## Consequences and deferred scope
 
-Prospective four work slices are described, not yet created/authorized. Close subsets and invalid-local-input semantics are proposed clarifications requiring approval. Streams/heartbeat/automatic reconnect remain deferred; no new module/dependency/refactor or extra milestone. #29/#132 publication gates stay open.
+Prospective four work slices are described, not yet created/authorized. The owner accepted the close subset and invalid-local-input semantics as planning direction on 2026-11-08. Streams/heartbeat/automatic reconnect remain deferred; no new module/dependency/refactor or extra milestone. #29/#132 publication gates stay open.
 
 ## Approval and verification
 
-Pending explicit owner review of transport/design/material boundaries and subsequent plan PR/main. Separate code-start and finite native-budget authorization required. Do not close #89 or create Ready implementation work from this proposed ADR. Earlier approvals of planning direction and #165/#168 code do not accept this decision.
+The owner explicitly approved the architecture/design direction in conversation on 2026-11-08, still no new code. Required design PR/main acceptance and exact API/signature review remain pending. Separate code-start and finite native-budget authorization required. Do not close #89 or create Ready implementation work from this architecture-only approval. The separate #165/#168 authorizations do not extend to production code.
 
 ## Supersedes / superseded by
 
-None while proposed. If accepted, supplements ADR-0005/0006/0007 only for a separately scoped WebSocket extension; does not change their HTTP contracts. ADR-0017 deployment floors remain. Preserve all source-specific failure and incomplete evidence.
+Supplements ADR-0005/0006/0007 only as accepted planning direction for a separately scoped WebSocket extension; does not change their HTTP contracts or authorize implementation. ADR-0017 deployment floors remain. Preserve all source-specific failure and incomplete evidence.

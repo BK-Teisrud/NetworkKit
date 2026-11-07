@@ -25,7 +25,7 @@ Additional decisions (later execution authority and source-specific acceptance r
 | --- | --- | --- |
 | [ADR-0016](ADR-0016-unified-networkkit-name.md) | Unified NetworkKit naming | Accepted by owner |
 | [ADR-0017](ADR-0017-current-platform-baseline.md) | Current deployment floors | Selected under explicit owner-delegated authority |
-| [ADR-0018](ADR-0018-foreground-websocket-foundation-proposal.md) | Foundation foreground WebSocket design | Proposed; no production implementation or further probe authority |
+| [ADR-0018](ADR-0018-foreground-websocket-foundation-proposal.md) | Foundation foreground WebSocket design | Owner-approved architecture direction only; exact API/code/runtime pending |
 
 ADR-0009 records combined acceptance of the core choices and documented defaults in ADR-0002–ADR-0008. Those planning decisions did not authorize implementation; ADR-0012 records the later authorization.
 
