@@ -1,5 +1,14 @@
 # Risk register
 
+## Current F4 risk boundaries — 2026-11-04
+
+The owner selected a combined I31/I32 candidate and delegated the modern OS baseline (ADR-0017): iOS/iPadOS18, macOS15, watchOS11, tvOS18. The retired macOS14 route is not a current support requirement and is not revived. New native/family/consumer evidence remains source-specific and must be verified; the historical dispositions below do not establish current F4 acceptance.
+
+Retain the output-only file-size limit, possible Foundation-owned unexposed partials/transient disk use, filesystem/crash cleanup failures, aggregate resource-observation limits and unknown actual app workloads. Store/cache behavior follows compatible Foundation profiles, not a cache-hit promise. Current candidate physical/patch/architecture coverage must be stated explicitly. I32 requires a concrete owner technical-risk disposition; #29/#132 remain separate publication gates. PDF aggregate export is currently deferred by the owner; inspect the actual new archive/manifest rather than reusing the old empty-manifest report.
+
+Useful independent work may proceed while CI runs under the new owner policy, but predecessor main and candidate checks still gate merge. Do not manufacture a pass or close issues from progress alone.
+
+
 ## Complete retry contract approval — 2026-10-31
 
 The owner approves the complete [ADR-0014 contract](../decisions/ADR-0014-opt-in-retry-proposal.md) and expressly withholds code. #87/#106 await planning PR/main acceptance; [START-F3 #137](https://github.com/BK-Teisrud/NetworkKit/issues/137) separately blocks selected I24–I27 (#107–#110). Existing F3 is now “F3 – Bounded read retries”; open unselected domain catalogs #12/#14/#15/#19/#24 stay outside this delivery milestone. No product code, default behavior, dependency, release/version/date or publication authorization. #132/#29 and accepted F2 remain unchanged.

@@ -773,9 +773,10 @@
       ],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner I29–I32 implementation instruction on 2026-11-01 under ADR-0015 / accepted I28 design, in order starting I29 #147. New signing/device installation, purchases and publication excluded.",
+      "authorization_scope": "Owner authorizes combined remaining F4/I31–I32 delivery and delegates modern minimum-OS choice; ADR-0017 selects iOS/iPadOS18, macOS15, watchOS11, tvOS18. Preparation may proceed while predecessor/main runs; dependent merge still requires accepted predecessor and candidate checks. No new signing/device installation, account changes, purchases or publication.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
-      "start_gate": 147
+      "start_gate": 147,
+      "delivery_group": "f4-final-download-review"
     },
     {
       "order": 40.6,
@@ -789,9 +790,13 @@
       ],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner I29–I32 implementation instruction on 2026-11-01 under ADR-0015 / accepted I28 design, in order starting I29 #147. New signing/device installation, purchases and publication excluded.",
+      "authorization_scope": "Owner authorizes combined remaining F4/I31–I32 delivery and delegates modern minimum-OS choice; ADR-0017 selects iOS/iPadOS18, macOS15, watchOS11, tvOS18. Preparation may proceed while predecessor/main runs; dependent merge still requires accepted predecessor and candidate checks. No new signing/device installation, account changes, purchases or publication.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
-      "start_gate": 147
+      "start_gate": 147,
+      "delivery_group": "f4-final-download-review",
+      "internal_order_after": [
+        "I31"
+      ]
     },
     {
       "order": 50,
@@ -834,5 +839,28 @@
     ],
     "predecessor_main": "d1ac92d4da8950b59521bf75b9690058302a4251",
     "predecessor_run": 41897385923
+  },
+  "ci_working_policy": "Continue useful independent/next-branch work without polling or wait loops; inspect CI at natural checkpoints and before merge. Prioritize predecessor failures. Dependent merges require predecessor main and candidate required checks. Maximum five processes.",
+  "f4_combined_delivery": {
+    "issues": [
+      149,
+      150
+    ],
+    "one_pr": true,
+    "internal_sequence": [
+      "I31",
+      "I32"
+    ],
+    "owner_delegated_minimums": {
+      "iOS": "18.0",
+      "iPadOS": "18.0",
+      "macOS": "15.0",
+      "watchOS": "11.0",
+      "tvOS": "18.0"
+    },
+    "predecessor_main": "2426c26565e970ddd1b2d34b2f3b0d81de9ad47d",
+    "predecessor_run": 41908869761,
+    "predecessor_acceptance_pending": false,
+    "predecessor_main_accepted": true
   }
 }

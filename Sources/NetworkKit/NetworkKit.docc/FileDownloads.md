@@ -24,8 +24,53 @@ The library attempts removal of files it has actually acquired. Foundation can o
 
 The existing optional terminal diagnostic keeps its six-field allowlist. Download file errors map to outcome `other`; no filenames, paths, byte counts, progress or cleanup event stream are added. Library attempt count is zero before invocation or one afterward. There is no automatic download retry.
 
-The I29 implementation has critical-path deterministic/file-backed tests; broader integration, current/minimum/native resource evidence and compiled examples remain the separate I30–I32 work. No production support, tag, release or publication follows from API availability. Consult the repository I29 report for exact candidate results and retained publication barriers.
+The implementation has deterministic/file-backed tests, explicit native download and HTTPS probes, finite resource observations and compiled app ownership examples. The repository F4 technical review records actual Mac/simulator coverage and remaining physical-device, workload and privacy-review limits. Technical acceptance and production suitability require separate recorded decisions; API availability does not authorize a tag, release or publication.
 
 ## Bundled privacy declaration
 
 The SDK uses fstat only to inspect the preserved temporary download file's type and size, without consuming timestamps or sending metadata to a telemetry service. Apple's required-reason category still covers that API. The bundled manifest declares FileTimestamp / C617.1 for app-container file metadata. This declaration does not authorize arbitrary filesystem inspection or establish the host app's complete privacy/distribution compliance; the app's integrated artifact and practices retain their separate review.
+
+## Compiled app ownership examples
+
+Use `import Foundation` and `import NetworkKit`. These exact blocks compile with an ordinary module import. The client remains reusable and caller-owned; choose the maximum from your actual app workload, rather than copying an arbitrary universal limit. `moveItem` does not overwrite an existing destination. This app policy attempts disposal on failed placement and propagates its error; it cannot guarantee filesystem deletion after refusal or a crash.
+
+<!-- DOC-EXAMPLE: save -->
+```swift
+/// The caller reuses/owns the client and chooses a private permanent destination.
+func guideSaveDownload(client: APIClient, request: URLRequest, maximumBytes: Int64,
+                       destination: URL) async throws -> NetworkResponse<URL> {
+    let response = try await client.download(request, maximumBytes: maximumBytes)
+    let saved = try guideMoveOwnedFile(response.value.url, to: destination)
+    return NetworkResponse(value: saved, status: response.status, headers: response.headers)
+}
+
+/// App policy: dispose the handed-off temporary file if permanent placement fails.
+func guideMoveOwnedFile(_ temporary: URL, to destination: URL) throws -> URL {
+    do {
+        try FileManager.default.moveItem(at: temporary, to: destination)
+        return destination
+    } catch {
+        try? FileManager.default.removeItem(at: temporary)
+        throw error
+    }
+}
+```
+
+<!-- DOC-EXAMPLE: fileerrors -->
+```swift
+/// Fixed categories only; do not publish file URLs or raw filesystem errors.
+func guideDownloadFailureCategory(_ error: any Error) -> String {
+    switch error {
+    case is CancellationError: "cancelled"
+    case DownloadError.sizeLimitExceeded: "file-too-large"
+    case DownloadError.fileSystem: "file-operation"
+    case DownloadError.cleanupFailed: "cleanup"
+    case is NetworkError: "network"
+    default: "unexpected"
+    }
+}
+```
+
+## App testing boundary
+
+The library keeps the approved concrete download API and does not add a requirement to NetworkClient. Apps can wrap this operation behind a domain-specific boundary returning their own saved-file value or URL, and supply app-owned fake files in their tests. That avoids exposing a public initializer for SDK-created DownloadedFile or breaking existing buffered mocks. The compiled guide separately tests app placement/disposal with synthetic local files; native transfer success is verified in the explicit native suite.

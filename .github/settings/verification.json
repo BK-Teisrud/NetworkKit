@@ -66,11 +66,11 @@
     "DEC-01": {
       "date": "2026-10-19",
       "minimum_os": {
-        "iOS": "17.0",
-        "iPadOS": "17.0",
-        "macOS": "14.0",
-        "watchOS": "10.0",
-        "tvOS": "17.0"
+        "iOS": "18.0",
+        "iPadOS": "18.0",
+        "macOS": "15.0",
+        "watchOS": "11.0",
+        "tvOS": "18.0"
       },
       "visionOS": "deferred",
       "minimum_xcode": "26.3",
@@ -342,5 +342,6 @@
     "native_failed_gate_merge_state": "BLOCKED",
     "temporary_control_removed": true,
     "positive_acceptance_evidence": "Required quality-gate on final PR #73 revision; final main run and completed issue #47 record acceptance"
-  }
+  },
+  "current_platform_decision": "docs/decisions/ADR-0017-current-platform-baseline.md"
 }

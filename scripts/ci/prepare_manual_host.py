@@ -12,10 +12,10 @@ from prepare_device_host import openstep
 
 ROOT = Path(__file__).resolve().parents[2]
 PLATFORMS = {
-    'iOS': ('iphoneos', 'iphoneos iphonesimulator', 'IPHONEOS_DEPLOYMENT_TARGET', '17.0', '1,2'),
-    'macOS': ('macosx', 'macosx', 'MACOSX_DEPLOYMENT_TARGET', '14.0', None),
-    'watchOS': ('watchos', 'watchos watchsimulator', 'WATCHOS_DEPLOYMENT_TARGET', '10.0', '4'),
-    'tvOS': ('appletvos', 'appletvos appletvsimulator', 'TVOS_DEPLOYMENT_TARGET', '17.0', '3'),
+    'iOS': ('iphoneos', 'iphoneos iphonesimulator', 'IPHONEOS_DEPLOYMENT_TARGET', '18.0', '1,2'),
+    'macOS': ('macosx', 'macosx', 'MACOSX_DEPLOYMENT_TARGET', '15.0', None),
+    'watchOS': ('watchos', 'watchos watchsimulator', 'WATCHOS_DEPLOYMENT_TARGET', '11.0', '4'),
+    'tvOS': ('appletvos', 'appletvos appletvsimulator', 'TVOS_DEPLOYMENT_TARGET', '18.0', '3'),
 }
 
 

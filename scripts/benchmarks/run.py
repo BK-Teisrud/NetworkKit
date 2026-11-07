@@ -115,7 +115,7 @@ def run(package, output, repetitions, smoke, post_budget, post_budget_cycles, ex
         (root / "Sources" / "ResourceProbe" / "Probe.swift").write_bytes(Path(__file__).with_name("Probe.swift").read_bytes())
         (root / "Package.swift").write_text('''// swift-tools-version: 6.2
 import PackageDescription
-let package = Package(name: "ResourceProbe", platforms: [.macOS(.v14)],
+let package = Package(name: "ResourceProbe", platforms: [.macOS(.v15)],
     dependencies: [.package(name: "NetworkKit", path: %s)], targets: [.executableTarget(name: "ResourceProbe",
     dependencies: [.product(name: "NetworkKit", package: "NetworkKit")])], swiftLanguageModes: [.v6])
 ''' % json.dumps(str(package)))
