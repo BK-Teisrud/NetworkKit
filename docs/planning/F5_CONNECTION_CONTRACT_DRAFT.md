@@ -10,6 +10,7 @@ Date: 2026-11-07. Tracking: #89 / #17. Status: proposal; only the explicitly lis
 - App owns new connections after termination; no automatic reconnect, resubscription or background continuity.
 - One active receiver requesting one message at a time; no library-owned unbounded event queue. Native buffering is not an aggregate-memory cap.
 - Optional handshake headers once per new connection; anonymous connections permitted. No token persistence, automatic renewal or hidden reconnect.
+- Cancellation of an active send or receive terminates the whole connection; no automatic new connection or message replay. Explicit owner selection on 2026-11-07.
 
 These inputs were explicitly selected by the owner. Remaining details below are recommendations for review, not inferred owner approval.
 
@@ -51,7 +52,7 @@ No trust override, custom TLS, pinning, mTLS, automatic network-path recovery or
 
 Separate categories for invalid settings/endpoint/headers, opening/handshake rejection, trust/transport, message limit/type/protocol, operation conflicts, send timeout and closed connection. Public shape and whether an underlying native error is exposed remain open; do not add cases to NetworkError speculatively. Swift CancellationError remains separate when cancellation wins terminal arbitration.
 
-Proposal: cancellation of opening, active receive or active send terminates the whole connection. Native message receipt/partial-send state cannot safely be assumed resumable after a cancelled operation. No silent message discard followed by continued reads and no retry of an ambiguously delivered send. This policy is material and needs owner review; it is not inferred from the HTTP client.
+Owner-selected policy: cancellation of active receive or active send terminates the whole connection. Cancellation during opening is also proposed to terminate opening. Native message receipt/partial-send state cannot safely be assumed resumable after a cancelled operation. No silent message discard followed by continued reads and no retry of an ambiguously delivered send. The active send/receive policy was explicitly accepted by the owner on 2026-11-07; it is not inferred from the HTTP client. Exact cancellation/terminal arbitration still needs detailed design and evidence.
 
 Define one serialized terminal decision. The first committed terminal cause controls pending operations; no later timeout/error overrides it or reopens the handle. Normal close is distinct from failed transport; malformed/oversized/unexpected data ends the connection. Graceful close rejects new operations immediately and attempts native close before its configured cancellation fallback. Duplicate close is safe. Close/code/reason validation must exclude forbidden wire codes and enforce protocol length/UTF-8 requirements using native framing.
 
@@ -65,7 +66,7 @@ The source document's URLSession suggestion remains under comparison with Networ
 
 ## Evidence gates and next decisions
 
-1. Review this combined proposal with the owner, including cancellation ending the whole connection, explicit message bounds, new finite settings, exclusions and raw operation model. Record accepted changes in an ADR only after material questions are resolved.
+1. Review this combined proposal with the owner, retaining the accepted connection-ending cancellation policy and reviewing proposed explicit message bounds, new finite settings, exclusions and raw operation model. Record accepted changes in an ADR only after material questions are resolved.
 2. Determine a controlled trusted-WSS route without assuming paid infrastructure or certificate provisioning authorization. Establish feasibility for endpoint/header/subprotocol/redirect/trust controls and async state/backpressure boundaries. Additional experiment code requires separate scope and authorization beyond #165.
 3. Choose one transport only after its security/lifecycle feasibility is sufficient. Explicitly accept any deviation from the source specification; do not adopt both adapters or create a transport framework speculatively.
 4. Specify exact API and testable internal boundaries, supported platform evidence, source hashes, physical/current/minimum/build-only distinctions and actual publication workload review. Native SDK availability is not an execution pass.
