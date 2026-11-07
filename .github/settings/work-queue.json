@@ -9,7 +9,7 @@
       "number": 42,
       "title": "[I01] Create the Swift package and test target after authorization",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/42",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START"
       ],
@@ -21,7 +21,7 @@
       "number": 43,
       "title": "[I02] Define immutable HTTP values, responses, and error taxonomy",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/43",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I01"
@@ -34,7 +34,7 @@
       "number": 44,
       "title": "[I03] Implement configuration snapshots and internal test boundaries",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/44",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I02"
@@ -47,7 +47,7 @@
       "number": 45,
       "title": "[I04] Implement safe endpoint and URL construction",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/45",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I03"
@@ -60,7 +60,7 @@
       "number": 46,
       "title": "[I05] Implement headers and request encoding",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/46",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I04"
@@ -73,7 +73,7 @@
       "number": 47,
       "title": "[I06] Enable real PR CI for all four platform families",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/47",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I05"
@@ -86,7 +86,7 @@
       "number": 48,
       "title": "[I07] Implement response strategies and HTTP status validation",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/48",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I06"
@@ -99,7 +99,7 @@
       "number": 49,
       "title": "[I08] Implement URLSession ownership and the transport adapter",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/49",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I07"
@@ -112,7 +112,7 @@
       "number": 50,
       "title": "[I09] Implement HTTPS, loopback, and redirect policies",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/50",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I08"
@@ -125,7 +125,7 @@
       "number": 51,
       "title": "[I10] Connect typed and raw calls to one secure HTTP pipeline",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/51",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I09"
@@ -138,7 +138,7 @@
       "number": 52,
       "title": "[I11] Verify the initial HTTP core and F1 gate",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/52",
-      "milestone": "F1 – HTTP core",
+      "milestone": "F1 \u2013 HTTP core",
       "blocked_by": [
         "START",
         "I10"
@@ -151,7 +151,7 @@
       "number": 53,
       "title": "[I12] Implement cancellation and the total time budget",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/53",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I11"
@@ -164,7 +164,7 @@
       "number": 54,
       "title": "[I13] Implement shutdown and concurrency isolation",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/54",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I12"
@@ -177,7 +177,7 @@
       "number": 55,
       "title": "[I14] Implement the bounded authentication-header provider",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/55",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I13"
@@ -190,7 +190,7 @@
       "number": 56,
       "title": "[I15] Implement sanitized optional diagnostics",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/56",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I14"
@@ -203,7 +203,7 @@
       "number": 57,
       "title": "[I16] Verify secure storage and injected-session profiles",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/57",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I15"
@@ -216,7 +216,7 @@
       "number": 85,
       "title": "[PREP-01] Prepare minimum-OS and physical-device evidence access",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/85",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [],
       "parent": 23
     },
@@ -226,7 +226,7 @@
       "number": 58,
       "title": "[I17] Complete the test matrix and regression suite",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/58",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I16"
@@ -239,7 +239,7 @@
       "number": 59,
       "title": "[I18] Complete API review, DocC, and integration guides",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/59",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I17",
@@ -253,7 +253,7 @@
       "number": 95,
       "title": "[BUG-01] Bound native HTTP probe liveness and diagnose main timeouts",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/95",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START"
       ],
@@ -265,7 +265,7 @@
       "number": 97,
       "title": "[QA-01] Review quality and remove stale validation duplication",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/97",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I18"
@@ -278,7 +278,7 @@
       "number": 60,
       "title": "[I19] Conduct the v1 security and privacy review",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/60",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I18",
@@ -292,7 +292,7 @@
       "number": 61,
       "title": "[I20] Measure baseline resource use and package quality",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/61",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I19"
@@ -305,7 +305,7 @@
       "number": 100,
       "title": "[RES-01] Diagnose repeated-call RSS growth against native URLSession control",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/100",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I20"
@@ -318,7 +318,7 @@
       "number": 104,
       "title": "[TLS-01] Verify native macOS rejection of an untrusted HTTPS certificate",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/104",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I19"
@@ -331,7 +331,7 @@
       "number": 113,
       "title": "[PREP-02] Provide an app-hosted iOS physical-device test route",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/113",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I18"
@@ -344,7 +344,7 @@
       "number": 115,
       "title": "[NET-01] Verify opt-in native public HTTPS scenarios",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/115",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "I19",
         "PREP-02"
@@ -357,7 +357,7 @@
       "number": 117,
       "title": "[NET-02] Verify native cancellation, shutdown and isolated cookie profiles",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/117",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "NET-01",
         "PREP-02"
@@ -370,7 +370,7 @@
       "number": 122,
       "title": "[NET-03] Verify portable native loopback and resource observations",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/122",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "PREP-02",
         "NET-01",
@@ -384,7 +384,7 @@
       "number": 126,
       "title": "[NET-04] Investigate watchOS native cookie and credential controls",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/126",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "NET-03"
       ],
@@ -396,7 +396,7 @@
       "number": 62,
       "title": "[I21] Obtain and document minimum-OS runtime evidence",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/62",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I19",
@@ -412,7 +412,7 @@
       "number": 63,
       "title": "[I22] Run representative tests on physical Apple devices",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/63",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I19",
@@ -431,7 +431,7 @@
       "number": 86,
       "title": "[GATE-F2] Reconcile v1 requirements, domain epics, and release evidence",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/86",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "I18",
         "I19",
@@ -449,7 +449,7 @@
       "number": 64,
       "title": "[I23] Rehearse the v1 release without publishing",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/64",
-      "milestone": "F2 – Production hardening and v1 gate",
+      "milestone": "F2 \u2013 Production hardening and v1 gate",
       "blocked_by": [
         "START",
         "I22",
@@ -463,7 +463,7 @@
       "number": 132,
       "title": "[WATCH-01] Complete physical Watch verification before publication",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/132",
-      "milestone": "v1.0 – Publication gate",
+      "milestone": "v1.0 \u2013 Publication gate",
       "blocked_by": [],
       "parent": 29,
       "authorization_scope": "publication evidence only; no release or paid/tool/account changes authorized",
@@ -475,7 +475,7 @@
       "number": 29,
       "title": "[REL-01] Verify the first stable core release",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/29",
-      "milestone": "v1.0 – Publication gate",
+      "milestone": "v1.0 \u2013 Publication gate",
       "blocked_by": [
         "WATCH-01",
         "I23"
@@ -504,7 +504,7 @@
       "number": 87,
       "title": "[PLAN-F3] Select the first resilience increment and decompose its delivery",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/87",
-      "milestone": "F3 – Bounded read retries",
+      "milestone": "F3 \u2013 Bounded read retries",
       "blocked_by": [],
       "parent": 14
     },
@@ -514,11 +514,11 @@
       "number": 106,
       "title": "[F3-DEC] Approve the bounded opt-in retry contract",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/106",
-      "milestone": "F3 – Bounded read retries",
+      "milestone": "F3 \u2013 Bounded read retries",
       "blocked_by": [],
       "parent": 14,
       "implementation_authorized": false,
-      "authorization_scope": "Contract/planning accepted through PR #111/main run 41248255517; subsequent I24–I27 code start recorded in START-F3 #137."
+      "authorization_scope": "Contract/planning accepted through PR #111/main run 41248255517; subsequent I24\u2013I27 code start recorded in START-F3 #137."
     },
     {
       "order": 30.15,
@@ -526,14 +526,14 @@
       "number": 137,
       "title": "[START-F3] Authorize implementation of the approved read-retry contract",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/137",
-      "milestone": "F3 – Bounded read retries",
+      "milestone": "F3 \u2013 Bounded read retries",
       "blocked_by": [
         "PLAN-F3",
         "F3-DEC"
       ],
       "parent": 14,
       "implementation_authorized": true,
-      "authorization_scope": "Owner explicitly authorized I24–I27 on 2026-10-31; planning main accepted; no publication or other extension."
+      "authorization_scope": "Owner explicitly authorized I24\u2013I27 on 2026-10-31; planning main accepted; no publication or other extension."
     },
     {
       "order": 30.2,
@@ -541,7 +541,7 @@
       "number": 107,
       "title": "[I24] Specify and verify retry eligibility and delay decisions",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/107",
-      "milestone": "F3 – Bounded read retries",
+      "milestone": "F3 \u2013 Bounded read retries",
       "blocked_by": [
         "F3-DEC",
         "GATE-F2",
@@ -549,7 +549,7 @@
       ],
       "parent": 14,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24–I27, no publication or other extension.",
+      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24\u2013I27, no publication or other extension.",
       "decision_gate": 106,
       "planning_key": "F3-C01",
       "start_gate": 137
@@ -560,7 +560,7 @@
       "number": 108,
       "title": "[I25] Integrate retries inside one admitted operation and deadline",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/108",
-      "milestone": "F3 – Bounded read retries",
+      "milestone": "F3 \u2013 Bounded read retries",
       "blocked_by": [
         "F3-DEC",
         "GATE-F2",
@@ -569,7 +569,7 @@
       ],
       "parent": 14,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24–I27, no publication or other extension.",
+      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24\u2013I27, no publication or other extension.",
       "decision_gate": 106,
       "planning_key": "F3-C02",
       "start_gate": 137
@@ -580,7 +580,7 @@
       "number": 109,
       "title": "[I26] Verify native retry integration and resource behavior",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/109",
-      "milestone": "F3 – Bounded read retries",
+      "milestone": "F3 \u2013 Bounded read retries",
       "blocked_by": [
         "F3-DEC",
         "GATE-F2",
@@ -589,7 +589,7 @@
       ],
       "parent": 14,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24–I27, no publication or other extension.",
+      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24\u2013I27, no publication or other extension.",
       "decision_gate": 106,
       "planning_key": "F3-V01",
       "start_gate": 137
@@ -600,7 +600,7 @@
       "number": 110,
       "title": "[I27] Review retry API, diagnostics, evidence and delivery readiness",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/110",
-      "milestone": "F3 – Bounded read retries",
+      "milestone": "F3 \u2013 Bounded read retries",
       "blocked_by": [
         "F3-DEC",
         "GATE-F2",
@@ -609,7 +609,7 @@
       ],
       "parent": 14,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24–I27, no publication or other extension.",
+      "authorization_scope": "Explicit owner code-start instruction on 2026-10-31 under ADR-0014 / START-F3 #137; only selected bounded read-retry I24\u2013I27, no publication or other extension.",
       "decision_gate": 106,
       "planning_key": "F3-GATE",
       "start_gate": 137
@@ -620,7 +620,7 @@
       "number": 88,
       "title": "[PLAN-F4] Establish transfer feasibility and decompose selected transfer scope",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/88",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [
         "I28"
       ],
@@ -634,11 +634,11 @@
       "number": 145,
       "title": "[START-F4] Authorize only the bounded foreground download feasibility task",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/145",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [],
       "parent": 16,
       "implementation_authorized": false,
-      "authorization_scope": "Explicit owner I28-only feasibility instruction on 2026-11-01; START-F4 #145 completed. No I29–I32, public API, signing/device install or publication authorization.",
+      "authorization_scope": "Explicit owner I28-only feasibility instruction on 2026-11-01; START-F4 #145 completed. No I29\u2013I32, public API, signing/device install or publication authorization.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
       "start_gate": 145
     },
@@ -648,13 +648,13 @@
       "number": 146,
       "title": "[I28] Verify file download lifetime, security and cleanup feasibility",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/146",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [
         "START-F4"
       ],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner I28-only feasibility instruction on 2026-11-01; START-F4 #145 completed. No I29–I32, public API, signing/device install or publication authorization.",
+      "authorization_scope": "Explicit owner I28-only feasibility instruction on 2026-11-01; START-F4 #145 completed. No I29\u2013I32, public API, signing/device install or publication authorization.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
       "start_gate": 145
     },
@@ -664,14 +664,14 @@
       "number": 147,
       "title": "[I29] Implement the approved foreground file download lifecycle",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/147",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [
         "I28",
         "PLAN-F4"
       ],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner I29–I32 implementation instruction on 2026-11-01 under ADR-0015 / accepted I28 design, in order starting I29 #147. New signing/device installation, purchases and publication excluded.",
+      "authorization_scope": "Explicit owner I29\u2013I32 implementation instruction on 2026-11-01 under ADR-0015 / accepted I28 design, in order starting I29 #147. New signing/device installation, purchases and publication excluded.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
       "start_gate": 147
     },
@@ -681,13 +681,13 @@
       "number": 148,
       "title": "[I30] Verify download boundaries, file failures and lifecycle races",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/148",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [
         "I29"
       ],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Explicit owner I29–I32 implementation instruction on 2026-11-01 under ADR-0015 / accepted I28 design, in order starting I29 #147. New signing/device installation, purchases and publication excluded.",
+      "authorization_scope": "Explicit owner I29\u2013I32 implementation instruction on 2026-11-01 under ADR-0015 / accepted I28 design, in order starting I29 #147. New signing/device installation, purchases and publication excluded.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
       "start_gate": 147
     },
@@ -697,11 +697,11 @@
       "number": 158,
       "title": "[QA-02] Make source discovery and device-host generation folder-aware",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/158",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "authorization_scope": "Owner selected one combined QA-02\u2013QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
       "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
       "internal_order_after": [],
       "delivery_group": "architecture-maintenance-2026-11-04"
@@ -712,11 +712,11 @@
       "number": 159,
       "title": "[QA-03] Split native loopback tests and execute a bounded functional CI selection",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/159",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "authorization_scope": "Owner selected one combined QA-02\u2013QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
       "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
       "internal_order_after": [
         "QA-02"
@@ -729,11 +729,11 @@
       "number": 160,
       "title": "[QA-04] Organize library and unit tests without changing API or lifecycle behavior",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/160",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "authorization_scope": "Owner selected one combined QA-02\u2013QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
       "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
       "internal_order_after": [
         "QA-03"
@@ -746,11 +746,11 @@
       "number": 161,
       "title": "[QA-05] Consolidate current planning and require privacy review with system API changes",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/161",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Owner selected one combined QA-02–QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
+      "authorization_scope": "Owner selected one combined QA-02\u2013QA-05 implementation branch/PR, excluding I31/I32; main #157 accepted. No product/API expansion, signing/device install, purchase or publication.",
       "readiness_note": "One integrated PR/main acceptance; internal local sequence does not require separate PRs.",
       "internal_order_after": [
         "QA-04"
@@ -763,7 +763,7 @@
       "number": 149,
       "title": "[I31] Verify native download files and bounded resource observations",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/149",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [
         "I30",
         "QA-02",
@@ -773,7 +773,7 @@
       ],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Owner authorizes combined remaining F4/I31–I32 delivery and delegates modern minimum-OS choice; ADR-0017 selects iOS/iPadOS18, macOS15, watchOS11, tvOS18. Preparation may proceed while predecessor/main runs; dependent merge still requires accepted predecessor and candidate checks. No new signing/device installation, account changes, purchases or publication.",
+      "authorization_scope": "Owner authorizes combined remaining F4/I31\u2013I32 delivery and delegates modern minimum-OS choice; ADR-0017 selects iOS/iPadOS18, macOS15, watchOS11, tvOS18. Preparation may proceed while predecessor/main runs; dependent merge still requires accepted predecessor and candidate checks. No new signing/device installation, account changes, purchases or publication.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
       "start_gate": 147,
       "delivery_group": "f4-final-download-review"
@@ -784,13 +784,13 @@
       "number": 150,
       "title": "[I32] Review download compatibility, documentation and technical gate",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/150",
-      "milestone": "F4 – File transfers",
+      "milestone": "F4 \u2013 File transfers",
       "blocked_by": [
         "I31"
       ],
       "parent": 16,
       "implementation_authorized": true,
-      "authorization_scope": "Owner authorizes combined remaining F4/I31–I32 delivery and delegates modern minimum-OS choice; ADR-0017 selects iOS/iPadOS18, macOS15, watchOS11, tvOS18. Preparation may proceed while predecessor/main runs; dependent merge still requires accepted predecessor and candidate checks. No new signing/device installation, account changes, purchases or publication.",
+      "authorization_scope": "Owner authorizes combined remaining F4/I31\u2013I32 delivery and delegates modern minimum-OS choice; ADR-0017 selects iOS/iPadOS18, macOS15, watchOS11, tvOS18. Preparation may proceed while predecessor/main runs; dependent merge still requires accepted predecessor and candidate checks. No new signing/device installation, account changes, purchases or publication.",
       "decision_adr": "docs/decisions/ADR-0015-foreground-file-download.md",
       "start_gate": 147,
       "delivery_group": "f4-final-download-review",
@@ -804,7 +804,7 @@
       "number": 89,
       "title": "[PLAN-F5] Define the WebSocket lifecycle and real-time delivery plan",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/89",
-      "milestone": "F5 – Real-time communication",
+      "milestone": "F5 \u2013 Real-time communication",
       "blocked_by": [],
       "parent": 17
     },
@@ -814,14 +814,14 @@
       "number": 90,
       "title": "[PLAN-F6] Triage specialized security and networking research by product need",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/90",
-      "milestone": "F6 – Specialized features and research",
+      "milestone": "F6 \u2013 Specialized features and research",
       "blocked_by": [],
       "parent": 18
     }
   ],
   "authorization_adr": "docs/decisions/ADR-0012-implementation-start.md",
   "status_source": "GitHub Issues and ProjectV2; this file records planned structure, not completion status",
-  "authorization_scope": "Core under ADR-0012; bounded read-retry I24–I27 explicitly authorized by owner on 2026-10-31 under ADR-0014 and START-F3 #137. No publication or other extension authorization. I28 non-shipping bounded feasibility only explicitly authorized on 2026-11-01 under ADR-0015 / START-F4 #145; I29–I32 remain unauthorized. I29–I32 explicitly authorized by owner on 2026-11-01 under ADR-0015/I28; permission recorded in #147–#150, no new signing/device-installation or publication.",
+  "authorization_scope": "Core under ADR-0012; bounded read-retry I24\u2013I27 explicitly authorized by owner on 2026-10-31 under ADR-0014 and START-F3 #137. No publication or other extension authorization. I28 non-shipping bounded feasibility only explicitly authorized on 2026-11-01 under ADR-0015 / START-F4 #145; I29\u2013I32 remain unauthorized. I29\u2013I32 explicitly authorized by owner on 2026-11-01 under ADR-0015/I28; permission recorded in #147\u2013#150, no new signing/device-installation or publication.",
   "extension_start_gate": 137,
   "download_start_decision": 147,
   "maintenance_delivery": {
@@ -862,5 +862,18 @@
     "predecessor_run": 41908869761,
     "predecessor_acceptance_pending": false,
     "predecessor_main_accepted": true
+  },
+  "f5_planning": {
+    "issue": 89,
+    "plan": "docs/planning/F5_FEASIBILITY_PLAN.md",
+    "owner_use_case": "Future foreground server status/data updates; no concrete server protocol.",
+    "selected_platform_evaluation": [
+      "iOS/iPadOS",
+      "macOS",
+      "tvOS"
+    ],
+    "watch_websocket": "Owner-approved deferral on 2026-11-07 under TN3135; HTTP support and #132 unchanged.",
+    "reconnect": "App-owned; automatic reconnect/resubscription deferred.",
+    "authorization": "Discovery/planning only; no transport/API/prototype or code-start approval."
   }
 }
