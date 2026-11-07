@@ -1,6 +1,6 @@
 # F5 foreground connection contract proposal
 
-Date: 2026-11-07. Tracking: #89 / #17. Status: proposal; only the explicitly listed owner selections are accepted. No public API, production transport or further code is authorized. Experiment #165/main acceptance is a separate gate.
+Date: 2026-11-07. Tracking: #89 / #17. Status: proposal; only the explicitly listed owner selections are accepted. No public API, production transport or further code is authorized. Experiment #165 is completed after accepted PR #166/main210a8bbae8d017ca7cb94983e390df8676ea0355/run42412525675.
 
 ## Accepted planning inputs
 
@@ -67,7 +67,7 @@ The source document's URLSession suggestion remains under comparison with Networ
 ## Evidence gates and next decisions
 
 1. Review this combined proposal with the owner, retaining the accepted connection-ending cancellation policy and reviewing proposed explicit message bounds, new finite settings, exclusions and raw operation model. Record accepted changes in an ADR only after material questions are resolved.
-2. Determine a controlled trusted-WSS route without assuming paid infrastructure or certificate provisioning authorization. Establish feasibility for endpoint/header/subprotocol/redirect/trust controls and async state/backpressure boundaries. Additional experiment code requires separate scope and authorization beyond #165.
+2. Review the [complementary local/public WSS feasibility proposal](F5_SECURITY_VERIFICATION_PLAN.md), which distinguishes controlled handshake observations from public TLS/echo observations and does not replace a controlled trusted server universally. Establish feasibility for endpoint/header/subprotocol/redirect/trust controls and async state/backpressure boundaries. Additional experiment code requires separate scope and authorization beyond #165.
 3. Choose one transport only after its security/lifecycle feasibility is sufficient. Explicitly accept any deviation from the source specification; do not adopt both adapters or create a transport framework speculatively.
 4. Specify exact API and testable internal boundaries, supported platform evidence, source hashes, physical/current/minimum/build-only distinctions and actual publication workload review. Native SDK availability is not an execution pass.
 5. Decompose concrete implementation/test/docs/native/gate issues only from accepted design. #89 remains In Progress and #17 undelivered; #29/#132 remain open. No production implementation code-start follows from a plan or experiment approval.
