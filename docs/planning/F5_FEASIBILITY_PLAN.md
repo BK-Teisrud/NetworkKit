@@ -37,6 +37,8 @@ Owner-approved scope decision, 2026-11-07: evaluate direct WebSocket for iOS/iPa
 
 The original specification names URLSessionWebSocketTask. Apple TN3151 now recommends Network framework for new WebSocket code unless there is a specific reason for URLSession. Compare both before adopting a transport: secure handshake/auth/redirect/origin policy, system trust, proxy/cookie/credential behavior, framing/message bounds, cancellation and shutdown, testability, actor isolation and current OS availability. Reusing HTTP configuration is not itself proof of equivalent security. Do not build custom TLS or a custom production WebSocket stack. Keep one library product unless evidence justifies a separate decision; do not merge long-lived connections into HTTP request deadlines/retry state.
 
+See the [native transport comparison and proposed spike](F5_TRANSPORT_ASSESSMENT.md) for the documentation-based recommendation, exact experimental bounds and separate code-start gate.
+
 ## Contract questions before a prototype
 
 - Identify a representative future server contract or explicitly approve a synthetic reference protocol. Decide whether subscription messages/outbound sends are needed; text/JSON/binary, maximum message bytes, expected rate/bursts and maximum active connections.
