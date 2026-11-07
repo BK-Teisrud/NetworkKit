@@ -1,19 +1,12 @@
 # Work queue
 
-## Current delivery — 2026-11-04
+## Current delivery — 2026-11-07
 
-Maintenance #158–#161 is completed after PR #162/main 2426c26565e970ddd1b2d34b2f3b0d81de9ad47d/run 41908869761, with all seven checks/full-log review (267 Mac tests, four 258-test simulator results, 28 helpers, native four-declaration/eight-case CI and DocC). The [maintenance review](ARCHITECTURE_MAINTENANCE_REVIEW_2026-11-04.md) preserves its candidate-time evidence; no extra closeout-only PR is required to rewrite pending history.
+I31/#149 and I32/#150 are completed through PR #163/main f86ddcb5ba7a26d05b370007f70b439d0eff5999/run 42406475143, all seven checks/full log accepted. F4 is closed under the explicit owner-approved bounded technical disposition. The [technical review](F4_TECHNICAL_REVIEW_2026-11-04.md) and [evidence](evidence/F4_DOWNLOAD_CLOSEOUT_2026-11-04.json) preserve candidate-time status and source-specific observations; actual closure is recorded in the issues. Publication #29/#132 remains blocked; no release is authorized.
 
-The owner selected **one combined branch/PR for remaining I31/#149 and I32/#150**, with native evidence before the final API/privacy/technical review. [ADR-0017](../decisions/ADR-0017-current-platform-baseline.md) records delegated current minima: iOS/iPadOS18, macOS15, watchOS11 and tvOS18. No new feature/module/dependency, paid runner, device signing/installation or publication is implied. Native, physical, minimum-family and build-only proof remain distinct.
+Next: PLAN-F5/#89 In Progress for [feasibility discovery](F5_FEASIBILITY_PLAN.md), future foreground server updates and app-owned reconnection. No concrete server, transport/API decision or code-start approval. All four families assessed; the owner approved deferring ordinary direct Watch WebSocket because of TN3135 restrictions. HTTP platform support remains unchanged. No speculative implementation issues or extra milestone.
 
-| Order | Task | Gate |
-| --- | --- | --- |
-| 40.5 | [I31 / #149](https://github.com/BK-Teisrud/NetworkKit/issues/149): native download/HTTPS/auth/storage/runtime/resource evidence | In Progress; predecessor maintenance accepted |
-| 40.6 | [I32 / #150](https://github.com/BK-Teisrud/NetworkKit/issues/150): compiled API examples, consumer/privacy and technical review | Same combined delivery; final review follows I31 evidence and requires explicit residual-risk disposition |
-
-The [F4 candidate technical review](F4_TECHNICAL_REVIEW_2026-11-04.md) and [content-hashed evidence](evidence/F4_DOWNLOAD_CLOSEOUT_2026-11-04.json) record Mac and eight simulator environments, failed attempts, consumer verification and remaining owner decisions.
-
-Project Status owns live work state; this file and work-queue.json define order/dependencies. ROADMAP owns scope; dated reports preserve evidence. Continue useful independent/next-branch work while CI runs, without polling or wait loops; check at natural checkpoints and before merge. Dependent merges require accepted predecessor main and candidate checks. Maximum five concurrent work processes remains. #29/#132 retain mandatory publication barriers.
+Project Status owns live state, this queue/JSON define dependencies and ROADMAP selected scope. Continue useful independent work during CI without polling. Dependent merges require accepted predecessor/main and candidate checks. Maximum five work processes.
 
 ## Accepted F2 and next lanes
 
@@ -77,7 +70,7 @@ I21 may investigate access to older test environments as preparation without cod
 | --- | --- | --- | --- |
 | 30 | [PLAN-F3 / #87](https://github.com/BK-Teisrud/NetworkKit/issues/87) | #14 first; assess #12/#15/#19/#24 separately | Done; ADR-0014 and selected I24–I27 decomposition accepted |
 | 40 | [PLAN-F4 / #88](https://github.com/BK-Teisrud/NetworkKit/issues/88) | #16/#26 | Done after PR #154/main run 41323512108; I28 accepted |
-| 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Backlog; real-time use case/lifecycle pending |
+| 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | In Progress; foreground server updates selected; feasibility/platform/protocol decisions pending |
 | 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
 
 The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.

@@ -1,8 +1,10 @@
 # Roadmap
 
-## Current scope — 2026-11-04
+## Current scope — 2026-11-07
 
-F0/F1/F2/F3 are complete within their recorded acceptance limits. The selected F4 foreground GET-to-file increment remains under ADR-0015; upload, progress, resume, background and download retry remain deferred. Maintenance #158–#161 is completed through PR #162 and accepted main run 41908869761. The owner selected one combined I31/#149–I32/#150 candidate and delegated the newer OS baseline to ADR-0017. Preparation may continue while CI runs; no dependent merge bypasses required predecessor/candidate checks. No new milestone, dates, module or product feature is selected.
+F0–F4 are completed within recorded technical limits. F4 I31/I32 completed through PR #163/main f86ddcb5ba7a26d05b370007f70b439d0eff5999/run 42406475143 after all seven checks/full-log review and the explicit bounded owner disposition. #29/#132 retain publication barriers. Upload, progress, resume, background and download retry remain deferred.
+
+PLAN-F5/#89 is discovery only for future foreground server status/data updates with app-owned reconnection and no concrete server. The owner approved evaluating iOS/iPadOS/macOS/tvOS and deferring direct generic Watch WebSocket after TN3135 assessment. HTTP Watch support is unchanged. The [feasibility plan](F5_FEASIBILITY_PLAN.md) leaves transport/API/server contract and code authorization open. No extra milestone, feature delivery or speculative refactor is selected.
 
 See [WORK_QUEUE](WORK_QUEUE.md) for current execution order and accepted predecessor evidence, GitHub Project Status for live work state, and the [maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) for safeguards. Dated reports and the original allocation below preserve history; their earlier status is not live state. #29 actual app/workload/security/publication and #132 physical Watch retain mandatory separate barriers.
 
