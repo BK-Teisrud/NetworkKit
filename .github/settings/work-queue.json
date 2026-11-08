@@ -831,6 +831,70 @@
       "authorization_scope": "Only the separately owner-authorized non-delivering experiment, not production SDK implementation."
     },
     {
+      "order": 51,
+      "key": "I33",
+      "number": 171,
+      "title": "[I33] Define WebSocket values and deterministic connection lifecycle",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/171",
+      "parent": 17,
+      "delivery_group": "f5-connection",
+      "milestone": "F5 \u2013 Real-time communication",
+      "blocked_by": [
+        "PLAN-F5"
+      ],
+      "code_start_authorized": false
+    },
+    {
+      "order": 52,
+      "key": "I34",
+      "number": 172,
+      "title": "[I34] Integrate the owned Foundation WebSocket adapter and handshake policy",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/172",
+      "parent": 17,
+      "delivery_group": "f5-connection",
+      "milestone": "F5 \u2013 Real-time communication",
+      "blocked_by": [
+        "PLAN-F5"
+      ],
+      "code_start_authorized": false,
+      "internal_order_after": [
+        "I33"
+      ]
+    },
+    {
+      "order": 53,
+      "key": "I35",
+      "number": 173,
+      "title": "[I35] Verify WebSocket platforms native boundaries resources and compiled usage",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/173",
+      "parent": 17,
+      "delivery_group": "f5-verification-gate",
+      "milestone": "F5 \u2013 Real-time communication",
+      "blocked_by": [
+        "I33",
+        "I34"
+      ],
+      "code_start_authorized": false
+    },
+    {
+      "order": 54,
+      "key": "I36",
+      "number": 174,
+      "title": "[I36] Review the bounded WebSocket technical delivery and remaining risks",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/174",
+      "parent": 17,
+      "delivery_group": "f5-verification-gate",
+      "milestone": "F5 \u2013 Real-time communication",
+      "blocked_by": [
+        "I33",
+        "I34"
+      ],
+      "code_start_authorized": false,
+      "internal_order_after": [
+        "I35"
+      ]
+    },
+    {
       "order": 60,
       "key": "PLAN-F6",
       "number": 90,
@@ -896,7 +960,7 @@
     ],
     "watch_websocket": "Owner-approved deferral on 2026-11-07 under TN3135; HTTP support and #132 unchanged.",
     "reconnect": "App-owned; automatic reconnect/resubscription deferred.",
-    "authorization": "Owner approved only isolated #165/#168 experiments under their separate scope/budgets. No production WebSocket API/transport/implementation or further native calls authorized.",
+    "authorization": "Only completed #165/#168 experiment code was authorized. Owner approved architecture and exact contract/delivery planning, explicitly still no production code or further probes.",
     "contract_direction": "Owner approved planning direction in PR #167, not exact API or production transport.",
     "accepted_plan_main": "e1845ccb3b31d260d8e1a0915be41a7361c9bb50",
     "accepted_plan_run": 42417330816,
@@ -910,8 +974,42 @@
         "candidate_pr": 169,
         "report": "docs/planning/F5_HANDSHAKE_SECURITY_REPORT.md",
         "runtime_budget_consumed": true,
-        "conclusion": "Negative/incomplete; production transport/API not adopted."
+        "conclusion": "Negative/incomplete; production transport/API not adopted.",
+        "accepted_main": "484873dfc7ea9cf5937d82777acc09172896c2a3",
+        "accepted_run": 42426806309
+      }
+    },
+    "architecture_adr": "docs/decisions/ADR-0018-foreground-websocket-foundation-proposal.md",
+    "architecture_main": "84976fb5ae181e34ecefd5cca0374ccbf7c400b6",
+    "architecture_main_run": 42460671040,
+    "exact_contract": "docs/planning/F5_API_AND_DELIVERY_CONTRACT.md",
+    "exact_contract_owner_approved": "2026-11-08",
+    "delivery_groups": {
+      "f5-connection": {
+        "issues": [
+          171,
+          172
+        ],
+        "internal_order": [
+          "I33",
+          "I34"
+        ],
+        "start_requires": "Accepted PLAN-F5/#89 plus explicit owner implementation-start decision; no automatic code permission."
+      },
+      "f5-verification-gate": {
+        "issues": [
+          173,
+          174
+        ],
+        "internal_order": [
+          "I35",
+          "I36"
+        ],
+        "requires_accepted_main_of": "f5-connection",
+        "additional_gate": "Concrete approved binary-WSS/native scope and applicable runtime/device authorization; final owner technical disposition."
       }
     }
-  }
+  },
+  "f5_implementation_authorized": false,
+  "f5_code_start_decision_issue": 171
 }

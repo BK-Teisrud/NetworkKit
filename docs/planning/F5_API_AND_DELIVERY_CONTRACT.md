@@ -1,8 +1,8 @@
 # F5 exact API and delivery contract proposal
 
-Date: 2026-11-08. Tracking: #89 / #17. Status: proposed exact contract; not owner-approved and no implementation/runtime authorized. ADR-0018 accepts architecture direction only. This document makes the remaining API, validation and delivery decisions reviewable together.
+Date: 2026-11-08. Tracking: #89 / #17. Status: owner-approved exact contract and delivery plan on 2026-11-08; required plan PR/main remains pending. No implementation/runtime authorized. ADR-0018 accepts architecture direction only. This document makes the remaining API, validation and delivery decisions reviewable together.
 
-## Proposed interface
+## Owner-approved interface specification
 
 The following is a declaration specification, not a complete/compiled Swift file or SDK implementation. Existing HTTPHeaders, NetworkAuthentication and NetworkError.TransportFailure are reused without changing their declarations. Each new public type containing URL/header/auth/message/reason data has redacted descriptions; accessors remain explicit data access. All connection-specific APIs are unavailable on watchOS; HTTP support is unchanged.
 
@@ -127,9 +127,9 @@ closeInfo is an immutable final snapshot of a valid peer close observed before l
 
 The logical opening budget includes one provider acquisition and native/protocol opening. Owner selected cooperative-provider reuse with possible work retention after logical cancellation; never wait indefinitely to promise unconditional joining, never start network from a late provider result. Track/cancel each owned job and separately observe actual invalidation/resource lifetime. Noncooperative/late-provider behavior and native callback arbitration are deterministic test requirements, not a production guarantee from the architecture decision.
 
-## Proposed delivery decomposition, not yet created/authorized
+## Owner-approved delivery decomposition; code unauthorized
 
-Use next available I identifiers only after uniqueness/readback checks. Four bounded task roles:
+I33–I36 identifiers were checked for uniqueness and the four concrete tasks created Blocked, under domain #17 rather than planning #89: [I33/#171](https://github.com/BK-Teisrud/NetworkKit/issues/171), [I34/#172](https://github.com/BK-Teisrud/NetworkKit/issues/172), [I35/#173](https://github.com/BK-Teisrud/NetworkKit/issues/173), [I36/#174](https://github.com/BK-Teisrud/NetworkKit/issues/174). Group A shares the #89 planning/code-start gate with internal I33→I34 order; Group B is natively blocked by both Group A issues, with internal I35→I36 evidence/review order. No dependency cycle or implicit code permission. Four bounded task roles:
 
 | Proposed task | Included requirements/result | Acceptance evidence |
 | --- | --- | --- |
@@ -144,4 +144,4 @@ To reduce CI churn, values/state and dependent adapter may share one coherent PR
 
 ## Approval and stop/go
 
-Owner review must explicitly accept/change this exact contract, including proposed24h timeout ceiling, pre-admission cancellation, peer-close result rules, logical-provider retention and close cancellation/fallback behavior. Only after accepted plan PR/main should #89's final trace/decomposition be reconciled and a separate explicit implementation code-start gate be presented. ADR-0018 remains architecture-only until this contract is separately recorded. No code is authorized by this declaration document.
+The owner explicitly approved this exact planning contract on 2026-11-08, including24h timeout ceiling, pre-admission cancellation, peer-close result rules, logical-provider retention and close cancellation/fallback behavior. Only after accepted plan PR/main should #89's final trace/decomposition be reconciled and a separate explicit implementation code-start gate be presented. ADR-0018 records the earlier architecture direction; this separate exact-contract decision supplements it without implementation authority. No code is authorized by this declaration document.
