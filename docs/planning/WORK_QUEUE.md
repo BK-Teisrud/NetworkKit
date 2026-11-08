@@ -4,11 +4,11 @@
 
 I31/#149 and I32/#150 are completed through PR #163/main f86ddcb5ba7a26d05b370007f70b439d0eff5999/run 42406475143, all seven checks/full log accepted. F4 is closed under the explicit owner-approved bounded technical disposition. The [technical review](F4_TECHNICAL_REVIEW_2026-11-04.md) and [evidence](evidence/F4_DOWNLOAD_CLOSEOUT_2026-11-04.json) preserve candidate-time status and source-specific observations; actual closure is recorded in the issues. Publication #29/#132 remains blocked; no release is authorized.
 
-Next: PLAN-F5/#89 remains In Progress until required exact-plan PR/main and final decomposition/readback acceptance. The owner approved Foundation architecture in ADR-0018 and the [exact API/delivery contract](F5_API_AND_DELIVERY_CONTRACT.md), explicitly still no code. Architecture PR #170 is merged at84976fb5ae181e34ecefd5cca0374ccbf7c400b6; its main run42460671040 remains a predecessor acceptance gate at this candidate checkpoint.
+PLAN-F5/#89 is completed after exact-plan PR #175/main7c192977d867201288e60532b51d8c8d711b11a1/run42505791505, all seven checks/full-log and task readback accepted. Architecture ADR-0018 and the [exact API/delivery contract](F5_API_AND_DELIVERY_CONTRACT.md) are owner-approved; **production code is still unauthorized**.
 
-#165 and #168 are completed after their accepted PR/main logs. [#168 findings](F5_HANDSHAKE_SECURITY_REPORT.md) remain negative/incomplete, with the finite runtime budget consumed; completion is not22 security passes. No additional probes authorized.
+Latest owner preference targets one complete I33–I36 implementation PR. Keep four Blocked issues #171–#174 and internal candidate order: values/state → Foundation adapter → actual integration/guide/resource evidence → technical review. All share the accepted #89 predecessor plus explicit code-start gate; no intermediate implementation main/issue closure is required within the candidate. I35 still requires concrete applicable native/public/device authorization; #168 budget consumed. I36 needs actual evidence and owner technical disposition before final PR/main/manual closure.
 
-Four owner-approved implementation tasks are created **Blocked**: I33/#171 and I34/#172 in Group A (internal state→adapter order, no intermediate main required); I35/#173 and I36/#174 in Group B (evidence→review order, after accepted Group A). All require explicit new implementation-start authorization. I35 additionally requires a concrete approved appropriate binary-WSS/native scope; no speculative Ready status. #17 undelivered; Watch WebSocket deferred/HTTP Watch unchanged; #29/#132 remain separate barriers. No further module/framework/refactor or milestone.
+#165/#168 findings remain source-specific/negative/incomplete, not SDK feature passes. #17 remains undelivered; streams/heartbeat/reconnect/background/direct Watch deferrals unchanged, HTTP Watch unchanged; #29/#132 remain separate publication barriers. No extra milestone or speculative module/framework/refactor.
 
 Project Status owns live state, this queue/JSON define dependencies and ROADMAP selected scope. Continue useful independent work during CI without polling. Dependent merges require accepted predecessor/main and candidate checks. Maximum five work processes.
 
@@ -74,13 +74,13 @@ I21 may investigate access to older test environments as preparation without cod
 | --- | --- | --- | --- |
 | 30 | [PLAN-F3 / #87](https://github.com/BK-Teisrud/NetworkKit/issues/87) | #14 first; assess #12/#15/#19/#24 separately | Done; ADR-0014 and selected I24–I27 decomposition accepted |
 | 40 | [PLAN-F4 / #88](https://github.com/BK-Teisrud/NetworkKit/issues/88) | #16/#26 | Done after PR #154/main run 41323512108; I28 accepted |
-| 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Owner-approved exact contract; required plan PR/main and final readback pending, no code |
+| 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Completed after accepted PR #175/main; no code authority |
 | 50.1 | [FEAS-F5 / #165](https://github.com/BK-Teisrud/NetworkKit/issues/165) | #89 | Completed after accepted PR #166/main |
 | 50.2 | [FEAS-F5-SEC / #168](https://github.com/BK-Teisrud/NetworkKit/issues/168) | #89 | Completed after accepted PR #169/main; negative/incomplete findings preserved |
-| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Blocked; PLAN-F5 acceptance and explicit code start; Group A internal order |
-| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Blocked; PLAN-F5 acceptance and explicit code start; Group A internal order |
-| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Blocked; accepted Group A plus verification/owner gates; Group B internal order |
-| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Blocked; accepted Group A plus verification/owner gates; Group B internal order |
+| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Blocked; explicit code start; one PR internal I33→I34→I35→I36 order |
+| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Blocked; explicit code start; one PR internal I33→I34→I35→I36 order |
+| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Blocked; explicit code start plus concrete verification/owner gates in the same candidate |
+| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Blocked; explicit code start plus concrete verification/owner gates in the same candidate |
 | 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
 
 The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.

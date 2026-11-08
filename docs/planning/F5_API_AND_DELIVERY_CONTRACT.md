@@ -129,7 +129,7 @@ The logical opening budget includes one provider acquisition and native/protocol
 
 ## Owner-approved delivery decomposition; code unauthorized
 
-I33–I36 identifiers were checked for uniqueness and the four concrete tasks created Blocked, under domain #17 rather than planning #89: [I33/#171](https://github.com/BK-Teisrud/NetworkKit/issues/171), [I34/#172](https://github.com/BK-Teisrud/NetworkKit/issues/172), [I35/#173](https://github.com/BK-Teisrud/NetworkKit/issues/173), [I36/#174](https://github.com/BK-Teisrud/NetworkKit/issues/174). Group A shares the #89 planning/code-start gate with internal I33→I34 order; Group B is natively blocked by both Group A issues, with internal I35→I36 evidence/review order. No dependency cycle or implicit code permission. Four bounded task roles:
+I33–I36 identifiers were checked for uniqueness and the four concrete tasks created Blocked, under domain #17 rather than planning #89: [I33/#171](https://github.com/BK-Teisrud/NetworkKit/issues/171), [I34/#172](https://github.com/BK-Teisrud/NetworkKit/issues/172), [I35/#173](https://github.com/BK-Teisrud/NetworkKit/issues/173), [I36/#174](https://github.com/BK-Teisrud/NetworkKit/issues/174). Latest owner preference targets one combined I33–I36 PR. All share the accepted #89 predecessor/code-start gate, with internal I33→I34→I35→I36 candidate order rather than intermediate merged-main/native completion gates. No dependency cycle or implicit code permission. Four bounded task roles:
 
 | Proposed task | Included requirements/result | Acceptance evidence |
 | --- | --- | --- |
@@ -140,7 +140,7 @@ I33–I36 identifiers were checked for uniqueness and the four concrete tasks cr
 
 A real binary-WSS evidence route and further native budgets remain unresolved. The corresponding verification task is Blocked until concrete authorized scope exists; do not mark it Ready from this table. No public reruns, tunnel/provisioning/dependency/device installation or certificate changes follow. No new milestone is needed; #29/#132 stay publication barriers. Scope reductions return for explicit owner decision.
 
-To reduce CI churn, values/state and dependent adapter may share one coherent PR; verification/docs and final review may share a second if evidence order permits. Keep four issues and actual blocker relationships, create PRs sequentially and review overlaps. Each dependent merge requires accepted predecessor main plus its own checks; at mostfive work processes, no wait/poll loops. No date/release promise.
+Latest owner delivery preference on 2026-11-08: target one coherent implementation PR containing all four issues. Retain internal values/state→adapter→actual integration evidence→final technical review order. Do not require an intermediate implementation merge or pre-close candidate issues. Keep source-specific tests, owner technical disposition, required PR/final main and manual ordered closure. Push at coherent review checkpoints rather than creating closeout-only documentation PRs. At mostfive work processes, no wait/poll loops. One PR does not promise one chat turn or a fixed completion time if evidence fails.
 
 ## Approval and stop/go
 
