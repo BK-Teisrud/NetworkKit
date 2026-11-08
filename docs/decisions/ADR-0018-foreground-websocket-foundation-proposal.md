@@ -1,7 +1,7 @@
 # ADR-0018: Proposed Foundation foreground WebSocket connection
 
 Date: 2026-11-08
-Status: Owner-approved architecture/design direction on 2026-11-08 only. Exact Swift signatures, production suitability, further implementation/runtime and publication remain unapproved.
+Status: Owner-approved architecture/design direction on 2026-11-08 only. Exact contract was subsequently owner-approved in [the API/delivery specification](../planning/F5_API_AND_DELIVERY_CONTRACT.md) on 2026-11-08; required plan PR/main, implementation/runtime and production/publication decisions remain.
 Owner: Teisrud Development AS / BK-Teisrud
 Issue / requirement: #89 / #17, proposed NK-10-01/05/06/07 increment
 
@@ -34,7 +34,7 @@ Prospective four work slices are described, not yet created/authorized. The owne
 
 ## Approval and verification
 
-The owner explicitly approved the architecture/design direction in conversation on 2026-11-08, still no new code. Required design PR/main acceptance and exact API/signature review remain pending. Separate code-start and finite native-budget authorization required. Do not close #89 or create Ready implementation work from this architecture-only approval. The separate #165/#168 authorizations do not extend to production code.
+The owner explicitly approved the architecture/design direction in conversation on 2026-11-08, still no new code. Architecture PR #170 is merged; its main acceptance remains a predecessor gate. The owner subsequently approved the separate exact API/delivery plan, still no code. Required exact-plan PR/main and verified task decomposition remain before #89 closure. Separate code-start and finite native-budget authorization required. Do not close #89 or create Ready implementation work from this architecture-only approval. The separate #165/#168 authorizations do not extend to production code.
 
 ## Supersedes / superseded by
 

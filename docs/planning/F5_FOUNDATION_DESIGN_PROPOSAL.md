@@ -1,6 +1,6 @@
 # F5 Foundation connection design proposal
 
-Date: 2026-11-08. Tracking: #89 / #17. Status: owner-approved architecture/design direction on 2026-11-08. Exact Swift signatures, implementation, production suitability and additional network budget remain unapproved. PR #169/main acceptance is a separate predecessor gate; #168 findings remain negative/incomplete.
+Date: 2026-11-08. Tracking: #89 / #17. Status: owner-approved architecture/design direction on 2026-11-08. The separate [exact API/delivery contract](F5_API_AND_DELIVERY_CONTRACT.md) was owner-approved on 2026-11-08; required plan PR/main and implementation/production/runtime decisions remain. PR #169/main acceptance is a separate predecessor gate; #168 findings remain negative/incomplete.
 
 ## Proposed transport and scope
 
@@ -77,6 +77,6 @@ Four slices are a proposal, not four new Ready issues or a schedule. They may be
 
 ## Remaining exact-contract and evidence decisions before final decomposition
 
-Foundation-only architecture, the stated surface direction/auth mapping/provider boundary, pre-admission distinction and close subset were accepted for planning; exact types/signatures/error values and detailed validation/arbitration still need review. Reconcile the exact requirement trace in #89/ADR-0018, fixture/binary-WSS strategy and stop/go conditions before creating implementation issues. #89 stays In Progress; #17 undelivered. #29/#132 remain open; direct generic Watch WebSocket deferred. No production code, new network budget, provisioning/device action or publication is authorized by this draft.
+Foundation-only architecture, the stated surface direction/auth mapping/provider boundary, pre-admission distinction and close subset were accepted for planning; exact types/signatures/error/validation/arbitration rules were subsequently owner-approved in the separate API/delivery specification. Reconcile the exact requirement trace in #89/ADR-0018, fixture/binary-WSS strategy and stop/go conditions before creating implementation issues. #89 stays In Progress; #17 undelivered. #29/#132 remain open; direct generic Watch WebSocket deferred. No production code, new network budget, provisioning/device action or publication is authorized by this draft.
 
 Primary reference for native framing/close validation: [RFC6455, sections5.5 and7.4](https://www.rfc-editor.org/rfc/rfc6455.html). No custom wire implementation is proposed.
