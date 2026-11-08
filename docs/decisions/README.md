@@ -16,7 +16,16 @@
 | [ADR-0012](ADR-0012-implementation-start.md) | Begin the approved HTTP-core implementation | Accepted through the owner instruction on 2026-10-20; start gate closed |
 | [ADR-0013](ADR-0013-watch-publication-gate.md) | Physical Watch timing and separate publication milestone | Accepted: mandatory WATCH-01 publication blocker; no physical pass or support change |
 | [ADR-0014](ADR-0014-opt-in-retry-proposal.md) | First bounded per-call retry increment | Accepted contract/planning; I24–I27 explicitly authorized through START-F3 |
-| [ADR-0015](ADR-0015-foreground-file-download.md) | Bounded foreground GET download | Owner-approved planning; I28-only feasibility authorized, I29–I32 unauthorized |
+| [ADR-0015](ADR-0015-foreground-file-download.md) | Bounded foreground GET download | Accepted planning; I28 and later I29–I32 separately authorized; bounded technical F4 completed |
+
+
+Additional decisions (later execution authority and source-specific acceptance remain in their linked records):
+
+| ID | Topic | Status |
+| --- | --- | --- |
+| [ADR-0016](ADR-0016-unified-networkkit-name.md) | Unified NetworkKit naming | Accepted by owner |
+| [ADR-0017](ADR-0017-current-platform-baseline.md) | Current deployment floors | Selected under explicit owner-delegated authority |
+| [ADR-0018](ADR-0018-foreground-websocket-foundation-proposal.md) | Foundation foreground WebSocket design | Owner-approved architecture direction only; exact API/code/runtime pending |
 
 ADR-0009 records combined acceptance of the core choices and documented defaults in ADR-0002–ADR-0008. Those planning decisions did not authorize implementation; ADR-0012 records the later authorization.
 
