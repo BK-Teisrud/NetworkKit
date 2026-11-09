@@ -1,0 +1,44 @@
+◇ Test run started.
+◇ Suite WebSocketNativeChecks started.
+◇ Test echoTypesEmptyUnicodeAndExactLimit() started.
+✔ Test echoTypesEmptyUnicodeAndExactLimit() passed after 0.578 seconds.
+◇ Test oversizedIncomingTerminates() started.
+F5 safe native transport: domain=NSPOSIXErrorDomain code=40
+✘ Test oversizedIncomingTerminates() recorded an issue at WebSocketNativeChecks.swift:45:6: Caught error: WebSocketError.transport
+✘ Test oversizedIncomingTerminates() failed after 0.069 seconds with 1 issue.
+◇ Test normalPeerCloseEndsRepeatedReceives() started.
+✘ Test normalPeerCloseEndsRepeatedReceives() recorded an issue at WebSocketNativeChecks.swift:61:17: Expectation failed: (info?.code == 1000 → false) && (info?.reason == "synthetic-close" → <not evaluated>)
+✘ Test normalPeerCloseEndsRepeatedReceives() failed after 0.040 seconds with 1 issue.
+◇ Test applicationPeerCloseIsStructured() started.
+F5 safe native transport: domain=NSPOSIXErrorDomain code=57
+✘ Test applicationPeerCloseIsStructured() recorded an issue at WebSocketNativeChecks.swift:65:6: Caught error: WebSocketError.transport
+✘ Test applicationPeerCloseIsStructured() failed after 0.032 seconds with 1 issue.
+◇ Test withheldHandshakeUsesConnectBudget() started.
+✔ Test withheldHandshakeUsesConnectBudget() passed after 0.235 seconds.
+◇ Test activeReceiveCancellationTerminates() started.
+✔ Test activeReceiveCancellationTerminates() passed after 0.132 seconds.
+◇ Test admittedConnectCancellationTerminates() started.
+✔ Test admittedConnectCancellationTerminates() passed after 0.034 seconds.
+◇ Test abruptNativeEndFails() started.
+F5 safe native transport: domain=NSPOSIXErrorDomain code=57
+✔ Test abruptNativeEndFails() passed after 0.030 seconds.
+◇ Test missingSelectedProtocolIsRejected() started.
+✔ Test missingSelectedProtocolIsRejected() passed after 0.028 seconds.
+◇ Test eightSequentialLifetimesReleaseFixtureConnections() started.
+✔ Test eightSequentialLifetimesReleaseFixtureConnections() passed after 0.104 seconds.
+◇ Test finiteSlowConsumerPreservesSixteenMessages() started.
+✔ Test finiteSlowConsumerPreservesSixteenMessages() passed after 0.244 seconds.
+✘ Suite WebSocketNativeChecks failed after 1.536 seconds with 3 issues.
+◇ Suite WebSocketPublicChecks started.
+◇ Test textAndBinaryEcho() started.
+✔ Test textAndBinaryEcho() passed after 0.535 seconds.
+◇ Test selfSignedCertificateRejected() started.
+✘ Test selfSignedCertificateRejected() recorded an issue at WebSocketPublicChecks.swift:61:13: Expectation failed: [-1201, -1202, -1203, -1204].contains(failure.code → -1200)
+✘ Test selfSignedCertificateRejected() failed after 1.950 seconds with 1 issue.
+◇ Test wrongHostnameRejected() started.
+✘ Test wrongHostnameRejected() recorded an issue at WebSocketPublicChecks.swift:61:13: Expectation failed: [-1201, -1202, -1203, -1204].contains(failure.code → -1200)
+✘ Test wrongHostnameRejected() failed after 1.751 seconds with 1 issue.
+✘ Suite WebSocketPublicChecks failed after 4.237 seconds with 2 issues.
+✘ Test run with 14 tests in 2 suites failed after 5.776 seconds with 5 issues.
+Connection 38: strict TLS Trust evaluation failed(-9802)
+Connection 39: strict TLS Trust evaluation failed(-9802)

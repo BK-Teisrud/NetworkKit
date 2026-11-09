@@ -1,0 +1,22 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (1.08s)
+Test Suite 'Selected tests' started at 2026-11-09 08:46:43.252.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' started at 2026-11-09 08:46:43.256.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' passed at 2026-11-09 08:46:43.256.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-11-09 08:46:43.256.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.004) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1501
+􀄵  Target Platform: x86_64-apple-macos14.0
+􀟈  Suite WebSocketPublicChecks started.
+􀟈  Test textAndBinaryEcho() started.
+􁁛  Test textAndBinaryEcho() passed after 0.545 seconds.
+􀟈  Test selfSignedCertificateRejected() started.
+􁁛  Test selfSignedCertificateRejected() passed after 1.187 seconds.
+􀟈  Test wrongHostnameRejected() started.
+􁁛  Test wrongHostnameRejected() passed after 9.093 seconds.
+􁁛  Suite WebSocketPublicChecks passed after 10.827 seconds.
+􁁛  Test run with 3 tests in 1 suite passed after 10.828 seconds.

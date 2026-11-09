@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-09",
+  "scope": "Owner approved Mac plus six simulator routes; 126 local and 18 new public SDK connects maximum, sequential without automatic retry.",
+  "route": "macOS 15.8.1 (24H32), x86_64",
+  "local_connect_calls": 18,
+  "public_connect_calls": 0,
+  "passed_tests": 9,
+  "failed_tests": 2,
+  "failed_cases": [
+    "oversizedIncomingTerminates",
+    "applicationPeerCloseIsStructured"
+  ],
+  "finding": "Expected structured messageTooLarge / peerClosed categories instead surfaced WebSocketError.transport. Exact native domain/code were not retained in this first run. No root cause inferred yet.",
+  "log": "F5_MAC_NATIVE_2026-11-09.log",
+  "log_sha256": "bed91f85c52251d987bd6349b464bdbbad4a27e7d0bcddf9a3d8e8227d77be3d",
+  "remaining_route_authority": 0,
+  "next": "Retain safe error domain/code during remaining separately approved simulator routes; no Mac rerun."
+}

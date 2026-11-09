@@ -105,6 +105,9 @@ def source_integrity():
     validate_documented_examples(
         (ROOT / "Tests/NetworkKitTests/Compatibility/FileDownloadExamplesTests.swift").read_text(),
         (ROOT / "Sources/NetworkKit/NetworkKit.docc/FileDownloads.md").read_text())
+    validate_documented_examples(
+        (ROOT / "Tests/NetworkKitTests/Compatibility/WebSocketExamples.swift").read_text(),
+        (ROOT / "Sources/NetworkKit/NetworkKit.docc/WebSockets.md").read_text())
     run("git", "diff", "--check")
     run("python3", "-m", "unittest", "discover", "-s", "scripts/ci", "-p", "test_*.py", "-v")
     print("Manifest, dependencies, source policies, JSON, local file links, workflow matrix/pins, and CI helper tests passed.")

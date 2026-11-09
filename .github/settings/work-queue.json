@@ -842,7 +842,7 @@
       "blocked_by": [
         "PLAN-F5"
       ],
-      "code_start_authorized": false
+      "code_start_authorized": true
     },
     {
       "order": 52,
@@ -856,7 +856,7 @@
       "blocked_by": [
         "PLAN-F5"
       ],
-      "code_start_authorized": false,
+      "code_start_authorized": true,
       "internal_order_after": [
         "I33"
       ]
@@ -873,7 +873,7 @@
       "blocked_by": [
         "PLAN-F5"
       ],
-      "code_start_authorized": false,
+      "code_start_authorized": true,
       "internal_order_after": [
         "I34"
       ]
@@ -890,7 +890,7 @@
       "blocked_by": [
         "PLAN-F5"
       ],
-      "code_start_authorized": false,
+      "code_start_authorized": true,
       "internal_order_after": [
         "I35"
       ]
@@ -1010,6 +1010,6 @@
     "accepted_exact_plan_run": 42505791505,
     "planning_completed": "2026-11-08"
   },
-  "f5_implementation_authorized": false,
+  "f5_implementation_authorized": true,
   "f5_code_start_decision_issue": 171
 }

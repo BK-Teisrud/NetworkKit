@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-09",
+  "device": {
+    "architecture": "x86_64",
+    "deviceName": "iPhone 16",
+    "modelName": "iPhone 16",
+    "osBuildNumber": "22C150",
+    "osVersion": "18.2",
+    "platform": "iOS Simulator"
+  },
+  "total_tests": 14,
+  "passed_tests": 9,
+  "failed_tests": 5,
+  "local_sdk_connect_calls": 18,
+  "public_sdk_connect_calls": 3,
+  "remaining_route_authority": 0,
+  "result": "failed; retained without rerun",
+  "findings": [
+    "Oversize yielded NSPOSIXErrorDomain/40; native log explicitly identified 4097 bytes above 4096-byte limit.",
+    "Application close yielded NSPOSIXErrorDomain/57, and normal close lost its code/reason snapshot.",
+    "Text and binary WSS echo passed.",
+    "Both invalid TLS endpoints were rejected with NSURLErrorDomain/-1200 and native strict-trust failure logs. The original narrow certificate-code assertions failed; this is not recorded as a passing test."
+  ],
+  "subsequent_candidate_changes": [
+    "Map native POSIX EMSGSIZE to messageTooLarge.",
+    "Retain validated task close metadata before delegate delivery; never infer peer metadata from SDK cancel/close or absent-status sentinels.",
+    "Future negative probes accept -1200 only as general TLS-layer rejection, without claiming the exact certificate defect."
+  ],
+  "retained_excerpt": "F5_IPHONE18_NATIVE_2026-11-09.log",
+  "full_local_log_sha256": "d1299a554e0ef8c7038b03958805714705482282b9b0588a7903d9f74a8eda72",
+  "xcresult_local": "/private/tmp/networkkit-f5-iphone18-native-run.xcresult"
+}
