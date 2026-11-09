@@ -2,6 +2,10 @@
 
 Proposed only, 2026-11-09, #90 / PR #177. Offline Phase A authorization does not cover this work. This document defines a possible first Mac-only batch for owner review; it does not authorize code, connections, test keys/certificates or production capability. It does not complete F6's physical/multiplatform evidence.
 
+## Concrete execution manifest
+
+The [execution manifest](F6_NATIVE_EXECUTION_MANIFEST.md) refines source files, commands, seven synthetic pairs, exact 32 initial Swift cases plus 16 correction cases, native expectations, process ownership and cleanup. Its explicit refinements supersede inconsistent wording in this earlier proposal; no execution is authorized yet.
+
 ## Proposed executable and isolation
 
 Extend only Tools/F6Feasibility/ with a standalone Swift tools 6.2 executable and controlled Python/OpenSSL fixtures. No external package, shipping target, root CI, signing identity, Apple account, host entitlement, Keychain, installed certificate/trust store or device installation changes. A fixture manifest names every source, command, scenario, counter and cleanup owner before execution. Existing Phase A ledgers remain immutable; its correction reserves cannot fund this batch.
@@ -29,7 +33,7 @@ Potential public controls, explicitly separate and sequential:
 3. Same host, two nonmatching synthetic pins; must reject despite system trust.
 4. HTTPS self-signed.badssl.com; must reject under unmodified system trust.
 
-Each external candidate has a 15-second total budget, one request, response body not retained and at most 4 KiB read for the observation. Three valid-host connections are not a production pin-provisioning or rotation scheme. Certificate changes between controls remain failures/inconclusive observations, not permission to learn and accept a replacement silently. No credentials/private URLs or uploads. Native trust services may perform their own auxiliary requests outside application visibility; do not promise an exact DNS/OCSP/AIA wire count. External controls are supplemental, not mTLS/rotation fixture evidence. Endpoint reachability and current behavior must be verified before the exact executable is approved; no public request is made from this plan.
+Each external candidate has a 15-second total budget, one request, response body not retained and at most 4 KiB read for the observation. Three valid-host connections are not a production pin-provisioning or rotation scheme. Certificate changes between controls remain failures/inconclusive observations, not permission to learn and accept a replacement silently. No credentials/private URLs or uploads. Native trust services may perform their own auxiliary requests outside application visibility; do not promise an exact DNS/OCSP/AIA wire count. External controls are supplemental, not mTLS/rotation fixture evidence. Endpoint source provenance is reviewed without a live probe; the counted observation determines reachability. No extra live preflight request is permitted.
 
 ## Synthetic TLS boundary and test material
 
@@ -41,7 +45,7 @@ Construct test SecIdentity in memory from the generated test key and certificate
 
 ## Compilation, pure Swift cases and process limits to specify before execution
 
-The native harness needs an explicitly separate compiler ledger; do not count it as a Phase A correction. Proposal: at most four Mac build commands (one initial and three documented correction builds) and 32 named pure Swift cases for credential carrier validation, signing/profile vectors and exactly-once state/cleanup models. The exact 32 input identifiers/assertions must be listed and source-ready before requesting execution authority; none is authorized by this draft. Full multiplatform API consumer compilation remains a later acceptance requirement.
+The native harness needs an explicitly separate compiler ledger; do not count it as a Phase A correction. Proposal: at most four Mac build commands (one initial and three documented correction builds) and 32 named initial pure Swift cases plus 16 correction-only cases for credential carrier validation, signing/profile vectors and exactly-once state/cleanup models. The exact identifiers/assertions are listed in the execution manifest; none is authorized by this draft. Full multiplatform API consumer compilation remains a later acceptance requirement.
 
 Maximum two experiment subprocesses concurrently, total at most five work processes. The controller must own/clean up its fixture child and terminate only its own process group. One native group at a time, no polling public availability. Per-group 180-second bound, whole batch 15 minutes; communicate at natural group boundaries rather than block a tool call for the whole batch. On failure retain source/command/log and stop that scenario; bounded correction reserves are explicit, never automatic.
 

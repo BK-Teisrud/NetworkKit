@@ -15,6 +15,8 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Native feasibility scope proposal](F6_NATIVE_FEASIBILITY_SCOPE.md): first Mac loopback/TLS/identity/signing batch and concrete remaining readiness gates; not approved for execution.
 
+- [Native execution manifest](F6_NATIVE_EXECUTION_MANIFEST.md): reviewable proposed code/runtime/key/certificate scope with exact inputs and cleanup; separate permission required.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.
