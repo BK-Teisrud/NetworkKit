@@ -83,6 +83,7 @@ I21 may investigate access to older test environments as preparation without cod
 | 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Done after conditional owner technical disposition, PR #176/main run 42595061321 and full-log review |
 | 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | In Progress, planning only; broad-reuse objective and one-plan/one-delivery PR target; see [F6 proposal](F6_COMPREHENSIVE_PLAN.md) |
 | 60.1 | [PREP-F6-TLS / #178](https://github.com/BK-Teisrud/NetworkKit/issues/178) | #90 | In Review; [#178 correction](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) passed selected build/pure/local controls; integrated PR #177/main still required, no separate PR or new execution |
+| 60.2 | [FEAS-F6-NATIVE / #179](https://github.com/BK-Teisrud/NetworkKit/issues/179) | #90 | Blocked for code/execution; [consolidated native scope](F6_NATIVE_RESEARCH_SCOPE.md) prepared in the same PR #177; no artificial wait for separate #178 merge |
 
 The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.
 

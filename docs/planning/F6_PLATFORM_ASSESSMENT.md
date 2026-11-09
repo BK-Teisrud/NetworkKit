@@ -49,3 +49,8 @@ Inspected official Markdown content and local SDK source on 2026-11-09:
 - [TN3179](https://developer.apple.com/documentation/technotes/tn3179-understanding-local-network-privacy): platform privacy matrix, operation distinctions, entitlement and simulator limitations.
 - [Secure Enclave keys](https://developer.apple.com/documentation/security/protecting-keys-with-the-secure-enclave): special key capabilities; no arbitrary imported-key vault claim.
 - [NWParameters](https://developer.apple.com/documentation/network/nwparameters), [Network](https://developer.apple.com/documentation/network): API candidates; no runtime evidence implied.
+
+
+## Native source review checkpoint
+
+The [discovery/QUIC refinement](F6_DISCOVERY_QUIC_CONTRACT.md) records actual SDK declarations and official semantics for listener remaining credits, full browser result sets, required interfaces, group receive bounds and QUIC extraction. These are source observations, not new compile/runtime proof. Local OpenSSL help has client QUIC but no s_server QUIC flag; do not treat the existing TLS fixture as an independent QUIC server. No package floor/product/ordinary-Watch decision changes.

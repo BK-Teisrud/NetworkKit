@@ -8,7 +8,7 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 - [Contract proposal](F6_CONTRACT_PROPOSAL.md): detailed candidate semantics, integration choices and unresolved decisions. Not approved exact Swift signatures.
 
 - [Signing profile](F6_SIGNING_PROFILE.md): proposed canonicalization, key/clock/replay and integration behavior; exact API approval pending.
-- [Feasibility plan](F6_FEASIBILITY_PLAN.md): bounded offline Phase A and explicit later native Phase B boundary; offline Phase A approved/completed, native Phase B not authorized.
+- [Feasibility plan](F6_FEASIBILITY_PLAN.md): bounded offline Phase A and explicit later native Phase B boundary; offline Phase A and the separately approved Mac scopes completed; no general Phase B or further execution authority.
 
 - [Security API candidate](F6_SECURITY_API_DESIGN.md): approved DER-pin direction and proposed Foundation-native identity/signing boundary.
 - [Native API candidate](F6_NATIVE_API_DESIGN.md): actor operations, ownership, framing and resource limits; remaining unresolved types are explicit.
@@ -18,6 +18,10 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 - [Native execution manifest](F6_NATIVE_EXECUTION_MANIFEST.md): reviewable proposed code/runtime/key/certificate scope with exact inputs and cleanup; authorized bounded experiment completed, with retained gaps; no further permission implied.
 
 - [Prepared TLS correction scope](F6_TLS_CORRECTION_SCOPE.md): #178 patch, eight pure cases, five local controls and a proposed separate execution envelope; subsequently authorized/executed; [result report](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) records all selected initial controls passed.
+
+- [Discovery/QUIC refinement](F6_DISCOVERY_QUIC_CONTRACT.md): corrected browser/listener/multicast guarantees and proposed full stream/datagram ownership; no new execution.
+
+- [Consolidated native research scope](F6_NATIVE_RESEARCH_SCOPE.md): one proposed offline/listener/QUIC package, including an independent local OpenSSL client control; no execution authority yet.
 
 ## Delivery strategy
 
@@ -33,10 +37,10 @@ Original PDF v1.0, 2026-10-19, sections 4.6 and 4.11, read as requirements rathe
 | --- | --- | --- | --- |
 | NK-06-01 | HTTPS/ATS | Secure app API access; retain HTTPS and no global ATS relaxation | Existing foundation; regression evidence required |
 | NK-06-02 | Trust evaluation | OS chain/hostname evaluation; additional rules must only narrow trust | Existing foundation; review extension interaction |
-| NK-06-03 | Certificate/public-key pinning | Restrict a controlled API to approved identities; compare app ATS configuration with SDK policy | Investigate both approaches; no pinning API selected |
-| NK-06-04 | mTLS | Enterprise/device API using app-supplied client identity and URLSession challenge | Investigate an origin/account-bound identity provider |
-| NK-06-05 | Keychain/Secure Enclave | Keep keys/identity references outside request values and diagnostics | Investigate app ownership versus optional narrow helper; no vault promised |
-| NK-06-06 | Signing/HMAC | Authenticate requests to a cooperating verifier with specified canonicalization | Investigate explicit interoperable profile; no generic signing promise |
+| NK-06-03 | Certificate/public-key pinning | Restrict a controlled API to approved identities; compare app ATS configuration with SDK policy | Owner selected SDK leaf DER/SHA-256 direction with backup; app ATS SPKI distinguished; exact API pending |
+| NK-06-04 | mTLS | Enterprise/device API using app-supplied client identity and URLSession challenge | App-owned Foundation carrier/provider direction selected; Mac proof retained, exact API/platform coverage pending |
+| NK-06-05 | Keychain/Secure Enclave | Keep keys/identity references outside request values and diagnostics | Owner selected app-owned keys/references, no SDK vault; hardware/helper scope remains explicit |
+| NK-06-06 | Signing/HMAC | Authenticate requests to a cooperating verifier with specified canonicalization | Owner selected RFC 9421 HMAC profile for further design; bounded Swift/Python/wire evidence retained, exact contract pending |
 | NK-06-07 | Redirect credential safety | Prevent auth, identity and signatures reaching another origin | Existing foundation plus extension regression/negative cases |
 | NK-06-08 | TLS policy | Expose only supported system policy; no custom TLS or bypass | Capability assessment; unsupported controls remain explicit |
 | NK-11-01 | TCP/UDP | Device/client byte streams and bounded datagrams through NWConnection | Investigate separate transport contracts |

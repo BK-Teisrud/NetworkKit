@@ -917,6 +917,18 @@
       "code_start_authorized": false,
       "execution_gate": "Owner-approved correction completed: one build/eight pure/five local initial cases passed; In Review pending integrated PR/main; no standing execution permission",
       "experimental_scope_commit": "55f31cf13204e1a5fb7eec6c4b5b1a94b9b107e6"
+    },
+    {
+      "order": 60.2,
+      "key": "FEAS-F6-NATIVE",
+      "number": 179,
+      "title": "[FEAS-F6-NATIVE] Assess bounded listener and QUIC ownership",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/179",
+      "milestone": "F6 \u2013 Specialized features and research",
+      "blocked_by": [],
+      "parent": 90,
+      "code_start_authorized": false,
+      "execution_gate": "Separate new non-shipping code/runtime/material scope pending owner decision; no dependency on an extra #178 PR"
     }
   ],
   "authorization_adr": "docs/decisions/ADR-0012-implementation-start.md",
@@ -1034,6 +1046,7 @@
     "next_evidence_followup": 178,
     "same_pr": true,
     "no_publication": true,
-    "tls_correction": "Selected #178 initial controls all passed; In Review pending same PR/main, broader #90 planning continues"
+    "tls_correction": "Selected #178 initial controls all passed; In Review pending same PR/main, broader #90 planning continues",
+    "next_research_task": 179
   }
 }
