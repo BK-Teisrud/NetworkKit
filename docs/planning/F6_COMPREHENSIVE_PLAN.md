@@ -31,6 +31,8 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Logical startup design](F6_QUIC_STARTUP_DESIGN.md): one-result ownership, trust/ALPN admission, late-handler lifecycle and future verification inputs; executable scope still unapproved.
 
+- [Logical startup execution proposal](F6_QUIC_STARTUP_EXECUTION_SCOPE.md): actual Swift coordinator tests and six controlled native inputs; separate code/execution authority pending. Empty/mixed and resumption gates remain.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.

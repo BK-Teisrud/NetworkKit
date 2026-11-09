@@ -1104,7 +1104,9 @@
         "design": "docs/planning/F6_QUIC_STARTUP_DESIGN.md",
         "code_authorized": false,
         "execution_authorized": false
-      }
+      },
+      "pending_scope": "docs/planning/F6_QUIC_STARTUP_EXECUTION_SCOPE.md",
+      "pending_scope_authorized": false
     }
   }
 }
