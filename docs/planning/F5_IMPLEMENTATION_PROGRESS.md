@@ -46,3 +46,7 @@ Eleven opt-in local tests (18 SDK connects per route) compile with warnings as e
 ## Approved cohort started — 2026-11-09
 
 Owner approved the complete seven-route cohort. Mac consumed all 18 local calls: nine tests passed; oversize and application-close tests failed with generic transport errors rather than the selected structured categories. No Mac rerun. Retained evidence: `evidence/F5_MAC_NATIVE_2026-11-09.json`. The first simulator route adds safe transport domain/code retention to diagnose the remaining authorized observations; no arbitrary error text or userInfo is logged. I35 and I36 stay blocked on these findings and remaining evidence.
+
+## Corrected candidate evidence — 2026-11-09
+
+38 deterministic WebSocket tests pass after native POSIX EMSGSIZE mapping and task-close snapshot retention. All 14 iPad 18.2 simulator tests pass on the corrected candidate (11 local + 3 public; 18 local/3 public calls), including normal/application close, oversize and TLS-layer rejection. Evidence: `evidence/F5_IPAD18_NATIVE_2026-11-09.json`. This does not erase the initial Mac/iPhone failures or authorize reruns there. Remaining approved routes continue sequentially.
