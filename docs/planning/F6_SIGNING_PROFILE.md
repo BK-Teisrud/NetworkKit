@@ -21,7 +21,7 @@ This design uses the component/metadata model from [RFC 9421](https://www.rfc-ed
 
 ## Proposed verifier rules
 
-An independent test verifier has its own canonical assembly/parser and uses a separate implementation of SHA-256/HMAC. It must not import or call the Swift signer's canonicalization or expected-output generator. Fixed vectors cross-check both sides; at least one expected result is prepared independently before the Swift path is exercised. No production verifier package or new dependency is needed merely to test this profile.
+The native experiment verifier has its own canonical assembly/parser in Python, separate from the Swift/CryptoKit signer. Offline Phase A used Python standard-library primitives on both paths and did not meet that cross-language/primitive separation goal. It must not import or call the Swift signer's canonicalization or expected-output generator. Fixed vectors cross-check both sides; at least one expected result is prepared independently before the Swift path is exercised. No production verifier package or new dependency is needed merely to test this profile.
 
 The verifier requires the selected algorithm and covered components; checks the key binding and MAC with constant-time comparison; recomputes the body digest; checks created/expires and atomic nonce uniqueness; then separately authorizes the request. It rejects expired signatures, created more than 5 seconds in the future, lifetimes other than 60 seconds, and repeated (keyid, nonce). Retain replay entries until expires plus 5 seconds. Concurrent duplicate submissions must produce at most one accepted admission. Production verifier scaling/persistence and clocks remain app/server responsibilities; sample success is not an authorization system.
 
@@ -46,3 +46,8 @@ Do not modify existing NetworkClient requirements or remove prior initializer ov
 Positive vectors: absent/empty/binary/JSON bodies; absent/present content type/auth; Unicode serialized JSON; escaped query and repeated query keys; explicit port, IPv6 and empty path; exact limit boundary; fixed clock/nonce reproducibility. Negative vectors: method/host/path/query/body/auth/content-type mutation, wrong/rotated key, bad MAC/digest/field syntax, duplicate/replayed nonce, parallel replay, expiry/future time/overflow, body limit, existing reserved headers, retry, redirect, cancellation and late provider.
 
 Pure vectors do not establish actual wire target reconstruction. A later separately authorized controlled server must observe Foundation's emitted request and independently verify it, including redirect refusal and absent/empty body behavior. No network execution, key provisioning or production acceptance is authorized here.
+
+
+## Native fixture finding
+
+The [Mac result report](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md) records a body/header-finalization failure and corrected actual-wire verification. Finalize an explicit content type for nonempty signed raw bodies before canonicalization; do not rely on Foundation leaving an absent Content-Type unchanged. H06 requires an independently valid positive input before its mutation negative. These results refine the proposed profile; they do not establish general RFC interoperability or production suitability.

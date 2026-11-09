@@ -43,3 +43,8 @@ Keep NetworkError unchanged for ordinary operations; exact integration for opted
 Apple's [URLCredential API](https://developer.apple.com/documentation/foundation/urlcredential) documents the client-identity carrier; the local NSURLCredential.h Sendable annotation supports the proposed async boundary. [SecIdentityCreate](https://developer.apple.com/documentation/security/secidentitycreate(_:_:_:)) can associate an existing in-memory key and certificate; this is a possible isolated fixture path, not authority to create keys. [Trust evaluation](https://developer.apple.com/documentation/security/sectrustevaluatewitherror(_:_:)) may perform system work beyond the caller, so native callbacks need bounded logical ownership.
 
 No new compiler or test slot was consumed for these proposals. Still required: actual credential validation and cross-SDK Sendable signatures, certificate-chain semantics, exactly-once challenge completion, correct app ATS interaction, native identity/resumption isolation, same-wire signing verification and owner acceptance of exact public API/defaults/coverage.
+
+
+## Mac source-specific follow-up
+
+The [Mac experiment](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md) exercised the Foundation carrier and in-memory fixture identity successfully. That narrows the feasibility gap without approving this public API. It also retains I04 native error-oracle failure and identifies incomplete late-challenge terminal gating; production security code must not copy the toy delegate. No additional compilation/native attempt is authorized.

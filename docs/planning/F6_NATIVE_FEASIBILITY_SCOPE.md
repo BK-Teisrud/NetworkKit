@@ -1,6 +1,6 @@
 # F6 native feasibility scope proposal
 
-Proposed only, 2026-11-09, #90 / PR #177. Offline Phase A authorization does not cover this work. This document defines a possible first Mac-only batch for owner review; it does not authorize code, connections, test keys/certificates or production capability. It does not complete F6's physical/multiplatform evidence.
+Historical proposal, 2026-11-09, #90 / PR #177. Offline Phase A authorization does not cover this work. This document defines a possible first Mac-only batch for owner review; it does not authorize code, connections, test keys/certificates or production capability. It does not complete F6's physical/multiplatform evidence.
 
 ## Concrete execution manifest
 
@@ -57,3 +57,8 @@ Maximum two experiment subprocesses concurrently, total at most five work proces
 - Obtain separate owner approval for this concrete code/runtime/key/certificate/network scope. Current document is not that approval.
 
 Keep PR #177 open as the same planning workstream. Scope/contract decisions and honest remaining gaps still precede production start; #13/#18, #29/#132 and watchOS native exclusion remain unchanged. Physical/QUIC/Bonjour/peer-to-peer/multicast coverage is neither accepted nor erased by a successful Mac batch.
+
+
+## Executed disposition
+
+The owner subsequently approved the concrete execution manifest at b4c86d3. The [Mac result report](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md) records consumed bounds, original failures and explicit gaps; no new native attempt follows from this historical proposal.

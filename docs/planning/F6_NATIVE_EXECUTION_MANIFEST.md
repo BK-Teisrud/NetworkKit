@@ -1,6 +1,6 @@
 # F6 Mac feasibility execution manifest
 
-Proposed execution contract, 2026-11-09. Tracking #90 / draft PR #177. Separate owner permission is required for all code and execution in this manifest; offline Phase A is complete and its reserve slots are not used here. This is a non-shipping experiment, not production code start or exact production API acceptance.
+Execution contract authorized by the owner on 2026-11-09; batch completed with explicit retained failures/gaps. Tracking #90 / draft PR #177. The owner approved only the bounded Mac experiment against commit b4c86d3; all build/local/public slots are now consumed. See [results](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md). No further execution is implied; offline Phase A is complete and its reserve slots are not used here. This is a non-shipping experiment, not production code start or exact production API acceptance.
 
 ## Files and entry points to create only after approval
 

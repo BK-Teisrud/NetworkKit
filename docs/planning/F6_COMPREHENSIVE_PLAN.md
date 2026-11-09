@@ -1,6 +1,6 @@
 # F6 comprehensive planning and delivery proposal
 
-Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production code, credential provisioning or network budget is authorized. The owner separately approved only offline Phase A, now completed within its initial limits. The owner requests broad reuse across future apps, has no specific server/application requirement, and prefers the fewest practical PRs without reducing scope or quality.
+Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production code, credential provisioning or network budget is authorized. The owner separately approved offline Phase A and then the concrete bounded Mac native experiment; both are complete with source-specific outcomes and remaining gaps. No additional runtime authority follows. The owner requests broad reuse across future apps, has no specific server/application requirement, and prefers the fewest practical PRs without reducing scope or quality.
 
 ## Working assessment artifacts
 
@@ -13,9 +13,9 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 - [Security API candidate](F6_SECURITY_API_DESIGN.md): approved DER-pin direction and proposed Foundation-native identity/signing boundary.
 - [Native API candidate](F6_NATIVE_API_DESIGN.md): actor operations, ownership, framing and resource limits; remaining unresolved types are explicit.
 
-- [Native feasibility scope proposal](F6_NATIVE_FEASIBILITY_SCOPE.md): first Mac loopback/TLS/identity/signing batch and concrete remaining readiness gates; not approved for execution.
+- [Native feasibility scope proposal](F6_NATIVE_FEASIBILITY_SCOPE.md): first Mac loopback/TLS/identity/signing batch and concrete remaining readiness gates; subsequently approved/executed within the concrete manifest; no further execution implied.
 
-- [Native execution manifest](F6_NATIVE_EXECUTION_MANIFEST.md): reviewable proposed code/runtime/key/certificate scope with exact inputs and cleanup; separate permission required.
+- [Native execution manifest](F6_NATIVE_EXECUTION_MANIFEST.md): reviewable proposed code/runtime/key/certificate scope with exact inputs and cleanup; authorized bounded experiment completed, with retained gaps; no further permission implied.
 
 ## Delivery strategy
 
@@ -115,3 +115,8 @@ For every selected feature require deterministic positive/negative/race tests, c
 ## Offline checkpoint
 
 [Phase A results](F6_OFFLINE_RESULTS_2026-11-09.md): four SDK declaration probes and 64 pure Python cases passed. Not native execution, Swift runtime signing, Sendable identity or actual wire/permission proof. Exact APIs, selected scope and later feasibility gates remain pending; #90 is not complete.
+
+
+## Mac checkpoint
+
+[Native result report](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md): four builds, 33 pure invocations (32 distinct accepted cases), 48 local logical attempts (39 latest passes/one I04 harness failure), four public passes and seven removed synthetic fixture pairs. Scope exhausted for builds/local/public. Expired-client server rejection, failed native error oracle and unverified late-challenge gate remain distinct. #90 and exact API/scope/native acceptance remain open.

@@ -1,0 +1,7 @@
+<workspace>/Tools/F6Feasibility/NativeValues.swift:45:35: error: cannot use optional chaining on non-optional value of type '[Any]'
+43 |     guard let value else { throw ProbeFailure.failed("nil-identity") }
+44 |     try require(value.persistence == .none && value.identity != nil, "invalid-identity")
+45 |     try require(value.certificates?.allSatisfy { CFGetTypeID($0 as CFTypeRef) == SecCertificateGetTypeID() } ?? true, "invalid-chain")
+   |                                   `- error: cannot use optional chaining on non-optional value of type '[Any]'
+46 | }
+47 | func originPolicy(_ source: URL, expected: URL, failures: Int = 0) throws {
