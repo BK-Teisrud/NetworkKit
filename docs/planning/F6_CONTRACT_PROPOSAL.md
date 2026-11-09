@@ -80,3 +80,8 @@ These are proposed work groups, not newly numbered I issues or an artificial req
 - Record exact Swift signatures, Sendable boundaries, platform annotations and errors only after those decisions.
 
 No feature is rejected or delivered by this proposal. Unsupported or unproven candidates stay visible in the original inventory; any narrower selected delivery needs owner approval. No new runtime, key/certificate, trust, signing/install or capability authority is implied.
+
+
+## Detailed profile and next evidence
+
+See [signing profile](F6_SIGNING_PROFILE.md) for the proposed wire/rotation/admission rules and [feasibility plan](F6_FEASIBILITY_PLAN.md) for the bounded offline candidate compilation/vector proposal. These refine the working design without approving exact APIs or execution.

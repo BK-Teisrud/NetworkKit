@@ -7,6 +7,9 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 - [Platform/integration assessment](F6_PLATFORM_ASSESSMENT.md): official runtime constraints, inspected SDK declarations and approved native Watch exclusion. Per-platform compilation/runtime evidence remains pending.
 - [Contract proposal](F6_CONTRACT_PROPOSAL.md): detailed candidate semantics, integration choices and unresolved decisions. Not approved exact Swift signatures.
 
+- [Signing profile](F6_SIGNING_PROFILE.md): proposed canonicalization, key/clock/replay and integration behavior; exact API approval pending.
+- [Feasibility plan](F6_FEASIBILITY_PLAN.md): bounded offline Phase A and explicit later native Phase B boundary; no execution approval yet.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.
