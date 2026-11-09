@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-09",
+  "result": "passed",
+  "native_control_connections": 8,
+  "sdk_connections": 8,
+  "external_calls": 0,
+  "payload_bytes_per_message": 4096,
+  "exchanges_per_connection": 16,
+  "rss_bytes": {
+    "before": 4718592,
+    "native_after_8s": 8613888,
+    "sdk_immediate": 9555968,
+    "sdk_after_8s": 9560064,
+    "sdk_after_61s": 9519104,
+    "sampled_peak": 9560064
+  },
+  "sampler_samples": 3046,
+  "duration_seconds": 69.621,
+  "log": "F5_RESOURCE_PROFILE_2026-11-09.log",
+  "sha256": "6cf64298ba79fcb4f371c3db8b477ea3205290010351f19d6a0e9e0897d490ab",
+  "limitations": [
+    "Same-process client/fixture/framework/allocator RSS, not isolated SDK allocation.",
+    "Sequential warmup/order and immediate native-control invalidation versus SDK graceful close differ.",
+    "No TLS workload, unbounded traffic, application memory ceiling or leak proof.",
+    "Sixty-one seconds does not prove every operating-system allocation deadline expired."
+  ]
+}

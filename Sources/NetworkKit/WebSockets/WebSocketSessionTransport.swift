@@ -77,6 +77,7 @@ internal final class WebSocketSessionTransport: NSObject, URLSessionWebSocketDel
             guard let self else { return }
             guard let error else { self.complete(.success(()), to: completion); return }
             if let failure = self.state.withLock({ $0.peerFailure }) { self.complete(.failure(failure), to: completion); return }
+            if let failure = self.protocolFailure(error, task: task) { self.complete(.failure(failure), to: completion); return }
             if let end = self.knownEnd(task) {
                 switch end {
                 case .peerClose(let info): self.publish(.peerClose(info))
@@ -96,6 +97,7 @@ internal final class WebSocketSessionTransport: NSObject, URLSessionWebSocketDel
             case .failure(let error):
                 if Self.failure(error, opened: true) == .messageTooLarge { mapped = .failure(.messageTooLarge) }
                 else if let failure = self.state.withLock({ $0.peerFailure }) { mapped = .failure(failure) }
+                else if let failure = self.protocolFailure(error, task: task) { mapped = .failure(failure) }
                 else if let end = self.knownEnd(task) { mapped = .success(end) }
                 else { mapped = .failure(Self.failure(error, opened: true)) }
             @unknown default: mapped = .failure(.protocolViolation)
@@ -143,13 +145,26 @@ internal final class WebSocketSessionTransport: NSObject, URLSessionWebSocketDel
               let peer = try? WebSocketValidation.peerClose(code: code, reason: reason) else { return nil }
         return peer
     }
+    private func protocolFailure(_ error: any Error, task: URLSessionWebSocketTask) -> WebSocketError? {
+        if Self.failure(error, opened: true) == .protocolViolation { return .protocolViolation }
+        guard !state.withLock({ $0.localClose || $0.cancelled }) else { return nil }
+        return Self.taskCloseValidationFailure(code: task.closeCode.rawValue, reason: task.closeReason)
+    }
+    static func taskCloseValidationFailure(code: Int, reason: Data?) -> WebSocketError? {
+        guard code != 0 else { return nil }
+        do { _ = try WebSocketValidation.peerClose(code: code, reason: reason); return nil }
+        catch { return .protocolViolation }
+    }
     static func failure(_ error: any Error, opened: Bool) -> WebSocketError {
         let native = error as NSError
-        if native.domain == NSPOSIXErrorDomain, native.code == Int(POSIXErrorCode.EMSGSIZE.rawValue) {
+        if opened, native.domain == NSPOSIXErrorDomain, native.code == Int(POSIXErrorCode.EPROTO.rawValue) {
+            return .protocolViolation
+        }
+        if opened, native.domain == NSPOSIXErrorDomain, native.code == Int(POSIXErrorCode.EMSGSIZE.rawValue) {
             return .messageTooLarge
         }
         if native.domain == NSURLErrorDomain {
-            if native.code == URLError.dataLengthExceedsMaximum.rawValue { return .messageTooLarge }
+            if opened, native.code == URLError.dataLengthExceedsMaximum.rawValue { return .messageTooLarge }
             if !opened && native.code == URLError.badServerResponse.rawValue { return .handshakeRejected }
         }
         return .transport(.init(domain: native.domain, code: native.code))
@@ -183,7 +198,9 @@ internal final class WebSocketSessionTransport: NSObject, URLSessionWebSocketDel
         let opened = state.withLock { $0.opened }
         if let error, Self.failure(error, opened: opened) == .messageTooLarge {
             publish(.failed(.messageTooLarge))
-        } else if let task = task as? URLSessionWebSocketTask, let end = knownEnd(task) {
+        } else if opened, let task = task as? URLSessionWebSocketTask, let error, let failure = protocolFailure(error, task: task) {
+            publish(.failed(failure))
+        } else if opened, let task = task as? URLSessionWebSocketTask, let end = knownEnd(task) {
             switch end { case .peerClose(let info): publish(.peerClose(info)); default: publish(.orderlyEnd) }
         } else if let error { publish(.failed(Self.failure(error, opened: opened))) }
         else { publish(.failed(.transport(.init(domain: NSURLErrorDomain, code: URLError.networkConnectionLost.rawValue)))) }

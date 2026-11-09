@@ -1,10 +1,26 @@
 # Foreground WebSockets
 
-The candidate WebSocket API supports foreground connections on iOS/iPadOS, macOS and tvOS. Direct watchOS WebSockets are excluded. Native verification and technical acceptance remain outstanding; this guide does not establish production readiness.
+The WebSocket API supports foreground connections on iOS/iPadOS, macOS and tvOS. Direct watchOS WebSockets are excluded. The repository technical review and I36 issue track verification/acceptance; this guide does not establish production readiness.
 
 Create a throwing ``WebSocketConfiguration`` with a WSS endpoint and an explicit positive `maximumMessageBytes`, then call ``WebSocketConnection/connect(configuration:)``. The connection owns a fresh session without cookie, credential or cache stores. It accepts no injected session. System trust remains enabled; redirects and automatic credential authentication are rejected.
 
 Receive one raw ``WebSocketMessage`` at a time. Text is measured in UTF-8 bytes. One send and one receive may overlap; duplicate calls of either kind fail. There is no library message stream, reconnect, heartbeat scheduler, subscription protocol or background continuity. The application owns foreground lifetime and any new connection.
+
+## Connection ownership
+
+This compiled example chooses 4 KiB for illustration; it is not a library default or an application workload recommendation. The caller owns the returned connection, awaits `receive()` for each optional text/binary message and closes it when leaving the foreground. A `nil` result means orderly completion. No real server protocol or subscription format is assumed.
+
+<!-- DOC-EXAMPLE: connect -->
+```swift
+/// This example chooses 4 KiB; the application must select its own message limit.
+func openStatusConnection(endpoint: URL,
+                          authentication: NetworkAuthentication? = nil) async throws -> WebSocketConnection {
+    let configuration = try WebSocketConfiguration(
+        endpoint: endpoint, maximumMessageBytes: 4096, authentication: authentication,
+        timeouts: WebSocketTimeouts(connect: 10, send: 10, close: 2))
+    return try await WebSocketConnection.connect(configuration: configuration)
+}
+```
 
 ## Lifetime and cancellation
 

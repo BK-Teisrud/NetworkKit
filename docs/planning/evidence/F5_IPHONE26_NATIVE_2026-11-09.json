@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-09",
+  "candidate_source_commit": "2fb4c47",
+  "device": {
+    "architecture": "x86_64",
+    "deviceName": "iPhone 17",
+    "modelName": "iPhone 17",
+    "osBuildNumber": "23C54",
+    "osVersion": "26.2",
+    "platform": "iOS Simulator"
+  },
+  "total_tests": 14,
+  "passed_tests": 14,
+  "failed_tests": 0,
+  "local_sdk_connect_calls": 18,
+  "public_sdk_connect_calls": 3,
+  "remaining_route_authority": 0,
+  "result": "Passed",
+  "log_excerpt": "F5_IPHONE26_NATIVE_2026-11-09.log",
+  "full_local_log_sha256": "861dadcf1ea2b7be1530bbc0d213c14437457270ef393a50fb044dba3ae790ce",
+  "xcresult_local": "/private/tmp/networkkit-f5-iphone26-native.xcresult",
+  "limitations": [
+    "Simulator, not physical device or exact minimum patch.",
+    "TLS negatives establish TLS-layer rejection, not exact certificate defect.",
+    "Earlier failed routes have not been repeated.",
+    "No global memory or immediate OS reclamation guarantee."
+  ]
+}

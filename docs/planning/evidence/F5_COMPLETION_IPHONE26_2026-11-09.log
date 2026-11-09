@@ -1,0 +1,14 @@
+◇ Test run started.
+◇ Suite WebSocketFrameChecks started.
+◇ Test fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .fragmentedText to fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .fragmentedBinary to fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .fragmentedOversize to fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .invalidUTF8 to fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .emptyClose to fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .invalidCloseCode to fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .invalidCloseReason to fixedFrameBoundary(_:) started.
+◇ Test case passing 1 argument scenario → .redirect to fixedFrameBoundary(_:) started.
+✔ Test fixedFrameBoundary(_:) with 8 test cases passed after 0.528 seconds.
+✔ Suite WebSocketFrameChecks passed after 0.535 seconds.
+✔ Test run with 1 test in 1 suite passed after 0.537 seconds.

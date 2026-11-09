@@ -13,6 +13,38 @@ private final class WebSocketChallengeSender: NSObject, URLAuthenticationChallen
 }
 
 @Suite(.timeLimit(.minutes(1))) struct WebSocketAdapterTests {
+    @Test(arguments: [Int(POSIXErrorCode.EPROTO.rawValue), Int(POSIXErrorCode.EMSGSIZE.rawValue),
+                      URLError.dataLengthExceedsMaximum.rawValue])
+    func unopenedTaskCompletionDoesNotInventMessageOrProtocolFailures(_ code: Int) async throws {
+        let domain = code < 0 ? NSURLErrorDomain : NSPOSIXErrorDomain
+        let ready = WebSocketTestCounter(), events = Mutex<[WebSocketTransportEvent]>([])
+        let adapter = WebSocketSessionTransport(request: .init(endpoint: URL(string: "wss://service.invalid")!,
+            headers: .init(), subprotocols: [], maximumMessageBytes: 64)) { event in
+                events.withLock { $0.append(event) }; ready.increment()
+            }
+        let session = URLSession(configuration: .ephemeral)
+        let task = session.webSocketTask(with: URL(string: "wss://service.invalid")!) // Never resumed.
+        defer { task.cancel(); session.invalidateAndCancel() }
+        adapter.urlSession(session, task: task, didCompleteWithError: NSError(domain: domain, code: code))
+        try await ready.wait(1)
+        #expect(events.withLock { values in
+            values.count == 1 && { if case .failed(.transport(let failure)) = values[0] {
+                failure == .init(domain: domain, code: code)
+            } else { false } }()
+        })
+    }
+
+    @Test func nativeProtocolErrorsAndInvalidCloseReasonsRemainProtocolFailures() {
+        let error = NSError(domain: NSPOSIXErrorDomain, code: Int(POSIXErrorCode.EPROTO.rawValue))
+        #expect(WebSocketSessionTransport.failure(error, opened: true) == .protocolViolation)
+        #expect(WebSocketSessionTransport.failure(error, opened: false) ==
+            .transport(.init(domain: NSPOSIXErrorDomain, code: Int(POSIXErrorCode.EPROTO.rawValue))))
+        #expect(WebSocketSessionTransport.taskCloseValidationFailure(code: 1000, reason: Data([255])) == .protocolViolation)
+        #expect(WebSocketSessionTransport.taskCloseValidationFailure(code: 1005, reason: Data([97])) == .protocolViolation)
+        #expect(WebSocketSessionTransport.taskCloseValidationFailure(code: 1000, reason: nil) == nil)
+        #expect(WebSocketSessionTransport.taskCloseValidationFailure(code: 0, reason: nil) == nil)
+    }
+
     @Test func nativeSizeErrorAndEarlyTaskCloseMetadataAreStructured() throws {
         #expect(WebSocketSessionTransport.failure(NSError(domain: NSPOSIXErrorDomain,
             code: Int(POSIXErrorCode.EMSGSIZE.rawValue)), opened: true) == .messageTooLarge)

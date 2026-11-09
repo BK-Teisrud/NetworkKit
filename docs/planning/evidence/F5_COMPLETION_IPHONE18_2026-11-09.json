@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-09",
+  "device": {
+    "architecture": "x86_64",
+    "deviceName": "iPhone 16",
+    "modelName": "iPhone 16",
+    "osBuildNumber": "22C150",
+    "osVersion": "18.2",
+    "platform": "iOS Simulator"
+  },
+  "total_test_declarations": 12,
+  "passed_test_declarations": 12,
+  "failed_test_declarations": 0,
+  "fixed_frame_scenarios": 8,
+  "local_core_test_declarations": 11,
+  "sdk_connect_ceiling_charged": 26,
+  "external_calls": 0,
+  "result": "Passed",
+  "log_excerpt": "F5_COMPLETION_IPHONE18_2026-11-09.log",
+  "full_local_log_sha256": "0540f6c0ff3f1e2000588fcf8d44a70171c2eebab6d4d318c80661782d0c71b4",
+  "shipping_source_hashes": {
+    "Sources/NetworkKit/WebSockets/WebSocketConnection.swift": "6095a5ae53f963df00d5d3b1efbe3a8f06109a3b6428c06e06d8ed2c76d5dd9d",
+    "Sources/NetworkKit/WebSockets/WebSocketError.swift": "3634d264f77d2fc28c64abd05b74ac6bda3e6c9ecefd13a46add7cda56217c9e",
+    "Sources/NetworkKit/WebSockets/WebSocketOperation.swift": "888b7175d919ce07d03d66643b044ed8d34a009e1235af000ee68f7b418085c6",
+    "Sources/NetworkKit/WebSockets/WebSocketSessionTransport.swift": "3c79287e38633d5f24895750f2fb9ea3a24891ab2e61cb22929e3d757ff76154",
+    "Sources/NetworkKit/WebSockets/WebSocketValidation.swift": "566f907bc98dff0b2c999931c6759d3c5775c0d05bb0d4dc84b5d716646f89e5",
+    "Sources/NetworkKit/WebSockets/WebSocketValues.swift": "088bdb71548f47aa99cbf05132320d9c084b34b249aea04f8191ecb489fa5031"
+  },
+  "limitations": [
+    "Simulator, not physical-device evidence or exact OS 18.0.",
+    "Counts distinguish test declarations from parameterized frame scenarios.",
+    "No complete RFC-conformance or total process-memory guarantee."
+  ]
+}

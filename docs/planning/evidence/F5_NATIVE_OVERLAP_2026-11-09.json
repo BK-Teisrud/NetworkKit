@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-09",
+  "authorization": "Owner separately approved one additional local Mac connection after the 124-call ceiling was exhausted.",
+  "result": "passed",
+  "sdk_connections": 1,
+  "external_calls": 0,
+  "remaining_authority": 0,
+  "duration_seconds": 0.089,
+  "proof": "Two public receive calls: duplicate rejection proves one native receive is admitted/waiting before send. Echo succeeds while receive is pending. No timing-based admission guess or internal test factory.",
+  "log": "F5_NATIVE_OVERLAP_2026-11-09.log",
+  "sha256": "a3513d632422c9689932f6d00642d7c85aef51b53e1835ddc305efc8cc8f2951"
+}

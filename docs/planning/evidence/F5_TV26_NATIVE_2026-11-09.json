@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-09",
+  "candidate_source_commit": "2fb4c47",
+  "device": {
+    "architecture": "x86_64",
+    "deviceName": "Apple TV 4K (3rd generation)",
+    "modelName": "Apple TV 4K (3rd generation)",
+    "osBuildNumber": "23K51",
+    "osVersion": "26.2",
+    "platform": "tvOS Simulator"
+  },
+  "total_tests": 14,
+  "passed_tests": 14,
+  "failed_tests": 0,
+  "local_sdk_connect_calls": 18,
+  "public_sdk_connect_calls": 3,
+  "remaining_route_authority": 0,
+  "result": "Passed",
+  "log_excerpt": "F5_TV26_NATIVE_2026-11-09.log",
+  "full_local_log_sha256": "c5136a04a3dc84fde462dee9bfce07775f280b285abebf89e7097aeab859c064",
+  "xcresult_local": "/private/tmp/networkkit-f5-tv26-native.xcresult",
+  "limitations": [
+    "Simulator, not physical device or exact minimum patch.",
+    "TLS negatives establish TLS-layer rejection, not exact certificate defect.",
+    "Earlier failed routes have not been repeated.",
+    "No global memory or immediate OS reclamation guarantee."
+  ]
+}

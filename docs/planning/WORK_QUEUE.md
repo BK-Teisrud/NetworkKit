@@ -1,12 +1,12 @@
 # Work queue
 
-## Current delivery — 2026-11-08
+## Current delivery — 2026-11-09
 
 I31/#149 and I32/#150 are completed through PR #163/main f86ddcb5ba7a26d05b370007f70b439d0eff5999/run 42406475143, all seven checks/full log accepted. F4 is closed under the explicit owner-approved bounded technical disposition. The [technical review](F4_TECHNICAL_REVIEW_2026-11-04.md) and [evidence](evidence/F4_DOWNLOAD_CLOSEOUT_2026-11-04.json) preserve candidate-time status and source-specific observations; actual closure is recorded in the issues. Publication #29/#132 remains blocked; no release is authorized.
 
-PLAN-F5/#89 is completed after exact-plan PR #175/main7c192977d867201288e60532b51d8c8d711b11a1/run42505791505, all seven checks/full-log and task readback accepted. Architecture ADR-0018 and the [exact API/delivery contract](F5_API_AND_DELIVERY_CONTRACT.md) are owner-approved; **production code is still unauthorized**.
+PLAN-F5/#89 is completed after exact-plan PR #175/main7c192977d867201288e60532b51d8c8d711b11a1/run42505791505, all seven checks/full-log and task readback accepted. Architecture ADR-0018 and the [exact API/delivery contract](F5_API_AND_DELIVERY_CONTRACT.md) are owner-approved; the owner subsequently authorized I33–I36 together in one implementation PR.
 
-Latest owner preference targets one complete I33–I36 implementation PR. Keep four Blocked issues #171–#174 and internal candidate order: values/state → Foundation adapter → actual integration/guide/resource evidence → technical review. All share the accepted #89 predecessor plus explicit code-start gate; no intermediate implementation main/issue closure is required within the candidate. I35 still requires concrete applicable native/public/device authorization; #168 budget consumed. I36 needs actual evidence and owner technical disposition before final PR/main/manual closure.
+The combined implementation is [PR #176](https://github.com/BK-Teisrud/NetworkKit/pull/176). I33/I34/I35 have completed candidate implementation/verification; live review and owner/final CI gates are tracked in Project Status and I36/#174. Internal order remains values/state → Foundation adapter → integration/guide/resources → technical review; no intermediate implementation merge. The final suite passes 309 tests/37 suites (40 WebSocket tests); strict DocC passes. Seven selected native routes pass all eight fixed-frame cases, corrected Mac/iPhone 18.2 core checks pass, and the finite Mac resource profile is recorded. Original failed attempts remain retained. Both explicit runtime budgets are completed/exhausted; no further network authority remains. See [technical review](F5_TECHNICAL_REVIEW_2026-11-09.md). No automatic closure or production acceptance; final required PR/main and the I36 disposition remain separate.
 
 #165/#168 findings remain source-specific/negative/incomplete, not SDK feature passes. #17 remains undelivered; streams/heartbeat/reconnect/background/direct Watch deferrals unchanged, HTTP Watch unchanged; #29/#132 remain separate publication barriers. No extra milestone or speculative module/framework/refactor.
 
@@ -16,7 +16,7 @@ Project Status owns live state, this queue/JSON define dependencies and ROADMAP 
 
 The [F2 closeout](F2_CLOSEOUT_2026-10-31.md) records accepted core hardening/rehearsal, final main d0a522770269617f95660d67e9d0198838dc2bb5/run 41244932962 and the milestone-counter discrepancy. Original submission-time evidence/failure limits remain immutable. The F2-only resource disposition is not F3 or production acceptance.
 
-F4 selected I29–I32 and the combined maintenance are completed under their recorded limits. #89 owns current F5 planning/experiments; #90 remains independent research, and deferred domain catalogs stay open. The owner now permits useful work while CI runs, without polling; retain predecessor/main and candidate gates before dependent merges.
+F4 selected I29–I32 and the combined maintenance are completed under their recorded limits. #89 planning is completed; #171–#174 own current F5 delivery; #90 remains independent research, and deferred domain catalogs stay open. The owner now permits useful work while CI runs, without polling; retain predecessor/main and candidate gates before dependent merges.
 
 ## Accepted core implementation history
 
@@ -77,10 +77,10 @@ I21 may investigate access to older test environments as preparation without cod
 | 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Completed after accepted PR #175/main; no code authority |
 | 50.1 | [FEAS-F5 / #165](https://github.com/BK-Teisrud/NetworkKit/issues/165) | #89 | Completed after accepted PR #166/main |
 | 50.2 | [FEAS-F5-SEC / #168](https://github.com/BK-Teisrud/NetworkKit/issues/168) | #89 | Completed after accepted PR #169/main; negative/incomplete findings preserved |
-| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Blocked; explicit code start; one PR internal I33→I34→I35→I36 order |
-| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Blocked; explicit code start; one PR internal I33→I34→I35→I36 order |
-| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Blocked; explicit code start plus concrete verification/owner gates in the same candidate |
-| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Blocked; explicit code start plus concrete verification/owner gates in the same candidate |
+| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Candidate in PR #176; live review status in Project; internal I33→I34→I35→I36 order |
+| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Candidate in PR #176; live review status in Project; internal I33→I34→I35→I36 order |
+| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Verification recorded in PR #176; budgets exhausted; final review/CI gate |
+| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Owner technical disposition and final PR/main gate via #174; see live Project status |
 | 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
 
 The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.

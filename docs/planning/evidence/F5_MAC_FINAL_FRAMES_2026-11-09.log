@@ -1,0 +1,34 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (1.95s)
+Test Suite 'Selected tests' started at 2026-11-09 09:58:42.434.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' started at 2026-11-09 09:58:42.440.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' passed at 2026-11-09 09:58:42.440.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-11-09 09:58:42.440.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.007) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1501
+􀄵  Target Platform: x86_64-apple-macos14.0
+􀟈  Suite WebSocketFrameChecks started.
+􀟈  Test fixedFrameBoundary(_:) started.
+􀟈  Test case passing 1 argument scenario → .fragmentedText to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=fragmentedText names=permessage-deflate selected=none
+􀟈  Test case passing 1 argument scenario → .fragmentedBinary to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=fragmentedBinary names=permessage-deflate selected=none
+􀟈  Test case passing 1 argument scenario → .fragmentedOversize to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=fragmentedOversize names=permessage-deflate selected=none
+􀟈  Test case passing 1 argument scenario → .invalidUTF8 to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=invalidUTF8 names=permessage-deflate selected=none
+􀟈  Test case passing 1 argument scenario → .emptyClose to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=emptyClose names=permessage-deflate selected=none
+􀟈  Test case passing 1 argument scenario → .invalidCloseCode to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=invalidCloseCode names=permessage-deflate selected=none
+􀟈  Test case passing 1 argument scenario → .invalidCloseReason to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=invalidCloseReason names=permessage-deflate selected=none
+􀟈  Test case passing 1 argument scenario → .redirect to fixedFrameBoundary(_:) started.
+F5 extension offer scenario=redirect names=permessage-deflate selected=none
+􁁛  Test fixedFrameBoundary(_:) with 8 test cases passed after 0.260 seconds.
+􁁛  Suite WebSocketFrameChecks passed after 0.261 seconds.
+􁁛  Test run with 1 test in 1 suite passed after 0.261 seconds.

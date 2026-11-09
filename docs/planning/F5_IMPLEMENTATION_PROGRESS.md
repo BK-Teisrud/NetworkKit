@@ -1,6 +1,7 @@
 # F5 combined implementation progress
 
-Status: implementation candidate; not technically accepted or merged.
+Status: final candidate review prepared in PR #176. All specifically authorized local/public verification is completed and its budgets are exhausted. Live technical owner disposition/final acceptance is tracked in [I36/#174](https://github.com/BK-Teisrud/NetworkKit/issues/174); no publication is authorized.
+
 Owner authorized I33–I36 / #171–#174 as one combined implementation PR on 2026-11-08. No publication, signing or device installation is authorized by that decision.
 
 ## Candidate and evidence
@@ -50,3 +51,19 @@ Owner approved the complete seven-route cohort. Mac consumed all 18 local calls:
 ## Corrected candidate evidence — 2026-11-09
 
 38 deterministic WebSocket tests pass after native POSIX EMSGSIZE mapping and task-close snapshot retention. All 14 iPad 18.2 simulator tests pass on the corrected candidate (11 local + 3 public; 18 local/3 public calls), including normal/application close, oversize and TLS-layer rejection. Evidence: `evidence/F5_IPAD18_NATIVE_2026-11-09.json`. This does not erase the initial Mac/iPhone failures or authorize reruns there. Remaining approved routes continue sequentially.
+
+## Current regression checkpoint
+
+The corrected candidate passes the complete Mac regression:307 tests in 37 suites, including 38 WebSocket tests. Strict DocC passes. Combined draft PR #176 is open; CI runs independently from authorized native tests. No merge or closure is authorized by a passing subset.
+
+## Final candidate checkpoint — 2026-11-09
+
+The final suite passes 309 tests/37 suites (40 WebSocket tests/four suites), strict DocC and source-integrity checks. All selected seven-route frame scenarios pass; corrected Mac/iPhone 18.2 core checks pass. The completion budget used 124 local connections, with zero new external calls and both manual reserve allocations recorded. Resource observation: 9.12 MiB highest sampled RSS and 9.08 MiB after 61 seconds under the finite same-process loopback profile. This is not a memory ceiling or production/load proof.
+
+All failures remain in evidence. A test-only startup-budget correction fixes observed interpreter/OpenSSL setup flakiness without changing product timeouts. Final unopened-delegate classification was checked deterministically without resumed tasks. No temporary observation hook, new SDK module/product/dependency, public diagnostic bus or custom production protocol stack remains. Existing 30 shipping Swift sources are unchanged. The new native-extension offer observation establishes Mac permessage-deflate offer/non-negotiating fixture only, not negotiated compression behavior.
+
+See [complete candidate review](F5_TECHNICAL_REVIEW_2026-11-09.md), [completed original cohort](evidence/F5_COHORT_2026-11-09.json), [completion ledger](evidence/F5_COMPLETION_LEDGER_2026-11-09.json) and [resource evidence](evidence/F5_RESOURCE_PROFILE_2026-11-09.json). No additional issue/milestone or major refactor is justified; keep review/owner/CI gates in I35/I36. #29/#132 and explicit deferrals remain unchanged.
+
+## Final native overlap reconciliation
+
+After the 124-call completion scope was exhausted, a distinct owner-approved one-call native overlap observation passed on Mac. It uses public duplicate-receive rejection as an admission barrier before send, not a timing guess. Evidence: `evidence/F5_NATIVE_OVERLAP_2026-11-09.json`. All execution permissions are now exhausted. The final 309-test suite, strict DocC and finite native evidence are complete for I36 disposition; final PR/main acceptance remains separate.

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-09",
+  "scenarios": 8,
+  "passed_scenarios": 8,
+  "connections": 8,
+  "charged_to_manual_reserve": 8,
+  "findings": [
+    "POSIX EPROTO is now a protocol violation only after opening; ENOTCONN alone remains transport.",
+    "Invalid native close metadata is validated before a generic error is committed.",
+    "Valid empty close exposed code1005 and zero reason bytes; forbidden wire1005 exposed code1005 plus two reason bytes. Both predicates now satisfy the unchanged contract.",
+    "Invalid UTF-8 close reason exposed one invalid reason byte and is rejected."
+  ],
+  "observation_cleanup": "Temporary internal code/reason-length observation and test factory override removed before remaining routes and resource profile. No diagnostic hook is part of the final candidate.",
+  "log": "F5_MAC_FRAMES_VERIFICATION_2026-11-09.log",
+  "sha256": "e162185657aafcfbf784f8b493e2303ec91c969946186998c012e5d23e972fe2"
+}

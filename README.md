@@ -4,7 +4,7 @@
 
 A native networking library for Apple platforms, distributed as a Swift package with no external package dependencies.
 
-**Status:** the HTTP core and bounded retry increment have recorded technical acceptance. Foreground file downloads remain under F4 verification; maintenance #158–#161 is one combined delivery before further I31/I32. See the [work queue](docs/planning/WORK_QUEUE.md) for current order and acceptance evidence. No stable version/tag, release or production suitability is approved; #29/#132 remain mandatory publication barriers.
+**Status:** the HTTP core, bounded retry and foreground file-download increments have recorded technical acceptance within their documented limits. Selected foreground WebSocket implementation and verification are recorded in [combined PR #176](https://github.com/BK-Teisrud/NetworkKit/pull/176); live technical disposition/closure is tracked in [I36/#174](https://github.com/BK-Teisrud/NetworkKit/issues/174). See the [work queue](docs/planning/WORK_QUEUE.md) for current order/evidence. No stable version/tag, release or production suitability is approved; #29/#132 remain mandatory publication barriers.
 
 Open the repository-root Package.swift in Xcode. The package is named NetworkKit and exposes the NetworkKit library. Tests cover HTTP values, configuration, construction, response interpretation, session ownership, network policy and client integration, with platform-specific evidence described in the guides. See [implementation authorization](docs/decisions/ADR-0012-implementation-start.md).
 
@@ -19,6 +19,8 @@ The repository and package are named **NetworkKit**. The library product, module
 - [Quality/maintainability review and deliberate simplification](docs/planning/QUALITY_REVIEW_2026-10-26.md)
 
 - [Compiled integration guide: installation, calls, formats, errors, authentication, ownership and testing](Sources/NetworkKit/NetworkKit.docc/IntegrationGuide.md)
+- [Compiled foreground WebSocket guide and lifecycle boundaries](Sources/NetworkKit/NetworkKit.docc/WebSockets.md)
+- [F5 candidate technical review and retained findings](docs/planning/F5_TECHNICAL_REVIEW_2026-11-09.md)
 - [Public API/availability review and guide verification](docs/planning/API_REVIEW.md)
 - [Contract-to-test evidence and explicit release gaps](docs/planning/TEST_EVIDENCE.md)
 

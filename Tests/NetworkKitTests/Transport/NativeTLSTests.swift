@@ -45,7 +45,7 @@ def terminate_generator(signum, frame):
     raise SystemExit(1)
 signal.signal(signal.SIGTERM, terminate_generator)
 try:
-    if generator.wait(timeout=3) != 0:
+    if generator.wait(timeout=8) != 0:
         raise RuntimeError('Synthetic certificate generation failed')
 finally:
     if generator.poll() is None:

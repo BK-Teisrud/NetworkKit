@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+### Foreground WebSocket candidate — I33–I36
+
+- Add raw text/binary foreground connections with a required message limit, explicit WSS authentication binding, one concurrent send/receive, logical deadlines and bounded close fallback.
+- Keep session ownership separate from the HTTP client; use store-free Foundation sessions, system trust, denied redirects and redacted default descriptions. Direct watchOS WebSockets, streams, heartbeat scheduling, reconnect and background continuity remain deferred.
+- Add deterministic lifecycle/adapter regression, compiled consumer guidance and opt-in bounded native/public/framing/resource verification. Preserve failures and the observed native message-size/protocol/close corrections; no public service or resource run is added to automatic CI.
+- F4 is technically completed within its recorded limits. F5 remains a candidate until final I35/I36 and required PR/main gates. No publication or production suitability is approved; #29/#132 remain separate barriers. Earlier candidate-stage entries below retain their original context.
+
+
 ### F4 verification and platform decision
 
 - Raise declared minima under owner-delegated authority to iOS/iPadOS 18, macOS 15, watchOS 11 and tvOS 18. Older-family support is removed from this unreleased candidate; toolchain and SDK runtime behavior remain unchanged.

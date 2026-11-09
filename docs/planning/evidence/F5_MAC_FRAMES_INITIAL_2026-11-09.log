@@ -1,0 +1,33 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (1.04s)
+Test Suite 'Selected tests' started at 2026-11-09 09:25:33.917.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' started at 2026-11-09 09:25:33.919.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' passed at 2026-11-09 09:25:33.919.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-11-09 09:25:33.919.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.002) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1501
+􀄵  Target Platform: x86_64-apple-macos14.0
+􀟈  Suite WebSocketFrameChecks started.
+􀟈  Test fixedFrameBoundary(_:) started.
+􀟈  Test case passing 1 argument scenario → .fragmentedText to fixedFrameBoundary(_:) started.
+􀟈  Test case passing 1 argument scenario → .fragmentedBinary to fixedFrameBoundary(_:) started.
+􀟈  Test case passing 1 argument scenario → .fragmentedOversize to fixedFrameBoundary(_:) started.
+􀟈  Test case passing 1 argument scenario → .invalidUTF8 to fixedFrameBoundary(_:) started.
+F5 frame scenario=invalidUTF8 domain=NSPOSIXErrorDomain code=100
+􀢄  Test fixedFrameBoundary(_:) recorded an issue with 1 argument scenario → .invalidUTF8 at WebSocketFrameChecks.swift:9:6: Caught error: WebSocketError.transport
+􀟈  Test case passing 1 argument scenario → .emptyClose to fixedFrameBoundary(_:) started.
+􀟈  Test case passing 1 argument scenario → .invalidCloseCode to fixedFrameBoundary(_:) started.
+􀢄  Test fixedFrameBoundary(_:) recorded an issue with 1 argument scenario → .invalidCloseCode at WebSocketFrameChecks.swift:30:70: Issue recorded
+􀄵  Invalid frame accepted
+􀟈  Test case passing 1 argument scenario → .invalidCloseReason to fixedFrameBoundary(_:) started.
+F5 frame scenario=invalidCloseReason domain=NSPOSIXErrorDomain code=57
+􀢄  Test fixedFrameBoundary(_:) recorded an issue with 1 argument scenario → .invalidCloseReason at WebSocketFrameChecks.swift:9:6: Caught error: WebSocketError.transport
+􀟈  Test case passing 1 argument scenario → .redirect to fixedFrameBoundary(_:) started.
+􀢄  Test fixedFrameBoundary(_:) with 8 test cases failed after 0.284 seconds with 3 issues.
+􀢄  Suite WebSocketFrameChecks failed after 0.284 seconds with 3 issues.
+􀄵  /// Separate authority required; never selected by the approved eighteen-call cohort.
+􀢄  Test run with 1 test in 1 suite failed after 0.285 seconds with 3 issues.

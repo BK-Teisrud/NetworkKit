@@ -1,8 +1,8 @@
 # F5 prepared native verification scope
 
-Status: owner approved the complete cohort on 2026-11-09. Mac local execution completed with nine passing and two failing tests; no Mac rerun is authorized. Six simulator routes remain within their original ceilings. The previous three Mac public calls are completed and exhausted. This proposal does not reuse that budget.
+Status: owner approved the complete cohort on 2026-11-09. Mac local execution completed with nine passing and two failing tests; no Mac rerun is authorized. Actual completed and active simulator routes are tracked in the implementation progress and per-route evidence; their original ceilings remain unchanged. The previous three Mac public calls are completed and exhausted. This proposal does not reuse that budget.
 
-## Proposed routes and ceilings
+## Approved routes and ceilings
 
 Run sequentially, with no automatic retries or fallback endpoints:
 
