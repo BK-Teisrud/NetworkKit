@@ -25,6 +25,8 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [QUIC correction results](F6_QUIC_CORRECTION_RESULTS_2026-11-09.md): separately authorized 3-build/4-oracle/16-session correction completed; seven of twelve unique controls pass, Q03–Q07 unresolved. No further runtime or production authority.
 
+- [QUIC completion investigation proposal](F6_QUIC_COMPLETION_SCOPE.md): phase-specific diagnostics, per-receive admission, same-group handshake witnesses and consolidated final-source controls; new bounded execution decision pending.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.

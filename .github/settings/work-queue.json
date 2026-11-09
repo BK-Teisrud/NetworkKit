@@ -1068,7 +1068,9 @@
         "Q06",
         "Q07"
       ],
-      "next_priority": "Datagram phase attribution, qualifying negative handshake completion and client-uni verification; prepare separate scope before further execution."
+      "next_priority": "Datagram phase attribution, qualifying negative handshake completion and client-uni verification; prepare separate scope before further execution.",
+      "pending_scope": "docs/planning/F6_QUIC_COMPLETION_SCOPE.md",
+      "pending_scope_authorized": false
     }
   }
 }
