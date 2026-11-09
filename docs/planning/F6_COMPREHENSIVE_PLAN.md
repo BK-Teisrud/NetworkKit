@@ -10,6 +10,11 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 - [Signing profile](F6_SIGNING_PROFILE.md): proposed canonicalization, key/clock/replay and integration behavior; exact API approval pending.
 - [Feasibility plan](F6_FEASIBILITY_PLAN.md): bounded offline Phase A and explicit later native Phase B boundary; offline Phase A approved/completed, native Phase B not authorized.
 
+- [Security API candidate](F6_SECURITY_API_DESIGN.md): approved DER-pin direction and proposed Foundation-native identity/signing boundary.
+- [Native API candidate](F6_NATIVE_API_DESIGN.md): actor operations, ownership, framing and resource limits; remaining unresolved types are explicit.
+
+- [Native feasibility scope proposal](F6_NATIVE_FEASIBILITY_SCOPE.md): first Mac loopback/TLS/identity/signing batch and concrete remaining readiness gates; not approved for execution.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.

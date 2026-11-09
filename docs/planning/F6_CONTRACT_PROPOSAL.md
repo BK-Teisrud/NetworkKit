@@ -12,6 +12,8 @@ The owner approved the following planning directions, not exact API or code star
 
 These decisions supersede the alternatives below only for further detailed design. They do not establish implementation feasibility or production suitability.
 
+- The owner subsequently approved SDK leaf-certificate DER/SHA-256 pinning with a distinct backup; ATS SPKI stays app-owned and dynamic SDK SPKI remains unselected.
+
 ## Common public behavior
 
 Keep the existing NetworkKit product/import and current APIs. Prefer capability-specific values/actors over a generic transport class with dozens of options. Validate local configuration and already-cancelled caller before side effects. Resource limits must be positive, explicit and checked against arithmetic overflow. No automatic reconnect, silent retry, identity refresh or fallback to weaker security. An accepted call has one terminal outcome; late callbacks cannot revive it. Cancellation of stateful I/O ends that connection when delivery state becomes uncertain. Invalid local input or duplicate operation fails without damaging an otherwise healthy connection. Native shutdown completion is distinct from confirmed peer acknowledgement and full OS resource drain.
@@ -85,3 +87,6 @@ No feature is rejected or delivered by this proposal. Unsupported or unproven ca
 ## Detailed profile and next evidence
 
 See [signing profile](F6_SIGNING_PROFILE.md) for the proposed wire/rotation/admission rules and [feasibility plan](F6_FEASIBILITY_PLAN.md) for the bounded offline candidate compilation/vector proposal. These refine the working design without approving exact APIs or execution.
+
+
+The [security API candidate](F6_SECURITY_API_DESIGN.md) and [native API candidate](F6_NATIVE_API_DESIGN.md) refine names, ownership and bounds. They are not complete approved public declarations. URLCredential Sendable/immutable carrier replaces the raw-reference-wrapper candidate for further design; native proof remains required.
