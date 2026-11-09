@@ -25,6 +25,10 @@ Start with <doc:IntegrationGuide> for compiled consumer examples, installation, 
 
 See <doc:FileDownloads> for the separate bodyless GET file operation, required size limit, temporary-file ownership and error/cleanup boundaries.
 
+## Foreground WebSocket candidate
+
+See <doc:WebSockets> for ownership, cancellation, message limits and pending native verification.
+
 ## Response interpretation
 
 Select ``ResponseStrategy`` for JSON models, Data, strict UTF-8 text, or explicit
@@ -122,3 +126,11 @@ is not a promise to suppress all writes. Apps own store isolation, disk/memory s
 capacity and deletion; client shutdown never clears or invalidates a borrowed session.
 Disabling the auth provider does not disable app-managed cookies/cache. Native macOS
 loopback storage tests exist; native HTTPS/device/consolidated privacy gates remain open.
+
+## Topics
+
+### Integration and operation guides
+
+- <doc:IntegrationGuide>
+- <doc:FileDownloads>
+- <doc:WebSockets>

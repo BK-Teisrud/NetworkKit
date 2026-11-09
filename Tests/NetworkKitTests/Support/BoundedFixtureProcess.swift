@@ -21,7 +21,8 @@ final class BoundedFixtureProcess {
         try process.run()
     }
 
-    func startupLine(milliseconds: Int32 = 3000) throws -> String {
+    // Readiness includes child/interpreter setup, outside the networking contract.
+    func startupLine(milliseconds: Int32 = 10000) throws -> String {
         let start = DispatchTime.now().uptimeNanoseconds
         let budget = UInt64(max(milliseconds, 1)) * 1_000_000
         var data = Data()

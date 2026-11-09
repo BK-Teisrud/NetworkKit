@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-09",
+  "authorization": "Owner explicitly approved the seven-route scope.",
+  "status": "complete; authority exhausted; no automatic reruns",
+  "routes": [
+    {
+      "route": "mac",
+      "label": "Mac 15.8.1",
+      "tests": 11,
+      "passed": 9,
+      "failed": 2,
+      "local_sdk_calls": 18,
+      "new_public_sdk_calls": 0,
+      "remaining_authorized_calls": 0
+    },
+    {
+      "route": "iphone18",
+      "label": "iPhone 18.2",
+      "tests": 14,
+      "passed": 9,
+      "failed": 5,
+      "local_sdk_calls": 18,
+      "new_public_sdk_calls": 3,
+      "remaining_authorized_calls": 0
+    },
+    {
+      "route": "ipad18",
+      "label": "iPad 18.2",
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "local_sdk_calls": 18,
+      "new_public_sdk_calls": 3,
+      "remaining_authorized_calls": 0
+    },
+    {
+      "route": "tv18",
+      "label": "Apple TV 18.2",
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "local_sdk_calls": 18,
+      "new_public_sdk_calls": 3,
+      "remaining_authorized_calls": 0
+    },
+    {
+      "route": "iphone26",
+      "label": "iPhone 26.2",
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "local_sdk_calls": 18,
+      "new_public_sdk_calls": 3,
+      "remaining_authorized_calls": 0
+    },
+    {
+      "route": "ipad26",
+      "label": "iPad 26.2",
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "local_sdk_calls": 18,
+      "new_public_sdk_calls": 3,
+      "remaining_authorized_calls": 0
+    },
+    {
+      "route": "tv26",
+      "label": "Apple TV 26.2",
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "local_sdk_calls": 18,
+      "new_public_sdk_calls": 3,
+      "remaining_authorized_calls": 0
+    }
+  ],
+  "total_tests": 95,
+  "passed_tests": 88,
+  "failed_tests": 7,
+  "local_sdk_calls": 126,
+  "new_public_sdk_calls": 18,
+  "total_sdk_calls": 144,
+  "remaining_authorized_calls": 0,
+  "corrected_candidate_routes": 5,
+  "corrected_candidate_tests_passed": 70,
+  "initial_failures_retained": true,
+  "earlier_mac_public_three_calls": "Separate prior authorization; passed and exhausted, not included in this cohort."
+}

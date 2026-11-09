@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-09",
+  "authorization": "Owner explicitly approved the complete 124-local-connection completion scope, no new external calls.",
+  "ceiling": 124,
+  "consumed": 124,
+  "reserved_in_flight": 0,
+  "remaining_unreserved": 0,
+  "attempts": [
+    {
+      "route": "Mac",
+      "suite": "corrected local core",
+      "connections": 18,
+      "outcome": "11 tests passed",
+      "log_name": "networkkit-f5-final-mac-core.log"
+    },
+    {
+      "route": "Mac",
+      "suite": "fixed frames initial",
+      "outcome": "eight scenarios completed; three failed",
+      "connections": 8,
+      "log_name": "networkkit-f5-final-mac-frames-initial.log"
+    },
+    {
+      "route": "Mac",
+      "suite": "fixed frames manual verification after protocol fix",
+      "outcome": "eight scenarios passed after documented corrections",
+      "connections": 8,
+      "log_name": "networkkit-f5-final-mac-frames-verification.log"
+    },
+    {
+      "route": "iPhone18.2",
+      "suite": "corrected core plus eight frames",
+      "connections": 26,
+      "outcome": "passed",
+      "log_name": "networkkit-f5-completion-iphone18.log"
+    },
+    {
+      "route": "ipad18",
+      "suite": "eight fixed frames",
+      "connection_ceiling_charged": 8,
+      "exit_code": 0,
+      "log_name": "networkkit-f5-completion-ipad18.log"
+    },
+    {
+      "route": "tv18",
+      "suite": "eight fixed frames",
+      "connection_ceiling_charged": 8,
+      "exit_code": 0,
+      "log_name": "networkkit-f5-completion-tv18.log"
+    },
+    {
+      "route": "iphone26",
+      "suite": "eight fixed frames",
+      "connection_ceiling_charged": 8,
+      "exit_code": 0,
+      "log_name": "networkkit-f5-completion-iphone26.log"
+    },
+    {
+      "route": "ipad26",
+      "suite": "eight fixed frames",
+      "connection_ceiling_charged": 8,
+      "exit_code": 0,
+      "log_name": "networkkit-f5-completion-ipad26.log"
+    },
+    {
+      "route": "tv26",
+      "suite": "eight fixed frames",
+      "connection_ceiling_charged": 8,
+      "exit_code": 0,
+      "log_name": "networkkit-f5-completion-tv26.log"
+    },
+    {
+      "route": "Mac",
+      "suite": "finite native-control and SDK RSS profile",
+      "outcome": "passed",
+      "native_control_connections": 8,
+      "sdk_connections": 8,
+      "log_name": "networkkit-f5-final-resource-profile.log"
+    },
+    {
+      "route": "Mac",
+      "suite": "ordinary adapter frame/extension-offer review after cleanup",
+      "connections": 8,
+      "outcome": "eight scenarios passed; permessage-deflate offered, no extension selected by fixture",
+      "log_name": "networkkit-f5-final-mac-frames-offer-review.log"
+    }
+  ],
+  "external_calls": 0,
+  "automatic_retries": false,
+  "reserve_calls_allocated": 16,
+  "status": "complete; authority exhausted"
+}

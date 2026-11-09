@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-09",
+  "result": "all eight scenarios passed",
+  "connections": 8,
+  "charged_to_manual_reserve": 8,
+  "shipping_observation_hook": false,
+  "native_extension_offer": "permessage-deflate",
+  "fixture_selected_extensions": [],
+  "extension_limits": "Only the observed Mac offer and controlled non-negotiation are established; negotiated compression and decompression-memory behavior are not measured.",
+  "log": "F5_MAC_FINAL_FRAMES_2026-11-09.log",
+  "sha256": "98313a0e353d615e47af2a8c51fca8af24bc7bc59f6fe1748a941739895f05ba"
+}

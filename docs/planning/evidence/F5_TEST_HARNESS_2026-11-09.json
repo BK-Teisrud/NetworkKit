@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-09",
+  "initial_total_test_declarations": 308,
+  "initial_failed_setup_declarations": [
+    "RedirectIntegrationTests.sameOriginRedirectsHaveABoundedLifetime",
+    "NativeTLSTests.optedInReadNeverRetriesUntrustedTLS"
+  ],
+  "observed_cause": "Three-second fixture readiness and nested three-second synthetic OpenSSL generation expired during concurrent simulator startup.",
+  "correction": "Test-only readiness bound ten seconds, generation eight seconds, preserving owned-child cleanup and explicit150ms negative-readiness test. Product behavior/timeouts unchanged.",
+  "subsequent_full_suite": "309 declarations/37 suites passed after the final unopened-classification regression was added.",
+  "no_automatic_retry": true
+}

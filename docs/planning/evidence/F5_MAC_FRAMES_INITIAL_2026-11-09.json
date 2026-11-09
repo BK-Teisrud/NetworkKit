@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-09",
+  "scenarios": 8,
+  "failed_scenarios": [
+    "invalidUTF8",
+    "invalidCloseCode",
+    "invalidCloseReason"
+  ],
+  "connections": 8,
+  "initial_observations": [
+    "Fragmented text/binary, aggregate bound, valid empty close and redirect assertions passed.",
+    "Invalid UTF-8 surfaced POSIX EPROTO/100.",
+    "Forbidden wire close1005 returned an orderly end; native metadata provenance is under investigation.",
+    "Invalid UTF-8 close reason surfaced POSIX ENOTCONN/57."
+  ],
+  "retained_log": "F5_MAC_FRAMES_INITIAL_2026-11-09.log",
+  "sha256": "3e6d13256c4ca15fabde046dab972afd4907ffec60b914710fa12bd647686b72",
+  "no_acceptance": true
+}

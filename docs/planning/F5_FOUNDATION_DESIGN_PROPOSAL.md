@@ -62,18 +62,18 @@ Use Sources/NetworkKit/WebSockets/ with small values/configuration, connection s
 
 Before claiming availability, compile/run selected iOS/iPadOS/macOS/tvOS routes and keep Watch HTTP regression green. Preserve current floors; no further OS/toolchain bump from this proposal. Record current-family versus exact-minimum, simulator/physical/build-only results. No signing/install or new public fixture budget follows automatically.
 
-## Evidence and proposed work slices
+## Evidence and four owner-approved work slices
 
 The public binary-echo failure, probe Host/TLS attribution limits and absence of production async/provider/platform evidence remain open. Existing local binary success plus public WSS/text/trust observations are complementary, not an end-to-end binary-WSS pass. Do not weaken binary support silently; obtain a controlled suitable route or explicitly revise scope before acceptance.
 
-| Proposed slice (no issue/code authorization yet) | Reviewable result | Dependency |
+| Work slice (issues created; code unauthorized) | Reviewable result | Dependency |
 | --- | --- | --- |
 | Values and deterministic connection state | Exact reviewed API/config/error contract, auth origin mapping, admission/terminal/provider/deadline tests using an internal fake | Owner-approved ADR/design and separate code start |
 | Foundation native adapter/security | Owned session/delegate integration; selected-protocol/redirect/store/trust/encoding checks; complete the agreed binary-WSS evidence or stop | Accepted first slice; explicit new finite native budget if needed |
 | Platform integration/examples/resources | Actual selected-platform evidence, compiled app wrappers, finite slow-consumer/native lifetime/resource observations and failure history | Accepted adapter; concrete runtime/device authorization as applicable |
 | Technical gate | Requirement/API/privacy/security review, owner residual-risk decision and PR/main acceptance | All selected criteria supported or separately approved scope disposition |
 
-Four slices are a proposal, not four new Ready issues or a schedule. They may be grouped only after dependency/overlap review; maxfive work processes and no polling/wait loops remain. No reconnect/stream milestone is selected.
+Four slices are created as I33–I36/#171–#174, all code-start blocked. Latest owner preference targets one combined implementation PR with internal state→adapter→evidence→review order, no intermediate implementation main. This is not a schedule or permission to waive acceptance criteria; maxfive work processes and no polling/wait loops remain. No reconnect/stream milestone is selected.
 
 ## Remaining exact-contract and evidence decisions before final decomposition
 

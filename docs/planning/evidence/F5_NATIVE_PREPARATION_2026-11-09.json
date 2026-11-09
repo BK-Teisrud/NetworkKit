@@ -1,0 +1,44 @@
+{
+  "status": "build-only; execution awaits concrete owner approval",
+  "date": "2026-11-09",
+  "local_tests": 11,
+  "local_connect_ceiling_per_route": 18,
+  "simulator_routes": [
+    {
+      "name": "iPhone 16",
+      "runtime": "iOS-18-2"
+    },
+    {
+      "name": "iPad (10th generation)",
+      "runtime": "iOS-18-2"
+    },
+    {
+      "name": "Apple TV 4K (3rd generation)",
+      "runtime": "tvOS-18-2"
+    },
+    {
+      "name": "iPhone 17",
+      "runtime": "iOS-26-2"
+    },
+    {
+      "name": "iPad (A16)",
+      "runtime": "iOS-26-2"
+    },
+    {
+      "name": "Apple TV 4K (3rd generation)",
+      "runtime": "tvOS-26-2"
+    }
+  ],
+  "builds": {
+    "macOS": "passed warnings-as-errors",
+    "iOS Simulator": "passed warnings-as-errors, suppress-warnings explicitly disabled",
+    "tvOS Simulator": "passed warnings-as-errors, suppress-warnings explicitly disabled"
+  },
+  "initial_build_failure": "Xcode warnings-as-errors conflicted with implicit suppress-warnings; corrected explicitly without weakening warning checks.",
+  "source_hashes": {
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/WebSockets/WebSocketLoopbackFixture.swift": "6dd35255f4aa5d0945518ff5abbe04c09e7a188502ac94e7022f6193110bc1b5",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/WebSockets/WebSocketNativeChecks.swift": "91ede4572ceaa29ab2cc89498ee718627e030395c648071ecb0d9e18f7a60f55",
+    "Tools/PublicHTTPSChecks/Tests/PublicHTTPSChecksTests/WebSockets/WebSocketPublicChecks.swift": "c006463cb6676e17a039148c2bd25f27c4ff7656b47a95c7fb98c7ee2b1d0055"
+  },
+  "not_executed": true
+}

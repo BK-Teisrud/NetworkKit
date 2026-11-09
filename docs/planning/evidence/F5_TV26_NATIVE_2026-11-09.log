@@ -1,0 +1,37 @@
+◇ Test run started.
+◇ Suite WebSocketNativeChecks started.
+◇ Test echoTypesEmptyUnicodeAndExactLimit() started.
+✔ Test echoTypesEmptyUnicodeAndExactLimit() passed after 0.087 seconds.
+◇ Test oversizedIncomingTerminates() started.
+✔ Test oversizedIncomingTerminates() passed after 0.043 seconds.
+◇ Test normalPeerCloseEndsRepeatedReceives() started.
+✔ Test normalPeerCloseEndsRepeatedReceives() passed after 0.032 seconds.
+◇ Test applicationPeerCloseIsStructured() started.
+✔ Test applicationPeerCloseIsStructured() passed after 0.034 seconds.
+◇ Test withheldHandshakeUsesConnectBudget() started.
+✔ Test withheldHandshakeUsesConnectBudget() passed after 0.246 seconds.
+◇ Test activeReceiveCancellationTerminates() started.
+✔ Test activeReceiveCancellationTerminates() passed after 0.144 seconds.
+◇ Test admittedConnectCancellationTerminates() started.
+✔ Test admittedConnectCancellationTerminates() passed after 0.031 seconds.
+◇ Test abruptNativeEndFails() started.
+F5 safe native transport: domain=NSPOSIXErrorDomain code=57
+✔ Test abruptNativeEndFails() passed after 0.031 seconds.
+◇ Test missingSelectedProtocolIsRejected() started.
+✔ Test missingSelectedProtocolIsRejected() passed after 0.041 seconds.
+◇ Test eightSequentialLifetimesReleaseFixtureConnections() started.
+✔ Test eightSequentialLifetimesReleaseFixtureConnections() passed after 0.112 seconds.
+◇ Test finiteSlowConsumerPreservesSixteenMessages() started.
+✔ Test finiteSlowConsumerPreservesSixteenMessages() passed after 0.245 seconds.
+✔ Suite WebSocketNativeChecks passed after 1.058 seconds.
+◇ Suite WebSocketPublicChecks started.
+◇ Test textAndBinaryEcho() started.
+✔ Test textAndBinaryEcho() passed after 0.318 seconds.
+◇ Test selfSignedCertificateRejected() started.
+F5 negative TLS domain=NSURLErrorDomain code=-1200
+✔ Test selfSignedCertificateRejected() passed after 0.573 seconds.
+◇ Test wrongHostnameRejected() started.
+F5 negative TLS domain=NSURLErrorDomain code=-1200
+✔ Test wrongHostnameRejected() passed after 0.557 seconds.
+✔ Suite WebSocketPublicChecks passed after 1.450 seconds.
+✔ Test run with 14 tests in 2 suites passed after 2.511 seconds.

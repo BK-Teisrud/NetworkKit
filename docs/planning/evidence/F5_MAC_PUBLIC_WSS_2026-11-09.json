@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-09",
+  "authorization": "Owner approved three sequential Mac WSS SDK connections, no retry.",
+  "platform": {
+    "os": "macOS 15.8.1",
+    "build": "24H32",
+    "architecture": "x86_64"
+  },
+  "sdk_connect_calls": 3,
+  "remaining_authorized_calls": 0,
+  "tests_passed": 3,
+  "duration_seconds": 10.828,
+  "results": [
+    {
+      "endpoint": "wss://echo.websocket.org/",
+      "result": "passed",
+      "checks": [
+        "expected initial empty text frame",
+        "exact synthetic text echo",
+        "exact five-byte binary echo",
+        "explicit close"
+      ]
+    },
+    {
+      "endpoint": "wss://self-signed.badssl.com/",
+      "result": "passed",
+      "checks": [
+        "NSURLErrorDomain certificate-related rejection; allowed code set -1201/-1202/-1203/-1204"
+      ]
+    },
+    {
+      "endpoint": "wss://wrong.host.badssl.com/",
+      "result": "passed",
+      "checks": [
+        "NSURLErrorDomain certificate-related rejection; allowed code set -1201/-1202/-1203/-1204"
+      ]
+    }
+  ],
+  "limitations": [
+    "Exact individual certificate error codes were asserted against the allowlist, not separately logged.",
+    "Public endpoint observations do not prove controlled framing/lifecycle/resource cases or other platforms.",
+    "Prior #168 binary mismatches remain recorded; this is new SDK evidence against a different provider.",
+    "No Watch, physical mobile/TV, production load or publication acceptance."
+  ],
+  "log": "F5_MAC_PUBLIC_WSS_2026-11-09.log",
+  "log_sha256": "fc72f8fb26fca7617a21e58e7b7d61c3afebb706cf294963cd514840248778f3"
+}

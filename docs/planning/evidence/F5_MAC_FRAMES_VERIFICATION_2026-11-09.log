@@ -1,0 +1,33 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (1.02s)
+Test Suite 'Selected tests' started at 2026-11-09 09:30:28.584.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' started at 2026-11-09 09:30:28.589.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' passed at 2026-11-09 09:30:28.589.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-11-09 09:30:28.589.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.005) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1501
+􀄵  Target Platform: x86_64-apple-macos14.0
+􀟈  Suite WebSocketFrameChecks started.
+􀟈  Test fixedFrameBoundary(_:) started.
+􀟈  Test case passing 1 argument scenario → .fragmentedText to fixedFrameBoundary(_:) started.
+F5 close metadata scenario=fragmentedText task=Optional(1000) peer=Optional(1000) reasonBytes=nil
+􀟈  Test case passing 1 argument scenario → .fragmentedBinary to fixedFrameBoundary(_:) started.
+F5 close metadata scenario=fragmentedBinary task=Optional(1000) peer=Optional(1000) reasonBytes=nil
+􀟈  Test case passing 1 argument scenario → .fragmentedOversize to fixedFrameBoundary(_:) started.
+F5 close metadata scenario=fragmentedOversize task=nil peer=nil reasonBytes=nil
+􀟈  Test case passing 1 argument scenario → .invalidUTF8 to fixedFrameBoundary(_:) started.
+F5 close metadata scenario=invalidUTF8 task=nil peer=nil reasonBytes=nil
+􀟈  Test case passing 1 argument scenario → .emptyClose to fixedFrameBoundary(_:) started.
+F5 close metadata scenario=emptyClose task=Optional(1005) peer=Optional(1005) reasonBytes=Optional(0)
+􀟈  Test case passing 1 argument scenario → .invalidCloseCode to fixedFrameBoundary(_:) started.
+F5 close metadata scenario=invalidCloseCode task=Optional(1005) peer=Optional(1005) reasonBytes=Optional(2)
+􀟈  Test case passing 1 argument scenario → .invalidCloseReason to fixedFrameBoundary(_:) started.
+F5 close metadata scenario=invalidCloseReason task=Optional(1000) peer=Optional(1000) reasonBytes=Optional(1)
+􀟈  Test case passing 1 argument scenario → .redirect to fixedFrameBoundary(_:) started.
+􁁛  Test fixedFrameBoundary(_:) with 8 test cases passed after 0.678 seconds.
+􁁛  Suite WebSocketFrameChecks passed after 0.679 seconds.
+􁁛  Test run with 1 test in 1 suite passed after 0.679 seconds.

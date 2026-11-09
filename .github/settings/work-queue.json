@@ -837,12 +837,12 @@
       "title": "[I33] Define WebSocket values and deterministic connection lifecycle",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/171",
       "parent": 17,
-      "delivery_group": "f5-connection",
+      "delivery_group": "f5-complete",
       "milestone": "F5 \u2013 Real-time communication",
       "blocked_by": [
         "PLAN-F5"
       ],
-      "code_start_authorized": false
+      "code_start_authorized": true
     },
     {
       "order": 52,
@@ -851,12 +851,12 @@
       "title": "[I34] Integrate the owned Foundation WebSocket adapter and handshake policy",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/172",
       "parent": 17,
-      "delivery_group": "f5-connection",
+      "delivery_group": "f5-complete",
       "milestone": "F5 \u2013 Real-time communication",
       "blocked_by": [
         "PLAN-F5"
       ],
-      "code_start_authorized": false,
+      "code_start_authorized": true,
       "internal_order_after": [
         "I33"
       ]
@@ -868,13 +868,15 @@
       "title": "[I35] Verify WebSocket platforms native boundaries resources and compiled usage",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/173",
       "parent": 17,
-      "delivery_group": "f5-verification-gate",
+      "delivery_group": "f5-complete",
       "milestone": "F5 \u2013 Real-time communication",
       "blocked_by": [
-        "I33",
-        "I34"
+        "PLAN-F5"
       ],
-      "code_start_authorized": false
+      "code_start_authorized": true,
+      "internal_order_after": [
+        "I34"
+      ]
     },
     {
       "order": 54,
@@ -883,13 +885,12 @@
       "title": "[I36] Review the bounded WebSocket technical delivery and remaining risks",
       "url": "https://github.com/BK-Teisrud/NetworkKit/issues/174",
       "parent": 17,
-      "delivery_group": "f5-verification-gate",
+      "delivery_group": "f5-complete",
       "milestone": "F5 \u2013 Real-time communication",
       "blocked_by": [
-        "I33",
-        "I34"
+        "PLAN-F5"
       ],
-      "code_start_authorized": false,
+      "code_start_authorized": true,
       "internal_order_after": [
         "I35"
       ]
@@ -985,31 +986,30 @@
     "exact_contract": "docs/planning/F5_API_AND_DELIVERY_CONTRACT.md",
     "exact_contract_owner_approved": "2026-11-08",
     "delivery_groups": {
-      "f5-connection": {
+      "f5-complete": {
         "issues": [
           171,
-          172
-        ],
-        "internal_order": [
-          "I33",
-          "I34"
-        ],
-        "start_requires": "Accepted PLAN-F5/#89 plus explicit owner implementation-start decision; no automatic code permission."
-      },
-      "f5-verification-gate": {
-        "issues": [
+          172,
           173,
           174
         ],
         "internal_order": [
+          "I33",
+          "I34",
           "I35",
           "I36"
         ],
-        "requires_accepted_main_of": "f5-connection",
-        "additional_gate": "Concrete approved binary-WSS/native scope and applicable runtime/device authorization; final owner technical disposition."
+        "target_implementation_prs": 1,
+        "start_requires": "Completed #89 plus separate explicit owner code-start.",
+        "merge_requires": "I35 actual evidence before I36 review/owner technical disposition; all selected criteria and required PR/main.",
+        "runtime_gate": "Concrete approved native/public/device scope; prior #168 budget consumed.",
+        "no_intermediate_main_required": true
       }
-    }
+    },
+    "accepted_exact_plan_main": "7c192977d867201288e60532b51d8c8d711b11a1",
+    "accepted_exact_plan_run": 42505791505,
+    "planning_completed": "2026-11-08"
   },
-  "f5_implementation_authorized": false,
+  "f5_implementation_authorized": true,
   "f5_code_start_decision_issue": 171
 }

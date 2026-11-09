@@ -2,6 +2,14 @@
 
 NET-01 / #115. The owner selected HTTPBingo and BadSSL on 2026-10-27 instead of provisioning a paid/private HTTPS environment. This separate verification package is not a shipped library product or an SDK dependency. Its only package dependency is the local repository. Normal root tests never run these checks.
 
+## Foreground WebSocket verification
+
+The candidate adds separately opt-in suites under `WebSockets/`: public WSS observations, controlled native loopback cases, fixed-frame protocol boundaries and a finite Mac resource profile. None is part of the distributed SDK or selected by automatic CI. The ordinary root regression suite uses deterministic WebSocket doubles and does not contact public WebSocket services.
+
+Execution requires the applicable concrete owner-approved endpoint/scenario/route budget, not just setting an environment variable. The first seven-route cohort is complete and exhausted. The separately approved completion scope is also completed/exhausted and recorded in [the exact plan](../../docs/planning/F5_COMPLETION_VERIFICATION_SCOPE.md); do not reuse old flags or repeat consumed attempts. Public probes remain disabled in this local-only completion phase. Fixed-frame TCP/handshake code is a bounded verification fixture, not a custom production WebSocket stack.
+
+See [progress and retained findings](../../docs/planning/F5_IMPLEMENTATION_PROGRESS.md) for actual passes, failures and pending gates. Simulator, physical, build-only and production evidence remain separate. Resource RSS includes the fixture, test framework, Foundation and allocator; the native control uses immediate invalidation whereas the SDK requests bounded graceful close, so observed differences are not isolated SDK overhead.
+
 ## Current F4 candidate
 
 ADR-0017 raises the selected floors to iOS/iPadOS18, macOS15, watchOS11 and tvOS18. Explicit `nativeHTTPSDownload` tests cover fixed small HTTPBingo payload/auth/store cases and BadSSL trust controls, with production 30/60 budgets. These four declarations/seven cases are never selected by automatic CI. The file resource test now compiles on all selected families; actual executed runtime/resource scope is recorded separately, never inferred from a build. No public stress benchmark or real credential is introduced.

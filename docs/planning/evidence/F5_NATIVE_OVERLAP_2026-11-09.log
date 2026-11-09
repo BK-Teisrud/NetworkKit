@@ -1,0 +1,18 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (1.17s)
+Test Suite 'Selected tests' started at 2026-11-09 10:17:48.699.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' started at 2026-11-09 10:17:48.702.
+Test Suite 'NetworkKitPublicHTTPSChecksPackageTests.xctest' passed at 2026-11-09 10:17:48.702.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-11-09 10:17:48.702.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.003) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1501
+􀄵  Target Platform: x86_64-apple-macos14.0
+􀟈  Suite WebSocketConcurrencyChecks started.
+􀟈  Test pendingReceiveOverlapsNativeSend() started.
+􁁛  Test pendingReceiveOverlapsNativeSend() passed after 0.087 seconds.
+􁁛  Suite WebSocketConcurrencyChecks passed after 0.088 seconds.
+􁁛  Test run with 1 test in 1 suite passed after 0.089 seconds.

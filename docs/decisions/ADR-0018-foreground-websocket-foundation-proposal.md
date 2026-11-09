@@ -30,7 +30,7 @@ iOS/iPadOS18, macOS15, tvOS18; Watch HTTP support and #132 unchanged. No broader
 
 ## Consequences and deferred scope
 
-Prospective four work slices are described, not yet created/authorized. The owner accepted the close subset and invalid-local-input semantics as planning direction on 2026-11-08. Streams/heartbeat/automatic reconnect remain deferred; no new module/dependency/refactor or extra milestone. #29/#132 publication gates stay open.
+Four owner-approved work slices are created as I33–I36/#171–#174, still code-unauthorized. Latest delivery preference targets one combined PR with internal candidate order and no intermediate implementation merge. The owner accepted the close subset and invalid-local-input semantics as planning direction on 2026-11-08. Streams/heartbeat/automatic reconnect remain deferred; no new module/dependency/refactor or extra milestone. #29/#132 publication gates stay open.
 
 ## Approval and verification
 

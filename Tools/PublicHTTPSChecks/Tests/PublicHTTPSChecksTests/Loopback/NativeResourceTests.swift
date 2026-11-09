@@ -19,7 +19,8 @@ private final class NativeDiagnosticCounter: NetworkDiagnosticSink {
     var invalid: Int { state.withLock { $0.invalid } }
 }
 
-private func nativeResidentBytes() throws -> UInt64 {
+// Shared test-only observation; no process-memory limit is inferred.
+func nativeResidentBytes() throws -> UInt64 {
     var info = mach_task_basic_info()
     var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.size / MemoryLayout<integer_t>.size)
     let result = withUnsafeMutablePointer(to: &info) {
