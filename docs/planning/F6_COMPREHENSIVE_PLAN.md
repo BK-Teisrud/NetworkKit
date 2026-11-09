@@ -27,6 +27,8 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [QUIC completion investigation proposal](F6_QUIC_COMPLETION_SCOPE.md): subsequently authorized and completed: [results](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md) show eight final-source positive controls, unresolved empty datagram/negative-handshake/mixed-mode gates; stop/redesign before another execution decision.
 
+- [QUIC adapter review](F6_QUIC_ADAPTER_REVIEW.md): preserve empty-message/mixed requirements; propose explicit logical-startup error/admission semantics, pending owner decision. New OS-26 API is not adopted or verified.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.

@@ -1096,7 +1096,9 @@
         "prerequisite_blocked": [
           "Q05"
         ]
-      }
+      },
+      "adapter_review": "docs/planning/F6_QUIC_ADAPTER_REVIEW.md",
+      "pending_decision": "Logical startup/trust/ALPN error and admission contract; owner acceptance pending. Empty/mixed requirements not waived."
     }
   }
 }
