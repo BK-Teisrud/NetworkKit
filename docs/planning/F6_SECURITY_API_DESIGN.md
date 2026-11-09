@@ -48,3 +48,6 @@ No new compiler or test slot was consumed for these proposals. Still required: a
 ## Mac source-specific follow-up
 
 The [Mac experiment](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md) exercised the Foundation carrier and in-memory fixture identity successfully. That narrows the feasibility gap without approving this public API. It also retains I04 native error-oracle failure and identifies incomplete late-challenge terminal gating; production security code must not copy the toy delegate. No additional compilation/native attempt is authorized.
+
+
+The subsequent [#178 correction](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) verifies the selected terminal gate and I04 controls in the experiment. This narrows those source-specific gaps, not exact public API/production/platform acceptance.

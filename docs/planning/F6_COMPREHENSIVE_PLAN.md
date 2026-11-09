@@ -17,7 +17,7 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Native execution manifest](F6_NATIVE_EXECUTION_MANIFEST.md): reviewable proposed code/runtime/key/certificate scope with exact inputs and cleanup; authorized bounded experiment completed, with retained gaps; no further permission implied.
 
-- [Prepared TLS correction scope](F6_TLS_CORRECTION_SCOPE.md): #178 patch, eight pure cases, five local controls and a proposed separate execution envelope; not yet compiled/run.
+- [Prepared TLS correction scope](F6_TLS_CORRECTION_SCOPE.md): #178 patch, eight pure cases, five local controls and a proposed separate execution envelope; subsequently authorized/executed; [result report](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) records all selected initial controls passed.
 
 ## Delivery strategy
 
@@ -122,3 +122,8 @@ For every selected feature require deterministic positive/negative/race tests, c
 ## Mac checkpoint
 
 [Native result report](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md): four builds, 33 pure invocations (32 distinct accepted cases), 48 local logical attempts (39 latest passes/one I04 harness failure), four public passes and seven removed synthetic fixture pairs. Scope exhausted for builds/local/public. Expired-client server rejection, failed native error oracle and unverified late-challenge gate remain distinct. #90 and exact API/scope/native acceptance remain open.
+
+
+## #178 correction checkpoint
+
+The owner-approved [TLS correction](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) passed one build, eight pure cases and five local cases, with no external attempts. Five new fixture pairs were removed after execution. New evidence resolves the selected I04/gate controls without rewriting original failures. #178 is In Review pending the same PR/main; #90 planning continues on remaining API/platform/research gates. No new production or execution authority.

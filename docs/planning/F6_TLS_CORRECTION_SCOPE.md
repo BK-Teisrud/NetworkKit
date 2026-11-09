@@ -1,6 +1,8 @@
 # PREP-F6-TLS / #178 correction scope
 
-Prepared, not executed or authorized for new execution, 2026-11-09. Same planning PR #177, child of #90. The previous Mac batch remains immutable evidence: four builds, 48 local and four public attempts exhausted, I04 harness failure retained. No prior reserve is reused or reset.
+Owner-authorized and executed against commit 55f31cf on 2026-11-09; [results](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) record all selected initial controls passed. No further execution is implied. Same planning PR #177, child of #90. The previous Mac batch remains immutable evidence: four builds, 48 local and four public attempts exhausted, I04 harness failure retained. No prior reserve is reused or reset.
+
+The remaining sections preserve the exact pre-execution proposal approved by the owner; their earlier future/uncompiled wording is historical. The result report above owns actual execution status.
 
 ## Concrete candidate correction already prepared
 

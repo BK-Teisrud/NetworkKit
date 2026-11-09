@@ -15,4 +15,4 @@ Future authorized corrections must retain the current immutable ledger and hashe
 
 ## Prepared #178 correction
 
-Later source edits add ChallengeGate and the separate run_tls_correction.py controller. They are uncompiled/unexecuted candidates under [the proposed correction scope](../../docs/planning/F6_TLS_CORRECTION_SCOPE.md). The original ledger/hashes/outcomes above remain historical input evidence, not verification of these later edits. No new execution authority is inferred.
+Later source edits add ChallengeGate and the separate run_tls_correction.py controller. They were subsequently compiled/executed under the separately owner-approved [correction scope](../../docs/planning/F6_TLS_CORRECTION_SCOPE.md); [results](../../docs/planning/F6_TLS_CORRECTION_RESULTS_2026-11-09.md) record one build/eight pure/five local controls passed, zero external attempts and five removed fixture pairs. The original ledger/hashes/outcomes above remain historical input evidence, not verification of these later edits. No new execution authority is inferred.

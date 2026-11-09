@@ -64,3 +64,8 @@ Before production planning acceptance: resolve/verify the I04 native oracle, com
 
 
 Concrete follow-up [PREP-F6-TLS / #178](https://github.com/BK-Teisrud/NetworkKit/issues/178), native child of #90, now tracks I04 and terminal trust completion at priority P2/order 60.1 in this same planning PR. It is blocked for further execution pending a separately prepared authorization, not a shipping defect or extra delivery PR.
+
+
+## Subsequent separately authorized correction
+
+[The #178 result report](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) records new passing I04/challenge-gate evidence under a distinct owner-approved scope and source commit. The original outcomes above remain historical failures/gaps; do not substitute new source hashes or reset this original ledger. The child now awaits integrated PR/main review; broader F6 planning remains open.

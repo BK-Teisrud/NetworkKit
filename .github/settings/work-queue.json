@@ -915,7 +915,8 @@
       "blocked_by": [],
       "parent": 90,
       "code_start_authorized": false,
-      "execution_gate": "Original Mac build/local/public bounds exhausted; prepare a concrete separate correction decision before execution"
+      "execution_gate": "Owner-approved correction completed: one build/eight pure/five local initial cases passed; In Review pending integrated PR/main; no standing execution permission",
+      "experimental_scope_commit": "55f31cf13204e1a5fb7eec6c4b5b1a94b9b107e6"
     }
   ],
   "authorization_adr": "docs/decisions/ADR-0012-implementation-start.md",
@@ -1032,6 +1033,7 @@
     "mac_experiment": "4 builds/33 pure/48 local/4 public completed; I04 native harness failure retained",
     "next_evidence_followup": 178,
     "same_pr": true,
-    "no_publication": true
+    "no_publication": true,
+    "tls_correction": "Selected #178 initial controls all passed; In Review pending same PR/main, broader #90 planning continues"
   }
 }
