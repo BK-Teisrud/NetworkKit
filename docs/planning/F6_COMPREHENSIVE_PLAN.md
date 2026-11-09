@@ -1,6 +1,6 @@
 # F6 comprehensive planning and delivery proposal
 
-Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production code, feasibility execution, credential provisioning or new network budget is authorized. The owner requests broad reuse across future apps, has no specific server/application requirement, and prefers the fewest practical PRs without reducing scope or quality.
+Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production code, credential provisioning or network budget is authorized. The owner separately approved only offline Phase A, now completed within its initial limits. The owner requests broad reuse across future apps, has no specific server/application requirement, and prefers the fewest practical PRs without reducing scope or quality.
 
 ## Working assessment artifacts
 
@@ -8,7 +8,7 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 - [Contract proposal](F6_CONTRACT_PROPOSAL.md): detailed candidate semantics, integration choices and unresolved decisions. Not approved exact Swift signatures.
 
 - [Signing profile](F6_SIGNING_PROFILE.md): proposed canonicalization, key/clock/replay and integration behavior; exact API approval pending.
-- [Feasibility plan](F6_FEASIBILITY_PLAN.md): bounded offline Phase A and explicit later native Phase B boundary; no execution approval yet.
+- [Feasibility plan](F6_FEASIBILITY_PLAN.md): bounded offline Phase A and explicit later native Phase B boundary; offline Phase A approved/completed, native Phase B not authorized.
 
 ## Delivery strategy
 
@@ -103,3 +103,8 @@ For every selected feature require deterministic positive/negative/race tests, c
 - [Apple multicast entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.networking.multicast): restricted capability, not automatically provided by the package.
 - [Apple NWParameters](https://developer.apple.com/documentation/network/nwparameters), [QUIC](https://developer.apple.com/documentation/network/nwprotocolquic) and [peer-to-peer option](https://developer.apple.com/documentation/network/nwparameters/includepeertopeer): native candidate APIs, not runtime support proofs.
 - [RFC 9421 HTTP Message Signatures](https://www.rfc-editor.org/rfc/rfc9421.html) and [RFC 9530 Digest Fields](https://www.rfc-editor.org/rfc/rfc9530.html): candidate interoperability references, not selected standards or an implementation claim.
+
+
+## Offline checkpoint
+
+[Phase A results](F6_OFFLINE_RESULTS_2026-11-09.md): four SDK declaration probes and 64 pure Python cases passed. Not native execution, Swift runtime signing, Sendable identity or actual wire/permission proof. Exact APIs, selected scope and later feasibility gates remain pending; #90 is not complete.

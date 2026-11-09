@@ -1,6 +1,6 @@
 # F6 platform and integration assessment
 
-Working proposal, 2026-11-09. Tracking #90 / draft PR #177. Documentation/source inspection only; no compilation probe or runtime execution performed for F6.
+Working proposal, 2026-11-09. Tracking #90 / draft PR #177. Source inspection plus the separately authorized [four SDK type-check probes](F6_OFFLINE_RESULTS_2026-11-09.md). No F6 native runtime execution.
 
 ## Owner decision
 
@@ -8,7 +8,7 @@ On 2026-11-09 the owner approved designing direct TCP/UDP, Bonjour, listeners, Q
 
 ## Evidence levels
 
-Distinguish SDK declarations, documented runtime policy, compilation and executed behavior. The first two were inspected here; the latter two remain pending. The active SDK selected by xcode-select is /Applications/Xcode.app/Contents/Developer. Network.swiftmodule/x86_64-apple-macos.swiftinterface declarations list NWConnection/NWListener at macOS 10.14/iOS 12/tvOS 12, NWBrowser at 10.15/13/13, NWConnectionGroup/NWMulticastGroup at 11/14/14 and QUIC parameter initialization at 12/15/15. These lie below current package floors, but a macOS interface is not a cross-SDK consumer compilation or runtime entitlement proof. Record actual Xcode/SDK version/build and each platform header/compilation result before exact-contract approval; do not infer support solely from these declarations.
+Distinguish SDK declarations, documented runtime policy, compilation and executed behavior. The first two were inspected here; declaration/type-check evidence now exists for selected candidate shapes; native runtime evidence remains pending. The active SDK selected by xcode-select is /Applications/Xcode.app/Contents/Developer. Network.swiftmodule/x86_64-apple-macos.swiftinterface declarations list NWConnection/NWListener at macOS 10.14/iOS 12/tvOS 12, NWBrowser at 10.15/13/13, NWConnectionGroup/NWMulticastGroup at 11/14/14 and QUIC parameter initialization at 12/15/15. These lie below current package floors, but a macOS interface is not a cross-SDK consumer compilation or runtime entitlement proof. Record actual Xcode/SDK version/build and each platform header/compilation result before exact-contract approval; do not infer support solely from these declarations.
 
 | Area | iOS/iPadOS 18+ | macOS 15+ | tvOS 18+ | watchOS 11+ |
 | --- | --- | --- | --- | --- |

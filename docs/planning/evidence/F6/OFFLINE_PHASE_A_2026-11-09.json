@@ -1,0 +1,462 @@
+{
+  "phase": "F6-A",
+  "compiler_limit": 8,
+  "case_limit": 96,
+  "network_attempts": 0,
+  "sources": {
+    "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+    "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+    "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+    "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+    "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+  },
+  "compilers": [
+    {
+      "slot": 1,
+      "sdk": "macosx",
+      "target": "x86_64-apple-macosx15.0",
+      "status": "pass",
+      "exit_code": 0,
+      "seconds": 1.431
+    },
+    {
+      "slot": 2,
+      "sdk": "iphonesimulator",
+      "target": "arm64-apple-ios18.0-simulator",
+      "status": "pass",
+      "exit_code": 0,
+      "seconds": 3.056
+    },
+    {
+      "slot": 3,
+      "sdk": "appletvsimulator",
+      "target": "arm64-apple-tvos18.0-simulator",
+      "status": "pass",
+      "exit_code": 0,
+      "seconds": 2.89
+    },
+    {
+      "slot": 4,
+      "sdk": "watchsimulator",
+      "target": "arm64-apple-watchos11.0-simulator",
+      "status": "pass",
+      "exit_code": 0,
+      "seconds": 2.776
+    }
+  ],
+  "cases": [
+    {
+      "id": "S01",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S02",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S03",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S04",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S05",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S06",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S07",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S08",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S09",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S10",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S11",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S12",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S13",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S14",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S15",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S16",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S17",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S18",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S19",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S20",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S21",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S22",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S23",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "S24",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F01",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F02",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F03",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F04",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F05",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F06",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F07",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F08",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F09",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F10",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F11",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F12",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F13",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F14",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F15",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F16",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F17",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F18",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F19",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F20",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F21",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F22",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F23",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "F24",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P01",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P02",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P03",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P04",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P05",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P06",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P07",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P08",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P09",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P10",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P11",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P12",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P13",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P14",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P15",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "P16",
+      "status": "pass",
+      "exit_code": 0
+    }
+  ],
+  "status": "completed",
+  "date": "2026-11-09",
+  "xcode": "26.3 / 17C529",
+  "swift": "6.2.4",
+  "host": "macOS 15.8.1 Intel",
+  "sdk_versions": {
+    "macosx": "26.2",
+    "iphonesimulator": "26.2",
+    "appletvsimulator": "26.2",
+    "watchsimulator": "26.2"
+  },
+  "remaining": {
+    "compiler_correction_reserve": 4,
+    "case_correction_reserve": 32,
+    "automatic_reruns": false
+  },
+  "scope_status": "Initial batch complete; unused correction reserves do not authorize new scenarios or native execution",
+  "log_sha256": {
+    "appletvsimulator.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "iphonesimulator.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "P09.log": "c11fa1ec5f26d1e159c140be167a064fa61e8afa708ed49b2e71684692266e7e",
+    "P08.log": "a255f113755a9dfc9d186a54bb8f1b7d2ea482d1d9280b8098ed835f0a636492",
+    "F15.log": "670352769e90c536caf0e3e4f825037c48d5f83bae016e867855a13777be02fd",
+    "F01.log": "fed0c1e6b89d1f6dbe28a9dfb79bf6a61fe4cd7d5f54ebb2d0a3de293b0f3042",
+    "F14.log": "d6f1bf2012d45f3cc6187640c4bdfacc0109d98d6f4fc1e64c54c90a0197c6ef",
+    "watchsimulator.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "S19.log": "18b1f135ffbc7d398ab2fe37dd6d007aea0b8c3e82139a807c742e976a11c862",
+    "F02.log": "8b484cf45cc0f8be2d4dc95ef9df94942848e9c409d87945e6468ce65c4149f4",
+    "F16.log": "1b4bc83a35b9f770e2d50ceb3f8553e3dacccbede87e2296848c1b2f8ed9086d",
+    "F17.log": "c41489c30b31ebd9d06ca867f6a35c5032c46840edbf493cacbcae66db9b7b80",
+    "F03.log": "ec7bcf8bd08d53d374172d17454c83edb2972248e58bfa6c97a72dd5e7365228",
+    "S24.log": "a680bd514d4277483d7d0ca96254784f7ac5512eaa44d82dab66db536e4208a9",
+    "S18.log": "3974ef63a3a40ecb9cbb14b900579197f16e4bbe77cbdf8ab0f2a810b56bc42c",
+    "S20.log": "b8af0a5219979409241e7bc48082f944386cc5399e8ad4ed0fafc56a06aaad07",
+    "S08.log": "88052d61dec82a1f2bbd21d72e11305817520be312c2933488b35faa331e0dc2",
+    "F07.log": "b10bf0a1b6d0eecda8dac1313bedb0338e68ab53f63c3aadb28033d2c78db11c",
+    "F13.log": "0362cd6d6cc45f083a3fabc24e107df212fee3b07fc57f5de7633581a2711f31",
+    "F12.log": "d0707e29f668018340ea7b692c2efbdd4c4646393621b43735d2b62ae9a2a52a",
+    "F06.log": "9bc227989086683e4a77cfc08c2c6a7be7f0fc9c8dfaa7b192ebafa3cbfa2804",
+    "S09.log": "be84bdc32b216c492eb772b2790c06fbc2123c7bed904984e39e509ac9e362ac",
+    "S21.log": "4303eb34b253dbfdfa034b2b1091a3a27998e67b7c51bfb0bb63c59b4802f830",
+    "S23.log": "a6d6e4659580a495a8c078843dabbce5ce59e408504b3114ddb853fc4303e12e",
+    "F10.log": "b4f1e677b1056b8ec540066f88edcced2247871df02eaeb92c5bbb0421a91bbd",
+    "F04.log": "9228a21f8c9146e34d1455694a407201c61522e725f93fb269585bfb6bac9c45",
+    "F05.log": "93d635f7f2160f2f75ca1df43c281157aebc93f02e3b427027e15ace2c1171be",
+    "F11.log": "18ae55c50f64075b0c091aab639ed6fe82dfbda2097e80d87437c03509061fc1",
+    "S22.log": "385b20be6759dfb4f37e5acf54c7ccb5bf7363bef946604cd3325f4a34d82c11",
+    "S07.log": "b11d2b4e5670ac5889e13da7fb1c70d9059051302eb9e03411794c63e9e3f9ac",
+    "S13.log": "e5c3dc0c6304609f8cb5819a60c713caaec5a40ea585b778f528efa6f3f697a1",
+    "F08.log": "562786bf5b0e09fceeb3f8c59518a395034fb159bd233b0d3aa4eec68b3f5c75",
+    "F20.log": "7b52b908545c3ce0a2aa9ac5b2ae96c337d72cd7ad206c17ae124677cd2468e0",
+    "F21.log": "eb0f32a7f7c2248d751b2195b19bdec0ff259475a651e470b0442f2d4c948fc5",
+    "F09.log": "f54ca5b9a1013232100772d4d0753c7f12f759c848828eaf66c4093a2b39e8c4",
+    "S12.log": "65c08f01dc353dcade1983b0e8a61b51c6f46d68957d9e2dfd9d564676a7a97c",
+    "S06.log": "5ecbdbbf7c73ac0e8a602590d26931106d3bfd4fadd15d9422c243b9c6fbe3bd",
+    "S10.log": "a0546fad92755538241aad6e6815599706fbdf1fe0ff2e4ca08b5f6126fdccb9",
+    "S04.log": "032d768370777177f1e4e6b49791806df160c8557ace89c191b311183a359bd8",
+    "F23.log": "2703445970d7cefc27e99b8e1d1e8fa7e4e88df126ddd68626bf72647cd2abb8",
+    "F22.log": "e1d7dcf2a49d4164a2243a4e2b0f961a21740ebc049746c37767d5b37ddfd245",
+    "S05.log": "4238c8e1610a0be4bbc5562a87ec8738872224901d41a74281dcc7e838c46a02",
+    "S11.log": "652a6fca2dc280cdadc9e9a5d5952014c3c60f267d1c90bfb70a73364732fb1b",
+    "S15.log": "e89565e515c64adb614193525ba945c75ed2f0534b46f4385a97a2c8ac94d7e8",
+    "S01.log": "a4a519b009ffba561f4453c1f8e48c22b283f8788e1ec88bc1d1a1f95d637bfc",
+    "S14.log": "49e0ada9bfc9f7c3cd8cec9819583c6dd6fcda896770c450fed96c2c01b43a0e",
+    "S02.log": "0591d6e7da5102ab911ba8398ea1d1e1b145f1b5ee67b0cfa4acfa8af0df6895",
+    "S16.log": "fee694b28b0d75e45eb5cbe53d48829a79bf43432f913abb46affa1572d70900",
+    "F19.log": "b89e12a235e1d8b60a8bad9fc9d7e924227fd413dbb331f5ce0b1447d4f6ad62",
+    "F18.log": "c7b41b5af26cf57cf9193e4a71a58a139b9c9a5b9ccc3851d14e7a607defc4d6",
+    "F24.log": "1c6e669eb5d919242ef5dc9d2d2e9a86c8fb15054a6781d88ce600a378294e4e",
+    "S17.log": "1bbed4ffbbd8fa66d55c6fa65c89dbdf5580a570104c0690c0db1980156a4028",
+    "S03.log": "8795e702678d2dfeb6a605564ea858a613df873c733450445cedbe21c42de019",
+    "P12.log": "cb00bf312f0b6d63dc1f311cf6e9274c5889ca061702e0a5d308797c8877f6bd",
+    "P06.log": "998cbb9d3ffcd03950b41502ca7aa8bd2546549fa71b59d8fb416c212b4f521c",
+    "P07.log": "c2bf3fcb3d55f401ac2a9720023b2fd9fb9583346bec6fe240e1975cd1e68602",
+    "P13.log": "b1560325878564db1c0a237e7e5a81cc8d0d00ed40743ef3ab7b3ad9a45a1481",
+    "P05.log": "be25f8c41230b16a2b3b2d68e38fa9f9bde140a7e851282439411132904db9c6",
+    "P11.log": "9d7353bb2918c96f4b80776c7f2dc4318f3e2e9e1b807ab7dd9f2919c7292bdd",
+    "P10.log": "8eba9f49654c5029c766f240df5083c3ea895bfde56e627b2483a45c30ff8519",
+    "P04.log": "8b9d9e7adc88500b6f43954c6383eccb782951e79559aa257d291d23910d8d61",
+    "macosx.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "P14.log": "b6e9f33f15fe231f239127a20b06a530c14ee7f68495f161f6ee92806e349cba",
+    "P15.log": "abfa60132196b9751b92ae898551d143efbd65e4c8b06cd7034c750e3f209125",
+    "P01.log": "1cf898f3b022997c84c7de62a213de32d97822163453f681e05165a1d56d6df0",
+    "P03.log": "a7488e4e2ca84e88d1c599d6af2065ca8b713be40c9f78f1ff293d709a6552bd",
+    "P02.log": "6888a4f8cea352c6a5d29cf516d7deea94502ef98d3f287907264f218dd79dce",
+    "P16.log": "f624997acf3e0597300ae5edd658585ff961c27f53764dac81f7286b6e4f7b3d"
+  },
+  "limitations": [
+    "Python-only offline models; Swift declaration type checking only",
+    "No native runtime, system trust, client certificate, Keychain, permission, wire target or radio-route evidence",
+    "No complete Swift public API, Sendable identity wrapper or actor race acceptance",
+    "Sequential replay check only; production atomic replay storage not established"
+  ]
+}

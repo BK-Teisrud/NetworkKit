@@ -1,6 +1,6 @@
 # F6 bounded feasibility proposal
 
-Working plan, 2026-11-09. Tracking #90 / PR #177. No experimental code or execution is authorized yet. Keep all authorized feasibility additions and resulting design revisions in the same planning PR. This is not production code start.
+Working plan, 2026-11-09. Tracking #90 / PR #177. The owner authorized only the bounded offline Phase A on 2026-11-09. The initial four compiler/64-case batch completed; [results](F6_OFFLINE_RESULTS_2026-11-09.md) and its ledger preserve the outcome. No Phase B or production code is authorized. Keep all authorized feasibility additions and resulting design revisions in the same planning PR. This is not production code start.
 
 ## Phase A: offline capability and contract probes
 
