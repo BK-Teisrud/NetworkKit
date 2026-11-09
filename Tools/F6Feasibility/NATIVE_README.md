@@ -11,3 +11,8 @@ Only run_native_batch.py owns scope admission, child processes and spent-ID ledg
 The synthetic CA and six leaves were generated only under the private fixture root, in-memory Security identity creation was exercised and owned fixture material was removed. No user Keychain operation, installed anchor, signing identity, entitlement, device installation, production source or dependency was used. Private logs and public leaf observations are not a release approval.
 
 Future authorized corrections must retain the current immutable ledger and hashes. Do not reset budgets, alter native error acceptance without matching independent fixture proof, or turn loopback test anchors/HTTP signing into a shipping policy. Python fixtures reconstruct wire requests and check signatures independently; ordinary Swift/Python standard cryptographic libraries remain the primitives. Current experiment does not validate production ATS integration, general RFC conformance, real-server credentials, load, all native races or physical/platform routes.
+
+
+## Prepared #178 correction
+
+Later source edits add ChallengeGate and the separate run_tls_correction.py controller. They are uncompiled/unexecuted candidates under [the proposed correction scope](../../docs/planning/F6_TLS_CORRECTION_SCOPE.md). The original ledger/hashes/outcomes above remain historical input evidence, not verification of these later edits. No new execution authority is inferred.

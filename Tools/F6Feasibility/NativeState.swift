@@ -46,3 +46,67 @@ func bounded<Value: Sendable>(_ seconds: Double, cancel: @escaping @Sendable () 
         return try await group.next()!
     }
 }
+
+/// Experiment-only terminal admission gate. Handlers are always invoked outside the lock.
+/// Admission linearizes under the lock; an already admitted reply can physically return later.
+final class ChallengeGate: Sendable {
+    typealias Completion = @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void
+    struct Snapshot: Sendable {
+        let closed: Bool
+        let registered: Int
+        let completed: Int
+        let admittedCredentials: Int
+        let rejected: Int
+        let suppressedLateResults: Int
+        let pending: Int
+    }
+    private struct State: Sendable {
+        var closed = false
+        var next = 0
+        var handlers: [Int: Completion] = [:]
+        var completed = 0
+        var admittedCredentials = 0
+        var rejected = 0
+        var suppressed = 0
+    }
+    private let lock = OSAllocatedUnfairLock(initialState: State())
+    func register(_ completion: @escaping Completion) -> Int? {
+        let token = lock.withLock { state -> Int? in
+            state.next += 1
+            guard !state.closed else { state.completed += 1; state.rejected += 1; return nil }
+            state.handlers[state.next] = completion
+            return state.next
+        }
+        if token == nil { completion(.cancelAuthenticationChallenge, nil) }
+        return token
+    }
+    func complete(_ token: Int, credential: URLCredential?) {
+        let reply = lock.withLock { state -> (Completion, URLCredential?)? in
+            guard let callback = state.handlers.removeValue(forKey: token) else {
+                state.suppressed += 1; return nil
+            }
+            let admitted = state.closed ? nil : credential
+            state.completed += 1
+            if admitted != nil { state.admittedCredentials += 1 } else { state.rejected += 1 }
+            return (callback, admitted)
+        }
+        if let (callback, credential) = reply {
+            callback(credential == nil ? .cancelAuthenticationChallenge : .useCredential, credential)
+        }
+    }
+    func close() {
+        let replies = lock.withLock { state -> [Completion] in
+            guard !state.closed else { return [] }
+            state.closed = true
+            let callbacks = Array(state.handlers.values); state.handlers.removeAll()
+            state.completed += callbacks.count; state.rejected += callbacks.count
+            return callbacks
+        }
+        for callback in replies { callback(.cancelAuthenticationChallenge, nil) }
+    }
+    var snapshot: Snapshot {
+        lock.withLock { Snapshot(closed: $0.closed, registered: $0.next, completed: $0.completed,
+            admittedCredentials: $0.admittedCredentials, rejected: $0.rejected,
+            suppressedLateResults: $0.suppressed, pending: $0.handlers.count) }
+    }
+}

@@ -1,6 +1,7 @@
 import Foundation
 import Security
 import CryptoKit
+import os
 
 func expectRejection(_ operation: () throws -> Void) throws {
     do { try operation() } catch { return }
@@ -84,6 +85,57 @@ func pure(_ id: String, fixture: URL?) async throws -> [String: Any] {
     default: throw ProbeFailure.failed("unknown")
     }
     return extra
+}
+func gateCase(_ id: String) async throws -> [String: Any] {
+    guard let n = Int(id.dropFirst()), (1...8).contains(n) else { throw ProbeFailure.failed("gate-case") }
+    let gate = ChallengeGate()
+    let callbacks = OSAllocatedUnfairLock(initialState: (count: 0, used: 0))
+    let handler: ChallengeGate.Completion = { disposition, _ in
+        callbacks.withLock { state in state.count += 1; if disposition == .useCredential { state.used += 1 } }
+        _ = gate.snapshot // Reentrant read proves handlers must run outside the gate lock.
+    }
+    // Synthetic carrier only, never delivered to a native challenge in these pure cases.
+    let carrier = URLCredential(user: "synthetic", password: "synthetic", persistence: .none)
+    switch n {
+    case 1:
+        let token = gate.register(handler)!
+        gate.complete(token, credential: carrier); gate.complete(token, credential: carrier)
+        try require(callbacks.withLock { $0.count == 1 && $0.used == 1 }, "one-active-completion")
+    case 2:
+        gate.close(); try require(gate.register(handler) == nil, "closed-admission")
+        try require(callbacks.withLock { $0.count == 1 && $0.used == 0 }, "closed-reply")
+    case 3:
+        let token = gate.register(handler)!; gate.close(); gate.complete(token, credential: carrier)
+        try require(callbacks.withLock { $0.count == 1 && $0.used == 0 }, "late-use-denied")
+    case 4:
+        let first = gate.register(handler)!; let second = gate.register(handler)!
+        gate.close(); gate.complete(first, credential: carrier); gate.complete(second, credential: carrier)
+        try require(callbacks.withLock { $0.count == 2 && $0.used == 0 }, "drain-two")
+    case 5:
+        let token = gate.register(handler)!; gate.complete(token, credential: carrier); gate.close()
+        try require(callbacks.withLock { $0.count == 1 && $0.used == 1 }, "already-admitted")
+    case 6:
+        let token = gate.register(handler)!
+        async let a: Void = { gate.complete(token, credential: carrier) }()
+        async let b: Void = { gate.complete(token, credential: carrier) }()
+        _ = await (a,b)
+        try require(callbacks.withLock { $0.count == 1 }, "concurrent-completions")
+    case 7:
+        let token = gate.register(handler)!
+        async let a: Void = { gate.complete(token, credential: carrier) }()
+        async let b: Void = { gate.close() }()
+        _ = await (a,b)
+        try require(callbacks.withLock { $0.count == 1 }, "close-completion-race")
+        try require(gate.snapshot.closed && gate.snapshot.pending == 0, "closed-empty")
+    case 8:
+        return ["oracleNativeDomain":NSURLErrorDomain,"oracleNativeCode":-1004,"oracleFixtureExpiryProof":false]
+    default: throw ProbeFailure.failed("gate-case")
+    }
+    let snapshot = gate.snapshot
+    try require(snapshot.completed == snapshot.registered && snapshot.pending == 0, "challenge-accounting")
+    return ["registered":snapshot.registered,"completed":snapshot.completed,
+            "admittedCredentials":snapshot.admittedCredentials,"suppressedLateResults":snapshot.suppressedLateResults,
+            "callbackCount":callbacks.withLock { $0.count }]
 }
 func local(_ id: String, port: UInt16, fixture: URL) async throws -> [String: Any] {
     let n = Int(id.dropFirst()) ?? 0
@@ -203,7 +255,7 @@ func local(_ id: String, port: UInt16, fixture: URL) async throws -> [String: An
     let mustReject = prefix == "L" && [2,4,5,6,8].contains(n) || prefix == "I" && [2,4].contains(n)
     do {
         let result = try await probe.request(request,minimumTLS: prefix == "L" && n == 7 ? .TLSv12 : nil,
-                                             cancelAfter: prefix == "L" && [6,8].contains(n) ? 0.05 : nil)
+                                             cancelOnTrust: prefix == "L" && n == 6, shutdownOnTrust: prefix == "L" && n == 8)
         try require(!mustReject, "unexpected-tls-success")
         try require(result.status == (prefix == "I" && n == 3 ? 403 : 200), "tls-status")
         return ["status":result.status,"trustAccepted":result.trustAccepted,"challenges":result.challenges,"tlsVersion":result.tlsVersion]
@@ -216,7 +268,22 @@ func local(_ id: String, port: UInt16, fixture: URL) async throws -> [String: An
         let allowed: Set<Int> = prefix == "L" && [6,8].contains(n) ? [-999] : [-1200,-1201,-1202,-1203,-1204,-1205,-1206]
         let expiredWithServerProof = prefix == "I" && n == 4 && [-999,-1004,-1200,-1205,-1206].contains(native.code)
         try require(native.domain == NSURLErrorDomain && (allowed.contains(native.code) || cancelFromPolicy || expiredWithServerProof), "unexpected-native-rejection:\(native.code):\(policy)")
-        return ["nativeRejected":true,"domain":native.domain,"code":native.code,"policyOutcome":policy,"challenges":probe.state.withLock { $0.challenges },"trustCallbacksCompleted":probe.state.withLock { $0.completedTrustCallbacks },"needsFixtureProof": prefix == "I" && [2,3,4].contains(n)]
+        var observation: [String: Any] = ["nativeRejected":true,"domain":native.domain,"code":native.code,"policyOutcome":policy,"challenges":probe.state.withLock { $0.challenges },"trustCallbacksCompleted":probe.state.withLock { $0.completedTrustCallbacks },"needsFixtureProof": prefix == "I" && [2,3,4].contains(n)]
+        if prefix == "L" && [6,8].contains(n) {
+            _ = try await bounded(2, cancel: { probe.trustWorkFinished.resolve(.failure(ProbeFailure.timeout)) }) {
+                try await probe.trustWorkFinished.value()
+            }
+            let gate = probe.challengeGate.snapshot
+            try require(gate.registered > 0 && gate.completed == gate.registered && gate.pending == 0 && gate.admittedCredentials == 0 && gate.suppressedLateResults > 0, "late-trust-gate")
+            try require(probe.result.resolutionCount == 1, "terminal-result-once")
+            observation["registeredChallenges"] = gate.registered
+            observation["completedChallenges"] = gate.completed
+            observation["admittedCredentials"] = gate.admittedCredentials
+            observation["suppressedLateResults"] = gate.suppressedLateResults
+            observation["pendingChallenges"] = gate.pending
+            observation["resultResolutions"] = probe.result.resolutionCount
+        }
+        return observation
     }
 }
 @main struct NativeMain {
@@ -227,7 +294,7 @@ func local(_ id: String, port: UInt16, fixture: URL) async throws -> [String: An
             let mode = args[1], id = args[2]
             let fixture = ProcessInfo.processInfo.environment["F6_FIXTURE"].map { URL(fileURLWithPath:$0) }
             var report: [String:Any]
-            if mode == "--pure" { report = try await pure(id,fixture:fixture) }
+            if mode == "--pure" { report = id.hasPrefix("G") ? try await gateCase(id) : try await pure(id,fixture:fixture) }
             else if mode == "--local", let fixture, args.count == 4, let port = UInt16(args[3]), ["H","T","D","L","I"].contains(String(id.prefix(1))), (1...8).contains(Int(id.dropFirst()) ?? 0) {
                 report = try await local(id,port:port,fixture:fixture)
             } else if mode == "--public", ["E01","E02","E03","E04"].contains(id) {

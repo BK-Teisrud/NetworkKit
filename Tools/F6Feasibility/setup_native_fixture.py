@@ -4,7 +4,10 @@ from pathlib import Path
 import hashlib,json,os,subprocess
 
 NAMES=['server-current','server-backup','server-wrong-host','client-valid','client-wrong','client-expired']
-def setup(root):
+def setup(root, names=None):
+    names=NAMES if names is None else names
+    if not names or len(names)!=len(set(names)) or any(n not in NAMES for n in names):
+        raise RuntimeError('Explicit approved fixture subset required')
     if root.exists(): raise RuntimeError('Refuse existing fixture directory / regeneration')
     root.mkdir(mode=0o700);(root/'newcerts').mkdir(mode=0o700)
     os.umask(0o077)
@@ -48,7 +51,7 @@ extendedKeyUsage=clientAuth
     now=datetime.now(timezone.utc)
     timestamp=lambda dt:dt.strftime('%Y%m%d%H%M%SZ')
     validity={}
-    for name in NAMES:
+    for name in names:
         subject='localhost' if name in ['server-current','server-backup'] else 'wrong.invalid' if name=='server-wrong-host' else 'NetworkKit F6 '+name
         run('req','-new','-newkey','rsa:2048','-noenc','-sha256','-subj','/CN='+subject,'-keyout',name+'.key.pem','-out',name+'.csr.pem')
         start=now-timedelta(days=3 if name=='client-expired' else 1)
@@ -61,4 +64,4 @@ extendedKeyUsage=clientAuth
     run('x509','-in','ca.cert.pem','-outform','DER','-out','ca.cert.der')
     for p in root.rglob('*'):
         if p.is_file():p.chmod(0o600)
-    return {'pair_count':7,'validity':validity,'certificate_hashes':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in root.glob('*.cert.der')},'commands':commands}
+    return {'pair_count':len(names)+1,'validity':validity,'certificate_hashes':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in root.glob('*.cert.der')},'commands':commands}

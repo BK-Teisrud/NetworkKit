@@ -17,6 +17,8 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Native execution manifest](F6_NATIVE_EXECUTION_MANIFEST.md): reviewable proposed code/runtime/key/certificate scope with exact inputs and cleanup; authorized bounded experiment completed, with retained gaps; no further permission implied.
 
+- [Prepared TLS correction scope](F6_TLS_CORRECTION_SCOPE.md): #178 patch, eight pure cases, five local controls and a proposed separate execution envelope; not yet compiled/run.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.

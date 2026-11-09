@@ -22,6 +22,9 @@ final class HTTPProbe: NSObject, URLSessionDataDelegate, URLSessionTaskDelegate,
     }
     let state = OSAllocatedUnfairLock(initialState: State())
     let result = Once<HTTPObservation>()
+    let challengeGate = ChallengeGate()
+    let trustEntered = Once<Bool>()
+    let trustWorkFinished = Once<Bool>()
     let anchor: Data?
     let requiredPins: Set<Data>?
     let credential: URLCredential?
@@ -34,19 +37,26 @@ final class HTTPProbe: NSObject, URLSessionDataDelegate, URLSessionTaskDelegate,
     }
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge,
                     completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        guard let token = challengeGate.register(completionHandler) else { return }
         let space = challenge.protectionSpace
         state.withLock { $0.challenges += 1 }
         if space.authenticationMethod == NSURLAuthenticationMethodClientCertificate {
             guard challenge.previousFailureCount == 0, let credential else {
                 state.withLock { $0.policyOutcome = self.credential == nil ? "identity-absent" : "identity-repeat" }
-                completionHandler(.cancelAuthenticationChallenge, nil); return
+                challengeGate.complete(token, credential: nil); return
             }
-            completionHandler(.useCredential, credential); return
+            challengeGate.complete(token, credential: credential); return
         }
         guard space.authenticationMethod == NSURLAuthenticationMethodServerTrust, let trust = space.serverTrust else {
-            completionHandler(.cancelAuthenticationChallenge, nil); return
+            challengeGate.complete(token, credential: nil); return
         }
+        defer { trustWorkFinished.resolve(.success(true)) }
+        trustEntered.resolve(.success(true))
         if delayTrust { Thread.sleep(forTimeInterval: 0.25) }
+        if challengeGate.snapshot.closed {
+            challengeGate.complete(token, credential: nil)
+            return
+        }
         if let chain = SecTrustCopyCertificateChain(trust) as? [SecCertificate], let leaf = chain.first {
             state.withLock { $0.leaf = SecCertificateCopyData(leaf) as Data }
         }
@@ -59,8 +69,7 @@ final class HTTPProbe: NSObject, URLSessionDataDelegate, URLSessionTaskDelegate,
         let leaf = state.withLock { $0.leaf }
         let matches = requiredPins.map { pins in leaf.map { pins.contains(Data(SHA256.hash(data: $0))) } ?? false } ?? true
         state.withLock { $0.trusted = valid; $0.policyOutcome = !valid ? "trust-rejected" : !matches ? "pin-rejected" : "accepted"; $0.completedTrustCallbacks += 1 }
-        completionHandler(valid && matches ? .useCredential : .cancelAuthenticationChallenge,
-                          valid && matches ? URLCredential(trust: trust) : nil)
+        challengeGate.complete(token, credential: valid && matches ? URLCredential(trust: trust) : nil)
     }
     func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge,
                     completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
@@ -80,29 +89,48 @@ final class HTTPProbe: NSObject, URLSessionDataDelegate, URLSessionTaskDelegate,
             guard s.body.count + data.count <= bodyLimit else { return true }
             s.body.append(data); return false
         }
-        if exceeded { dataTask.cancel() }
+        if exceeded { challengeGate.close(); dataTask.cancel() }
     }
     func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
         state.withLock { $0.protocolName = metrics.transactionMetrics.last?.negotiatedTLSProtocolVersion.map { String(describing: $0) } ?? "none" }
     }
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: (any Error)?) {
+        challengeGate.close()
         if let error { result.resolve(.failure(error)); return }
         let value = state.withLock { HTTPObservation(status: $0.status, bytes: $0.body, leaf: $0.leaf,
             trustAccepted: $0.trusted, challenges: $0.challenges, taskStarts: $0.starts, tlsVersion: $0.protocolName) }
         result.resolve(.success(value))
     }
-    func request(_ request: URLRequest, minimumTLS: tls_protocol_version_t? = nil, cancelAfter: Double? = nil) async throws -> HTTPObservation {
+    func request(_ request: URLRequest, minimumTLS: tls_protocol_version_t? = nil, cancelAfter: Double? = nil,
+                 cancelOnTrust: Bool = false, shutdownOnTrust: Bool = false) async throws -> HTTPObservation {
+        try Task.checkCancellation()
         let config = URLSessionConfiguration.ephemeral
         config.httpCookieStorage = nil; config.urlCredentialStorage = nil; config.urlCache = nil
         config.httpShouldSetCookies = false; config.timeoutIntervalForRequest = 10; config.timeoutIntervalForResource = 15
         if let minimumTLS { config.tlsMinimumSupportedProtocolVersion = minimumTLS }
         let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
-        defer { session.invalidateAndCancel() }
+        defer {
+            challengeGate.close(); trustEntered.resolve(.failure(CancellationError()))
+            session.invalidateAndCancel()
+        }
         let task = session.dataTask(with: request)
         state.withLock { $0.starts += 1 }; task.resume()
-        let cancellation = cancelAfter.map { seconds in Task { try await Task.sleep(for: .seconds(seconds)); task.cancel() } }
+        let cancellation: Task<Void, any Error>?
+        if cancelOnTrust || shutdownOnTrust {
+            cancellation = Task {
+                _ = try await self.trustEntered.value()
+                self.challengeGate.close()
+                if shutdownOnTrust { session.invalidateAndCancel() } else { task.cancel() }
+            }
+        } else if let seconds = cancelAfter {
+            cancellation = Task {
+                try await Task.sleep(for: .seconds(seconds)); self.challengeGate.close(); task.cancel()
+            }
+        } else { cancellation = nil }
         defer { cancellation?.cancel() }
-        return try await withTaskCancellationHandler { try await result.value() } onCancel: { task.cancel() }
+        return try await withTaskCancellationHandler { try await result.value() } onCancel: {
+            self.challengeGate.close(); task.cancel()
+        }
     }
 }
 
