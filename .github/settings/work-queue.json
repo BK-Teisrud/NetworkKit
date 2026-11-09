@@ -928,7 +928,7 @@
       "blocked_by": [],
       "parent": 90,
       "code_start_authorized": false,
-      "execution_gate": "Separate new non-shipping code/runtime/material scope pending owner decision; no dependency on an extra #178 PR"
+      "execution_gate": "Previous isolated scopes closed; owner-approved startup design direction only. Further experiment code/runtime/material requires a concrete separate decision; no extra PR dependency."
     }
   ],
   "authorization_adr": "docs/decisions/ADR-0012-implementation-start.md",
@@ -1067,7 +1067,7 @@
         "Q06",
         "Q07"
       ],
-      "next_priority": "Adapter/design review of empty-message delivery and terminal handshake propagation; no automatic reruns, no waived criteria.",
+      "next_priority": "Prepare verified one-result startup/trust/ALPN admission and identify supported empty-datagram route; no further execution or waived requirements.",
       "completion": {
         "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
         "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
@@ -1098,7 +1098,13 @@
         ]
       },
       "adapter_review": "docs/planning/F6_QUIC_ADAPTER_REVIEW.md",
-      "pending_decision": "Logical startup/trust/ALPN error and admission contract; owner acceptance pending. Empty/mixed requirements not waived."
+      "startup_direction": {
+        "approved_basis": "084525a0638e659be9c355318720ebea58d62a4d",
+        "owner_decision": "Approve design direction; no new code",
+        "design": "docs/planning/F6_QUIC_STARTUP_DESIGN.md",
+        "code_authorized": false,
+        "execution_authorized": false
+      }
     }
   }
 }

@@ -47,3 +47,5 @@ Resolve interface binding feasibility, active-connection lease release without r
 ## Current QUIC feasibility boundary
 
 The [completion investigation](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md) verifies both stream directions and eight positive controls on one Mac source version. Empty datagram delivery and terminal handshake-error propagation remain unproved; complete mixed mode is blocked. Do not finalize a QUIC public contract that promises these behaviors from current prototype evidence. Keep the original requirements visible and review the adapter before proposing further execution or owner scope changes.
+
+The owner subsequently approved the [logical startup/error direction](F6_QUIC_ADAPTER_REVIEW.md), explicitly no new code or execution. [Coordinator design](F6_QUIC_STARTUP_DESIGN.md) defines the next verification preparation; it does not retrospectively pass Q06/Q07 or resolve Q04/Q05.

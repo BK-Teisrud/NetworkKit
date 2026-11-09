@@ -1,6 +1,10 @@
 # F6 QUIC adapter and error-contract review
 
-Prepared 2026-11-09 for #179/#90, same draft PR #177. Read-only source/documentation assessment following the closed [completion investigation](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md). No new experiment code, compiler, transport, fixture material, dependency or OS change. This document proposes an owner decision, not a waiver or runtime authority.
+Prepared 2026-11-09 for #179/#90, same draft PR #177. Read-only source/documentation assessment following the closed [completion investigation](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md). No new experiment code, compiler, transport, fixture material, dependency or OS change. The owner approved the contract direction below, explicitly with no new code or execution. This is not a waiver or runtime authority.
+
+## Decision record
+
+Owner response: “Godkjenn designretningen; ingen ny kode”. Approved basis: 084525a0638e659be9c355318720ebea58d62a4d. Only the planning/error/admission direction is adopted. Historical probes remain failed; empty datagrams and mixed mode remain unresolved. No code, compiler, network, fixture or production authorization follows.
 
 ## Finding 1: empty datagrams remain a delivery gap
 
@@ -18,7 +22,7 @@ Apple documents group states and NWError categories but the sources reviewed do 
 
 A production adapter must have its own one-result startup ownership and deadline. An absent native callback cannot leave an SDK connect call pending indefinitely. Conversely, a generic native POSIX failure cannot be diagnosed as a certificate or ALPN error merely to satisfy a test.
 
-## Recommended contract direction — owner approval pending
+## Owner-approved contract direction
 
 1. Startup owns one monotonic budget covering setup/trust and native establishment. It returns at most one connection or one error. Cancellation and close seal admission; late callbacks cannot publish a connection or revive a completed call.
 2. A real rejection made by the adapter's own trust-verification callback may complete logical startup with a redacted trustRejected error and cancel the native group. No waiting for a specific native TLS code is required to report the decision the adapter actually made. This is not proof that all OS work has drained.
@@ -27,7 +31,7 @@ A production adapter must have its own one-result startup ownership and deadline
 5. Negative acceptance requires the intended controlled input, a matching valid positive control, no connection/data admission, exactly one bounded logical outcome and clean logical shutdown. The trust case additionally requires the actual rejection witness. A timeout by itself or an unrelated network failure without controls is insufficient evidence that the security input was exercised. A native TLS-domain code is additional diagnostic evidence, not a universal prerequisite.
 6. Preserve the original Q06/Q07 failed probes as history. New logical-startup tests have separately named expectations and require their own reviewed implementation/execution scope; never rewrite the old ledger to passed. Deterministic tests must prove late-result suppression and ALPN/trust admission races, alongside native controlled negatives.
 
-This changes the proposed acceptance/error boundary and therefore needs explicit owner agreement before adoption. It does not implement or automatically satisfy #179, relax system trust, accept a mismatching ALPN, authorize production code or resolve empty datagrams. Exact public error types and method signatures remain part of #90's later complete-contract decision.
+The owner explicitly approved this planning change after reviewing commit 084525a. It does not implement or automatically satisfy #179, relax system trust, accept a mismatching ALPN, authorize production code or resolve empty datagrams. Exact public error types and method signatures remain part of #90's later complete-contract decision.
 
 ## Finding 3: the newer Swift QUIC API is an alternative to assess, not an automatic fix
 
@@ -37,9 +41,9 @@ Do not raise all package floors, upgrade the Mac or introduce two production QUI
 
 ## Priority and delivery consequences
 
-Keep #179 Open/Blocked for native empty-datagram/mixed proof and the pending error-contract decision. Avoid another near-identical budget/approval cycle without a changed mechanism. No new issue, milestone, module or PR is justified by this review. #90 may continue independent security integration, platform, Bonjour/multicast/P2P planning while these specific QUIC gates remain visible. The one-plan/one-delivery-PR target remains.
+Keep #179 Open/Blocked for native empty-datagram/mixed proof and verification of the approved error-contract direction. Avoid another near-identical budget/approval cycle without a changed mechanism. No new issue, milestone, module or PR is justified by this review. #90 may continue independent security integration, platform, Bonjour/multicast/P2P planning while these specific QUIC gates remain visible. The one-plan/one-delivery-PR target remains.
 
-If the owner accepts the recommended error direction, record that planning decision and prepare a small, explicit logical-startup design/test scope. Empty-message support stays unresolved unless a separately supported route is demonstrated or the owner explicitly chooses a scope disposition. No deferral is inferred. #13/#18 and publication barriers #29/#132 remain open.
+The owner accepted the error direction; the [logical startup design and verification plan](F6_QUIC_STARTUP_DESIGN.md) records the next preparation step. Empty-message support stays unresolved unless a separately supported route is demonstrated or the owner explicitly chooses a scope disposition. No deferral is inferred. #13/#18 and publication barriers #29/#132 remain open.
 
 ## Primary references and local evidence
 

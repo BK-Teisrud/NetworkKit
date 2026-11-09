@@ -27,7 +27,9 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [QUIC completion investigation proposal](F6_QUIC_COMPLETION_SCOPE.md): subsequently authorized and completed: [results](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md) show eight final-source positive controls, unresolved empty datagram/negative-handshake/mixed-mode gates; stop/redesign before another execution decision.
 
-- [QUIC adapter review](F6_QUIC_ADAPTER_REVIEW.md): preserve empty-message/mixed requirements; propose explicit logical-startup error/admission semantics, pending owner decision. New OS-26 API is not adopted or verified.
+- [QUIC adapter review](F6_QUIC_ADAPTER_REVIEW.md): preserve empty-message/mixed requirements; owner approved explicit logical-startup error/admission direction, explicitly no new code/execution. New OS-26 API is not adopted or verified.
+
+- [Logical startup design](F6_QUIC_STARTUP_DESIGN.md): one-result ownership, trust/ALPN admission, late-handler lifecycle and future verification inputs; executable scope still unapproved.
 
 ## Delivery strategy
 
