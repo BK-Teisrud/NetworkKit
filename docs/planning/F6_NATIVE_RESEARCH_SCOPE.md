@@ -1,6 +1,6 @@
 # F6 consolidated native research execution proposal
 
-Proposed only, 2026-11-09. Tracking #179, parent #90, same draft PR #177. This is a new non-shipping experiment, not covered by earlier Mac/#178 execution quotas or a production-code decision. The [contract refinement](F6_DISCOVERY_QUIC_CONTRACT.md) provides hypotheses, not approved production semantics. No code/build/test/network/key generation for this scope has started.
+Proposed only, 2026-11-09. Tracking #179, parent #90, same draft PR #177. This is a new non-shipping experiment, not covered by earlier Mac/#178 execution quotas or a production-code decision. The [contract refinement](F6_DISCOVERY_QUIC_CONTRACT.md) provides hypotheses, not approved production semantics. The owner subsequently authorized this exact scope. Execution is now closed with mixed results; see [results and consumed budget](F6_NATIVE_RESEARCH_RESULTS_2026-11-09.md). The original proposal below is retained as the authorization baseline.
 
 ## Purpose and boundaries
 

@@ -1,0 +1,1745 @@
+{
+  "scope_commit": "c70a780a3cf4ce76eefd07fd540fb64787489dad",
+  "compiler": [
+    {
+      "slot": 1,
+      "kind": "macosx",
+      "target": "x86_64-apple-macosx15.0",
+      "reason": null,
+      "sources": {
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "67e7ca6a7c5f04aa63bf883a5f2d2f7d87261a742ca989fd8b5b6d3e3594469b",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/ProbeMain.swift": "817fe09a4d16a9cbeb475386d00496043166d173e10a289b451f33983987df71"
+      },
+      "status": "pass",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-typecheck",
+        "<tool>/NativeResearch/CapabilityProbe.swift"
+      ],
+      "exit_code": 0
+    },
+    {
+      "slot": 2,
+      "kind": "iphonesimulator",
+      "target": "arm64-apple-ios18.0-simulator",
+      "reason": null,
+      "sources": {
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "67e7ca6a7c5f04aa63bf883a5f2d2f7d87261a742ca989fd8b5b6d3e3594469b",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/ProbeMain.swift": "817fe09a4d16a9cbeb475386d00496043166d173e10a289b451f33983987df71"
+      },
+      "status": "pass",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk",
+        "-target",
+        "arm64-apple-ios18.0-simulator",
+        "-typecheck",
+        "<tool>/NativeResearch/CapabilityProbe.swift"
+      ],
+      "exit_code": 0
+    },
+    {
+      "slot": 3,
+      "kind": "appletvsimulator",
+      "target": "arm64-apple-tvos18.0-simulator",
+      "reason": null,
+      "sources": {
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "67e7ca6a7c5f04aa63bf883a5f2d2f7d87261a742ca989fd8b5b6d3e3594469b",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/ProbeMain.swift": "817fe09a4d16a9cbeb475386d00496043166d173e10a289b451f33983987df71"
+      },
+      "status": "pass",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVSimulator.platform/Developer/SDKs/AppleTVSimulator26.2.sdk",
+        "-target",
+        "arm64-apple-tvos18.0-simulator",
+        "-typecheck",
+        "<tool>/NativeResearch/CapabilityProbe.swift"
+      ],
+      "exit_code": 0
+    },
+    {
+      "slot": 4,
+      "kind": "watchsimulator",
+      "target": "arm64-apple-watchos11.0-simulator",
+      "reason": null,
+      "sources": {
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "67e7ca6a7c5f04aa63bf883a5f2d2f7d87261a742ca989fd8b5b6d3e3594469b",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/ProbeMain.swift": "817fe09a4d16a9cbeb475386d00496043166d173e10a289b451f33983987df71"
+      },
+      "status": "pass",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/WatchSimulator.platform/Developer/SDKs/WatchSimulator26.2.sdk",
+        "-target",
+        "arm64-apple-watchos11.0-simulator",
+        "-typecheck",
+        "<tool>/NativeResearch/CapabilityProbe.swift"
+      ],
+      "exit_code": 0
+    },
+    {
+      "slot": 5,
+      "kind": "executable",
+      "target": "x86_64-apple-macosx15.0",
+      "reason": null,
+      "sources": {
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/ListenerPeer.swift": "67e7ca6a7c5f04aa63bf883a5f2d2f7d87261a742ca989fd8b5b6d3e3594469b",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "817fe09a4d16a9cbeb475386d00496043166d173e10a289b451f33983987df71",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "status": "fail",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/ProbeMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-research179/research179"
+      ],
+      "exit_code": 1
+    },
+    {
+      "slot": 6,
+      "kind": "executable",
+      "target": "x86_64-apple-macosx15.0",
+      "reason": "Honor Swift 6.2 weak-let diagnostic and explicitly discard dictionary removal result; keep warnings-as-errors unchanged",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "status": "pass",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/ProbeMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-research179/research179"
+      ],
+      "exit_code": 0
+    },
+    {
+      "slot": 7,
+      "kind": "executable",
+      "target": "x86_64-apple-macosx15.0",
+      "reason": "Q01 EINVAL: SDK listener.h explicitly prohibits setting newConnectionHandler together with newConnectionGroupHandler; retain group handler only and annotate listener failure stage",
+      "sources": {
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/QUICPeer.swift": "8b7038a83528fcf8d8be6a1cbeb1ed6efdc5509c3827b37eab6f84aeb80610b6",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349"
+      },
+      "status": "pass",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/ProbeMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-research179/research179"
+      ],
+      "exit_code": 0
+    },
+    {
+      "slot": 8,
+      "kind": "executable",
+      "target": "x86_64-apple-macosx15.0",
+      "reason": "Own-process logs show QUIC handshake succeeded then stream clone failed, not general network loss. Align ordinary bidirectional extraction with documented nil/default options; only set uni/datagram options for those explicit modes. Last authorized compiler slot.",
+      "sources": {
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f"
+      },
+      "status": "pass",
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/ProbeMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-research179/research179"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "pure": [
+    {
+      "case": "B01",
+      "slot": 1,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "B01",
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "B02",
+      "slot": 2,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "B02"
+      }
+    },
+    {
+      "case": "B03",
+      "slot": 3,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "B03"
+      }
+    },
+    {
+      "case": "B04",
+      "slot": 4,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "B04"
+      }
+    },
+    {
+      "case": "B05",
+      "slot": 5,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "B05"
+      }
+    },
+    {
+      "case": "B06",
+      "slot": 6,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "B06",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "B07",
+      "slot": 7,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "id": "B07",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "B08",
+      "slot": 8,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "B08",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "B09",
+      "slot": 9,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "id": "B09",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "B10",
+      "slot": 10,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "id": "B10",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "L01",
+      "slot": 11,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "id": "L01",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "L02",
+      "slot": 12,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "status": "pass",
+        "id": "L02"
+      }
+    },
+    {
+      "case": "L03",
+      "slot": 13,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "status": "pass",
+        "id": "L03"
+      }
+    },
+    {
+      "case": "L04",
+      "slot": 14,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "id": "L04",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "L05",
+      "slot": 15,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "L05"
+      }
+    },
+    {
+      "case": "L06",
+      "slot": 16,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "L06"
+      }
+    },
+    {
+      "case": "M01",
+      "slot": 17,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "M01",
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "M02",
+      "slot": 18,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "M02"
+      }
+    },
+    {
+      "case": "M03",
+      "slot": 19,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "M03",
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "M04",
+      "slot": 20,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "M04",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "M05",
+      "slot": 21,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "M05",
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "M06",
+      "slot": 22,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "M06",
+        "status": "pass"
+      }
+    },
+    {
+      "case": "Q01",
+      "slot": 23,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "Q01"
+      }
+    },
+    {
+      "case": "Q02",
+      "slot": 24,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "Q02"
+      }
+    },
+    {
+      "case": "Q03",
+      "slot": 25,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "Q03",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "Q04",
+      "slot": 26,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "status": "pass",
+        "id": "Q04",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "Q05",
+      "slot": 27,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "Q05",
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "Q06",
+      "slot": 28,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "Q06",
+        "status": "pass",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        }
+      }
+    },
+    {
+      "case": "Q07",
+      "slot": 29,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "id": "Q07",
+        "status": "pass"
+      }
+    },
+    {
+      "case": "Q08",
+      "slot": 30,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "exit_code": 0,
+      "observation": {
+        "id": "Q08",
+        "observations": {
+          "evidence": "pure policy model, not native/permission proof"
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "local": [
+    {
+      "case": "N01",
+      "slot": 1,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "handoffExchange": "true",
+          "nativeDeliveries": "1",
+          "loopbackInterfaceObserved": "true",
+          "leaseReleases": "1"
+        },
+        "id": "N01"
+      }
+    },
+    {
+      "case": "N02",
+      "slot": 2,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f"
+      },
+      "transport_sessions": 2,
+      "observation": {
+        "observations": {
+          "activeLeases": "1",
+          "nativeRemainingCredit": "0",
+          "leaseReleases": "0",
+          "nativeDeliveries": "1",
+          "secondNativeReady": "true"
+        },
+        "status": "pass",
+        "id": "N02"
+      }
+    },
+    {
+      "case": "N03",
+      "slot": 3,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "observations": {
+          "nativeDeliveries": "1",
+          "unhandedLeaseReleased": "true",
+          "leaseReleases": "1"
+        },
+        "status": "pass",
+        "id": "N03"
+      }
+    },
+    {
+      "case": "N04",
+      "slot": 4,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "N04",
+        "status": "pass",
+        "observations": {
+          "leaseReleases": "1",
+          "handoffExchange": "true",
+          "nativeDeliveries": "1"
+        }
+      }
+    },
+    {
+      "case": "N05",
+      "slot": 5,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "N05",
+        "status": "pass",
+        "observations": {
+          "wrapperReleased": "true",
+          "nativeDeliveries": "1",
+          "leaseReleases": "1"
+        }
+      }
+    },
+    {
+      "case": "N06",
+      "slot": 6,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "N06",
+        "status": "pass",
+        "observations": {
+          "leaseReleases": "1",
+          "requiredInterfaceApplied": "true",
+          "handoffExchange": "true",
+          "nativeDeliveries": "1"
+        }
+      }
+    },
+    {
+      "case": "Q01",
+      "slot": 7,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/QUICPeer.swift": "48a3ab985e2ffe6ec579105a99130107db4809ba092be8221ee91cced8193d13",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "status": "fail",
+        "id": "Q01",
+        "observations": {
+          "error": "POSIXErrorCode(rawValue: 22): Invalid argument"
+        }
+      }
+    },
+    {
+      "case": "Q01",
+      "slot": 8,
+      "reason": "Correct listener mutually exclusive handler configuration after documented initial Q01 EINVAL; same transport input, no other initial QUIC cases started",
+      "status": "fail",
+      "sources": {
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/QUICPeer.swift": "8b7038a83528fcf8d8be6a1cbeb1ed6efdc5509c3827b37eab6f84aeb80610b6",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "status": "fail",
+        "id": "Q01",
+        "observations": {
+          "error": "POSIXErrorCode(rawValue: 50): Network is down"
+        }
+      }
+    },
+    {
+      "case": "Q01",
+      "slot": 9,
+      "reason": "Own-process trace isolated failure to stream extraction after successful transport setup; use documented default options for the same bidirectional Q01 input",
+      "status": "fail",
+      "sources": {
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/run_research.py": "822f882ac85ccf3a32242437ae30f801f766846a0f6c691980aae6ddd1562de4",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "Q01",
+        "observations": {
+          "error": "timeout"
+        },
+        "status": "fail"
+      }
+    },
+    {
+      "case": "Q10",
+      "slot": 10,
+      "reason": null,
+      "status": "pass",
+      "sources": {
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2"
+      },
+      "transport_sessions": 1,
+      "client_exit": 0,
+      "reply_bytes": 4,
+      "peer_observation": {
+        "status": "pass",
+        "id": "Q10-peer",
+        "observations": {
+          "peerTransportGroups": "1",
+          "echoBytes": "4"
+        }
+      }
+    },
+    {
+      "case": "Q02",
+      "slot": 11,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "observations": {
+          "error": "failed(\"extracted-flow-ready:POSIXErrorCode(rawValue: 50): Network is down\")"
+        },
+        "id": "Q02",
+        "status": "fail"
+      }
+    },
+    {
+      "case": "Q03",
+      "slot": 12,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "Q03",
+        "status": "fail",
+        "observations": {
+          "error": "failed(\"extracted-flow-ready:POSIXErrorCode(rawValue: 50): Network is down\")"
+        }
+      }
+    },
+    {
+      "case": "Q04",
+      "slot": 13,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "Q04",
+        "status": "fail",
+        "observations": {
+          "error": "failed(\"extracted-flow-ready:POSIXErrorCode(rawValue: 50): Network is down\")"
+        }
+      }
+    },
+    {
+      "case": "Q05",
+      "slot": 14,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "Q05",
+        "status": "fail",
+        "observations": {
+          "error": "failed(\"extracted-flow-ready:POSIXErrorCode(rawValue: 50): Network is down\")"
+        }
+      }
+    },
+    {
+      "case": "Q06",
+      "slot": 15,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "Q06",
+        "observations": {
+          "error": "timeout"
+        },
+        "status": "fail"
+      }
+    },
+    {
+      "case": "Q07",
+      "slot": 16,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "id": "Q07",
+        "status": "fail",
+        "observations": {
+          "error": "timeout"
+        }
+      }
+    },
+    {
+      "case": "Q08",
+      "slot": 17,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "observations": {
+          "error": "timeout"
+        },
+        "id": "Q08",
+        "status": "fail"
+      }
+    },
+    {
+      "case": "Q09",
+      "slot": 18,
+      "reason": null,
+      "status": "fail",
+      "sources": {
+        "NativeResearch/State.swift": "1bd20acea737f187ddae1fb9157d27f55adafd644317b08ce6f3538e616a576f",
+        "NativeResearch/ProbeMain.swift": "216184e0040bd743537c6e7903a952e21129722f7448b1167737dbdf2891920f",
+        "NativeResearch/QUICPeer.swift": "9f4aede23c6e575da810f01fb40ef6c68b0b582af1867be6ae339e47200b4f8c",
+        "NativeResearch/Values.swift": "166502f56979370def900f8e54771726e3609a808e17794234291aa79ae0a2c2",
+        "NativeResearch/run_research.py": "af7afa2eb343d3d6237a546bbff872786e27c54ae1bd44982211a3fe82f15b92",
+        "NativeResearch/CapabilityProbe.swift": "17016f073a1a6f38de38b39b821d3ec8acd0c992304c31198c92628984267439",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149",
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536"
+      },
+      "transport_sessions": 1,
+      "observation": {
+        "status": "fail",
+        "observations": {
+          "error": "timeout"
+        },
+        "id": "Q09"
+      }
+    }
+  ],
+  "sessions": 19,
+  "fixture": {
+    "pair_count": 2,
+    "validity": {
+      "server-current": {
+        "start": "20261108114911Z",
+        "end": "20261111114911Z"
+      }
+    },
+    "certificate_hashes": {
+      "ca.cert.der": "5c5ff3502f0ce5521690211830f5028446da8d12aa0d2f85730b719463e58d9f",
+      "server-current.cert.der": "750303e7a38ffb9e2eab85a9828f064e06b712119c38e99a0fac8159ab409750"
+    },
+    "commands": [
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-x509",
+        "-sha256",
+        "-days",
+        "7",
+        "-subj",
+        "/CN=NetworkKit F6 Fixture CA",
+        "-addext",
+        "basicConstraints=critical,CA:true",
+        "-addext",
+        "keyUsage=critical,keyCertSign,cRLSign",
+        "-keyout",
+        "ca.key.pem",
+        "-out",
+        "ca.cert.pem"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=localhost",
+        "-keyout",
+        "server-current.key.pem",
+        "-out",
+        "server-current.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "server_current",
+        "-startdate",
+        "20261108114911Z",
+        "-enddate",
+        "20261111114911Z",
+        "-in",
+        "server-current.csr.pem",
+        "-out",
+        "server-current.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "server-current.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "server-current.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "server-current.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "server-current.key.der"
+      ],
+      [
+        "x509",
+        "-in",
+        "ca.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "ca.cert.der"
+      ]
+    ],
+    "status": "complete"
+  },
+  "cleanup": "owned fixture material removed, not secure erasure",
+  "runtime_closed": true,
+  "private_log_sha256": {
+    "local-Q02-11.log": "ef098ed86692aaa416a8ba7433e917055d46850534edd5de99989af1b4cff094",
+    "local-Q09-18.log": "21a489e97c7c4477fad7bf30e302956a8091952d0501e16d460ece7116f8202f",
+    "local-Q01-8.log": "be149d518c007add520aa12e3917b044621affc6fc49499657d156831aedacd0",
+    "local-batch-9.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "local-Q01-9.log": "fd22275ce86ea359fb644220af0c83c9a9f7da8336b2bf3121a9adc03153049d",
+    "pure-L05-15.log": "b8a79e121fd8fc766a943ac8f9bdf86061edb5fdd4ba660b6cdabb6815f9dd77",
+    "pure-M02-18.log": "bf72e01abc859c27663232379e5e62533c159ec7d785ce8685f0133d67d79934",
+    "local-batch-7.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pure-Q01-23.log": "2a09e7cead77c89b33e7fdd48d51431e3f18181ac0648b2a72bdeec79c7a486d",
+    "pure-B10-10.log": "61794dfda8d578a325a7fb5270d1ea703de708a1180ede07141c96df9458ebd5",
+    "compiler-8.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pure-Q06-28.log": "96a9f413d7ac66d4e0df8458b4c59133219450d3b3632b9a230f5b24d7ee8775",
+    "pure-Q03-25.log": "b4b0682c44637d823420ed4562d9d1324137bb7d9fc029016f1065c7f8659d86",
+    "pure-M04-20.log": "f4ba5c6a2d18ab962d55ff5e11994ced8a166cace2052b8662b1ceb7490c146a",
+    "local-Q04-13.log": "929b751021b90f5b3485a5f83413bd2723038db139647fa60c2ddb68b022b68a",
+    "pure-L01-11.log": "460f95f34621cf54db45ba8fed38109237df900a5813382df69b58b5f04d3759",
+    "local-Q06-15.log": "4144100f5ec41372f22e17e7566e68c115cb5769107e4b4db0717f916589f41f",
+    "Q10-client-10.stderr": "04df43092e02255f6fd466ba6e4c3beaf36549a75ec47338832de73bdc40567e",
+    "pure-L03-13.log": "633c0e9ae8f6ee1730b4a3d03230c4397b18eb5907e21248e67a30d32d25c500",
+    "pure-M01-17.log": "8c5b05e25b33985a85d002be8a7de003ef73b149420ac193b3cfb4a2585c4ff6",
+    "pure-M06-22.log": "bb77cc4ead3d179bde68ff6668a6524a7e063b19fe57791f5ef93f48750a1437",
+    "own-process-diagnostic.log": "285dcf20be2639138b5faa669d09804646986f92bc752d0c75f2736719eca259",
+    "local-batch-1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "local-Q08-17.log": "49f05db89c8ad47bf2080391fc869797a9680aa82288a2e63611f065e127b448",
+    "pure-Q05-27.log": "6a9750aefd56dafdb9e427b4295da5f96ebb204b45ebc0123c8318413bf52774",
+    "local-batch-11.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "local-Q03-12.log": "be15b34fde9e4f3483b958b4069fef1520ba7896f9e638f0e8b39f172ca60392",
+    "local-batch-8.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pure-L04-14.log": "b950afd556c84fc1ee58b990a2fb167a612e61fd4f0ca907c21a27882066d407",
+    "local-N01-1.log": "96afd5081dbb938879615884f94b48275176e6662547f4cf0a3abd2b23fe8f1b",
+    "local-N03-3.log": "b0c42e0219d2d2a73f96b46770b374a229d321e3b213c814fe9d5bb51ca4bdd9",
+    "local-N05-5.log": "89d189603d2dfc67600703c5587fbea9033b2356826596ebae565e985e1b42fb",
+    "pure-L06-16.log": "b5334eda82757383091876a4383ced541eae76170a9202fa48878f1e04a83ad2",
+    "pure-B06-6.log": "24295f38eb3608075eeea6718e19a55ae28c5121ad1edf84e9d6b5988cf77adc",
+    "pure-B04-4.log": "e7b9bbb8bf5fb8afd341541b5b9c6ebf1d9d18cae92646f600201f7c8fab2fa8",
+    "pure-Q07-29.log": "29232ea0dad7fc99b95d9413aa0cadfbb809050e6f32a27c1e804ed899d73f67",
+    "pure-B02-2.log": "582855ce966534cba582dda73f4c790fa4956857e1aae7eb33f5def5bd801d41",
+    "Q10-peer-10.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pure-Q02-24.log": "52a91d0a8052f6e0a847f5bc020d467c0c55cfc816cf20bb4ef5db30c1858f65",
+    "pure-B08-8.log": "cfee203aa63ef78ec3ca8e8b4a57365aaf0dd185c826900d840223ede6bab6bc",
+    "pure-M03-19.log": "1b4df6d1cd85afaf2e528e169f3b1a296f71cf96730093bb8b1f3db1d8097d07",
+    "compiler-4.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "local-N02-2.log": "151b69267197cf8fbe490e7e60844e1c3b4a3a3e2361b33d0be9d62712ea75b3",
+    "compiler-5.log": "e4fc5a53cbc70bc6957c2a8f8a7b07455da3c45b5d921c20941eb83b64ff87b6",
+    "local-N04-4.log": "1149123da885245be00cf1f2ff6432319a09fbf8aacdd59b803209c20fcf8ef7",
+    "local-N06-6.log": "c1567b223b428d53548d1793d2b317fb7e8662268b243e987a9de62898093d4b",
+    "pure-M05-21.log": "97e4397dade66d92e19e77b5ecb769b53b956875cf35a0e189dd7068af3dba2e",
+    "local-Q07-16.log": "fbf8703d14917bfe9e251f93ea42e68b474f805a75bfb7ef004d698ec96002d7",
+    "compiler-7.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiler-6.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiler-2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiler-3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pure-Q04-26.log": "350d68c1798e1a5762a96e17af696b95955ba5923094e76728599a97a320c0f6",
+    "pure-L02-12.log": "24c1ac92f0f48750ae030e171621378910585e88ba26091bf2278c96d6bba422",
+    "compiler-1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pure-B09-9.log": "65d18ee5dd262aa2d4dab877d93087d87aff97f5542e0073c29efac84396069f",
+    "pure-Q08-30.log": "7610e81746093c89421bff60ed8aeb5d8543c1835e4a393fc4ab635a08b7415a",
+    "local-Q01-7.log": "06663e89208f012049885feeacca605fbf8c5301fb36c06d5f5897169a7c5f74",
+    "pure-B07-7.log": "b3362027ae034803917c7696c30425de46a6ac2ac94eba6ff8c0b032561df828",
+    "pure-B05-5.log": "99b15a74cd198e7ddcc828b194e5d4eb34f6009908aea8f09964fbe68cf521dd",
+    "local-Q05-14.log": "aeefe6d730444aa394879b504df236648a2af33bd74e8251ac39d4becfd77ecf",
+    "pure-B03-3.log": "f5a99bce59c6dfad4dab5a7da40b3c72fa3217b3600d29d23d969613b77cf8a4",
+    "pure-B01-1.log": "fca9471644f39e476abb955253f5be1f608ac01d5531781a7ab8c9b1a9e4b4f5"
+  },
+  "interpretation": "Mixed feasibility results; not technical acceptance. Per-invocation source hashes are authoritative. All compiler slots consumed; runtime closed."
+}

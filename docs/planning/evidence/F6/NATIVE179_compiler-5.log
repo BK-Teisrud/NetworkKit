@@ -1,0 +1,17 @@
+<workspace>/Tools/F6Feasibility/NativeResearch/ListenerPeer.swift:51:15: error: result of call to 'withLock' is unused [#no-usage]
+ 49 |         guard let flow = state.withLock({ $0.pending[id] }) else { throw ProbeFailure.failed("no-pending") }
+ 50 |         try await flow.waitReady(); try registry.handoff(id)
+ 51 |         state.withLock { $0.pending.removeValue(forKey:id) }
+    |               `- error: result of call to 'withLock' is unused [#no-usage]
+ 52 |         return flow
+ 53 |     }
+
+<workspace>/Tools/F6Feasibility/NativeResearch/ListenerPeer.swift:92:18: error: weak variable 'weakAccepted' was never mutated; consider changing to 'let' constant [#WeakMutability]
+ 90 |     } else if id == "N05" {
+ 91 |         var accepted: ResearchFlow? = try await peer.accept()
+ 92 |         weak var weakAccepted = accepted
+    |                  `- error: weak variable 'weakAccepted' was never mutated; consider changing to 'let' constant [#WeakMutability]
+ 93 |         accepted = nil
+ 94 |         try assertion(weakAccepted == nil && peer.registry.state.withLock { $0.active.isEmpty },"registry-retain-cycle")
+
+[#WeakMutability]: <https://docs.swift.org/compiler/documentation/diagnostics/weak-mutability>
