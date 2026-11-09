@@ -9,13 +9,13 @@ final class TrustObservation: Sendable {
     let state = OSAllocatedUnfairLock(initialState: State())
 }
 func quicParameters(root: URL, server: Bool, trusted: Bool = true, alpn: String = researchALPN,
-                    observation: TrustObservation) throws -> NWParameters {
+                    observation: TrustObservation, datagrams: Bool = true) throws -> NWParameters {
     let options = NWProtocolQUIC.Options(alpn:[alpn])
     options.idleTimeout = 5000; options.initialMaxData = 65536
     options.initialMaxStreamDataBidirectionalLocal = 65536; options.initialMaxStreamDataBidirectionalRemote = 65536
     options.initialMaxStreamDataUnidirectional = 65536
     options.initialMaxStreamsBidirectional = 4; options.initialMaxStreamsUnidirectional = 4
-    options.maxDatagramFrameSize = 1024
+    options.maxDatagramFrameSize = datagrams ? 1024 : 0
     let security = options.securityProtocolOptions
     if server {
         let carrier = try fixtureCredential(root,name:"server-current")
@@ -48,18 +48,23 @@ final class QUICGroupBox: Sendable {
     let flows = OSAllocatedUnfairLock(initialState:[ResearchFlow]())
     let queue = DispatchQueue(label:"f6.179.quic.group")
     let failure = OSAllocatedUnfairLock<String?>(initialState:nil)
+    let history = StateHistory()
+    let unexpected = OSAllocatedUnfairLock(initialState:0)
     init(_ group: NWConnectionGroup) {
         self.group = group
-        group.stateUpdateHandler = { [ready,failure] state in
+        group.stateUpdateHandler = { [ready,failure,history] state in
+            history.record(String(describing:state))
             if case .ready = state { ready.resolve(.success(true)) }
             if case .failed(let error) = state { failure.withLock { $0 = String(describing:error) }; ready.resolve(.failure(error)) }
             if case .cancelled = state { ready.resolve(.failure(ProbeFailure.cancelled)) }
         }
-        group.newConnectionHandler = { [inbox,budget,flows,queue] connection in
+        group.newConnectionHandler = { [inbox,budget,flows,queue,unexpected] connection in
             do {
                 let flow = try ResearchFlow(connection,budget:budget)
-                flows.withLock { $0.append(flow) }; flow.start(on:queue); inbox.push(flow)
-            } catch { connection.cancel() }
+                flows.withLock { $0.append(flow) }
+                // Do not block the FIFO on an incoming stream that has not reached readiness.
+                flow.start(on:queue,onReady:{ [weak flow] in if let flow { inbox.push(flow) } })
+            } catch { unexpected.withLock { $0 += 1 }; connection.cancel() }
         }
     }
     func start() { group.start(queue:queue) }
@@ -69,9 +74,13 @@ final class QUICGroupBox: Sendable {
     func open(unidirectional: Bool = false, datagram: Bool = false) async throws -> ResearchFlow {
         let connection: NWConnection?
         if unidirectional || datagram {
-            let options = NWProtocolQUIC.Options()
-            if unidirectional { options.direction = .unidirectional }
-            if datagram { options.isDatagram = true }
+            // Preserve the established group's TLS/ALPN configuration when selecting a child mode.
+            // A fresh options object may request a different protocol stack during cloning.
+            guard let options = group.parameters.copy().defaultProtocolStack.transportProtocol as? NWProtocolQUIC.Options else {
+                throw ProbeFailure.failed("group-QUIC-options-unavailable")
+            }
+            options.direction = unidirectional ? .unidirectional : .bidirectional
+            options.isDatagram = datagram
             connection = group.extract(using: options)
         } else {
             // Ordinary bidirectional stream uses the documented default extraction.
@@ -84,6 +93,9 @@ final class QUICGroupBox: Sendable {
         return flow
     }
     func incoming() async throws -> ResearchFlow { let flow = try await inbox.take(); try await flow.waitReady(); return flow }
+    func diagnostic() -> String {
+        "group=\(history.snapshot);unexpected=\(unexpected.withLock { $0 });flows=" + flows.withLock { $0.map { $0.history.snapshot }.joined(separator:";") }
+    }
     func close() {
         let all = flows.withLock { s in let all = s; s.removeAll(); return all }
         all.forEach { $0.close() }; inbox.close(); group.cancel(); ready.resolve(.failure(ProbeFailure.cancelled))
@@ -97,22 +109,23 @@ final class QUICListenerPeer: Sendable {
     let accepted = Once<QUICGroupBox>()
     let groups = OSAllocatedUnfairLock(initialState:[QUICGroupBox]())
     let queue = DispatchQueue(label:"f6.179.quic.listener")
-    init(root: URL) throws {
-        let parameters = try quicParameters(root:root,server:true,observation:TrustObservation())
+    let unexpected = OSAllocatedUnfairLock(initialState:0)
+    init(root: URL, datagrams: Bool = true) throws {
+        let parameters = try quicParameters(root:root,server:true,observation:TrustObservation(),datagrams:datagrams)
         parameters.requiredLocalEndpoint = .hostPort(host:"127.0.0.1",port:.any)
         let listener: NWListener
         do { listener = try NWListener(using:parameters,on:.any) }
         catch { throw ProbeFailure.failed("quic-listener-init:\(error)") }
         self.listener = listener
-        listener.newConnectionLimit = 1
+        listener.newConnectionLimit = 8 // Finite creation credit, not the one-transport admission cap.
         listener.stateUpdateHandler = { [ready,weak listener] state in
             if case .ready = state, let port = listener?.port { ready.resolve(.success(port.rawValue)) }
             if case .failed(let error) = state { ready.resolve(.failure(error)) }
             if case .cancelled = state { ready.resolve(.failure(ProbeFailure.cancelled)) }
         }
-        listener.newConnectionGroupHandler = { [groups,accepted] group in
+        listener.newConnectionGroupHandler = { [groups,accepted,unexpected] group in
             let allowed = groups.withLock { $0.isEmpty }
-            guard allowed else { group.cancel(); return }
+            guard allowed else { unexpected.withLock { $0 += 1 }; group.cancel(); return }
             let box = QUICGroupBox(group)
             groups.withLock { $0.append(box) }; box.start(); accepted.resolve(.success(box))
         }
@@ -132,11 +145,16 @@ final class QUICListenerPeer: Sendable {
 }
 
 func quicCase(_ id: String, root: URL) async throws -> ResearchReport {
-    let peer = try QUICListenerPeer(root:root); defer { peer.close() }
+    let streamOnly = id == "C01"
+    let peer = try QUICListenerPeer(root:root,datagrams:!streamOnly); defer { peer.close() }
     let port = try await peer.start(); let trust = TrustObservation()
-    let parameters = try quicParameters(root:root,server:false,trusted:id != "Q07",alpn:id == "Q06" ? "networkkit-f6-wrong" : researchALPN,observation:trust)
+    let parameters = try quicParameters(root:root,server:false,trusted:id != "Q07",alpn:id == "Q06" ? "networkkit-f6-wrong" : researchALPN,observation:trust,datagrams:!streamOnly)
     let client = QUICGroupBox(NWConnectionGroup(with:NWMultiplexGroup(to:.hostPort(host:"127.0.0.1",port:NWEndpoint.Port(rawValue:port)!)),using:parameters))
-    defer { client.close() }; client.start()
+    defer {
+        let evidence = ResearchReport(id:id+"-diagnostic",observations:["client":client.diagnostic(),"peer":peer.groups.withLock { $0.map { $0.diagnostic() }.joined(separator:" / ") },"unexpectedTransports":String(peer.unexpected.withLock { $0 }),"trustCalls":String(trust.state.withLock { $0.calls }),"trustRejected":String(trust.state.withLock { $0.rejected }),"trustAccepted":String(trust.state.withLock { $0.accepted })])
+        if let bytes = try? JSONEncoder().encode(evidence) { FileHandle.standardError.write(bytes + Data([10])) }
+        client.close()
+    }; client.start()
     var report = ResearchReport(id:id)
     if id == "Q06" || id == "Q07" {
         do { try await client.waitReady(); throw ProbeFailure.failed("negative-quic-ready") }
@@ -194,6 +212,7 @@ func quicCase(_ id: String, root: URL) async throws -> ResearchReport {
             report.observations["negotiatedALPN"] = outgoing.alpn
         }
     }
+    try assertion(peer.unexpected.withLock { $0 == 0 } && client.unexpected.withLock { $0 == 0 } && server.unexpected.withLock { $0 == 0 },"unexpected-group-or-context")
     try assertion(client.budget.state.withLock { $0.contextAttempts <= 4 } && server.budget.state.withLock { $0.contextAttempts <= 4 },"native-context-budget")
     report.observations["clientContexts"] = String(client.budget.state.withLock { $0.contexts })
     report.observations["serverContexts"] = String(server.budget.state.withLock { $0.contexts })

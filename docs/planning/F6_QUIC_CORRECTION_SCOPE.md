@@ -1,6 +1,6 @@
 # F6 QUIC correction proposal for #179
 
-Prepared 2026-11-09, same draft PR #177. Planning only: new code, compilation, fixture creation and execution require separate owner authorization. The consumed c70a780 experiment stays immutable; no unused reserve is transferred.
+Prepared 2026-11-09, same draft PR #177. The owner subsequently approved this exact scope. [Execution is now closed with mixed results](F6_QUIC_CORRECTION_RESULTS_2026-11-09.md); the proposal below is retained as the authorization baseline. The consumed c70a780 experiment stays immutable; no unused reserve is transferred.
 
 ## Evidence and correction rationale
 

@@ -15,6 +15,7 @@ final class FlowBudget: Sendable {
 final class ResearchFlow: Sendable {
     let connection: NWConnection
     let ready = Once<Bool>()
+    let history = StateHistory()
     let budget: FlowBudget
     let lease: Lease?
     let datagram: Bool
@@ -28,10 +29,11 @@ final class ResearchFlow: Sendable {
         try budget.context()
     }
     deinit { close() }
-    func start(on queue: DispatchQueue) {
-        connection.stateUpdateHandler = { [ready, lease] state in
+    func start(on queue: DispatchQueue, onReady: (@Sendable () -> Void)? = nil) {
+        connection.stateUpdateHandler = { [ready, lease, history, onReady] state in
+            history.record(String(describing:state))
             switch state {
-            case .ready: ready.resolve(.success(true))
+            case .ready: if ready.resolve(.success(true)) { onReady?() }
             case .failed(let e): ready.resolve(.failure(e)); lease?.release()
             case .cancelled: ready.resolve(.failure(ProbeFailure.cancelled)); lease?.release()
             default: break

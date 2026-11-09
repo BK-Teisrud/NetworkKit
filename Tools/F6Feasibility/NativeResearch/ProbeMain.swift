@@ -86,11 +86,41 @@ func failedReport(_ id: String, _ error: any Error) -> ResearchReport {
                     let report: ResearchReport
                     if id.hasPrefix("N"), (1...6).contains(Int(id.dropFirst()) ?? 0) {
                         let result = try await tcpCase(id,observedInterface:observedInterface); observedInterface = result.1; report = result.0
-                    } else if id.hasPrefix("Q"), (1...9).contains(Int(id.dropFirst()) ?? 0) { report = try await quicCase(id,root:fixture) }
+                    } else if id == "C01" { report = try await quicCase(id,root:fixture) }
+                    else if id.hasPrefix("Q"), (1...9).contains(Int(id.dropFirst()) ?? 0) { report = try await quicCase(id,root:fixture) }
                     else { throw ProbeFailure.failed("explicit-local-id") }
                     printReport(report)
                 } catch { printReport(failedReport(id,error)) }
             }
+            return
+        }
+        if args[1] == "--correction-peer", args[2] == "C02", let fixture {
+            do {
+                let peer = try QUICListenerPeer(root:fixture,datagrams:false); defer { peer.close() }
+                let port = try await peer.start(); printReport(ResearchReport(id:"C02-ready",observations:["port":String(port)]))
+                let group = try await peer.take(); let flow = try await group.incoming()
+                let input = try await flow.read(3); try assertion(input == Data("one".utf8),"split-native-input")
+                try await flow.send(Data("ok".utf8))
+                try assertion(peer.unexpected.withLock { $0 == 0 } && group.unexpected.withLock { $0 == 0 },"extra-transport-or-flow")
+                printReport(ResearchReport(id:"C02-peer",observations:["echoBytes":String(input.count),"group":group.diagnostic(),"transportGroups":String(peer.groups.withLock { $0.count })]))
+                try await Task.sleep(for:.seconds(0.3))
+            } catch { printReport(failedReport("C02-peer",error)); exit(1) }
+            return
+        }
+        if args[1] == "--correction-client", args[2] == "C02", args.count == 4, let port = UInt16(args[3]), port > 0, let fixture {
+            let trust = TrustObservation()
+            do {
+                let parameters = try quicParameters(root:fixture,server:false,observation:trust,datagrams:false)
+                let client = QUICGroupBox(NWConnectionGroup(with:NWMultiplexGroup(to:.hostPort(host:"127.0.0.1",port:NWEndpoint.Port(rawValue:port)!)),using:parameters))
+                defer {
+                    FileHandle.standardError.write(Data((client.diagnostic()+"\n").utf8)); client.close()
+                }
+                client.start(); try await client.waitReady(); let flow = try await client.open()
+                try await flow.send(Data("one".utf8)); let reply = try await flow.read(2)
+                try assertion(reply == Data("ok".utf8) && flow.alpn == researchALPN && trust.state.withLock { $0.accepted == 1 && $0.rejected == 0 },"split-native-reply-trust-ALPN")
+                try assertion(client.unexpected.withLock { $0 == 0 },"extra-flow")
+                printReport(ResearchReport(id:"C02",observations:["replyBytes":String(reply.count),"ALPN":flow.alpn,"group":client.diagnostic()]))
+            } catch { printReport(failedReport("C02",error)); exit(1) }
             return
         }
         if args[1] == "--peer", args[2] == "Q10", let fixture {

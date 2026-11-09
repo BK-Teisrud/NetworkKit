@@ -21,7 +21,9 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Discovery/QUIC refinement](F6_DISCOVERY_QUIC_CONTRACT.md): corrected browser/listener/multicast guarantees and proposed full stream/datagram ownership; no new execution.
 
-- [Consolidated native research scope](F6_NATIVE_RESEARCH_SCOPE.md): one proposed offline/listener/QUIC package, including an independent local OpenSSL client control; no execution authority yet.
+- [Consolidated native research scope](F6_NATIVE_RESEARCH_SCOPE.md): authorized initial package completed with mixed results, including an independent local OpenSSL client control; [initial results](F6_NATIVE_RESEARCH_RESULTS_2026-11-09.md) preserve failures.
+
+- [QUIC correction results](F6_QUIC_CORRECTION_RESULTS_2026-11-09.md): separately authorized 3-build/4-oracle/16-session correction completed; seven of twelve unique controls pass, Q03–Q07 unresolved. No further runtime or production authority.
 
 ## Delivery strategy
 

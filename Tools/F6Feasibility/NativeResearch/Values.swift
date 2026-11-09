@@ -110,3 +110,13 @@ struct QUICModel {
         guard !senderBusy else { throw ProbeFailure.failed("duplicate") }; senderBusy = true
     }
 }
+
+/// Experiment-only bounded diagnostic state; no payloads or endpoints.
+final class StateHistory: Sendable {
+    struct State: Sendable { var entries: [String] = []; var overflow = false }
+    let state = OSAllocatedUnfairLock(initialState: State())
+    func record(_ text: String) {
+        state.withLock { s in if s.entries.count < 32 { s.entries.append(text) } else { s.overflow = true } }
+    }
+    var snapshot: String { state.withLock { $0.entries.joined(separator:"|") + ($0.overflow ? "|overflow" : "") } }
+}

@@ -1,6 +1,6 @@
 # F6 platform and integration assessment
 
-Working proposal, 2026-11-09. Tracking #90 / draft PR #177. Source inspection plus the separately authorized [four SDK type-check probes](F6_OFFLINE_RESULTS_2026-11-09.md). Selected Mac-only native runtime observations now exist in the [Mac results](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md); all other runtime/physical routes remain unverified.
+Working proposal, 2026-11-09. Tracking #90 / draft PR #177. Source inspection plus the separately authorized [four SDK type-check probes](F6_OFFLINE_RESULTS_2026-11-09.md). Selected Mac-only native runtime observations now exist in the [Mac results](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md); selected listener/QUIC Mac evidence and unresolved controls are recorded in the [native research](F6_NATIVE_RESEARCH_RESULTS_2026-11-09.md) and [correction report](F6_QUIC_CORRECTION_RESULTS_2026-11-09.md). All other runtime/physical routes remain unverified.
 
 ## Owner decision
 

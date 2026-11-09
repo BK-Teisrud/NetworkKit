@@ -1043,10 +1043,32 @@
     "production_authorized": false,
     "offline_phase_a": "4 SDK probes/64 pure cases complete; no native authority from that scope",
     "mac_experiment": "4 builds/33 pure/48 local/4 public completed; I04 native harness failure retained",
-    "next_evidence_followup": 178,
+    "next_evidence_followup": 179,
     "same_pr": true,
     "no_publication": true,
     "tls_correction": "Selected #178 initial controls all passed; In Review pending same PR/main, broader #90 planning continues",
-    "next_research_task": 179
+    "next_research_task": 179,
+    "native_research": {
+      "issue": 179,
+      "status": "Blocked",
+      "initial_report": "docs/planning/F6_NATIVE_RESEARCH_RESULTS_2026-11-09.md",
+      "correction_report": "docs/planning/F6_QUIC_CORRECTION_RESULTS_2026-11-09.md",
+      "correction_scope_commit": "fabf77a55a9fdcf69e0b4f503075c60409d3eb63",
+      "correction_used": {
+        "compiler": 3,
+        "pure": 4,
+        "local_sessions": 16,
+        "fixture_pairs": 2
+      },
+      "runtime_closed": true,
+      "remaining_cases": [
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07"
+      ],
+      "next_priority": "Datagram phase attribution, qualifying negative handshake completion and client-uni verification; prepare separate scope before further execution."
+    }
   }
 }
