@@ -1,6 +1,6 @@
 # F6 logical QUIC startup experiment scope
 
-Prepared 2026-11-09 for #179/#90, same draft PR #177. Owner approved the [startup/error design direction](F6_QUIC_ADAPTER_REVIEW.md) only, explicitly no new code. This is the next concrete proposal; code/execution requires separate approval. All prior ledgers/scopes remain closed and unchanged.
+Prepared 2026-11-09 for #179/#90, same draft PR #177. Owner approved the [startup/error design direction](F6_QUIC_ADAPTER_REVIEW.md) only, explicitly no new code. The owner subsequently approved this exact scope. [Execution is now closed with selected controls passing](F6_QUIC_STARTUP_RESULTS_2026-11-09.md); the proposal below is retained as its authorization baseline. All prior ledgers/scopes remain closed and unchanged.
 
 ## Changed hypothesis and source boundary
 

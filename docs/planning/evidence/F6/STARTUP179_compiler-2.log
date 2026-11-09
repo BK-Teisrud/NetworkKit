@@ -1,0 +1,10 @@
+<workspace>/Tools/F6Feasibility/NativeResearch/StartupMain.swift:39:30: error: sending 'complete' risks causing data races [#SendingRisksDataRace]
+ 37 |         sec_protocol_options_set_verify_block(options.securityProtocolOptions,{ [trust,held,verificationSeen,history] _,reference,complete in
+ 38 |             history.record("real-verify-callback")
+ 39 |             let replyOwner = NativeVerifyReply(complete)
+    |                              |- error: sending 'complete' risks causing data races [#SendingRisksDataRace]
+    |                              `- note: task-isolated 'complete' is passed as a 'sending' parameter; Uses in callee may race with later task-isolated uses
+ 40 |             guard let token = gate.register(context:gate.context,reply:{ valid in replyOwner.finish(valid) }) else { return }
+ 41 |             let nativeTrust = sec_trust_copy_ref(reference).takeRetainedValue()
+
+[#SendingRisksDataRace]: <https://docs.swift.org/compiler/documentation/diagnostics/sending-risks-data-race>

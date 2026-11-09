@@ -1,0 +1,1150 @@
+{
+  "scope_commit": "3bffb74d71b1306d3426901634f120663e0eb0e9",
+  "compiler": [
+    {
+      "slot": 1,
+      "status": "fail",
+      "reason": null,
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "35cb00cb57981634d0eb734f468aa63f01c7b63d2335e3f870e93376f0e71b3e",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/StartupCoordinator.swift",
+        "<tool>/NativeResearch/StartupMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-startup179/startup179"
+      ],
+      "exit_code": 1,
+      "forced_teardown": false
+    },
+    {
+      "slot": 2,
+      "status": "fail",
+      "reason": "Initial compiler rejected non-Sendable native completion captured by Sendable closure; transfer completion into standard Mutex exclusive owner, take once and invoke outside lock without unchecked wrapper",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "7a1fb758b39d8fc818eb38b11b9e946e5eaccc72860c1ec0946ca629ebe20687",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/StartupCoordinator.swift",
+        "<tool>/NativeResearch/StartupMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-startup179/startup179"
+      ],
+      "exit_code": 1,
+      "forced_teardown": false
+    },
+    {
+      "slot": 3,
+      "status": "pass",
+      "reason": "Native C completion cannot satisfy sending transfer; confine it to a private standard lock unchecked-state slot, take exactly once and invoke outside lock, with explicit C/Swift ownership audit boundary",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/StartupCoordinator.swift",
+        "<tool>/NativeResearch/StartupMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-startup179/startup179"
+      ],
+      "exit_code": 0,
+      "forced_teardown": false
+    },
+    {
+      "slot": 4,
+      "status": "pass",
+      "reason": "S01 proved trust/ALPN/handoff but fixture waited for incoming stream before first send; send admitted request bytes before awaiting peer incoming delivery",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "command": [
+        "xcrun",
+        "swiftc",
+        "-swift-version",
+        "6",
+        "-warnings-as-errors",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-target",
+        "x86_64-apple-macosx15.0",
+        "-parse-as-library",
+        "-j",
+        "1",
+        "<tool>/NativeState.swift",
+        "<tool>/NativeValues.swift",
+        "<tool>/NativeResearch/Values.swift",
+        "<tool>/NativeResearch/State.swift",
+        "<tool>/NativeResearch/ListenerPeer.swift",
+        "<tool>/NativeResearch/QUICPeer.swift",
+        "<tool>/NativeResearch/StartupCoordinator.swift",
+        "<tool>/NativeResearch/StartupMain.swift",
+        "-o",
+        "/private/tmp/networkkit-f6-startup179/startup179"
+      ],
+      "exit_code": 0,
+      "forced_teardown": false
+    }
+  ],
+  "pure": [
+    {
+      "case": "L01",
+      "slot": 1,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.342,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "callerResults": "1",
+          "callbackReplies": "0",
+          "evidence": "actual Swift coordinator, fixed schedule"
+        },
+        "id": "L01"
+      }
+    },
+    {
+      "case": "L02",
+      "slot": 2,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.013,
+      "observation": {
+        "status": "pass",
+        "id": "L02",
+        "observations": {
+          "evidence": "actual Swift coordinator, fixed schedule",
+          "callbackReplies": "0",
+          "callerResults": "1"
+        }
+      }
+    },
+    {
+      "case": "L03",
+      "slot": 3,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.012,
+      "observation": {
+        "id": "L03",
+        "observations": {
+          "evidence": "actual Swift coordinator, fixed schedule",
+          "callbackReplies": "1",
+          "callerResults": "1"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "L04",
+      "slot": 4,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.021,
+      "observation": {
+        "observations": {
+          "callbackReplies": "1",
+          "evidence": "actual Swift coordinator, fixed schedule",
+          "callerResults": "1"
+        },
+        "id": "L04",
+        "status": "pass"
+      }
+    },
+    {
+      "case": "L05",
+      "slot": 5,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.011,
+      "observation": {
+        "id": "L05",
+        "observations": {
+          "callerResults": "1",
+          "callbackReplies": "2",
+          "evidence": "actual Swift coordinator, fixed schedule"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "L06",
+      "slot": 6,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.012,
+      "observation": {
+        "status": "pass",
+        "id": "L06",
+        "observations": {
+          "evidence": "actual Swift coordinator, fixed schedule",
+          "callbackReplies": "1",
+          "callerResults": "1"
+        }
+      }
+    },
+    {
+      "case": "L07",
+      "slot": 7,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.012,
+      "observation": {
+        "observations": {
+          "callbackReplies": "0",
+          "evidence": "actual Swift coordinator, fixed schedule",
+          "callerResults": "1"
+        },
+        "id": "L07",
+        "status": "pass"
+      }
+    },
+    {
+      "case": "L08",
+      "slot": 8,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.012,
+      "observation": {
+        "id": "L08",
+        "observations": {
+          "callbackReplies": "0",
+          "evidence": "actual Swift coordinator, fixed schedule",
+          "callerResults": "1"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "L09",
+      "slot": 9,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.011,
+      "observation": {
+        "id": "L09",
+        "observations": {
+          "callerResults": "1",
+          "callbackReplies": "0",
+          "evidence": "actual Swift coordinator, fixed schedule"
+        },
+        "status": "pass"
+      }
+    },
+    {
+      "case": "L10",
+      "slot": 10,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.012,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "callerResults": "1",
+          "callbackReplies": "1",
+          "evidence": "actual Swift coordinator, fixed schedule"
+        },
+        "id": "L10"
+      }
+    },
+    {
+      "case": "L11",
+      "slot": 11,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.012,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "evidence": "actual Swift coordinator, fixed schedule",
+          "callbackReplies": "1",
+          "callerResults": "1"
+        },
+        "id": "L11"
+      }
+    },
+    {
+      "case": "L12",
+      "slot": 12,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.011,
+      "observation": {
+        "id": "L12",
+        "observations": {
+          "callerResults": "1",
+          "callbackReplies": "2",
+          "evidence": "actual Swift coordinator, fixed schedule"
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "native": [
+    {
+      "case": "S01",
+      "slot": 1,
+      "kind": "initial",
+      "status": "fail",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "0367ffe94058615d200a689e9eb7be6f77070359f2cea86281fcd04e1efd35e8"
+      },
+      "reason": null,
+      "exit_code": 1,
+      "forced_teardown": false,
+      "elapsed_seconds": 3.274,
+      "observation": {
+        "observations": {
+          "states": "real-verify-callback|group:waiting(POSIXErrorCode(rawValue: 50): Network is down)|group:ready|real-child-ready",
+          "registered": "1",
+          "error": "timeout",
+          "peer": "group=waiting(POSIXErrorCode(rawValue: 50): Network is down)|ready;unexpected=0;flows=",
+          "trustAccepted": "1",
+          "pending": "0",
+          "dataAdmissions": "1",
+          "handoffs": "1",
+          "trustRejected": "0",
+          "completed": "1",
+          "ignoredLate": "0",
+          "callerResults": "1"
+        },
+        "status": "fail",
+        "id": "S01"
+      }
+    },
+    {
+      "case": "S01",
+      "slot": 2,
+      "kind": "correction",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f"
+      },
+      "reason": "Build4 corrects S01 fixture send/accept ordering without changing StartupCoordinator or its passing Swift controls",
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.39,
+      "observation": {
+        "observations": {
+          "dataAdmissions": "1",
+          "registered": "1",
+          "callerResults": "1",
+          "outcome": "admitted",
+          "completed": "1",
+          "states": "real-verify-callback|group:waiting(POSIXErrorCode(rawValue: 50): Network is down)|group:ready|real-child-ready",
+          "ignoredLate": "0",
+          "pending": "0",
+          "handoffs": "1",
+          "peer": "group=waiting(POSIXErrorCode(rawValue: 50): Network is down)|ready;unexpected=0;flows=",
+          "trustAccepted": "1",
+          "trustRejected": "0"
+        },
+        "status": "pass",
+        "id": "S01"
+      }
+    },
+    {
+      "case": "S02",
+      "slot": 3,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.075,
+      "observation": {
+        "id": "S02",
+        "status": "pass",
+        "observations": {
+          "completed": "1",
+          "callerResults": "1",
+          "dataAdmissions": "0",
+          "pending": "0",
+          "states": "real-verify-callback",
+          "ignoredLate": "0",
+          "trustAccepted": "0",
+          "registered": "1",
+          "outcome": "trustRejected",
+          "peer": "group=waiting(POSIXErrorCode(rawValue: 50): Network is down);unexpected=0;flows=",
+          "handoffs": "0",
+          "trustRejected": "1"
+        }
+      }
+    },
+    {
+      "case": "S03",
+      "slot": 4,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 3.04,
+      "observation": {
+        "status": "pass",
+        "observations": {
+          "ignoredLate": "0",
+          "pending": "0",
+          "callerResults": "1",
+          "handoffs": "0",
+          "outcome": "timeout",
+          "registered": "0",
+          "completed": "0",
+          "trustRejected": "0",
+          "states": "",
+          "peer": "group=waiting(POSIXErrorCode(rawValue: 50): Network is down)|failed(POSIXErrorCode(rawValue: 22): Invalid argument);unexpected=0;flows=",
+          "trustAccepted": "0",
+          "dataAdmissions": "0"
+        },
+        "id": "S03"
+      }
+    },
+    {
+      "case": "S04",
+      "slot": 5,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.039,
+      "observation": {
+        "id": "S04",
+        "status": "pass",
+        "observations": {
+          "states": "real-verify-callback",
+          "handoffs": "0",
+          "callerResults": "1",
+          "registered": "1",
+          "trustAccepted": "1",
+          "trustRejected": "0",
+          "outcome": "cancelled",
+          "pending": "0",
+          "dataAdmissions": "0",
+          "completed": "1",
+          "ignoredLate": "1",
+          "peer": "group=waiting(POSIXErrorCode(rawValue: 50): Network is down);unexpected=0;flows="
+        }
+      }
+    },
+    {
+      "case": "S05",
+      "slot": 6,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.335,
+      "observation": {
+        "status": "pass",
+        "id": "S05",
+        "observations": {
+          "registered": "1",
+          "states": "real-verify-callback",
+          "completed": "1",
+          "ignoredLate": "1",
+          "peer": "group=waiting(POSIXErrorCode(rawValue: 50): Network is down);unexpected=0;flows=",
+          "outcome": "timeout",
+          "handoffs": "0",
+          "trustAccepted": "1",
+          "trustRejected": "0",
+          "callerResults": "1",
+          "dataAdmissions": "0",
+          "pending": "0"
+        }
+      }
+    },
+    {
+      "case": "S06",
+      "slot": 7,
+      "kind": "initial",
+      "status": "pass",
+      "sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f",
+        "NativeResearch/run_startup.py": "22aeca777e51b66ecddc0e33dca49ffeb5aede833c55f72f79afc1630bf546ed",
+        "setup_native_fixture.py": "ac3044e32dfaa884c907bc1ac9f99241872d596b09088e93b0fa8908f75b3149"
+      },
+      "swift_sources": {
+        "NativeState.swift": "ff4c034de2f154040f3d8acede8ab4c6d6d95effce5462a5e48cc29c41b309be",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "NativeResearch/Values.swift": "1563e39f8ef663ced3514bf98cdc3984cdd96ff8f244f7e72118b6972cde58d0",
+        "NativeResearch/State.swift": "1a98c2c81f9b7323fe7bcd6e9a1bd6e16ebbc045d75ab0a21215c6c1bc6e8826",
+        "NativeResearch/ListenerPeer.swift": "591cacc7da9576ff8b9083888ab8a2060168d0075da558dd88b0ea570daf2349",
+        "NativeResearch/QUICPeer.swift": "fa37c4a47235e67c51ad4c8864f9b8de6811073097dd6a33ac42fc9982270926",
+        "NativeResearch/StartupCoordinator.swift": "1fbe30563444727acc3ef4878bf14d10bcaa3dc8ca404e0b3bebc63e88c235dc",
+        "NativeResearch/StartupMain.swift": "083c21afe0f05f84d80286f30e1147f70737a3823171d41e350e6490b0cd522f"
+      },
+      "reason": null,
+      "exit_code": 0,
+      "forced_teardown": false,
+      "elapsed_seconds": 0.041,
+      "observation": {
+        "status": "pass",
+        "id": "S06",
+        "observations": {
+          "trustAccepted": "1",
+          "pending": "0",
+          "handoffs": "0",
+          "states": "real-verify-callback|group:waiting(POSIXErrorCode(rawValue: 50): Network is down)|group:ready|real-child-ready",
+          "completed": "1",
+          "ignoredLate": "0",
+          "peer": "group=waiting(POSIXErrorCode(rawValue: 50): Network is down)|ready;unexpected=0;flows=",
+          "trustRejected": "0",
+          "dataAdmissions": "0",
+          "registered": "1",
+          "outcome": "cancelled",
+          "callerResults": "1"
+        }
+      }
+    }
+  ],
+  "sessions": 7,
+  "corrections": 1,
+  "final_cases": [],
+  "fixture": {
+    "pair_count": 2,
+    "validity": {
+      "server-current": {
+        "start": "20261108130735Z",
+        "end": "20261111130735Z"
+      }
+    },
+    "certificate_hashes": {
+      "ca.cert.der": "7c62e60834c7c3c44108eb28c40467f8d2c6c2a0996dd29f2faa07f3edbf7996",
+      "server-current.cert.der": "d165945abed4c2485526c5331807c32a63f0d56c1cf867523e99d6006ad8fbb0"
+    },
+    "commands": [
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-x509",
+        "-sha256",
+        "-days",
+        "7",
+        "-subj",
+        "/CN=NetworkKit F6 Fixture CA",
+        "-addext",
+        "basicConstraints=critical,CA:true",
+        "-addext",
+        "keyUsage=critical,keyCertSign,cRLSign",
+        "-keyout",
+        "ca.key.pem",
+        "-out",
+        "ca.cert.pem"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=localhost",
+        "-keyout",
+        "server-current.key.pem",
+        "-out",
+        "server-current.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "server_current",
+        "-startdate",
+        "20261108130735Z",
+        "-enddate",
+        "20261111130735Z",
+        "-in",
+        "server-current.csr.pem",
+        "-out",
+        "server-current.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "server-current.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "server-current.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "server-current.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "server-current.key.der"
+      ],
+      [
+        "x509",
+        "-in",
+        "ca.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "ca.cert.der"
+      ]
+    ],
+    "status": "complete"
+  },
+  "closed": true,
+  "cleanup": "owned fixture directory absent; ordinary removal, not secure erasure",
+  "private_log_sha256": {
+    "native-S01-1.log": "72ab15285660390be71e97cb09e7d91e87c0185ccd79376707ffad03c36dee0b",
+    "native-S01-2.log": "68a3630b0e95452c30d9ede61145b7a5602c5ddbc8ae1b1522def51180ba0c67",
+    "native-S05-6.log": "7bd585e2c0e486f54bea36a3d5076b031381e36ec9968df35c6a599150bf8f1b",
+    "pure-L08-8.log": "f20d381a1e1d33aed5d8b2c1cfaf65c990023b8eea4cc4620666414fb5ffc691",
+    "pure-L06-6.log": "7e4c2fe03827ce7a20a2ff7306dd82eddce0bcebf66e5144d5f31909ed251ad2",
+    "pure-L04-4.log": "71aabb78323ce80d553a18002325b763a16123b4705c89619a5fe84362db2475",
+    "native-S03-4.log": "6f1910b2de90d9e34d86fa76ab88db093c7162de1ce09511b7ad4ee945825c1a",
+    "pure-L02-2.log": "7d8f3264784095c182fe7ad9b40c28f4685937a02b8fd6b3fe07f621c78742cd",
+    "native-S06-7.log": "7c46d85a3d13af872cfdcc3ca1b7625f470f6d6479fc533465be11568f283209",
+    "native-S04-5.log": "7bf98a1d003d461e585bbef5d7da26f0769184a6f3571ea1d4e12d7c78de225f",
+    "native-S02-3.log": "7b1a96f0af32fa3b87a6315724e69fb261a25bf1e7a899e2a5b730a0c3489eca",
+    "pure-L07-7.log": "6f85e79fe39db4b464db968a31714042897156e975901a0c7b912cb7e0e313a8",
+    "pure-L05-5.log": "97c86cc82d6885be400b32a864706dc5c2519a7c3ef370abcd9a04cfc2d6e148",
+    "pure-L03-3.log": "fe0df8ee1b9ad729011d3336832b4ee9745382a3e280e4291ea8ad5142350ccb",
+    "pure-L01-1.log": "e0bd7f1561cd7b5cb1b5c6c109493977d06bc505d4e16c6584adc22b43c6c6d9",
+    "pure-L11-11.log": "d6c4657403617efd37fd4df0925b1f4cb33b7595ab89767d0250d182549e8585",
+    "pure-L09-9.log": "1ed9f13e96cd278e3abc67ff79a0694b1a3e6e25837171d6539837db5ab4a9d1",
+    "pure-L12-12.log": "3b5e79e49684f04c35ebfe513820a0b17f3021973031f9a241b5e05dfdfa8499",
+    "compiler-4.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiler-2.log": "0247275477edc3bd90e3041d1474a1390b48a24a0067144379ffcf48ad2041f2",
+    "pure-L10-10.log": "6f2a49e6376168a8a0fae720aab5482b5215e9a84b58d62a7c42e30ab98c3211",
+    "compiler-3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiler-1.log": "c2f724e35a76c4621eb997bad21cf2106738777157ab45240d0a0640adf64b15"
+  },
+  "disposition": "Selected logical-startup controls passed; historical native-error probes remain failed and empty/mixed QUIC requirements unresolved. No production/API acceptance."
+}

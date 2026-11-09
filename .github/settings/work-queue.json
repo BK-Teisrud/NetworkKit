@@ -928,7 +928,7 @@
       "blocked_by": [],
       "parent": 90,
       "code_start_authorized": false,
-      "execution_gate": "Previous isolated scopes closed; owner-approved startup design direction only. Further experiment code/runtime/material requires a concrete separate decision; no extra PR dependency."
+      "execution_gate": "Owner-approved startup-only experiment completed; twelve Swift and six latest native controls pass; Q04/Q05 and complete review remain. Scopes closed; no standing code/runtime permission."
     }
   ],
   "authorization_adr": "docs/decisions/ADR-0012-implementation-start.md",
@@ -1063,11 +1063,9 @@
       "runtime_closed": true,
       "remaining_cases": [
         "Q04",
-        "Q05",
-        "Q06",
-        "Q07"
+        "Q05"
       ],
-      "next_priority": "Prepare verified one-result startup/trust/ALPN admission and identify supported empty-datagram route; no further execution or waived requirements.",
+      "next_priority": "Identify supported empty-message/mixed datagram evidence route; retain production callback bridge/resumption/platform review; no further standing execution.",
       "completion": {
         "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
         "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
@@ -1105,8 +1103,26 @@
         "code_authorized": false,
         "execution_authorized": false
       },
-      "pending_scope": "docs/planning/F6_QUIC_STARTUP_EXECUTION_SCOPE.md",
-      "pending_scope_authorized": false
+      "startup_verification": {
+        "approved_scope": "3bffb74d71b1306d3426901634f120663e0eb0e9",
+        "report": "docs/planning/F6_QUIC_STARTUP_RESULTS_2026-11-09.md",
+        "used": {
+          "compiler": 4,
+          "pure_swift": 12,
+          "sessions": 7,
+          "pairs": 2
+        },
+        "latest_native_passes": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06"
+        ],
+        "runtime_closed": true,
+        "historical_native_error_probes": "Q06/Q07 remain failed; not reclassified"
+      }
     }
   }
 }
