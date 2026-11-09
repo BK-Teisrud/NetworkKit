@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-09",
   "implementation_authorized": true,
   "start_gate": 41,
   "tasks": [
@@ -904,6 +904,18 @@
       "milestone": "F6 \u2013 Specialized features and research",
       "blocked_by": [],
       "parent": 18
+    },
+    {
+      "order": 60.1,
+      "key": "PREP-F6-TLS",
+      "number": 178,
+      "title": "[PREP-F6] Verify late trust completion and expired-client error evidence",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/178",
+      "milestone": "F6 \u2013 Specialized features and research",
+      "blocked_by": [],
+      "parent": 90,
+      "code_start_authorized": false,
+      "execution_gate": "Original Mac build/local/public bounds exhausted; prepare a concrete separate correction decision before execution"
     }
   ],
   "authorization_adr": "docs/decisions/ADR-0012-implementation-start.md",
@@ -1011,5 +1023,15 @@
     "planning_completed": "2026-11-08"
   },
   "f5_implementation_authorized": true,
-  "f5_code_start_decision_issue": 171
+  "f5_code_start_decision_issue": 171,
+  "f6_planning": {
+    "issue": 90,
+    "one_planning_pr": 177,
+    "production_authorized": false,
+    "offline_phase_a": "4 SDK probes/64 pure cases complete; no native authority from that scope",
+    "mac_experiment": "4 builds/33 pure/48 local/4 public completed; I04 native harness failure retained",
+    "next_evidence_followup": 178,
+    "same_pr": true,
+    "no_publication": true
+  }
 }

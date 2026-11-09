@@ -77,11 +77,12 @@ I21 may investigate access to older test environments as preparation without cod
 | 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Completed after accepted PR #175/main; no code authority |
 | 50.1 | [FEAS-F5 / #165](https://github.com/BK-Teisrud/NetworkKit/issues/165) | #89 | Completed after accepted PR #166/main |
 | 50.2 | [FEAS-F5-SEC / #168](https://github.com/BK-Teisrud/NetworkKit/issues/168) | #89 | Completed after accepted PR #169/main; negative/incomplete findings preserved |
-| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Candidate in PR #176; live review status in Project; internal I33→I34→I35→I36 order |
-| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Candidate in PR #176; live review status in Project; internal I33→I34→I35→I36 order |
-| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Verification recorded in PR #176; budgets exhausted; final review/CI gate |
-| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Owner technical disposition and final PR/main gate via #174; see live Project status |
+| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Done after PR #176/main run 42595061321 and full-log review; ordered manual closure verified |
+| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Done after PR #176/main run 42595061321 and full-log review; ordered manual closure verified |
+| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Done after PR #176/main run 42595061321; source-specific evidence/limits retained |
+| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Done after conditional owner technical disposition, PR #176/main run 42595061321 and full-log review |
 | 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | In Progress, planning only; broad-reuse objective and one-plan/one-delivery PR target; see [F6 proposal](F6_COMPREHENSIVE_PLAN.md) |
+| 60.1 | [PREP-F6-TLS / #178](https://github.com/BK-Teisrud/NetworkKit/issues/178) | #90 | Blocked for new execution; prepare combined correction scope for I04 and terminal trust callbacks in the same PR #177; see [Mac results](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md) |
 
 The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.
 

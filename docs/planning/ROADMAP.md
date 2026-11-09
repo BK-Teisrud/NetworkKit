@@ -2,9 +2,9 @@
 
 ## Current scope — 2026-11-09
 
-F0–F4 are completed within recorded technical limits. F4 I31/I32 completed through PR #163/main f86ddcb5ba7a26d05b370007f70b439d0eff5999/run 42406475143 after all seven checks/full-log review and the explicit bounded owner disposition. #29/#132 retain publication barriers. Upload, progress, resume, background and download retry remain deferred.
+F0–F5 selected deliveries are completed within their recorded technical limits. F5 I33–I36/#171–#174 and selected #17/milestone closed after PR #176/main f746928220a430c22065a1c75599f5f6b7e52101/run 42595061321, all seven checks and full-log review, under explicit bounded owner acceptance. Direct Watch WebSocket, streams/heartbeat/reconnect/background and other recorded catalogs remain deferred. #29/#132 publication barriers are unchanged.
 
-PLAN-F5/#89 is completed after accepted exact-contract PR #175/main7c192977d867201288e60532b51d8c8d711b11a1/run42505791505. The owner authorized I33–I36 together in [PR #176](https://github.com/BK-Teisrud/NetworkKit/pull/176). Its final candidate passes 309 Mac tests/37 suites and strict DocC; selected seven-route frame coverage and finite resource evidence are complete, including corrected original failures. All explicit execution budgets are exhausted. Technical owner disposition/current closure is tracked in I36/#174 and Project Status; required final PR/main cannot be inferred from local tests. See [technical review](F5_TECHNICAL_REVIEW_2026-11-09.md). Direct Watch WebSocket, stream/heartbeat/reconnect/background deferrals and HTTP Watch support are unchanged. #165/#168 historical findings remain intact; no new milestone, feature or major refactor is selected.
+F6 #90 is active in one evolving planning PR #177 for broad future-app reuse. Offline Phase A and the separately authorized Mac experiment are completed, not full F6 acceptance. [Mac results](F6_MAC_FEASIBILITY_RESULTS_2026-11-09.md) retain I04's failed native error oracle and late trust-completion gaps. [#178](https://github.com/BK-Teisrud/NetworkKit/issues/178) owns a concrete correction scope before further execution or exact-contract acceptance; original native build/local/public bounds are exhausted. No F6 production code is authorized. All sixteen original research/security requirements remain accounted for.
 
 See [WORK_QUEUE](WORK_QUEUE.md) for current execution order and accepted predecessor evidence, GitHub Project Status for live work state, and the [maintenance plan](ARCHITECTURE_MAINTENANCE_2026-11-04.md) for safeguards. Dated reports and the original allocation below preserve history; their earlier status is not live state. #29 actual app/workload/security/publication and #132 physical Watch retain mandatory separate barriers.
 
@@ -30,7 +30,7 @@ One foreground GET-to-file increment is selected under ADR-0015. #88/I28 are com
 
 ## F5 – Real-time communication
 
-The selected foreground raw-message increment is being implemented in one I33–I36 candidate under ADR-0018 and the exact API contract. Reconnect, event streams, heartbeat scheduling, background continuity and direct Watch WebSockets remain deferred; file transfer is not a dependency. F5 is technically accepted and closed after PR #176/main f746928220a430c22065a1c75599f5f6b7e52101/run 42595061321 and full-log review under the bounded owner disposition. #29/#132 remain open.
+The selected foreground raw-message increment was delivered together through I33–I36 under ADR-0018 and the exact API contract. Reconnect, event streams, heartbeat scheduling, background continuity and direct Watch WebSockets remain deferred; file transfer is not a dependency. F5 is technically accepted and closed after PR #176/main f746928220a430c22065a1c75599f5f6b7e52101/run 42595061321 and full-log review under the bounded owner disposition. #29/#132 remain open.
 
 ## F6 – Specialized features and research
 
