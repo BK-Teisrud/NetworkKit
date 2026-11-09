@@ -81,7 +81,7 @@ I21 may investigate access to older test environments as preparation without cod
 | 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Candidate in PR #176; live review status in Project; internal I33→I34→I35→I36 order |
 | 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Verification recorded in PR #176; budgets exhausted; final review/CI gate |
 | 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Owner technical disposition and final PR/main gate via #174; see live Project status |
-| 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
+| 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | In Progress, planning only; broad-reuse objective and one-plan/one-delivery PR target; see [F6 proposal](F6_COMPREHENSIVE_PLAN.md) |
 
 The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.
 

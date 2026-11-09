@@ -30,11 +30,11 @@ One foreground GET-to-file increment is selected under ADR-0015. #88/I28 are com
 
 ## F5 – Real-time communication
 
-The selected foreground raw-message increment is being implemented in one I33–I36 candidate under ADR-0018 and the exact API contract. Reconnect, event streams, heartbeat scheduling, background continuity and direct Watch WebSockets remain deferred; file transfer is not a dependency. F5 is not yet technically accepted or closed.
+The selected foreground raw-message increment is being implemented in one I33–I36 candidate under ADR-0018 and the exact API contract. Reconnect, event streams, heartbeat scheduling, background continuity and direct Watch WebSockets remain deferred; file transfer is not a dependency. F5 is technically accepted and closed after PR #176/main f746928220a430c22065a1c75599f5f6b7e52101/run 42595061321 and full-log review under the bounded owner disposition. #29/#132 remain open.
 
 ## F6 – Specialized features and research
 
-Research candidates only. PLAN-F6 / #90 ranks actual product needs and sets bounded feasibility and stop/go criteria. Split unrelated security/networking delivery milestones only after evidence and a scope decision.
+PLAN-F6 / #90 is active planning for broad reuse across future apps, with no concrete server requirement. The [comprehensive proposal](F6_COMPREHENSIVE_PLAN.md) inventories all sixteen source bullets. Target one evolving complete planning PR and one integrated implementation PR after explicit contract/code approval; no feature is silently dropped to reach the PR target. Exact scope, capability evidence and contracts remain pending. No F6 production code or execution budget is authorized.
 
 ## Dependencies and approval
 
