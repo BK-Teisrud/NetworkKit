@@ -1,6 +1,6 @@
 # F6 QUIC completion investigation proposal
 
-Prepared 2026-11-09 for #179/#90, same draft PR #177. This is a reviewable code/execution proposal, not current authorization. The completed [initial research](F6_NATIVE_RESEARCH_RESULTS_2026-11-09.md) and [correction](F6_QUIC_CORRECTION_RESULTS_2026-11-09.md) stay immutable. No old quota or key material is reused.
+Prepared 2026-11-09 for #179/#90, same draft PR #177. The owner subsequently approved this exact scope. [Execution is now closed with a stop/redesign finding](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md); the proposal below is retained as the approval baseline. The completed [initial research](F6_NATIVE_RESEARCH_RESULTS_2026-11-09.md) and [correction](F6_QUIC_CORRECTION_RESULTS_2026-11-09.md) stay immutable. No old quota or key material is reused.
 
 ## Concrete preparation findings
 

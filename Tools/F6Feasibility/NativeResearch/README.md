@@ -7,3 +7,5 @@ The approved runtime is closed: 8/8 compiler commands, 30/40 pure invocations, 1
 Use only explicitly authorized controller actions; no default network execution. Per-invocation hashes in the evidence distinguish corrected source versions. Further compiled corrections require a new reviewed execution scope.
 
 The separately approved [QUIC correction](../../../docs/planning/F6_QUIC_CORRECTION_RESULTS_2026-11-09.md) is also closed: 3/4 compiler commands, 4/8 offline oracle controls, 16/16 local sessions, 2/2 pairs. Its fixed-path run_quic_correction.py ledger is independent of the original runtime and refuses execution after closure. Final-source changes do not retroactively validate build-2 observations.
+
+The separately approved [completion investigation](../../../docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md) is closed: 3/6 Mac builds, 6/12 oracle controls, 19/32 local sessions, 2/2 fixture pairs. Eight positive controls match final Swift sources; Q04/Q06/Q07 failed and Q05 was prerequisite-blocked. run_quic_completion.py uses a separate fixed-path closed ledger. Unused quota is not permission to reopen it.

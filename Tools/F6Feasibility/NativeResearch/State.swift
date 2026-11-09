@@ -16,6 +16,8 @@ final class ResearchFlow: Sendable {
     let connection: NWConnection
     let ready = Once<Bool>()
     let history = StateHistory()
+    let phases: StateHistory?
+    let tag: String
     let budget: FlowBudget
     let lease: Lease?
     let datagram: Bool
@@ -24,9 +26,10 @@ final class ResearchFlow: Sendable {
     let lastReceive = OSAllocatedUnfairLock<Once<Data>?>(initialState: nil)
     private struct Pending: Sendable { var closed = false; var sends: [Once<Bool>] = []; var receives: [Once<Data>] = [] }
     private let pending = OSAllocatedUnfairLock(initialState: Pending())
-    init(_ connection: NWConnection, budget: FlowBudget, lease: Lease? = nil, datagram: Bool = false, sendOnly: Bool = false) throws {
+    init(_ connection: NWConnection, budget: FlowBudget, lease: Lease? = nil, datagram: Bool = false, sendOnly: Bool = false, phases: StateHistory? = nil) throws {
         self.connection = connection; self.budget = budget; self.lease = lease; self.datagram = datagram; self.sendOnly = sendOnly
         try budget.context()
+        self.phases = phases; self.tag = "flow-" + String(budget.state.withLock { $0.contextAttempts })
     }
     deinit { close() }
     func start(on queue: DispatchQueue, onReady: (@Sendable () -> Void)? = nil) {
@@ -49,25 +52,40 @@ final class ResearchFlow: Sendable {
         try pending.withLock { s in try assertion(!s.closed && s.sends.isEmpty,"closed/duplicate-send"); s.sends.append(done) }
         defer { pending.withLock { $0.sends.removeAll { $0 === done } } }
         try budget.send(bytes.count)
-        connection.send(content:bytes,contentContext:.defaultMessage,isComplete:true,completion:.contentProcessed { error in
+        phases?.record("\(tag):send-admitted:bytes=\(bytes.count)")
+        let completion = NWConnection.SendCompletion.contentProcessed { [phases,tag] error in
+            phases?.record("\(tag):send-processed:error=\(error != nil)")
             if let error { done.resolve(.failure(error)) } else { done.resolve(.success(true)) }
-        })
+        }
+        if datagram && bytes.isEmpty {
+            phases?.record("\(tag):explicit-empty-dispatch-message")
+            connection.send(content:DispatchData.empty,contentContext:NWConnection.ContentContext(identifier:"f6-empty-datagram"),isComplete:true,completion:completion)
+        } else {
+            connection.send(content:bytes,contentContext:.defaultMessage,isComplete:true,completion:completion)
+        }
         _ = try await bounded(3,cancel:{ [connection] in connection.cancel(); done.resolve(.failure(ProbeFailure.timeout)) }) { try await done.value() }
     }
-    func receive() async throws -> Data {
+    func receive(registered: Once<Bool>? = nil) async throws -> Data {
         try assertion(!sendOnly,"send-only-receive")
         let done = Once<Data>(); lastReceive.withLock { $0 = done }
         try pending.withLock { s in try assertion(!s.closed && s.receives.isEmpty,"closed/duplicate-receive"); s.receives.append(done) }
         defer { pending.withLock { $0.receives.removeAll { $0 === done } } }
-        let callback: @Sendable (Data?,NWConnection.ContentContext?,Bool,NWError?) -> Void = { [budget,datagram] bytes,context,complete,error in
+        let callback: @Sendable (Data?,NWConnection.ContentContext?,Bool,NWError?) -> Void = { [budget,datagram,phases,tag] bytes,context,complete,error in
+            phases?.record("\(tag):receive-callback:bytes=\(bytes?.count ?? -1):complete=\(complete):context=\(context != nil):error=\(error != nil)")
             if let error { done.resolve(.failure(error)); return }
-            if datagram && (!complete || context == nil) { done.resolve(.failure(ProbeFailure.failed("incomplete-datagram"))); return }
+            if datagram && (!complete || context == nil || bytes == nil) { done.resolve(.failure(ProbeFailure.failed("incomplete-datagram"))); return }
             let bytes = bytes ?? Data()
             do { try budget.receive(bytes.count); done.resolve(.success(bytes)) } catch { done.resolve(.failure(error)) }
         }
-        if datagram { connection.receiveMessage(completion:callback) }
+        if datagram {
+            // Preserve the distinction between a missing dispatch object and an actual empty object.
+            connection.receiveMessageDiscontiguous { bytes, context, complete, error in
+                callback(bytes.map { Data($0) },context,complete,error)
+            }
+        }
         else { connection.receive(minimumIncompleteLength:1,maximumLength:65536,completion:callback) }
-        receiveStarted.resolve(.success(true))
+        phases?.record("\(tag):receive-registered")
+        receiveStarted.resolve(.success(true)); registered?.resolve(.success(true))
         return try await bounded(3,cancel:{ [connection] in connection.cancel(); done.resolve(.failure(ProbeFailure.timeout)) }) { try await done.value() }
     }
     func read(_ count: Int) async throws -> Data {
@@ -83,6 +101,11 @@ final class ResearchFlow: Sendable {
         work.1.forEach { $0.resolve(.failure(ProbeFailure.cancelled)) }
         ready.resolve(.failure(ProbeFailure.cancelled)); connection.cancel(); lease?.release()
     }
+    var datagramMetadata: String {
+        guard let metadata = connection.metadata(definition:NWProtocolQUIC.definition) as? NWProtocolQUIC.Metadata else { return "unavailable" }
+        return "usable=\(metadata.usableDatagramFrameSize);streamID=\(metadata.streamIdentifier);ALPN=\(metadata.negotiatedALPN ?? "none")"
+    }
+    var usableDatagramSize: Int { (connection.metadata(definition:NWProtocolQUIC.definition) as? NWProtocolQUIC.Metadata)?.usableDatagramFrameSize ?? 0 }
     var streamID: UInt64? { (connection.metadata(definition:NWProtocolQUIC.definition) as? NWProtocolQUIC.Metadata)?.streamIdentifier }
     var alpn: String { (connection.metadata(definition:NWProtocolQUIC.definition) as? NWProtocolQUIC.Metadata)?.negotiatedALPN ?? "unavailable" }
 }

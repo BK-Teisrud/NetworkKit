@@ -50,17 +50,18 @@ final class QUICGroupBox: Sendable {
     let failure = OSAllocatedUnfairLock<String?>(initialState:nil)
     let history = StateHistory()
     let unexpected = OSAllocatedUnfairLock(initialState:0)
-    init(_ group: NWConnectionGroup) {
-        self.group = group
+    let phases: StateHistory
+    init(_ group: NWConnectionGroup, phases: StateHistory = StateHistory(limit:64)) {
+        self.group = group; self.phases = phases
         group.stateUpdateHandler = { [ready,failure,history] state in
             history.record(String(describing:state))
             if case .ready = state { ready.resolve(.success(true)) }
             if case .failed(let error) = state { failure.withLock { $0 = String(describing:error) }; ready.resolve(.failure(error)) }
             if case .cancelled = state { ready.resolve(.failure(ProbeFailure.cancelled)) }
         }
-        group.newConnectionHandler = { [inbox,budget,flows,queue,unexpected] connection in
+        group.newConnectionHandler = { [inbox,budget,flows,queue,unexpected,phases] connection in
             do {
-                let flow = try ResearchFlow(connection,budget:budget)
+                let flow = try ResearchFlow(connection,budget:budget,phases:phases)
                 flows.withLock { $0.append(flow) }
                 // Do not block the FIFO on an incoming stream that has not reached readiness.
                 flow.start(on:queue,onReady:{ [weak flow] in if let flow { inbox.push(flow) } })
@@ -71,7 +72,8 @@ final class QUICGroupBox: Sendable {
     func waitReady() async throws {
         _ = try await bounded(4,cancel:{ [group,ready] in group.cancel(); ready.resolve(.failure(ProbeFailure.timeout)) }) { [ready] in try await ready.value() }
     }
-    func open(unidirectional: Bool = false, datagram: Bool = false) async throws -> ResearchFlow {
+    func extractAndStart(unidirectional: Bool = false, datagram: Bool = false) throws -> ResearchFlow {
+        phases.record("extract:uni=\(unidirectional):datagram=\(datagram)")
         let connection: NWConnection?
         if unidirectional || datagram {
             // Preserve the established group's TLS/ALPN configuration when selecting a child mode.
@@ -87,9 +89,14 @@ final class QUICGroupBox: Sendable {
             connection = group.extract()
         }
         guard let connection else { throw ProbeFailure.failed("extract-nil") }
-        let flow = try ResearchFlow(connection,budget:budget,datagram:datagram,sendOnly:unidirectional)
+        let flow = try ResearchFlow(connection,budget:budget,datagram:datagram,sendOnly:unidirectional,phases:phases)
         flows.withLock { $0.append(flow) }; flow.start(on:queue)
+        return flow
+    }
+    func open(unidirectional: Bool = false, datagram: Bool = false) async throws -> ResearchFlow {
+        let flow = try extractAndStart(unidirectional:unidirectional,datagram:datagram)
         do { try await flow.waitReady() } catch { throw ProbeFailure.failed("extracted-flow-ready:\(error)") }
+        phases.record("extracted-ready:" + flow.datagramMetadata)
         return flow
     }
     func incoming() async throws -> ResearchFlow { let flow = try await inbox.take(); try await flow.waitReady(); return flow }
@@ -110,7 +117,7 @@ final class QUICListenerPeer: Sendable {
     let groups = OSAllocatedUnfairLock(initialState:[QUICGroupBox]())
     let queue = DispatchQueue(label:"f6.179.quic.listener")
     let unexpected = OSAllocatedUnfairLock(initialState:0)
-    init(root: URL, datagrams: Bool = true) throws {
+    init(root: URL, datagrams: Bool = true, phases: StateHistory = StateHistory(limit:64)) throws {
         let parameters = try quicParameters(root:root,server:true,observation:TrustObservation(),datagrams:datagrams)
         parameters.requiredLocalEndpoint = .hostPort(host:"127.0.0.1",port:.any)
         let listener: NWListener
@@ -123,10 +130,10 @@ final class QUICListenerPeer: Sendable {
             if case .failed(let error) = state { ready.resolve(.failure(error)) }
             if case .cancelled = state { ready.resolve(.failure(ProbeFailure.cancelled)) }
         }
-        listener.newConnectionGroupHandler = { [groups,accepted,unexpected] group in
+        listener.newConnectionGroupHandler = { [groups,accepted,unexpected,phases] group in
             let allowed = groups.withLock { $0.isEmpty }
             guard allowed else { unexpected.withLock { $0 += 1 }; group.cancel(); return }
-            let box = QUICGroupBox(group)
+            let box = QUICGroupBox(group,phases:phases)
             groups.withLock { $0.append(box) }; box.start(); accepted.resolve(.success(box))
         }
         // SDK listener.h: group and ordinary connection handlers are mutually exclusive.
@@ -145,23 +152,44 @@ final class QUICListenerPeer: Sendable {
 }
 
 func quicCase(_ id: String, root: URL) async throws -> ResearchReport {
+    let phases = StateHistory(limit:64)
     let streamOnly = id == "C01"
-    let peer = try QUICListenerPeer(root:root,datagrams:!streamOnly); defer { peer.close() }
+    let peer = try QUICListenerPeer(root:root,datagrams:!streamOnly,phases:phases); defer { peer.close() }
     let port = try await peer.start(); let trust = TrustObservation()
     let parameters = try quicParameters(root:root,server:false,trusted:id != "Q07",alpn:id == "Q06" ? "networkkit-f6-wrong" : researchALPN,observation:trust,datagrams:!streamOnly)
-    let client = QUICGroupBox(NWConnectionGroup(with:NWMultiplexGroup(to:.hostPort(host:"127.0.0.1",port:NWEndpoint.Port(rawValue:port)!)),using:parameters))
+    let client = QUICGroupBox(NWConnectionGroup(with:NWMultiplexGroup(to:.hostPort(host:"127.0.0.1",port:NWEndpoint.Port(rawValue:port)!)),using:parameters),phases:phases)
     defer {
-        let evidence = ResearchReport(id:id+"-diagnostic",observations:["client":client.diagnostic(),"peer":peer.groups.withLock { $0.map { $0.diagnostic() }.joined(separator:" / ") },"unexpectedTransports":String(peer.unexpected.withLock { $0 }),"trustCalls":String(trust.state.withLock { $0.calls }),"trustRejected":String(trust.state.withLock { $0.rejected }),"trustAccepted":String(trust.state.withLock { $0.accepted })])
+        let evidence = ResearchReport(id:id+"-diagnostic",observations:["phases":phases.snapshot,"client":client.diagnostic(),"peer":peer.groups.withLock { $0.map { $0.diagnostic() }.joined(separator:" / ") },"unexpectedTransports":String(peer.unexpected.withLock { $0 }),"trustCalls":String(trust.state.withLock { $0.calls }),"trustRejected":String(trust.state.withLock { $0.rejected }),"trustAccepted":String(trust.state.withLock { $0.accepted })])
         if let bytes = try? JSONEncoder().encode(evidence) { FileHandle.standardError.write(bytes + Data([10])) }
         client.close()
     }; client.start()
     var report = ResearchReport(id:id)
     if id == "Q06" || id == "Q07" {
-        do { try await client.waitReady(); throw ProbeFailure.failed("negative-quic-ready") }
+        let child: ResearchFlow? = try await withCheckedThrowingContinuation { continuation in
+            client.queue.async {
+                do { continuation.resume(returning:try client.extractAndStart()) }
+                catch ProbeFailure.failed(let label) where label == "extract-nil" {
+                    phases.record("initial-child-unavailable-before-group-readiness")
+                    continuation.resume(returning:nil)
+                }
+                catch { continuation.resume(throwing:error) }
+            }
+        }
+        do {
+            if let child { try await child.waitReady(4) }
+            else {
+                // Observe the actual handshake instead of terminating it at an unavailable early extract.
+                phases.record("await-group-handshake-terminal")
+                try await client.waitReady()
+            }
+            throw ProbeFailure.failed("negative-quic-ready")
+        }
         catch let error as NWError {
             if id == "Q07" { try assertion(trust.state.withLock { $0.calls > 0 && $0.rejected > 0 && $0.accepted == 0 },"trust-witness") }
             if id == "Q06" { guard case .tls = error else { throw ProbeFailure.failed("ALPN-not-TLS-error") } }
+            try assertion(child?.history.state.withLock { $0.entries.contains("ready") } != true,"negative-child-ready")
             report.observations["nativeError"] = String(describing:error)
+            report.observations["childStates"] = child?.history.snapshot ?? "unavailable"
             report.observations["trustRejected"] = String(trust.state.withLock { $0.rejected })
             return report
         }
@@ -169,12 +197,28 @@ func quicCase(_ id: String, root: URL) async throws -> ResearchReport {
     try await client.waitReady(); let server = try await peer.take()
     if id == "Q04" || id == "Q05" {
         let outgoing = try await client.open(datagram:true); let incoming = try await server.open(datagram:true)
-        try await outgoing.send(Data("dg".utf8)); let data = try await incoming.receive()
+        phases.record("datagram-metadata:client:"+outgoing.datagramMetadata+";server:"+incoming.datagramMetadata)
+        try assertion(outgoing.usableDatagramSize >= 2 && incoming.usableDatagramSize >= 2,"no-usable-datagram-capacity")
+        let firstRegistered = Once<Bool>()
+        let firstReceive = Task { try await incoming.receive(registered:firstRegistered) }
+        defer { firstReceive.cancel() }
+        _ = try await bounded(2,cancel:{ incoming.close(); firstRegistered.resolve(.failure(ProbeFailure.timeout)) }) { try await firstRegistered.value() }
+        try await outgoing.send(Data("dg".utf8)); let data = try await firstReceive.value
         try assertion(data == Data("dg".utf8),"datagram-route")
-        try await outgoing.send(Data()); let empty = try await incoming.receive()
+        phases.record("datagram-first-exact")
+        let emptyRegistered = Once<Bool>()
+        let emptyReceive = Task { try await incoming.receive(registered:emptyRegistered) }
+        defer { emptyReceive.cancel() }
+        _ = try await bounded(2,cancel:{ incoming.close(); emptyRegistered.resolve(.failure(ProbeFailure.timeout)) }) { try await emptyRegistered.value() }
+        try await outgoing.send(Data()); let empty = try await emptyReceive.value
         try assertion(empty.isEmpty,"empty-datagram")
+        phases.record("datagram-empty-exact")
         report.observations["datagramBytes"] = String(data.count); report.observations["emptyDatagram"] = "true"
-        if id == "Q04" { report.observations["clientContexts"] = String(client.budget.state.withLock { $0.contexts }); return report }
+        if id == "Q04" {
+            try assertion(peer.unexpected.withLock { $0 == 0 } && client.unexpected.withLock { $0 == 0 } && server.unexpected.withLock { $0 == 0 },"unexpected-group-or-context")
+            report.observations["clientContexts"] = String(client.budget.state.withLock { $0.contexts }); return report
+        }
+        phases.record("mixed-start-stream")
     }
     if id == "Q02" {
         let outgoing = try await server.open(unidirectional:true)

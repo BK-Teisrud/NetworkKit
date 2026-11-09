@@ -1062,15 +1062,41 @@
       },
       "runtime_closed": true,
       "remaining_cases": [
-        "Q03",
         "Q04",
         "Q05",
         "Q06",
         "Q07"
       ],
-      "next_priority": "Datagram phase attribution, qualifying negative handshake completion and client-uni verification; prepare separate scope before further execution.",
-      "pending_scope": "docs/planning/F6_QUIC_COMPLETION_SCOPE.md",
-      "pending_scope_authorized": false
+      "next_priority": "Adapter/design review of empty-message delivery and terminal handshake propagation; no automatic reruns, no waived criteria.",
+      "completion": {
+        "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
+        "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
+        "used": {
+          "compiler": 3,
+          "pure": 6,
+          "sessions": 19,
+          "pairs": 2
+        },
+        "runtime_closed": true,
+        "final_source_positive_cases": [
+          "C01",
+          "Q03",
+          "Q01",
+          "C02",
+          "C03",
+          "Q02",
+          "Q08",
+          "Q09"
+        ],
+        "failed": [
+          "Q04",
+          "Q06",
+          "Q07"
+        ],
+        "prerequisite_blocked": [
+          "Q05"
+        ]
+      }
     }
   }
 }

@@ -43,3 +43,7 @@ Peer-to-peer is an explicit Network.framework option attached to selected discov
 ## Before final exact API approval
 
 Resolve interface binding feasibility, active-connection lease release without retained cycles, browser overflow semantics, multicast native loss accounting and QUIC model. Set all config value types/constructors/properties, result types and error enums without placeholders; compile ordinary public-import examples for each family. The signatures above are an actionable candidate, not a complete public header. Do not mark #90 complete or create a Ready implementation ticket while these boundaries are unresolved. No additional offline reserve slots were consumed by this document.
+
+## Current QUIC feasibility boundary
+
+The [completion investigation](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md) verifies both stream directions and eight positive controls on one Mac source version. Empty datagram delivery and terminal handshake-error propagation remain unproved; complete mixed mode is blocked. Do not finalize a QUIC public contract that promises these behaviors from current prototype evidence. Keep the original requirements visible and review the adapter before proposing further execution or owner scope changes.

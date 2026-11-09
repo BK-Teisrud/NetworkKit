@@ -25,7 +25,7 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [QUIC correction results](F6_QUIC_CORRECTION_RESULTS_2026-11-09.md): separately authorized 3-build/4-oracle/16-session correction completed; seven of twelve unique controls pass, Q03–Q07 unresolved. No further runtime or production authority.
 
-- [QUIC completion investigation proposal](F6_QUIC_COMPLETION_SCOPE.md): phase-specific diagnostics, per-receive admission, same-group handshake witnesses and consolidated final-source controls; new bounded execution decision pending.
+- [QUIC completion investigation proposal](F6_QUIC_COMPLETION_SCOPE.md): subsequently authorized and completed: [results](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md) show eight final-source positive controls, unresolved empty datagram/negative-handshake/mixed-mode gates; stop/redesign before another execution decision.
 
 ## Delivery strategy
 
