@@ -43,3 +43,5 @@ Keep #179 ahead of exact API selection and production start. Review stream extra
 All eight compiler commands are consumed, so no further compiled correction or native rerun was performed. A concrete correction and a separately authorized new execution envelope are needed. No new issue/PR is required merely to continue this same investigation.
 
 Native/physical Bonjour, permissions, multicast, peer-to-peer, other-platform runtime evidence and exact public contracts remain open. No installed trust, user Keychain, signing, device installation, entitlement or account changes occurred. The fixture directory is absent; ordinary removal is not secure-erasure proof. #29/#132 publication barriers remain.
+
+A [bounded correction proposal](F6_QUIC_CORRECTION_SCOPE.md) now isolates stream-only/extraction/process-correlation controls and strengthens handshake oracles. It is not execution authority.
