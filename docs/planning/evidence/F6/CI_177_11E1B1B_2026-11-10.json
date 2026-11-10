@@ -1,0 +1,29 @@
+{
+  "reviewed_on": "2026-11-10",
+  "pull_request": 177,
+  "head": "11e1b1b5196cc1547ef39e228d0ca203dbb55531",
+  "run": 42623248593,
+  "run_url": "https://github.com/BK-Teisrud/NetworkKit/actions/runs/42623248593",
+  "checks": {
+    "source-integrity": "SUCCESS",
+    "macos-core": "SUCCESS",
+    "ios-core": "SUCCESS",
+    "watchos-core": "SUCCESS",
+    "tvos-core": "SUCCESS",
+    "documentation": "SUCCESS",
+    "quality-gate": "SUCCESS"
+  },
+  "full_log_sha256": "1af3043262b9d185230d244ca1f8c98c8048e173d110a5cc850ab6c03a97f4dc",
+  "full_log_bytes": 4078217,
+  "test_summaries": [
+    "\u2714 Test run with 309 tests in 37 suites passed after 13.805 seconds.",
+    "\u2714 Test run with 4 tests in 1 suite passed after 0.934 seconds.",
+    "\u2714 Test run with 300 tests in 34 suites passed after 88.961 seconds.",
+    "\u2714 Test run with 300 tests in 34 suites passed after 170.382 seconds.",
+    "\u2714 Test run with 260 tests in 30 suites passed after 42.967 seconds.",
+    "\u2714 Test run with 300 tests in 34 suites passed after 3.824 seconds."
+  ],
+  "compiler_error_lines": 0,
+  "warning_assessment": "Test-host warnings: manual target order, skipped AppIntents extraction, signed Apple test binaries not stripped and interface orientation. Not proof of specialized F6 runtime behavior. Review host configuration during selected native/physical integration. No warning suppression or CI/source change made.",
+  "acceptance_boundary": "PR candidate checks passed; draft not merged, no main acceptance or full F6/179 closure."
+}

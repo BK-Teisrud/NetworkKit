@@ -1065,7 +1065,7 @@
         "Q04",
         "Q05"
       ],
-      "next_priority": "Identify supported empty-message/mixed datagram evidence route; retain production callback bridge/resumption/platform review; no further standing execution.",
+      "next_priority": "Assess explicitly preconfigured native datagram route versus group extraction after separate code/runtime approval; no OS-floor/dependency change.",
       "completion": {
         "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
         "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
@@ -1122,7 +1122,15 @@
         ],
         "runtime_closed": true,
         "historical_native_error_probes": "Q06/Q07 remain failed; not reclassified"
-      }
+      },
+      "pending_scope": "docs/planning/F6_QUIC_DATAGRAM_ROUTE_SCOPE.md",
+      "pending_scope_authorized": false
+    },
+    "latest_reviewed_pr_ci": {
+      "head": "11e1b1b5196cc1547ef39e228d0ca203dbb55531",
+      "run": 42623248593,
+      "all_seven_checks": "SUCCESS",
+      "main_accepted": false
     }
   }
 }

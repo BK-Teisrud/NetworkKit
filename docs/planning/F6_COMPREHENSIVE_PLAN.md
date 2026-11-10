@@ -33,6 +33,8 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Logical startup execution proposal](F6_QUIC_STARTUP_EXECUTION_SCOPE.md): subsequently authorized and completed: [results](F6_QUIC_STARTUP_RESULTS_2026-11-09.md) record twelve Swift controls and six latest native passes, with original failures retained. Empty/mixed, resumption and production callback-boundary gates remain.
 
+- [Native datagram route comparison proposal](F6_QUIC_DATAGRAM_ROUTE_SCOPE.md): direct preconfigured datagram mode versus extracted-flow group, within existing OS floors; separate code/runtime decision pending. OpenSSL 3.6 is not an independent DATAGRAM peer.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.
