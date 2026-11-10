@@ -1,6 +1,6 @@
 # F6 QUIC native datagram route comparison
 
-Prepared 2026-11-10 for #179/#90, same draft PR #177. Read-only review plus proposed next executable scope. No new code/compiler/transport/fixture was run. Previous startup verification and all prior ledgers remain closed. Separate owner code/execution approval is required.
+Prepared 2026-11-10 for #179/#90, same draft PR #177. Read-only review plus proposed next executable scope. No new code/compiler/transport/fixture was run. Previous startup verification and all prior ledgers remain closed. The owner subsequently approved this exact scope. [Execution is now closed with unresolved empty delivery](F6_QUIC_DATAGRAM_ROUTE_RESULTS_2026-11-10.md); the proposal below is retained as the approval baseline.
 
 ## New supported hypothesis
 

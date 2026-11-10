@@ -51,3 +51,5 @@ The [completion investigation](F6_QUIC_COMPLETION_RESULTS_2026-11-09.md) verifie
 The owner subsequently approved the [logical startup/error direction](F6_QUIC_ADAPTER_REVIEW.md), explicitly no new code or execution. [Coordinator design](F6_QUIC_STARTUP_DESIGN.md) defines the next verification preparation; it does not retrospectively pass Q06/Q07 or resolve Q04/Q05.
 
 The separately approved [startup experiment](F6_QUIC_STARTUP_RESULTS_2026-11-09.md) now verifies twelve Swift coordinator inputs and six latest native startup cases. This narrows logical-error/admission gaps without passing old native-code probes or resolving empty/mixed datagrams, resumption, callback bridge production safety or cross-platform API acceptance.
+
+The separately approved [direct datagram comparison](F6_QUIC_DATAGRAM_ROUTE_RESULTS_2026-11-10.md) also failed complete empty delivery, despite successful nonempty delivery in both directions. It does not establish a universal OS limitation or an independent peer verdict. Raw empty/mixed requirements stay blocked and unchanged; no further identical rerun is justified without a new supported mechanism.

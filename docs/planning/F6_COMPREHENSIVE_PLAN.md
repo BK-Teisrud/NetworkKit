@@ -33,7 +33,7 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Logical startup execution proposal](F6_QUIC_STARTUP_EXECUTION_SCOPE.md): subsequently authorized and completed: [results](F6_QUIC_STARTUP_RESULTS_2026-11-09.md) record twelve Swift controls and six latest native passes, with original failures retained. Empty/mixed, resumption and production callback-boundary gates remain.
 
-- [Native datagram route comparison proposal](F6_QUIC_DATAGRAM_ROUTE_SCOPE.md): direct preconfigured datagram mode versus extracted-flow group, within existing OS floors; separate code/runtime decision pending. OpenSSL 3.6 is not an independent DATAGRAM peer.
+- [Native datagram route comparison proposal](F6_QUIC_DATAGRAM_ROUTE_SCOPE.md): subsequently authorized and completed: [results](F6_QUIC_DATAGRAM_ROUTE_RESULTS_2026-11-10.md) show direct mode nonempty delivery in both directions, but no empty delivery. Group/mixed comparison prerequisites did not pass. OpenSSL 3.6 is not an independent DATAGRAM peer.
 
 ## Delivery strategy
 

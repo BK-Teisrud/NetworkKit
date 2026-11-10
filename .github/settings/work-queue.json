@@ -1065,7 +1065,7 @@
         "Q04",
         "Q05"
       ],
-      "next_priority": "Assess explicitly preconfigured native datagram route versus group extraction after separate code/runtime approval; no OS-floor/dependency change.",
+      "next_priority": "Identify a supported changed mechanism, independently implemented DATAGRAM peer or available runtime comparison; preserve empty/mixed requirement, no identical reruns. Independent F6 planning may proceed.",
       "completion": {
         "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
         "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
@@ -1123,8 +1123,26 @@
         "runtime_closed": true,
         "historical_native_error_probes": "Q06/Q07 remain failed; not reclassified"
       },
-      "pending_scope": "docs/planning/F6_QUIC_DATAGRAM_ROUTE_SCOPE.md",
-      "pending_scope_authorized": false
+      "datagram_route": {
+        "scope": "ed85295dff2b38337ba35a287c7bdefd9b61d8e4",
+        "report": "docs/planning/F6_QUIC_DATAGRAM_ROUTE_RESULTS_2026-11-10.md",
+        "used": {
+          "compiler": 1,
+          "pure_swift": 4,
+          "sessions": 3,
+          "pairs": 2
+        },
+        "runtime_closed": true,
+        "failed": [
+          "D01",
+          "D02",
+          "D03"
+        ],
+        "prerequisite_blocked": [
+          "G01",
+          "G02"
+        ]
+      }
     },
     "latest_reviewed_pr_ci": {
       "head": "11e1b1b5196cc1547ef39e228d0ca203dbb55531",
