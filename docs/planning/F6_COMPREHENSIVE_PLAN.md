@@ -35,6 +35,9 @@ Status: working proposal, 2026-11-09. Tracking: #90, #13, #18. No F6 production 
 
 - [Native datagram route comparison proposal](F6_QUIC_DATAGRAM_ROUTE_SCOPE.md): subsequently authorized and completed: [results](F6_QUIC_DATAGRAM_ROUTE_RESULTS_2026-11-10.md) show direct mode nonempty delivery in both directions, but no empty delivery. Group/mixed comparison prerequisites did not pass. OpenSSL 3.6 is not an independent DATAGRAM peer.
 
+- [Installed runtime/API comparison proposal](F6_QUIC_RUNTIME_COMPARISON_SCOPE.md): compare legacy and modern QUIC on existing iOS 26.2 x86_64 simulator; no runtime downloaded/booted, separate execution decision pending.
+- [Independent local-network preparation](F6_LOCAL_NETWORK_VERIFICATION_PLAN.md): Bonjour/listener/multicast/P2P host and real-route evidence lane under #90/#18, not dependent on #179 runtime acceptance.
+
 ## Delivery strategy
 
 Use one evolving planning PR for the complete inventory, architecture decisions, exact contracts, threat models, feasibility plans/results where separately authorized, platform assessment and delivery/test decomposition. Do not merge a partial planning draft as a completed design. Resolve material decisions in the owner conversation and record them in this PR instead of creating a PR per decision. Then target one integrated implementation PR for the approved deliverable, with independently reviewable commits and internal task order. Keep fixes and documentation in that PR until acceptance. Additional PRs require an explained dependency, risk or review reason, rather than an arbitrary slice count.

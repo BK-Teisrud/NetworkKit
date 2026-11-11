@@ -1,0 +1,24 @@
+{
+  "observed_on": "2026-11-11",
+  "read_only": true,
+  "iOS_runtime": {
+    "name": "iOS 26.2",
+    "version": "26.2",
+    "isAvailable": true,
+    "supportedArchitectures": [
+      "x86_64",
+      "arm64"
+    ]
+  },
+  "runtime_booted": false,
+  "compiler_or_test_started": false,
+  "selected_python_aioquic_present": false,
+  "inventory_boundary": "Selected Python interpreter only; no install or exhaustive environment search. Simulator availability/architectures do not prove boot or test compatibility.",
+  "pr_ci": {
+    "commit": "00083e4fb5baceb17b9e17ddebdb70fb97d8a491",
+    "run": 42830158396,
+    "seven_job_statuses": "completed/success",
+    "full_logs_accepted_this_turn": false,
+    "main_accepted": false
+  }
+}

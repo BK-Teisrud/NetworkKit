@@ -1065,7 +1065,7 @@
         "Q04",
         "Q05"
       ],
-      "next_priority": "Identify a supported changed mechanism, independently implemented DATAGRAM peer or available runtime comparison; preserve empty/mixed requirement, no identical reruns. Independent F6 planning may proceed.",
+      "next_priority": "Installed iOS26.2 legacy/modern runtime comparison proposal pending approval; preserve Mac baseline and no new dependency.",
       "completion": {
         "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
         "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
@@ -1142,13 +1142,17 @@
           "G01",
           "G02"
         ]
-      }
+      },
+      "pending_scope": "docs/planning/F6_QUIC_RUNTIME_COMPARISON_SCOPE.md",
+      "pending_scope_authorized": false
     },
     "latest_reviewed_pr_ci": {
-      "head": "11e1b1b5196cc1547ef39e228d0ca203dbb55531",
-      "run": 42623248593,
+      "head": "00083e4fb5baceb17b9e17ddebdb70fb97d8a491",
+      "run": 42830158396,
       "all_seven_checks": "SUCCESS",
+      "status_verified_only": true,
       "main_accepted": false
-    }
+    },
+    "independent_local_network_plan": "docs/planning/F6_LOCAL_NETWORK_VERIFICATION_PLAN.md"
   }
 }
