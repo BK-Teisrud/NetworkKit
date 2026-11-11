@@ -77,11 +77,13 @@ I21 may investigate access to older test environments as preparation without cod
 | 50 | [PLAN-F5 / #89](https://github.com/BK-Teisrud/NetworkKit/issues/89) | #17 | Completed after accepted PR #175/main; no code authority |
 | 50.1 | [FEAS-F5 / #165](https://github.com/BK-Teisrud/NetworkKit/issues/165) | #89 | Completed after accepted PR #166/main |
 | 50.2 | [FEAS-F5-SEC / #168](https://github.com/BK-Teisrud/NetworkKit/issues/168) | #89 | Completed after accepted PR #169/main; negative/incomplete findings preserved |
-| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Candidate in PR #176; live review status in Project; internal I33→I34→I35→I36 order |
-| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Candidate in PR #176; live review status in Project; internal I33→I34→I35→I36 order |
-| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Verification recorded in PR #176; budgets exhausted; final review/CI gate |
-| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Owner technical disposition and final PR/main gate via #174; see live Project status |
-| 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | Backlog; research need/stop-go criteria pending |
+| 51 | [I33 / #171](https://github.com/BK-Teisrud/NetworkKit/issues/171) | #17 | Done after PR #176/main run 42595061321 and full-log review; ordered manual closure verified |
+| 52 | [I34 / #172](https://github.com/BK-Teisrud/NetworkKit/issues/172) | #17 | Done after PR #176/main run 42595061321 and full-log review; ordered manual closure verified |
+| 53 | [I35 / #173](https://github.com/BK-Teisrud/NetworkKit/issues/173) | #17 | Done after PR #176/main run 42595061321; source-specific evidence/limits retained |
+| 54 | [I36 / #174](https://github.com/BK-Teisrud/NetworkKit/issues/174) | #17 | Done after conditional owner technical disposition, PR #176/main run 42595061321 and full-log review |
+| 60 | [PLAN-F6 / #90](https://github.com/BK-Teisrud/NetworkKit/issues/90) | #13/#18 | In Progress, planning only; broad-reuse objective and one-plan/one-delivery PR target; see [F6 proposal](F6_COMPREHENSIVE_PLAN.md) |
+| 60.1 | [PREP-F6-TLS / #178](https://github.com/BK-Teisrud/NetworkKit/issues/178) | #90 | In Review; [#178 correction](F6_TLS_CORRECTION_RESULTS_2026-11-09.md) passed selected build/pure/local controls; integrated PR #177/main still required, no separate PR or new execution |
+| 60.2 | [FEAS-F6-NATIVE / #179](https://github.com/BK-Teisrud/NetworkKit/issues/179) | #90 | Blocked for empty/mixed datagram proof; [approved logical-startup experiment](F6_QUIC_STARTUP_RESULTS_2026-11-09.md) passed twelve Swift/six latest native controls; historical probes retained; [direct-route comparison](F6_QUIC_DATAGRAM_ROUTE_RESULTS_2026-11-10.md) completed without empty delivery; [installed runtime attempt](F6_QUIC_RUNTIME_COMPARISON_RESULTS_2026-11-11.md) stopped on one boot timeout, cleanup verified; no protocol tests run, no more identical Mac reruns; candidate 11e1b1b CI passed, same draft PR #177/main still required |
 
 The planning rows do not themselves authorize extension implementation. F2/F3 are complete; selected F4 authorization and current delivery are recorded above. Future epics have no Order and require new scope decisions; only selected implementation slices receive I identifiers. Parent epics may span phases; individual subtasks' milestones define delivery requirements. Reassess phase boundaries after selection and sizing, without inventing dates.
 
@@ -114,3 +116,5 @@ Minimum macOS follow-up, 2026-10-29: [temporary standard GitHub macOS 14 executi
 - Order 40.5: [I31 / #149](https://github.com/BK-Teisrud/NetworkKit/issues/149) — Blocked by the maintenance chain; native Mac checkpoint and remaining platform/HTTPS/resource criteria retained. See download plan for dependencies.
 
 - Order 40.6: [I32 / #150](https://github.com/BK-Teisrud/NetworkKit/issues/150) — Authorized in sequence; predecessor acceptance required. See download plan for dependencies.
+
+F6 independent lane, 2026-11-11: [local-network verification preparation](F6_LOCAL_NETWORK_VERIFICATION_PLAN.md) under #90/#18 can progress while #179 retains its specific empty/mixed gate. No new code/network authority or production Ready issue follows.

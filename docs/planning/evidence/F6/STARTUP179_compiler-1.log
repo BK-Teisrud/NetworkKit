@@ -1,0 +1,10 @@
+<workspace>/Tools/F6Feasibility/NativeResearch/StartupMain.swift:28:83: error: capture of 'complete' with non-Sendable type 'sec_protocol_verify_complete_t' (aka '(Bool) -> ()') in a '@Sendable' closure [#SendableClosureCaptures]
+ 26 |         sec_protocol_options_set_verify_block(options.securityProtocolOptions,{ [trust,held,verificationSeen,history] _,reference,complete in
+ 27 |             history.record("real-verify-callback")
+ 28 |             guard let token = gate.register(context:gate.context,reply:{ valid in complete(valid) }) else { return }
+    |                                                                                   |- error: capture of 'complete' with non-Sendable type 'sec_protocol_verify_complete_t' (aka '(Bool) -> ()') in a '@Sendable' closure [#SendableClosureCaptures]
+    |                                                                                   `- note: a function type must be marked '@Sendable' to conform to 'Sendable'
+ 29 |             let nativeTrust = sec_trust_copy_ref(reference).takeRetainedValue()
+ 30 |             SecTrustSetNetworkFetchAllowed(nativeTrust,false)
+
+[#SendableClosureCaptures]: <https://docs.swift.org/compiler/documentation/diagnostics/sendable-closure-captures>

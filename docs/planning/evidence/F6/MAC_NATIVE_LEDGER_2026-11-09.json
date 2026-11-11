@@ -1,0 +1,3263 @@
+{
+  "builds": [
+    {
+      "exit_code": 1,
+      "reason": "initial",
+      "slot": 1,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "ce20fd54ffd2d22c6577015c546662d751aeee463baf687b932b8a2f146ac5be",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "dd90677c827408f5c8f2012558eb241053e46206abf34eb2f1afeefaf7afb37c",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "exit_code": 0,
+      "reason": "Correct nonoptional URLCredential.certificates SDK type; replace H08 placeholder admission observation with a real cancelled preparation task and task-start barrier",
+      "slot": 2,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "exit_code": 0,
+      "reason": "Finalize signed body Content-Type before sending; require positive H06 control; witness delegate policy cancellation and require independent missing/wrong/expired client fixture evidence rather than guessing from generic URL errors",
+      "slot": 3,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "exit_code": 0,
+      "reason": "Make W26 prove both waiters are stored before resolution. Record expired-client native -1004 acceptance only behind independent server verify_code=10; network scope exhausted, that oracle change will not be rerun.",
+      "slot": 4,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "e11338902daf87c63a0d06f68a24a4b37f9c4c5a9f9e145bdb7dfb88d2760496",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "d3daa07570d586c7602d30904c883e95e7f56f54ebd96210030bd794c6b698cd",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    }
+  ],
+  "cleanup": "owned fixture material removed; no secure-erasure guarantee",
+  "date": "2026-11-09",
+  "final_source_hashes": {
+    "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+    "NATIVE_README.md": "0336684b40eddf78db13bc2c404be265f02de4133310d8635ceab055e387ea3c",
+    "NativeMain.swift": "e11338902daf87c63a0d06f68a24a4b37f9c4c5a9f9e145bdb7dfb88d2760496",
+    "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+    "NativeState.swift": "d3daa07570d586c7602d30904c883e95e7f56f54ebd96210030bd794c6b698cd",
+    "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+    "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+    "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+    "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+    "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+    "run_native_batch.py": "744c231708a03b510b550e84e5c708a846c2e399900fe3454a22b9b40a42d733",
+    "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+    "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+    "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+  },
+  "fixture": {
+    "certificate_hashes": {
+      "ca.cert.der": "9e7778ae3d832ffa3387a8bb4956356349d9d57cb965823ab4c8bbc4cbbe7fec",
+      "client-expired.cert.der": "dfe5323a5a2d6275bbacb6820dceff8cdcfcaf56c447bbc026603f0e7ebc2332",
+      "client-valid.cert.der": "2ffd12162070c88f0af974bdcf763766f684a3830796797c635b9dc1be3a3567",
+      "client-wrong.cert.der": "c2b3e702c29137cab81636647964ba588415e58024223f7f180689e3d45d2c52",
+      "server-backup.cert.der": "0946b26fe089bf1f25ddaf29d190d01049ec772d6dd0aaed394209ab944d3894",
+      "server-current.cert.der": "af16a7bda6fc7cd482a911882aa0013c55f3866273076cb56db2f248d717313e",
+      "server-wrong-host.cert.der": "cc30723378211cfdd9e0d9801309e917fe3a0d5a5afae1ab76dc512944f38540"
+    },
+    "commands": [
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-x509",
+        "-sha256",
+        "-days",
+        "7",
+        "-subj",
+        "/CN=NetworkKit F6 Fixture CA",
+        "-addext",
+        "basicConstraints=critical,CA:true",
+        "-addext",
+        "keyUsage=critical,keyCertSign,cRLSign",
+        "-keyout",
+        "ca.key.pem",
+        "-out",
+        "ca.cert.pem"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=localhost",
+        "-keyout",
+        "server-current.key.pem",
+        "-out",
+        "server-current.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "server_current",
+        "-startdate",
+        "20261108103643Z",
+        "-enddate",
+        "20261111103643Z",
+        "-in",
+        "server-current.csr.pem",
+        "-out",
+        "server-current.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "server-current.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "server-current.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "server-current.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "server-current.key.der"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=localhost",
+        "-keyout",
+        "server-backup.key.pem",
+        "-out",
+        "server-backup.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "server_current",
+        "-startdate",
+        "20261108103643Z",
+        "-enddate",
+        "20261111103643Z",
+        "-in",
+        "server-backup.csr.pem",
+        "-out",
+        "server-backup.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "server-backup.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "server-backup.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "server-backup.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "server-backup.key.der"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=wrong.invalid",
+        "-keyout",
+        "server-wrong-host.key.pem",
+        "-out",
+        "server-wrong-host.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "server_wrong",
+        "-startdate",
+        "20261108103643Z",
+        "-enddate",
+        "20261111103643Z",
+        "-in",
+        "server-wrong-host.csr.pem",
+        "-out",
+        "server-wrong-host.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "server-wrong-host.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "server-wrong-host.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "server-wrong-host.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "server-wrong-host.key.der"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=NetworkKit F6 client-valid",
+        "-keyout",
+        "client-valid.key.pem",
+        "-out",
+        "client-valid.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "client",
+        "-startdate",
+        "20261108103643Z",
+        "-enddate",
+        "20261111103643Z",
+        "-in",
+        "client-valid.csr.pem",
+        "-out",
+        "client-valid.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "client-valid.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "client-valid.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "client-valid.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "client-valid.key.der"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=NetworkKit F6 client-wrong",
+        "-keyout",
+        "client-wrong.key.pem",
+        "-out",
+        "client-wrong.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "client",
+        "-startdate",
+        "20261108103643Z",
+        "-enddate",
+        "20261111103643Z",
+        "-in",
+        "client-wrong.csr.pem",
+        "-out",
+        "client-wrong.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "client-wrong.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "client-wrong.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "client-wrong.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "client-wrong.key.der"
+      ],
+      [
+        "req",
+        "-new",
+        "-newkey",
+        "rsa:2048",
+        "-noenc",
+        "-sha256",
+        "-subj",
+        "/CN=NetworkKit F6 client-expired",
+        "-keyout",
+        "client-expired.key.pem",
+        "-out",
+        "client-expired.csr.pem"
+      ],
+      [
+        "ca",
+        "-batch",
+        "-notext",
+        "-config",
+        "ca.cnf",
+        "-extensions",
+        "client",
+        "-startdate",
+        "20261106103643Z",
+        "-enddate",
+        "20261107103643Z",
+        "-in",
+        "client-expired.csr.pem",
+        "-out",
+        "client-expired.cert.pem"
+      ],
+      [
+        "x509",
+        "-in",
+        "client-expired.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "client-expired.cert.der"
+      ],
+      [
+        "rsa",
+        "-in",
+        "client-expired.key.pem",
+        "-traditional",
+        "-outform",
+        "DER",
+        "-out",
+        "client-expired.key.der"
+      ],
+      [
+        "x509",
+        "-in",
+        "ca.cert.pem",
+        "-outform",
+        "DER",
+        "-out",
+        "ca.cert.der"
+      ]
+    ],
+    "pair_count": 7,
+    "status": "complete",
+    "validity": {
+      "client-expired": {
+        "end": "20261107103643Z",
+        "start": "20261106103643Z"
+      },
+      "client-valid": {
+        "end": "20261111103643Z",
+        "start": "20261108103643Z"
+      },
+      "client-wrong": {
+        "end": "20261111103643Z",
+        "start": "20261108103643Z"
+      },
+      "server-backup": {
+        "end": "20261111103643Z",
+        "start": "20261108103643Z"
+      },
+      "server-current": {
+        "end": "20261111103643Z",
+        "start": "20261108103643Z"
+      },
+      "server-wrong-host": {
+        "end": "20261111103643Z",
+        "start": "20261108103643Z"
+      }
+    }
+  },
+  "host": "macOS 15.8.1 Intel",
+  "input_sources_note": "Per-invocation hashes describe actual historical inputs; final source is not retroactive runtime evidence. Controller post-batch guard changes were source-inspected only.",
+  "limits": {
+    "builds": 4,
+    "key_pairs": 7,
+    "local_logical_attempts": 48,
+    "public_logical_attempts": 4,
+    "pure_cases": 48
+  },
+  "local": [
+    {
+      "case": "H01",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H01",
+        "received_payload": 524,
+        "sent_payload": 64,
+        "signature_verified": true,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H01",
+        "nativeTaskStarts": 1,
+        "status": 200,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 1,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "H02",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H02",
+        "received_payload": 524,
+        "sent_payload": 64,
+        "signature_verified": true,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H02",
+        "nativeTaskStarts": 1,
+        "status": 200,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 2,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "H03",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H03",
+        "received_payload": 596,
+        "sent_payload": 64,
+        "signature_verified": false,
+        "status": "done"
+      },
+      "reason": null,
+      "slot": 3,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "case": "H04",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H04",
+        "received_payload": 537,
+        "sent_payload": 64,
+        "signature_verified": true,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H04",
+        "nativeTaskStarts": 1,
+        "status": 200,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 4,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "H05",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H05",
+        "received_payload": 620,
+        "sent_payload": 64,
+        "signature_verified": true,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H05",
+        "nativeTaskStarts": 1,
+        "status": 200,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 5,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "acceptance": "invalid-evidence",
+      "case": "H06",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H06",
+        "received_payload": 601,
+        "sent_payload": 64,
+        "signature_verified": false,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H06",
+        "nativeTaskStarts": 1,
+        "status": 400,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "review_reason": "No positive original-signature verification before body mutation; original process pass is retained, not accepted as mutation proof",
+      "slot": 6,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "H07",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H07",
+        "received_payload": 524,
+        "sent_payload": 105,
+        "signature_verified": true,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H07",
+        "nativeTaskStarts": 1,
+        "status": 302,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 7,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "H08",
+      "exit_code": 0,
+      "fixture_observation": "terminated before report; no success inferred",
+      "observation": {
+        "case": "H08",
+        "evidence": "real cancelled preparation task; no URLSession task created",
+        "lateOutputAdmitted": false,
+        "nativeTaskStarts": 0,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 8,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T01",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T01",
+        "received_payload": 0,
+        "sent_payload": 7,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T01",
+        "evidence": "native bytes; framing oracle inspected exact prefix/delimiter",
+        "nativeReceivedBytes": 7,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 9,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T02",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T02",
+        "received_payload": 0,
+        "sent_payload": 10,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T02",
+        "evidence": "native bytes; framing oracle inspected exact prefix/delimiter",
+        "nativeReceivedBytes": 10,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 10,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T03",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T03",
+        "received_payload": 0,
+        "sent_payload": 4,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T03",
+        "evidence": "native bytes; framing oracle inspected exact prefix/delimiter",
+        "nativeReceivedBytes": 4,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 11,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T04",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T04",
+        "received_payload": 0,
+        "sent_payload": 5,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T04",
+        "evidence": "native bytes; framing oracle inspected exact prefix/delimiter",
+        "nativeReceivedBytes": 5,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 12,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T05",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T05",
+        "received_payload": 0,
+        "sent_payload": 4,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T05",
+        "evidence": "native bytes; framing oracle inspected exact prefix/delimiter",
+        "nativeReceivedBytes": 4,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 13,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T06",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T06",
+        "received_payload": 2,
+        "sent_payload": 3,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T06",
+        "nativeSendReceiveOverlap": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 14,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T07",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T07",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T07",
+        "nativePendingTerminated": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 15,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "T08",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "T08",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "done"
+      },
+      "observation": {
+        "case": "T08",
+        "nativePendingTerminated": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 16,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D01",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 0,
+        "case": "D01",
+        "received_payload": 2,
+        "sent_payload": 0,
+        "status": "done"
+      },
+      "observation": {
+        "case": "D01",
+        "receivedBytes": 0,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 17,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D02",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 0,
+        "case": "D02",
+        "received_payload": 2,
+        "sent_payload": 8,
+        "status": "done"
+      },
+      "observation": {
+        "case": "D02",
+        "receivedBytes": 8,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 18,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D03",
+      "exit_code": 0,
+      "fixture_observation": "terminated before report; no success inferred",
+      "observation": {
+        "case": "D03",
+        "nativeConnections": 1,
+        "payloadSent": 0,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 19,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D04",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 0,
+        "case": "D04",
+        "received_payload": 2,
+        "sent_payload": 9,
+        "status": "done"
+      },
+      "observation": {
+        "case": "D04",
+        "oversizeReceivedRejected": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 20,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D05",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 0,
+        "case": "D05",
+        "received_payload": 2,
+        "sent_payload": 0,
+        "status": "done"
+      },
+      "observation": {
+        "case": "D05",
+        "controlledLossTimeout": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 21,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D06",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 0,
+        "case": "D06",
+        "received_payload": 2,
+        "sent_payload": 2,
+        "status": "done"
+      },
+      "observation": {
+        "case": "D06",
+        "receivedBytes": 1,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 22,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D07",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 0,
+        "case": "D07",
+        "received_payload": 2,
+        "sent_payload": 3,
+        "status": "done"
+      },
+      "observation": {
+        "case": "D07",
+        "duplicateReceiveRejected": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 23,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "D08",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 0,
+        "case": "D08",
+        "received_payload": 2,
+        "sent_payload": 3,
+        "status": "done"
+      },
+      "observation": {
+        "activeReceiveCancelled": true,
+        "case": "D08",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 24,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L01",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L01",
+        "received_payload": 234,
+        "sent_payload": 64,
+        "status": "done",
+        "tls_established": true,
+        "tls_version": "TLSv1.3"
+      },
+      "observation": {
+        "case": "L01",
+        "challenges": 1,
+        "status": 200,
+        "statusResult": "pass",
+        "tlsVersion": "tls_protocol_version_t(rawValue: 772)",
+        "trustAccepted": true
+      },
+      "reason": null,
+      "slot": 25,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L02",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L02",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "reason": null,
+      "slot": 26,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "case": "L03",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L03",
+        "received_payload": 234,
+        "sent_payload": 64,
+        "status": "done",
+        "tls_established": true,
+        "tls_version": "TLSv1.3"
+      },
+      "observation": {
+        "case": "L03",
+        "challenges": 1,
+        "status": 200,
+        "statusResult": "pass",
+        "tlsVersion": "tls_protocol_version_t(rawValue: 772)",
+        "trustAccepted": true
+      },
+      "reason": null,
+      "slot": 27,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L04",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L04",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "reason": null,
+      "slot": 28,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "case": "L05",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L05",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "reason": null,
+      "slot": 29,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "case": "L06",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L06",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "observation": {
+        "case": "L06",
+        "challenges": 1,
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 30,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L07",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L07",
+        "received_payload": 234,
+        "sent_payload": 64,
+        "status": "done",
+        "tls_established": true,
+        "tls_version": "TLSv1.3"
+      },
+      "observation": {
+        "case": "L07",
+        "challenges": 1,
+        "status": 200,
+        "statusResult": "pass",
+        "tlsVersion": "tls_protocol_version_t(rawValue: 772)",
+        "trustAccepted": true
+      },
+      "reason": null,
+      "slot": 31,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L08",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L08",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "observation": {
+        "case": "L08",
+        "challenges": 1,
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 32,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I01",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "I01",
+        "client_leaf_authorized": true,
+        "received_payload": 234,
+        "sent_payload": 64,
+        "status": "done",
+        "tls_established": true,
+        "tls_version": "TLSv1.3"
+      },
+      "observation": {
+        "case": "I01",
+        "challenges": 2,
+        "status": 200,
+        "statusResult": "pass",
+        "tlsVersion": "tls_protocol_version_t(rawValue: 772)",
+        "trustAccepted": true
+      },
+      "reason": null,
+      "slot": 33,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I02",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "I02",
+        "error_category": "SSLError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "PEER_DID_NOT_RETURN_A_CERTIFICATE"
+      },
+      "reason": null,
+      "slot": 34,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "case": "I03",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "I03",
+        "client_leaf_authorized": false,
+        "received_payload": 234,
+        "sent_payload": 64,
+        "status": "done",
+        "tls_established": true,
+        "tls_version": "TLSv1.3"
+      },
+      "reason": null,
+      "slot": 35,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "case": "I04",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "I04",
+        "error_category": "SSLCertVerificationError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "CERTIFICATE_VERIFY_FAILED"
+      },
+      "reason": null,
+      "slot": 36,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    },
+    {
+      "case": "I05",
+      "exit_code": 0,
+      "fixture_observation": "terminated before report; no success inferred",
+      "observation": {
+        "case": "I05",
+        "credentialCarrierValidated": true,
+        "evidence": "carrier/policy model; no native challenge/resumption proof",
+        "nativeTaskStarts": 0,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 37,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I06",
+      "exit_code": 0,
+      "fixture_observation": "terminated before report; no success inferred",
+      "observation": {
+        "case": "I06",
+        "credentialCarrierValidated": true,
+        "evidence": "carrier/policy model; no native challenge/resumption proof",
+        "nativeTaskStarts": 0,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 38,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I07",
+      "exit_code": 0,
+      "fixture_observation": "terminated before report; no success inferred",
+      "observation": {
+        "case": "I07",
+        "credentialCarrierValidated": true,
+        "evidence": "carrier/policy model; no native challenge/resumption proof",
+        "nativeTaskStarts": 0,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 39,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I08",
+      "exit_code": 0,
+      "fixture_observation": "terminated before report; no success inferred",
+      "observation": {
+        "case": "I08",
+        "credentialCarrierValidated": true,
+        "evidence": "carrier/policy model; no native challenge/resumption proof",
+        "nativeTaskStarts": 0,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 40,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "H03",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H03",
+        "http_status": 200,
+        "observed_content_type": "application/octet-stream",
+        "received_payload": 602,
+        "sent_payload": 64,
+        "signature_verified": true,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H03",
+        "nativeTaskStarts": 1,
+        "status": 200,
+        "statusResult": "pass"
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 41,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "H06",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "H06",
+        "http_status": 400,
+        "observed_content_type": "application/octet-stream",
+        "original_signature_verified": true,
+        "received_payload": 607,
+        "sent_payload": 64,
+        "signature_verified": false,
+        "status": "done"
+      },
+      "observation": {
+        "case": "H06",
+        "nativeTaskStarts": 1,
+        "status": 400,
+        "statusResult": "pass"
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 42,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L02",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L02",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "observation": {
+        "case": "L02",
+        "challenges": 1,
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "needsFixtureProof": false,
+        "policyOutcome": "pin-rejected",
+        "statusResult": "pass",
+        "trustCallbacksCompleted": 1
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 43,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L04",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L04",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "observation": {
+        "case": "L04",
+        "challenges": 1,
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "needsFixtureProof": false,
+        "policyOutcome": "trust-rejected",
+        "statusResult": "pass",
+        "trustCallbacksCompleted": 1
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 44,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "L05",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "L05",
+        "error_category": "SSLEOFError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "UNEXPECTED_EOF_WHILE_READING"
+      },
+      "observation": {
+        "case": "L05",
+        "challenges": 1,
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "needsFixtureProof": false,
+        "policyOutcome": "trust-rejected",
+        "statusResult": "pass",
+        "trustCallbacksCompleted": 1
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 45,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I02",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "I02",
+        "error_category": "SSLError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "PEER_DID_NOT_RETURN_A_CERTIFICATE"
+      },
+      "observation": {
+        "case": "I02",
+        "challenges": 2,
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "needsFixtureProof": true,
+        "policyOutcome": "identity-absent",
+        "statusResult": "pass",
+        "trustCallbacksCompleted": 1
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 46,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I03",
+      "exit_code": 0,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "I03",
+        "client_leaf_authorized": false,
+        "http_status": 403,
+        "received_payload": 234,
+        "sent_payload": 64,
+        "status": "done",
+        "tls_established": true,
+        "tls_version": "TLSv1.3"
+      },
+      "observation": {
+        "case": "I03",
+        "challenges": 2,
+        "code": -1206,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "needsFixtureProof": true,
+        "policyOutcome": "accepted",
+        "statusResult": "pass",
+        "trustCallbacksCompleted": 1
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 47,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "I04",
+      "exit_code": 1,
+      "fixture_observation": {
+        "accepted": 1,
+        "case": "I04",
+        "certificate_verify_code": 10,
+        "error_category": "SSLCertVerificationError",
+        "received_payload": 0,
+        "sent_payload": 0,
+        "status": "peer-ended",
+        "tls_reason": "CERTIFICATE_VERIFY_FAILED"
+      },
+      "reason": "Correct signed body media type and invalid H06 baseline oracle; accept only witnessed delegate-policy cancellation and independent missing/wrong/expired identity controls. Original failures and H06 invalid evidence retained.",
+      "slot": 48,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "fail"
+    }
+  ],
+  "network_end": 1794220880.176376,
+  "network_scope_status": "Completed/exhausted: 48 local logical slots and four external slots; no further network attempts authorized",
+  "public": [
+    {
+      "case": "E01",
+      "exit_code": 0,
+      "observation": {
+        "bodyBytes": 0,
+        "case": "E01",
+        "status": 200,
+        "statusResult": "pass",
+        "trustAccepted": true
+      },
+      "reason": null,
+      "slot": 1,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "E02",
+      "exit_code": 0,
+      "observation": {
+        "bodyBytes": 0,
+        "case": "E02",
+        "status": 200,
+        "statusResult": "pass",
+        "trustAccepted": true
+      },
+      "reason": null,
+      "slot": 2,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "E03",
+      "exit_code": 0,
+      "observation": {
+        "case": "E03",
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "statusResult": "pass",
+        "systemTrustAccepted": true
+      },
+      "reason": null,
+      "slot": 3,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "E04",
+      "exit_code": 0,
+      "observation": {
+        "case": "E04",
+        "code": -999,
+        "domain": "NSURLErrorDomain",
+        "nativeRejected": true,
+        "statusResult": "pass",
+        "systemTrustAccepted": false
+      },
+      "reason": null,
+      "slot": 4,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "b255647f3ba7fe0ff3d7b1922fe791cf764a2a22bd1bf522bc09a326f72e970a",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    }
+  ],
+  "pure": [
+    {
+      "case": "W01",
+      "exit_code": 0,
+      "observation": {
+        "case": "W01",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 1,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W02",
+      "exit_code": 0,
+      "observation": {
+        "case": "W02",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 2,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W03",
+      "exit_code": 0,
+      "observation": {
+        "case": "W03",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 3,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W04",
+      "exit_code": 0,
+      "observation": {
+        "case": "W04",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 4,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W05",
+      "exit_code": 0,
+      "observation": {
+        "case": "W05",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 5,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W06",
+      "exit_code": 0,
+      "observation": {
+        "case": "W06",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 6,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W07",
+      "exit_code": 0,
+      "observation": {
+        "case": "W07",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 7,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W08",
+      "exit_code": 0,
+      "observation": {
+        "case": "W08",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 8,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W09",
+      "exit_code": 0,
+      "observation": {
+        "case": "W09",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 9,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W10",
+      "exit_code": 0,
+      "observation": {
+        "case": "W10",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 10,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W11",
+      "exit_code": 0,
+      "observation": {
+        "case": "W11",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 11,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W12",
+      "exit_code": 0,
+      "observation": {
+        "case": "W12",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 12,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W13",
+      "exit_code": 0,
+      "observation": {
+        "case": "W13",
+        "mutate": "content-type",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 13,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W14",
+      "exit_code": 0,
+      "observation": {
+        "case": "W14",
+        "mutate": "authorization",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 14,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W15",
+      "exit_code": 0,
+      "observation": {
+        "case": "W15",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 15,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W16",
+      "exit_code": 0,
+      "observation": {
+        "case": "W16",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 16,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W17",
+      "exit_code": 0,
+      "observation": {
+        "case": "W17",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 17,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W18",
+      "exit_code": 0,
+      "observation": {
+        "case": "W18",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 18,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W19",
+      "exit_code": 0,
+      "observation": {
+        "case": "W19",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 19,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W20",
+      "exit_code": 0,
+      "observation": {
+        "case": "W20",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 20,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W21",
+      "exit_code": 0,
+      "observation": {
+        "case": "W21",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 21,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W22",
+      "exit_code": 0,
+      "observation": {
+        "case": "W22",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 22,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W23",
+      "exit_code": 0,
+      "observation": {
+        "case": "W23",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 23,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W24",
+      "exit_code": 0,
+      "observation": {
+        "case": "W24",
+        "retired": true,
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 24,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W25",
+      "exit_code": 0,
+      "observation": {
+        "case": "W25",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 25,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "acceptance": "invalid-evidence",
+      "case": "W26",
+      "exit_code": 0,
+      "observation": {
+        "case": "W26",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "review_reason": "Original two async waiters were not explicitly registered before resolution; process pass retained, corrected barrier required",
+      "slot": 26,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W27",
+      "exit_code": 0,
+      "observation": {
+        "case": "W27",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 27,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W28",
+      "exit_code": 0,
+      "observation": {
+        "case": "W28",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 28,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W29",
+      "exit_code": 0,
+      "observation": {
+        "case": "W29",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 29,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W30",
+      "exit_code": 0,
+      "observation": {
+        "case": "W30",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 30,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W31",
+      "exit_code": 0,
+      "observation": {
+        "case": "W31",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 31,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W32",
+      "exit_code": 0,
+      "observation": {
+        "case": "W32",
+        "statusResult": "pass"
+      },
+      "reason": null,
+      "slot": 32,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "dfd46a0598054ccccf19a2a007667155c473cd6e5e0e72f1f10b1444cb34584c",
+        "NativeProbe.swift": "7ebd80017ec6a721b5ddba55f205858cc6275521f826e04eb94676d8ee083a0f",
+        "NativeState.swift": "42ff34b2d40a27f56ab9595734ac92a8a75320715b1efa8b5f5ad46c8ab14e60",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "6dde9edef0dffef0f55199a9423966bc0c619bcb696adcd90bce4a062ee80a8d",
+        "run_native_batch.py": "fb87503f4d9642656daa149dc6d474d13f7dd389a039c97b974f0238ca7b1b53",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    },
+    {
+      "case": "W26",
+      "exit_code": 0,
+      "observation": {
+        "case": "W26",
+        "statusResult": "pass"
+      },
+      "reason": "Original process pass did not establish both waiters were registered. New explicit registration barrier corrects that invalid proof; no other pure cases or native scenarios rerun.",
+      "slot": 33,
+      "sources": {
+        "CapabilityProbe.swift": "23f1a50445e2a093b4ebcff383b437be4d52a1e4f716926aaa2709cddf250906",
+        "NativeMain.swift": "e11338902daf87c63a0d06f68a24a4b37f9c4c5a9f9e145bdb7dfb88d2760496",
+        "NativeProbe.swift": "24214076b6c9419cdf643486931329183ded465d7c8b7feba377213acccd11eb",
+        "NativeState.swift": "d3daa07570d586c7602d30904c883e95e7f56f54ebd96210030bd794c6b698cd",
+        "NativeValues.swift": "5354c4622865c4c2f119a0a4a93593b3d57d5361ad2fefbdc7f796d19214a536",
+        "README.md": "10ca98928796197a30560916f9f89796fde4864142f34464e8f105b4ac8a834e",
+        "candidate.py": "85d48ab42e7adcce4fc8e2be03c9770c0eeaa340555a57de156f96af4d1d2b85",
+        "cases.py": "1af8b642f941192d0f92dd34035eb261bb1329212b045b4b3ff9a7a274a1ad9b",
+        "native_fixture.py": "a8c7d64a6c2d3e30204f89fc4b27859f15d72f81b67957aa6cf9d23c629792b8",
+        "run_native_batch.py": "1a27c01c032901c4fb99a3f2bb0e95da9a283b4443034b74c29bf924c8b23d6b",
+        "run_offline.py": "efd86c5e03449cc91333cea0af4cc3790f2ef2b705aefdfb37068e5f61937a99",
+        "setup_native_fixture.py": "c0700496dfaf6c7bc06850347a7bf66039da48433fa4d0c80173d82e0d735959",
+        "verifier.py": "31d61932288240a6d5a717bfb40498cf30bce6510b0a2fa9dc6b722d08c629eb"
+      },
+      "status": "pass"
+    }
+  ],
+  "raw_log_hashes": {
+    "D01-17.log": "741bd06f51a73389fcafa1c6fdc3965eb692ea6102a44b9ed0a48937186a263e",
+    "D02-18.log": "9d31f418d9ca9c7788353cb430e91c9e4e6cfbfb0359a0c9398fb44572197cbc",
+    "D03-19.log": "f9a0b4d48be62ebe5b35711245c96b75de0a25e20d4f8e43a8db723051ed1c20",
+    "D04-20.log": "91fe845058bf077d8b9f4b01e0fa63e382b731f268c20b09cf29073a0463bdc3",
+    "D05-21.log": "71d66970a0055cc6d4e753e61f5173a39ee983acb3f0574074fca6dc0f8555a1",
+    "D06-22.log": "f6522dbc2a46c7d3b914add44ef6be80bb3fd92e90a432acf902c4497e3998c5",
+    "D07-23.log": "b314c34aba75ca1446f66fa2c57decf01d5de79dadd731a15d678416781ce00a",
+    "D08-24.log": "b0ee19f01838041491f772a558010a7e6170dba1c206ffaf44ce6d60d32f8a4f",
+    "E01-1.log": "a724eda3e47ae187b482556ba915f20e5a59846c918a0ea7b97282e0367c40cd",
+    "E02-2.log": "70bf67789c804b84464fa4ab31490fae0e995c4270e0199a2dd1622a9fca9986",
+    "E03-3.log": "0b9833f1059c51c4879f86ffea4186ee3a32fc6a8da7359845e45f95f152caea",
+    "E04-4.log": "0481f2156c148996962027eaefe38f8840b38cb9dc1f2b912a8cf05e833fbf52",
+    "H01-1.log": "199cd57839b1b1f03ec25600fa64305d43687bb26ab1e5cd5bc6604dd69ca992",
+    "H02-2.log": "a19af17dac74a2d916148823193d332e5f55b4bf37b0628b67c2d7aa7f0db5f0",
+    "H03-3.log": "597c6a37e594431d3f8073cf90c0951af5d9158cd0d0a81820916902629bb9b3",
+    "H03-41.log": "153c4457c3885864d7bfa30cfd2e08cc4d3e9a453ef9be03c15b1cd2e7f37ec6",
+    "H04-4.log": "383309bc2cf103b8eddc96831a0a803f5e53b69a3d40773799bbc0472031b3b8",
+    "H05-5.log": "6d7e7e6e61be27bad4aab6f9381954ec3d6c51631de7b59c35b8c5977cea451f",
+    "H06-42.log": "91affdf7307009aec934553658aee3f63fbcbd5a48074b6757a68263c6617d48",
+    "H06-6.log": "91affdf7307009aec934553658aee3f63fbcbd5a48074b6757a68263c6617d48",
+    "H07-7.log": "14bfd0ab9f8f6397ad65484ec6652879386faabd44e618246e070609f785de4f",
+    "H08-8.log": "cf39cc1590db9b8647af4dc5599a8958535d3ae7e5bcbbde3301d268e75bd82d",
+    "I01-33.log": "f149e1effc2d0a0adcd20bb3911756301d35d55844252641d1b2f0fbbf817a79",
+    "I02-34.log": "e04bc4d0275930840b9cc0dc88895f047217869514daecfd9f2f6fb15014bb84",
+    "I02-46.log": "7e5cc4c1c39fbc6de78e8083c286236fa85a63e239644d022daffb8ba6b01fdb",
+    "I03-35.log": "a4764711e711c2632039760ce0d22cbf0ca6ba68511d662388d9185a170d1f53",
+    "I03-47.log": "3e6c8c1e0e261ad7bad073c5631ab1afbf15de88ec87109c2559053931dda6f4",
+    "I04-36.log": "e04bc4d0275930840b9cc0dc88895f047217869514daecfd9f2f6fb15014bb84",
+    "I04-48.log": "528d61deab4b4246b579699b2b60ecb09cc552dbc9abdeb5de8a84844e873627",
+    "I05-37.log": "d2bb7e373ae19dfee0df7bd6669a2f228dbbdda0a57b85f2961f2ba714154531",
+    "I06-38.log": "cdad4912fef896a4a4dc0732b8cd128a9e8e74f1bb63a049b2d4178b713d5297",
+    "I07-39.log": "0aa1a0d51895678098b78c2e633ab00b60e0e1b70e98d237b0ec39e04438d56b",
+    "I08-40.log": "ec3a98edbbaa7084f73a8f5947ce1f2639725737c702687cf02e30d8a0759264",
+    "L01-25.log": "f91f5402822779e5a0e99ee2e4019d8b5e850db0b870dac587e29ff9e67d989c",
+    "L02-26.log": "e04bc4d0275930840b9cc0dc88895f047217869514daecfd9f2f6fb15014bb84",
+    "L02-43.log": "69adbc59577d29c92ae04a4b281984e4c2643a11333097861db1e165303df7b6",
+    "L03-27.log": "e4667befdd3fe5402302b735e462598ad224d9bf68932b0fb6594e1d2c4bb7ce",
+    "L04-28.log": "e04bc4d0275930840b9cc0dc88895f047217869514daecfd9f2f6fb15014bb84",
+    "L04-44.log": "7a95929afb7833e5f63ec3572391ec3fdb36f440a20c946bcabd0f747583a4f1",
+    "L05-29.log": "e04bc4d0275930840b9cc0dc88895f047217869514daecfd9f2f6fb15014bb84",
+    "L05-45.log": "c6f703417bd31f2efeace126bf6ed56065b26d754a3f7ddba9a3851831edfe5a",
+    "L06-30.log": "50a628c693b5f6be4f639e45632f8ee7ce109584cfffce8fd7f3c7ad7f72a523",
+    "L07-31.log": "6eb49bc0123a6ec8436f933faddf39022e8961e4456b4deab0a88601785bb14d",
+    "L08-32.log": "55d598b1f694caafc3507057d1c5d9b5a0c82553d8fd0348a27404f170d3c80b",
+    "T01-9.log": "e0adf0a4087c3b3972468a6643519baaf0d37753c2a202502db4cfb3a402e95c",
+    "T02-10.log": "21d3806e18b882a129b318c1bc5c41d873e748bc10c24499e355b3c82ec446de",
+    "T03-11.log": "a80ac57431d94028bc2543428a3425f49015236d8ba48fc581bc18d526e82d7d",
+    "T04-12.log": "0a6d28b8b2af444af1920611b8a956015d0e820a9c0006c994edf7bd4bc09ab9",
+    "T05-13.log": "dbee069a1a8be2a87f852cc0b3532b590682b64d25056291d08553ae5e18024e",
+    "T06-14.log": "bbeee1d34eb10586ee3c1e35b23ff85cdf5585a6dee320013452c1dfe04ef461",
+    "T07-15.log": "cdccf51441ac3ca72d668de15d931f65eaf3ed4b808511df94e2476a4ab69934",
+    "T08-16.log": "910e63eee430c9cfe16e8d71c258b6f4fade5dbc60357e3a953b28c2fd0d5110",
+    "W01-1.log": "7f175fb051a14d5d64a9aecab338a64f4f0fc590f976ff78741d7f4e6b615ce8",
+    "W02-2.log": "d5f2e1ceda81cba37f83056d3b01fbf3de43c55e6ae498868df63102521954f1",
+    "W03-3.log": "566028b5f577ac4bf401c9b7df27c265691dc75aa1b4a67ad3f198f743291e81",
+    "W04-4.log": "0a06fe76968c4fc9d10f8cf37bd885d0bd453a3e628a6db5b406f0be6af7a3f0",
+    "W05-5.log": "076194292fc08c30a019b1f1e3cf1b8525f71d71cb116a4da9c6ee8eafa97791",
+    "W06-6.log": "73d7c73269e98ddf8f2596b91064263b39aae78ce3dbb261a4aeed38430722c4",
+    "W07-7.log": "5d762ba44fde3877e72ca46b89b0ebb46b52d0dcdfe4a7fdb7989549aa4ab968",
+    "W08-8.log": "817576be13f400fffaaba90066e2abc7db6dd27b63ffbdb95ed5ea6f7258694c",
+    "W09-9.log": "02eeec1e9c36fe475ccedc2919440530fc677c672530e500b46e571a81c80595",
+    "W10-10.log": "f563f19f4d5e119d48a43c01b95b95f9ef7a8e240fc15b6a5c165723c3f03fab",
+    "W11-11.log": "624e11160b0098c763b7696fbdb0e1430257f8b6549a7e04a652d55dfdfe8831",
+    "W12-12.log": "fc9a639d9983b3eab393479a226ae52dea53bd47124290dac6e15ee22a626f09",
+    "W13-13.log": "81e054c41afafe3620ed3197a9a4925574a1fedcfe194ab104c2d3cb61967b80",
+    "W14-14.log": "c7f48c3cef6fd8c498b24c3372acb7e62c734e63d79a3a921621c875e2b62dc3",
+    "W15-15.log": "37ecedd4514ff61f649f11ab595695b5857872357e4c8b9c837d1795008f58ea",
+    "W16-16.log": "1ba338bb561a1e5449523f57f7a727251de7551ef46bdbbdd4327ee96dc159ed",
+    "W17-17.log": "02e416ef9cc861912d8f9653e41c767012b29ff19e0391ccf67a1bd324e01e66",
+    "W18-18.log": "5fc0b384b7774c8d8c52ef971ade0feb6403c3323e5a73dfe548fec80fd1b3be",
+    "W19-19.log": "24d87a43ac058e159e34fe10ba0971e68e3c65f37fea00f50372f5c63a2470a7",
+    "W20-20.log": "df7f5ee62dd47d68f5740a73e4a348f0b145f2d6f2c3f107681080e94962db94",
+    "W21-21.log": "6b45a8fe4d4236661e9749915ca13f7a5119d28b760193d4c347c9f148dc3484",
+    "W22-22.log": "bf5a9648347d3a6153eef6499d9dc9ada4dfc643483e3796442e170ca794bd0b",
+    "W23-23.log": "9dca563bc73bea178316ee2098f7fd10b3f9019d7a73be25cb6225bf97bf9947",
+    "W24-24.log": "0ded571c5e75aa870f68e044e74ba0dcb4bef119acc3a725803211499a8ffdb4",
+    "W25-25.log": "7f11efe5909beeacfe10e353fb8182a49d92145601ed110467de2ec8c0f31834",
+    "W26-26.log": "01cedcf18d21176bb348c52364538c67e789b4db40cf325d8009c5fd52e4a1a7",
+    "W26-33.log": "01cedcf18d21176bb348c52364538c67e789b4db40cf325d8009c5fd52e4a1a7",
+    "W27-27.log": "9f602cfde6fa83ad7f5aaa486a91a3849c758b9e3709b3adfdf74bbaab321c70",
+    "W28-28.log": "9b0ab9962365ce57b155b46d5036b019b654608ffc0ed42d828c81afafe63781",
+    "W29-29.log": "c41acf7a0e36e35ceaede99c95cdb3101397d2aa98e3becd68f48171f6ea8864",
+    "W30-30.log": "271f3a22921687a38e95d2c312b53408857033cf81373f7ea9ae40a0336ae458",
+    "W31-31.log": "52b3752500892c2d2800a326a545077dcc0e8c2b837dbe4dd302376e8af3a8a3",
+    "W32-32.log": "65d0af85308c09fcd16207c48ea08c69472870a99a0f1d62f69605032b574d1b",
+    "build-1.log": "196b7b38cf60ca8d0cac91bffbac186579c4d0bff5a213243979309ffc4f7af9",
+    "build-2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-3.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-4.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "remaining": {
+    "builds": 0,
+    "local": 0,
+    "public": 0,
+    "pure_correction_only": 15,
+    "test_key_pairs": 0
+  },
+  "scope_commit": "b4c86d322dbabb72f4c5c94075ceb1f427ebc430",
+  "scope_status": "Completed with retained failures/gaps; no production/native acceptance",
+  "started": 1794220631.6206841,
+  "swift": "6.2.4",
+  "xcode": "26.3 / 17C529"
+}

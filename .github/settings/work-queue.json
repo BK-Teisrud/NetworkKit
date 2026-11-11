@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-09",
   "implementation_authorized": true,
   "start_gate": 41,
   "tasks": [
@@ -904,6 +904,31 @@
       "milestone": "F6 \u2013 Specialized features and research",
       "blocked_by": [],
       "parent": 18
+    },
+    {
+      "order": 60.1,
+      "key": "PREP-F6-TLS",
+      "number": 178,
+      "title": "[PREP-F6] Verify late trust completion and expired-client error evidence",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/178",
+      "milestone": "F6 \u2013 Specialized features and research",
+      "blocked_by": [],
+      "parent": 90,
+      "code_start_authorized": false,
+      "execution_gate": "Owner-approved correction completed: one build/eight pure/five local initial cases passed; In Review pending integrated PR/main; no standing execution permission",
+      "experimental_scope_commit": "55f31cf13204e1a5fb7eec6c4b5b1a94b9b107e6"
+    },
+    {
+      "order": 60.2,
+      "key": "FEAS-F6-NATIVE",
+      "number": 179,
+      "title": "[FEAS-F6-NATIVE] Assess bounded listener and QUIC ownership",
+      "url": "https://github.com/BK-Teisrud/NetworkKit/issues/179",
+      "milestone": "F6 \u2013 Specialized features and research",
+      "blocked_by": [],
+      "parent": 90,
+      "code_start_authorized": false,
+      "execution_gate": "Owner-approved startup-only experiment completed; twelve Swift and six latest native controls pass; Q04/Q05 and complete review remain. Scopes closed; no standing code/runtime permission."
     }
   ],
   "authorization_adr": "docs/decisions/ADR-0012-implementation-start.md",
@@ -1011,5 +1036,133 @@
     "planning_completed": "2026-11-08"
   },
   "f5_implementation_authorized": true,
-  "f5_code_start_decision_issue": 171
+  "f5_code_start_decision_issue": 171,
+  "f6_planning": {
+    "issue": 90,
+    "one_planning_pr": 177,
+    "production_authorized": false,
+    "offline_phase_a": "4 SDK probes/64 pure cases complete; no native authority from that scope",
+    "mac_experiment": "4 builds/33 pure/48 local/4 public completed; I04 native harness failure retained",
+    "next_evidence_followup": 179,
+    "same_pr": true,
+    "no_publication": true,
+    "tls_correction": "Selected #178 initial controls all passed; In Review pending same PR/main, broader #90 planning continues",
+    "next_research_task": 179,
+    "native_research": {
+      "issue": 179,
+      "status": "Blocked",
+      "initial_report": "docs/planning/F6_NATIVE_RESEARCH_RESULTS_2026-11-09.md",
+      "correction_report": "docs/planning/F6_QUIC_CORRECTION_RESULTS_2026-11-09.md",
+      "correction_scope_commit": "fabf77a55a9fdcf69e0b4f503075c60409d3eb63",
+      "correction_used": {
+        "compiler": 3,
+        "pure": 4,
+        "local_sessions": 16,
+        "fixture_pairs": 2
+      },
+      "runtime_closed": true,
+      "remaining_cases": [
+        "Q04",
+        "Q05"
+      ],
+      "next_priority": "Environment/peer decision required before another runtime attempt; preserve QUIC blockers. Continue independent security/exact-contract/local-network planning.",
+      "completion": {
+        "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
+        "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
+        "used": {
+          "compiler": 3,
+          "pure": 6,
+          "sessions": 19,
+          "pairs": 2
+        },
+        "runtime_closed": true,
+        "final_source_positive_cases": [
+          "C01",
+          "Q03",
+          "Q01",
+          "C02",
+          "C03",
+          "Q02",
+          "Q08",
+          "Q09"
+        ],
+        "failed": [
+          "Q04",
+          "Q06",
+          "Q07"
+        ],
+        "prerequisite_blocked": [
+          "Q05"
+        ]
+      },
+      "adapter_review": "docs/planning/F6_QUIC_ADAPTER_REVIEW.md",
+      "startup_direction": {
+        "approved_basis": "084525a0638e659be9c355318720ebea58d62a4d",
+        "owner_decision": "Approve design direction; no new code",
+        "design": "docs/planning/F6_QUIC_STARTUP_DESIGN.md",
+        "code_authorized": false,
+        "execution_authorized": false
+      },
+      "startup_verification": {
+        "approved_scope": "3bffb74d71b1306d3426901634f120663e0eb0e9",
+        "report": "docs/planning/F6_QUIC_STARTUP_RESULTS_2026-11-09.md",
+        "used": {
+          "compiler": 4,
+          "pure_swift": 12,
+          "sessions": 7,
+          "pairs": 2
+        },
+        "latest_native_passes": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06"
+        ],
+        "runtime_closed": true,
+        "historical_native_error_probes": "Q06/Q07 remain failed; not reclassified"
+      },
+      "datagram_route": {
+        "scope": "ed85295dff2b38337ba35a287c7bdefd9b61d8e4",
+        "report": "docs/planning/F6_QUIC_DATAGRAM_ROUTE_RESULTS_2026-11-10.md",
+        "used": {
+          "compiler": 1,
+          "pure_swift": 4,
+          "sessions": 3,
+          "pairs": 2
+        },
+        "runtime_closed": true,
+        "failed": [
+          "D01",
+          "D02",
+          "D03"
+        ],
+        "prerequisite_blocked": [
+          "G01",
+          "G02"
+        ]
+      },
+      "runtime_comparison": {
+        "scope": "e33747857c40b913a9f3e8af23df9f587300c647",
+        "report": "docs/planning/F6_QUIC_RUNTIME_COMPARISON_RESULTS_2026-11-11.md",
+        "compiler": 1,
+        "pure": 0,
+        "sessions": 0,
+        "pairs": 0,
+        "boot_attempts": 1,
+        "boot_completed": false,
+        "temporary_device_absent": true,
+        "runtime_closed": true
+      }
+    },
+    "latest_reviewed_pr_ci": {
+      "head": "00083e4fb5baceb17b9e17ddebdb70fb97d8a491",
+      "run": 42830158396,
+      "all_seven_checks": "SUCCESS",
+      "status_verified_only": true,
+      "main_accepted": false
+    },
+    "independent_local_network_plan": "docs/planning/F6_LOCAL_NETWORK_VERIFICATION_PLAN.md"
+  }
 }
