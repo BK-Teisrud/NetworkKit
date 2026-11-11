@@ -1065,7 +1065,7 @@
         "Q04",
         "Q05"
       ],
-      "next_priority": "Installed iOS26.2 legacy/modern runtime comparison proposal pending approval; preserve Mac baseline and no new dependency.",
+      "next_priority": "Environment/peer decision required before another runtime attempt; preserve QUIC blockers. Continue independent security/exact-contract/local-network planning.",
       "completion": {
         "scope_commit": "079fb795e05ea907ad228b7e676f3c7fcc3dbd29",
         "report": "docs/planning/F6_QUIC_COMPLETION_RESULTS_2026-11-09.md",
@@ -1143,8 +1143,18 @@
           "G02"
         ]
       },
-      "pending_scope": "docs/planning/F6_QUIC_RUNTIME_COMPARISON_SCOPE.md",
-      "pending_scope_authorized": false
+      "runtime_comparison": {
+        "scope": "e33747857c40b913a9f3e8af23df9f587300c647",
+        "report": "docs/planning/F6_QUIC_RUNTIME_COMPARISON_RESULTS_2026-11-11.md",
+        "compiler": 1,
+        "pure": 0,
+        "sessions": 0,
+        "pairs": 0,
+        "boot_attempts": 1,
+        "boot_completed": false,
+        "temporary_device_absent": true,
+        "runtime_closed": true
+      }
     },
     "latest_reviewed_pr_ci": {
       "head": "00083e4fb5baceb17b9e17ddebdb70fb97d8a491",

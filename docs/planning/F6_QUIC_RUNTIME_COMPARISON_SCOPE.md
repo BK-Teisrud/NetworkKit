@@ -1,6 +1,6 @@
 # F6 QUIC runtime and API comparison proposal
 
-Prepared 2026-11-11 for #179/#90, same draft PR #177. No new code/build/test/boot/material authority yet. Previous experiment ledgers remain closed. [Read-only inventory](evidence/F6/RUNTIME_ROUTE_PREPARATION_2026-11-11.json) establishes an installed available iOS 26.2 simulator with x86_64 and arm64 support. No runtime was booted. This makes an existing-runtime comparison possible without a download, purchase or package OS-floor change; actual boot/executable compatibility is unproved.
+Prepared 2026-11-11 for #179/#90, same draft PR #177. The owner subsequently approved this exact scope. [The one boot attempt timed out and the scope is now closed](F6_QUIC_RUNTIME_COMPARISON_RESULTS_2026-11-11.md); the proposal below is retained as its authorization baseline. Previous experiment ledgers remain closed. [Read-only inventory](evidence/F6/RUNTIME_ROUTE_PREPARATION_2026-11-11.json) establishes an installed available iOS 26.2 simulator with x86_64 and arm64 support. No runtime was booted. This makes an existing-runtime comparison possible without a download, purchase or package OS-floor change; actual boot/executable compatibility is unproved.
 
 ## Changed variables and hypotheses
 
